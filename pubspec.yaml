@@ -1,0 +1,29 @@
+name: box_shadow_generator
+description: A new Flutter project.
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
+  build_config: 1.0.0
+  flutter:
+    sdk: flutter
+  flutter_hooks: ^0.18.2+1
+  freezed_annotation: 1.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: 1.0.0
+  flutter_bloc: 8.0.1
+  freezed: 1.1.1
+  build_runner: 2.1.7
+  flutter_colorpicker: 1.0.3
+
+flutter:
+  uses-material-design: true
