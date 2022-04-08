@@ -7,7 +7,7 @@ class BaseScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    backgroundColor: AppColors.beigeWhite,
+    backgroundColor: AppColors.background,
     body: child,
   );
 }
