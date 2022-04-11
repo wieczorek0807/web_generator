@@ -22,13 +22,15 @@ class _Body extends StatelessWidget{
   const _Body();
 
   @override
-  Widget build(BuildContext context) => Row(
-    mainAxisAlignment: MainAxisAlignment.center,
-    crossAxisAlignment: CrossAxisAlignment.center,
-    children: const [
-      Controllers(),
-      SizedBox(width: AppDimens.d100),
-      AnimatedBox(),
-    ],
+  Widget build(BuildContext context) => Center(
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: const [
+        Controllers(),
+        SizedBox(width: AppDimens.d100),
+        AnimatedBox(),
+      ],
+    ),
   );
 }

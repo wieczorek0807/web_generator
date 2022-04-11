@@ -18,7 +18,7 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
   Offset _offset = Offset.zero;
   double _spreadRadius = 0.0;
   double _blurRadius = 0.0;
-  final Color _color = Colors.black;
+  Color _color = Colors.black;
 
   void initialize(){
     add(const ShadowEvent.initial());

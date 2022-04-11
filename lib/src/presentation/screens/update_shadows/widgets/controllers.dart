@@ -1,5 +1,6 @@
 import 'package:box_shadow_generator/src/presentation/screens/update_shadows/bloc/shadow_bloc.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/app_value_slider.dart';
+import 'package:box_shadow_generator/src/presentation/widgets/app_color_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -7,8 +8,7 @@ class Controllers extends StatelessWidget {
   const Controllers({Key? key}) : super(key: key);
 
   static const _height = 500.0;
-  static const _width = 200.0;
-
+  static const _width = 300.0;
   static const _blurMin = 0.0;
 
   @override
@@ -44,6 +44,10 @@ class Controllers extends StatelessWidget {
                   title: 'spread radius',
                   value: state.spreadRadius,
                   onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateSpread(v)),
+                ),
+                const Divider(),
+                AppColorPicker(
+                    title: 'Shadow color',
                 ),
               ],
             ),
