@@ -30,6 +30,7 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
         updateBlur: (v) => _blurRadius = v,
         updateOffsetX: (v) => _offset = _offset.copyWith(dx: v),
         updateOffsetY: (v) => _offset = _offset.copyWith(dy: v),
+        updateColor: (v) => _color = v,
       );
 
   void _updateScreen(Emitter<ShadowState> emit) {

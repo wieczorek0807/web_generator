@@ -47,7 +47,8 @@ class Controllers extends StatelessWidget {
                 ),
                 const Divider(),
                 AppColorPicker(
-                    title: 'Shadow color',
+                  title: 'Shadow color:',
+                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateColor(v)),
                 ),
               ],
             ),

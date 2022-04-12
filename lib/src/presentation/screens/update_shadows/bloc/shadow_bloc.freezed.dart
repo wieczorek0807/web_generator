@@ -46,6 +46,12 @@ class _$ShadowEventTearOff {
     );
   }
 
+  _UpdateColor updateColor(Color value) {
+    return _UpdateColor(
+      value,
+    );
+  }
+
   _UpdateColorR updateColorR(double value) {
     return _UpdateColorR(
       value,
@@ -77,6 +83,7 @@ mixin _$ShadowEvent {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -89,6 +96,7 @@ mixin _$ShadowEvent {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -101,6 +109,7 @@ mixin _$ShadowEvent {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -114,6 +123,7 @@ mixin _$ShadowEvent {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -126,6 +136,7 @@ mixin _$ShadowEvent {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -138,6 +149,7 @@ mixin _$ShadowEvent {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -207,6 +219,7 @@ class _$_InitialEvent implements _InitialEvent {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -222,6 +235,7 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -237,6 +251,7 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -256,6 +271,7 @@ class _$_InitialEvent implements _InitialEvent {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -271,6 +287,7 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -286,6 +303,7 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -371,6 +389,7 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -386,6 +405,7 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -401,6 +421,7 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -420,6 +441,7 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -435,6 +457,7 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -450,6 +473,7 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -540,6 +564,7 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -555,6 +580,7 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -570,6 +596,7 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -589,6 +616,7 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -604,6 +632,7 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -619,6 +648,7 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -709,6 +739,7 @@ class _$_UpdateBlur implements _UpdateBlur {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -724,6 +755,7 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -739,6 +771,7 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -758,6 +791,7 @@ class _$_UpdateBlur implements _UpdateBlur {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -773,6 +807,7 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -788,6 +823,7 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -878,6 +914,7 @@ class _$_UpdateRadius implements _UpdateRadius {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -893,6 +930,7 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -908,6 +946,7 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -927,6 +966,7 @@ class _$_UpdateRadius implements _UpdateRadius {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -942,6 +982,7 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -957,6 +998,7 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -975,6 +1017,181 @@ abstract class _UpdateRadius implements ShadowEvent {
   double get value;
   @JsonKey(ignore: true)
   _$UpdateRadiusCopyWith<_UpdateRadius> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$UpdateColorCopyWith<$Res> {
+  factory _$UpdateColorCopyWith(
+          _UpdateColor value, $Res Function(_UpdateColor) then) =
+      __$UpdateColorCopyWithImpl<$Res>;
+  $Res call({Color value});
+}
+
+/// @nodoc
+class __$UpdateColorCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
+    implements _$UpdateColorCopyWith<$Res> {
+  __$UpdateColorCopyWithImpl(
+      _UpdateColor _value, $Res Function(_UpdateColor) _then)
+      : super(_value, (v) => _then(v as _UpdateColor));
+
+  @override
+  _UpdateColor get _value => super._value as _UpdateColor;
+
+  @override
+  $Res call({
+    Object? value = freezed,
+  }) {
+    return _then(_UpdateColor(
+      value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as Color,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateColor implements _UpdateColor {
+  const _$_UpdateColor(this.value);
+
+  @override
+  final Color value;
+
+  @override
+  String toString() {
+    return 'ShadowEvent.updateColor(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _UpdateColor &&
+            const DeepCollectionEquality().equals(other.value, value));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+
+  @JsonKey(ignore: true)
+  @override
+  _$UpdateColorCopyWith<_UpdateColor> get copyWith =>
+      __$UpdateColorCopyWithImpl<_UpdateColor>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(double value) updateOffsetY,
+    required TResult Function(double value) updateOffsetX,
+    required TResult Function(double value) updateBlur,
+    required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
+    required TResult Function(double value) updateColorR,
+    required TResult Function(double value) updateColorG,
+    required TResult Function(double value) updateColorB,
+  }) {
+    return updateColor(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
+    TResult Function(double value)? updateColorR,
+    TResult Function(double value)? updateColorG,
+    TResult Function(double value)? updateColorB,
+  }) {
+    return updateColor?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
+    TResult Function(double value)? updateColorR,
+    TResult Function(double value)? updateColorG,
+    TResult Function(double value)? updateColorB,
+    required TResult orElse(),
+  }) {
+    if (updateColor != null) {
+      return updateColor(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialEvent value) initial,
+    required TResult Function(_UpdateOffsetY value) updateOffsetY,
+    required TResult Function(_UpdateOffsetX value) updateOffsetX,
+    required TResult Function(_UpdateBlur value) updateBlur,
+    required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
+    required TResult Function(_UpdateColorR value) updateColorR,
+    required TResult Function(_UpdateColorG value) updateColorG,
+    required TResult Function(_UpdateColorB value) updateColorB,
+  }) {
+    return updateColor(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
+    TResult Function(_UpdateColorR value)? updateColorR,
+    TResult Function(_UpdateColorG value)? updateColorG,
+    TResult Function(_UpdateColorB value)? updateColorB,
+  }) {
+    return updateColor?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
+    TResult Function(_UpdateColorR value)? updateColorR,
+    TResult Function(_UpdateColorG value)? updateColorG,
+    TResult Function(_UpdateColorB value)? updateColorB,
+    required TResult orElse(),
+  }) {
+    if (updateColor != null) {
+      return updateColor(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateColor implements ShadowEvent {
+  const factory _UpdateColor(Color value) = _$_UpdateColor;
+
+  Color get value;
+  @JsonKey(ignore: true)
+  _$UpdateColorCopyWith<_UpdateColor> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1047,6 +1264,7 @@ class _$_UpdateColorR implements _UpdateColorR {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -1062,6 +1280,7 @@ class _$_UpdateColorR implements _UpdateColorR {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -1077,6 +1296,7 @@ class _$_UpdateColorR implements _UpdateColorR {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -1096,6 +1316,7 @@ class _$_UpdateColorR implements _UpdateColorR {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -1111,6 +1332,7 @@ class _$_UpdateColorR implements _UpdateColorR {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -1126,6 +1348,7 @@ class _$_UpdateColorR implements _UpdateColorR {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -1216,6 +1439,7 @@ class _$_UpdateColorG implements _UpdateColorG {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -1231,6 +1455,7 @@ class _$_UpdateColorG implements _UpdateColorG {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -1246,6 +1471,7 @@ class _$_UpdateColorG implements _UpdateColorG {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -1265,6 +1491,7 @@ class _$_UpdateColorG implements _UpdateColorG {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -1280,6 +1507,7 @@ class _$_UpdateColorG implements _UpdateColorG {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -1295,6 +1523,7 @@ class _$_UpdateColorG implements _UpdateColorG {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -1385,6 +1614,7 @@ class _$_UpdateColorB implements _UpdateColorB {
     required TResult Function(double value) updateOffsetX,
     required TResult Function(double value) updateBlur,
     required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateColor,
     required TResult Function(double value) updateColorR,
     required TResult Function(double value) updateColorG,
     required TResult Function(double value) updateColorB,
@@ -1400,6 +1630,7 @@ class _$_UpdateColorB implements _UpdateColorB {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -1415,6 +1646,7 @@ class _$_UpdateColorB implements _UpdateColorB {
     TResult Function(double value)? updateOffsetX,
     TResult Function(double value)? updateBlur,
     TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateColor,
     TResult Function(double value)? updateColorR,
     TResult Function(double value)? updateColorG,
     TResult Function(double value)? updateColorB,
@@ -1434,6 +1666,7 @@ class _$_UpdateColorB implements _UpdateColorB {
     required TResult Function(_UpdateOffsetX value) updateOffsetX,
     required TResult Function(_UpdateBlur value) updateBlur,
     required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateColor value) updateColor,
     required TResult Function(_UpdateColorR value) updateColorR,
     required TResult Function(_UpdateColorG value) updateColorG,
     required TResult Function(_UpdateColorB value) updateColorB,
@@ -1449,6 +1682,7 @@ class _$_UpdateColorB implements _UpdateColorB {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
@@ -1464,6 +1698,7 @@ class _$_UpdateColorB implements _UpdateColorB {
     TResult Function(_UpdateOffsetX value)? updateOffsetX,
     TResult Function(_UpdateBlur value)? updateBlur,
     TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateColor value)? updateColor,
     TResult Function(_UpdateColorR value)? updateColorR,
     TResult Function(_UpdateColorG value)? updateColorG,
     TResult Function(_UpdateColorB value)? updateColorB,
