@@ -3,21 +3,30 @@ import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
 
 class AppColorPicker extends StatefulWidget {
-  const AppColorPicker({
-    required this.title,
-    required this.onChanged,
-    Key? key
-  }) : super(key: key);
 
   final String title;
   final Function(Color) onChanged;
+  final Color startColor;
+
+  const AppColorPicker({
+    required this.title,
+    required this.onChanged,
+    required this.startColor,
+    Key? key
+  }) : super(key: key);
 
   @override
   State<AppColorPicker> createState() => _AppColorPickerState();
 }
 
 class _AppColorPickerState extends State<AppColorPicker> {
-  Color myColor = Colors.black;
+  Color myColor = Colors.grey.shade200;
+
+  @override
+  void initState() {
+    myColor = widget.startColor;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

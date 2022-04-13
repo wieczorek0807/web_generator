@@ -14,9 +14,6 @@ class ShadowEvent with _$ShadowEvent {
   const factory ShadowEvent.updateSpread(double value) = _UpdateRadius;
 
   // colors
-  const factory ShadowEvent.updateColor(Color value) = _UpdateColor;
-  const factory ShadowEvent.updateColorR(double value) = _UpdateColorR;
-  const factory ShadowEvent.updateColorG(double value) = _UpdateColorG;
-  const factory ShadowEvent.updateColorB(double value) = _UpdateColorB;
-
+  const factory ShadowEvent.updateAnimatedBoxColor(Color value) = _UpdateAnimatedBoxColor;
+  const factory ShadowEvent.updateShadowColor(Color value) = _UpdateShadowColor;
 }

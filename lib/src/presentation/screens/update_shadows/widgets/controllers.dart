@@ -48,7 +48,14 @@ class Controllers extends StatelessWidget {
                 const Divider(),
                 AppColorPicker(
                   title: 'Shadow color:',
-                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateColor(v)),
+                  startColor: Colors.black,
+                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateShadowColor(v)),
+                ),
+                const Divider(),
+                AppColorPicker(
+                  title: 'Box color:',
+                  startColor: Colors.grey,
+                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateAnimatedBoxColor(v)),
                 ),
               ],
             ),

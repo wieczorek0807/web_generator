@@ -22,11 +22,11 @@ class AnimatedBox extends StatelessWidget {
               height: AppDimens.animatedContainerSize,
               width: AppDimens.animatedContainerSize,
               decoration: BoxDecoration(
-                color: Colors.grey[200],
+                color: state.animatedBoxColor,
                 boxShadow: [
                   BoxShadow(
                     blurRadius: state.blurRadius,
-                    color: state.color,
+                    color: state.shadowColor,
                     offset: state.offset,
                     spreadRadius: state.spreadRadius,
                   ),

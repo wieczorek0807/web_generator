@@ -6,7 +6,8 @@ class ShadowState with _$ShadowState {
 
   const factory ShadowState.updateShadow({
     required Offset offset,
-    required Color color,
+    required Color shadowColor,
+    required Color animatedBoxColor,
     required double blurRadius,
     required double spreadRadius,
   }) = _UpdateShadow;

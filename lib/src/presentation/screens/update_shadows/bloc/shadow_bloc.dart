@@ -18,7 +18,8 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
   Offset _offset = Offset.zero;
   double _spreadRadius = 0.0;
   double _blurRadius = 0.0;
-  Color _color = Colors.black;
+  Color _shadowColor = Colors.black;
+  Color _animatedBoxColor = Colors.grey.shade200;
 
   void initialize(){
     add(const ShadowEvent.initial());
@@ -30,7 +31,8 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
         updateBlur: (v) => _blurRadius = v,
         updateOffsetX: (v) => _offset = _offset.copyWith(dx: v),
         updateOffsetY: (v) => _offset = _offset.copyWith(dy: v),
-        updateColor: (v) => _color = v,
+        updateShadowColor: (v) => _shadowColor = v,
+        updateAnimatedBoxColor: (v) => _animatedBoxColor = v,
       );
 
   void _updateScreen(Emitter<ShadowState> emit) {
@@ -38,7 +40,8 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
       spreadRadius: _spreadRadius,
       blurRadius: _blurRadius,
       offset: _offset,
-      color: _color,
+      shadowColor: _shadowColor,
+      animatedBoxColor : _animatedBoxColor,
     ));
   }
 }
