@@ -18,19 +18,24 @@ class ShadowScreen extends StatelessWidget {
       );
 }
 
-class _Body extends StatelessWidget{
+class _Body extends StatelessWidget {
   const _Body();
 
   @override
-  Widget build(BuildContext context) => Center(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: const [
-        Controllers(),
-        SizedBox(width: AppDimens.d100),
-        AnimatedBox(),
-      ],
-    ),
-  );
+  Widget build(BuildContext context) => Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          IconButton(onPressed: () {}, icon: const Icon(Icons.undo)),
+          const SizedBox(height: AppDimens.d72),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: const [
+              Controllers(),
+              SizedBox(width: AppDimens.d100),
+              AnimatedBox(),
+            ],
+          ),
+        ],
+      );
 }
