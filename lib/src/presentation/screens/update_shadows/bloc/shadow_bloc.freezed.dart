@@ -12,73 +12,7 @@ part of 'shadow_bloc.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$ShadowEventTearOff {
-  const _$ShadowEventTearOff();
-
-  _InitialEvent initial() {
-    return const _InitialEvent();
-  }
-
-  _UpdateOffsetY updateOffsetY(double value) {
-    return _UpdateOffsetY(
-      value,
-    );
-  }
-
-  _UpdateOffsetX updateOffsetX(double value) {
-    return _UpdateOffsetX(
-      value,
-    );
-  }
-
-  _UpdateBlur updateBlur(double value) {
-    return _UpdateBlur(
-      value,
-    );
-  }
-
-  _UpdateRadius updateSpread(double value) {
-    return _UpdateRadius(
-      value,
-    );
-  }
-
-  _UpdateAnimatedBoxColor updateAnimatedBoxColor(Color value) {
-    return _UpdateAnimatedBoxColor(
-      value,
-    );
-  }
-
-  _UpdateShadowColor updateShadowColor(Color value) {
-    return _UpdateShadowColor(
-      value,
-    );
-  }
-
-  _UpdateColorR updateColorR(double value) {
-    return _UpdateColorR(
-      value,
-    );
-  }
-
-  _UpdateColorG updateColorG(double value) {
-    return _UpdateColorG(
-      value,
-    );
-  }
-
-  _UpdateColorB updateColorB(double value) {
-    return _UpdateColorB(
-      value,
-    );
-  }
-}
-
-/// @nodoc
-const $ShadowEvent = _$ShadowEventTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 mixin _$ShadowEvent {
@@ -91,23 +25,17 @@ mixin _$ShadowEvent {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -119,9 +47,6 @@ mixin _$ShadowEvent {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -135,23 +60,17 @@ mixin _$ShadowEvent {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -163,9 +82,6 @@ mixin _$ShadowEvent {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -175,34 +91,34 @@ mixin _$ShadowEvent {
 abstract class $ShadowEventCopyWith<$Res> {
   factory $ShadowEventCopyWith(
           ShadowEvent value, $Res Function(ShadowEvent) then) =
-      _$ShadowEventCopyWithImpl<$Res>;
+      _$ShadowEventCopyWithImpl<$Res, ShadowEvent>;
 }
 
 /// @nodoc
-class _$ShadowEventCopyWithImpl<$Res> implements $ShadowEventCopyWith<$Res> {
+class _$ShadowEventCopyWithImpl<$Res, $Val extends ShadowEvent>
+    implements $ShadowEventCopyWith<$Res> {
   _$ShadowEventCopyWithImpl(this._value, this._then);
 
-  final ShadowEvent _value;
   // ignore: unused_field
-  final $Res Function(ShadowEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$InitialEventCopyWith<$Res> {
-  factory _$InitialEventCopyWith(
-          _InitialEvent value, $Res Function(_InitialEvent) then) =
-      __$InitialEventCopyWithImpl<$Res>;
+abstract class _$$_InitialEventCopyWith<$Res> {
+  factory _$$_InitialEventCopyWith(
+          _$_InitialEvent value, $Res Function(_$_InitialEvent) then) =
+      __$$_InitialEventCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitialEventCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$InitialEventCopyWith<$Res> {
-  __$InitialEventCopyWithImpl(
-      _InitialEvent _value, $Res Function(_InitialEvent) _then)
-      : super(_value, (v) => _then(v as _InitialEvent));
-
-  @override
-  _InitialEvent get _value => super._value as _InitialEvent;
+class __$$_InitialEventCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_InitialEvent>
+    implements _$$_InitialEventCopyWith<$Res> {
+  __$$_InitialEventCopyWithImpl(
+      _$_InitialEvent _value, $Res Function(_$_InitialEvent) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -218,7 +134,7 @@ class _$_InitialEvent implements _InitialEvent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _InitialEvent);
+        (other.runtimeType == runtimeType && other is _$_InitialEvent);
   }
 
   @override
@@ -234,9 +150,6 @@ class _$_InitialEvent implements _InitialEvent {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) {
     return initial();
   }
@@ -244,16 +157,13 @@ class _$_InitialEvent implements _InitialEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) {
     return initial?.call();
   }
@@ -268,9 +178,6 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -290,9 +197,6 @@ class _$_InitialEvent implements _InitialEvent {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) {
     return initial(this);
   }
@@ -300,16 +204,13 @@ class _$_InitialEvent implements _InitialEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) {
     return initial?.call(this);
   }
@@ -324,9 +225,6 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -341,29 +239,29 @@ abstract class _InitialEvent implements ShadowEvent {
 }
 
 /// @nodoc
-abstract class _$UpdateOffsetYCopyWith<$Res> {
-  factory _$UpdateOffsetYCopyWith(
-          _UpdateOffsetY value, $Res Function(_UpdateOffsetY) then) =
-      __$UpdateOffsetYCopyWithImpl<$Res>;
+abstract class _$$_UpdateOffsetYCopyWith<$Res> {
+  factory _$$_UpdateOffsetYCopyWith(
+          _$_UpdateOffsetY value, $Res Function(_$_UpdateOffsetY) then) =
+      __$$_UpdateOffsetYCopyWithImpl<$Res>;
+  @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$UpdateOffsetYCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateOffsetYCopyWith<$Res> {
-  __$UpdateOffsetYCopyWithImpl(
-      _UpdateOffsetY _value, $Res Function(_UpdateOffsetY) _then)
-      : super(_value, (v) => _then(v as _UpdateOffsetY));
+class __$$_UpdateOffsetYCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateOffsetY>
+    implements _$$_UpdateOffsetYCopyWith<$Res> {
+  __$$_UpdateOffsetYCopyWithImpl(
+      _$_UpdateOffsetY _value, $Res Function(_$_UpdateOffsetY) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateOffsetY get _value => super._value as _UpdateOffsetY;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(_UpdateOffsetY(
-      value == freezed
+    return _then(_$_UpdateOffsetY(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
@@ -388,18 +286,18 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateOffsetY &&
-            const DeepCollectionEquality().equals(other.value, value));
+            other is _$_UpdateOffsetY &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateOffsetYCopyWith<_UpdateOffsetY> get copyWith =>
-      __$UpdateOffsetYCopyWithImpl<_UpdateOffsetY>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateOffsetYCopyWith<_$_UpdateOffsetY> get copyWith =>
+      __$$_UpdateOffsetYCopyWithImpl<_$_UpdateOffsetY>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -411,9 +309,6 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) {
     return updateOffsetY(value);
   }
@@ -421,16 +316,13 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) {
     return updateOffsetY?.call(value);
   }
@@ -445,9 +337,6 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateOffsetY != null) {
@@ -467,9 +356,6 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) {
     return updateOffsetY(this);
   }
@@ -477,16 +363,13 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) {
     return updateOffsetY?.call(this);
   }
@@ -501,9 +384,6 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateOffsetY != null) {
@@ -514,38 +394,38 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
 }
 
 abstract class _UpdateOffsetY implements ShadowEvent {
-  const factory _UpdateOffsetY(double value) = _$_UpdateOffsetY;
+  const factory _UpdateOffsetY(final double value) = _$_UpdateOffsetY;
 
   double get value;
   @JsonKey(ignore: true)
-  _$UpdateOffsetYCopyWith<_UpdateOffsetY> get copyWith =>
+  _$$_UpdateOffsetYCopyWith<_$_UpdateOffsetY> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$UpdateOffsetXCopyWith<$Res> {
-  factory _$UpdateOffsetXCopyWith(
-          _UpdateOffsetX value, $Res Function(_UpdateOffsetX) then) =
-      __$UpdateOffsetXCopyWithImpl<$Res>;
+abstract class _$$_UpdateOffsetXCopyWith<$Res> {
+  factory _$$_UpdateOffsetXCopyWith(
+          _$_UpdateOffsetX value, $Res Function(_$_UpdateOffsetX) then) =
+      __$$_UpdateOffsetXCopyWithImpl<$Res>;
+  @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$UpdateOffsetXCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateOffsetXCopyWith<$Res> {
-  __$UpdateOffsetXCopyWithImpl(
-      _UpdateOffsetX _value, $Res Function(_UpdateOffsetX) _then)
-      : super(_value, (v) => _then(v as _UpdateOffsetX));
+class __$$_UpdateOffsetXCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateOffsetX>
+    implements _$$_UpdateOffsetXCopyWith<$Res> {
+  __$$_UpdateOffsetXCopyWithImpl(
+      _$_UpdateOffsetX _value, $Res Function(_$_UpdateOffsetX) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateOffsetX get _value => super._value as _UpdateOffsetX;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(_UpdateOffsetX(
-      value == freezed
+    return _then(_$_UpdateOffsetX(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
@@ -570,18 +450,18 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateOffsetX &&
-            const DeepCollectionEquality().equals(other.value, value));
+            other is _$_UpdateOffsetX &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateOffsetXCopyWith<_UpdateOffsetX> get copyWith =>
-      __$UpdateOffsetXCopyWithImpl<_UpdateOffsetX>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateOffsetXCopyWith<_$_UpdateOffsetX> get copyWith =>
+      __$$_UpdateOffsetXCopyWithImpl<_$_UpdateOffsetX>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -593,9 +473,6 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) {
     return updateOffsetX(value);
   }
@@ -603,16 +480,13 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) {
     return updateOffsetX?.call(value);
   }
@@ -627,9 +501,6 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateOffsetX != null) {
@@ -649,9 +520,6 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) {
     return updateOffsetX(this);
   }
@@ -659,16 +527,13 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) {
     return updateOffsetX?.call(this);
   }
@@ -683,9 +548,6 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateOffsetX != null) {
@@ -696,38 +558,38 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
 }
 
 abstract class _UpdateOffsetX implements ShadowEvent {
-  const factory _UpdateOffsetX(double value) = _$_UpdateOffsetX;
+  const factory _UpdateOffsetX(final double value) = _$_UpdateOffsetX;
 
   double get value;
   @JsonKey(ignore: true)
-  _$UpdateOffsetXCopyWith<_UpdateOffsetX> get copyWith =>
+  _$$_UpdateOffsetXCopyWith<_$_UpdateOffsetX> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$UpdateBlurCopyWith<$Res> {
-  factory _$UpdateBlurCopyWith(
-          _UpdateBlur value, $Res Function(_UpdateBlur) then) =
-      __$UpdateBlurCopyWithImpl<$Res>;
+abstract class _$$_UpdateBlurCopyWith<$Res> {
+  factory _$$_UpdateBlurCopyWith(
+          _$_UpdateBlur value, $Res Function(_$_UpdateBlur) then) =
+      __$$_UpdateBlurCopyWithImpl<$Res>;
+  @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$UpdateBlurCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateBlurCopyWith<$Res> {
-  __$UpdateBlurCopyWithImpl(
-      _UpdateBlur _value, $Res Function(_UpdateBlur) _then)
-      : super(_value, (v) => _then(v as _UpdateBlur));
+class __$$_UpdateBlurCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateBlur>
+    implements _$$_UpdateBlurCopyWith<$Res> {
+  __$$_UpdateBlurCopyWithImpl(
+      _$_UpdateBlur _value, $Res Function(_$_UpdateBlur) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateBlur get _value => super._value as _UpdateBlur;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(_UpdateBlur(
-      value == freezed
+    return _then(_$_UpdateBlur(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
@@ -752,18 +614,18 @@ class _$_UpdateBlur implements _UpdateBlur {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateBlur &&
-            const DeepCollectionEquality().equals(other.value, value));
+            other is _$_UpdateBlur &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateBlurCopyWith<_UpdateBlur> get copyWith =>
-      __$UpdateBlurCopyWithImpl<_UpdateBlur>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateBlurCopyWith<_$_UpdateBlur> get copyWith =>
+      __$$_UpdateBlurCopyWithImpl<_$_UpdateBlur>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -775,9 +637,6 @@ class _$_UpdateBlur implements _UpdateBlur {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) {
     return updateBlur(value);
   }
@@ -785,16 +644,13 @@ class _$_UpdateBlur implements _UpdateBlur {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) {
     return updateBlur?.call(value);
   }
@@ -809,9 +665,6 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateBlur != null) {
@@ -831,9 +684,6 @@ class _$_UpdateBlur implements _UpdateBlur {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) {
     return updateBlur(this);
   }
@@ -841,16 +691,13 @@ class _$_UpdateBlur implements _UpdateBlur {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) {
     return updateBlur?.call(this);
   }
@@ -865,9 +712,6 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateBlur != null) {
@@ -878,38 +722,38 @@ class _$_UpdateBlur implements _UpdateBlur {
 }
 
 abstract class _UpdateBlur implements ShadowEvent {
-  const factory _UpdateBlur(double value) = _$_UpdateBlur;
+  const factory _UpdateBlur(final double value) = _$_UpdateBlur;
 
   double get value;
   @JsonKey(ignore: true)
-  _$UpdateBlurCopyWith<_UpdateBlur> get copyWith =>
+  _$$_UpdateBlurCopyWith<_$_UpdateBlur> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$UpdateRadiusCopyWith<$Res> {
-  factory _$UpdateRadiusCopyWith(
-          _UpdateRadius value, $Res Function(_UpdateRadius) then) =
-      __$UpdateRadiusCopyWithImpl<$Res>;
+abstract class _$$_UpdateRadiusCopyWith<$Res> {
+  factory _$$_UpdateRadiusCopyWith(
+          _$_UpdateRadius value, $Res Function(_$_UpdateRadius) then) =
+      __$$_UpdateRadiusCopyWithImpl<$Res>;
+  @useResult
   $Res call({double value});
 }
 
 /// @nodoc
-class __$UpdateRadiusCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateRadiusCopyWith<$Res> {
-  __$UpdateRadiusCopyWithImpl(
-      _UpdateRadius _value, $Res Function(_UpdateRadius) _then)
-      : super(_value, (v) => _then(v as _UpdateRadius));
+class __$$_UpdateRadiusCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateRadius>
+    implements _$$_UpdateRadiusCopyWith<$Res> {
+  __$$_UpdateRadiusCopyWithImpl(
+      _$_UpdateRadius _value, $Res Function(_$_UpdateRadius) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateRadius get _value => super._value as _UpdateRadius;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(_UpdateRadius(
-      value == freezed
+    return _then(_$_UpdateRadius(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as double,
@@ -934,18 +778,18 @@ class _$_UpdateRadius implements _UpdateRadius {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateRadius &&
-            const DeepCollectionEquality().equals(other.value, value));
+            other is _$_UpdateRadius &&
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateRadiusCopyWith<_UpdateRadius> get copyWith =>
-      __$UpdateRadiusCopyWithImpl<_UpdateRadius>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateRadiusCopyWith<_$_UpdateRadius> get copyWith =>
+      __$$_UpdateRadiusCopyWithImpl<_$_UpdateRadius>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -957,9 +801,6 @@ class _$_UpdateRadius implements _UpdateRadius {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) {
     return updateSpread(value);
   }
@@ -967,16 +808,13 @@ class _$_UpdateRadius implements _UpdateRadius {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) {
     return updateSpread?.call(value);
   }
@@ -991,9 +829,6 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateSpread != null) {
@@ -1013,9 +848,6 @@ class _$_UpdateRadius implements _UpdateRadius {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) {
     return updateSpread(this);
   }
@@ -1023,16 +855,13 @@ class _$_UpdateRadius implements _UpdateRadius {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) {
     return updateSpread?.call(this);
   }
@@ -1047,9 +876,6 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateSpread != null) {
@@ -1060,39 +886,38 @@ class _$_UpdateRadius implements _UpdateRadius {
 }
 
 abstract class _UpdateRadius implements ShadowEvent {
-  const factory _UpdateRadius(double value) = _$_UpdateRadius;
+  const factory _UpdateRadius(final double value) = _$_UpdateRadius;
 
   double get value;
   @JsonKey(ignore: true)
-  _$UpdateRadiusCopyWith<_UpdateRadius> get copyWith =>
+  _$$_UpdateRadiusCopyWith<_$_UpdateRadius> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$UpdateAnimatedBoxColorCopyWith<$Res> {
-  factory _$UpdateAnimatedBoxColorCopyWith(_UpdateAnimatedBoxColor value,
-          $Res Function(_UpdateAnimatedBoxColor) then) =
-      __$UpdateAnimatedBoxColorCopyWithImpl<$Res>;
+abstract class _$$_UpdateAnimatedBoxColorCopyWith<$Res> {
+  factory _$$_UpdateAnimatedBoxColorCopyWith(_$_UpdateAnimatedBoxColor value,
+          $Res Function(_$_UpdateAnimatedBoxColor) then) =
+      __$$_UpdateAnimatedBoxColorCopyWithImpl<$Res>;
+  @useResult
   $Res call({Color value});
 }
 
 /// @nodoc
-class __$UpdateAnimatedBoxColorCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateAnimatedBoxColorCopyWith<$Res> {
-  __$UpdateAnimatedBoxColorCopyWithImpl(_UpdateAnimatedBoxColor _value,
-      $Res Function(_UpdateAnimatedBoxColor) _then)
-      : super(_value, (v) => _then(v as _UpdateAnimatedBoxColor));
+class __$$_UpdateAnimatedBoxColorCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateAnimatedBoxColor>
+    implements _$$_UpdateAnimatedBoxColorCopyWith<$Res> {
+  __$$_UpdateAnimatedBoxColorCopyWithImpl(_$_UpdateAnimatedBoxColor _value,
+      $Res Function(_$_UpdateAnimatedBoxColor) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateAnimatedBoxColor get _value => super._value as _UpdateAnimatedBoxColor;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(_UpdateAnimatedBoxColor(
-      value == freezed
+    return _then(_$_UpdateAnimatedBoxColor(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as Color,
@@ -1117,7 +942,7 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateAnimatedBoxColor &&
+            other is _$_UpdateAnimatedBoxColor &&
             const DeepCollectionEquality().equals(other.value, value));
   }
 
@@ -1127,8 +952,9 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateAnimatedBoxColorCopyWith<_UpdateAnimatedBoxColor> get copyWith =>
-      __$UpdateAnimatedBoxColorCopyWithImpl<_UpdateAnimatedBoxColor>(
+  @pragma('vm:prefer-inline')
+  _$$_UpdateAnimatedBoxColorCopyWith<_$_UpdateAnimatedBoxColor> get copyWith =>
+      __$$_UpdateAnimatedBoxColorCopyWithImpl<_$_UpdateAnimatedBoxColor>(
           this, _$identity);
 
   @override
@@ -1141,9 +967,6 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) {
     return updateAnimatedBoxColor(value);
   }
@@ -1151,16 +974,13 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) {
     return updateAnimatedBoxColor?.call(value);
   }
@@ -1175,9 +995,6 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateAnimatedBoxColor != null) {
@@ -1197,9 +1014,6 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) {
     return updateAnimatedBoxColor(this);
   }
@@ -1207,16 +1021,13 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) {
     return updateAnimatedBoxColor?.call(this);
   }
@@ -1231,9 +1042,6 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateAnimatedBoxColor != null) {
@@ -1244,40 +1052,39 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
 }
 
 abstract class _UpdateAnimatedBoxColor implements ShadowEvent {
-  const factory _UpdateAnimatedBoxColor(Color value) =
+  const factory _UpdateAnimatedBoxColor(final Color value) =
       _$_UpdateAnimatedBoxColor;
 
   Color get value;
   @JsonKey(ignore: true)
-  _$UpdateAnimatedBoxColorCopyWith<_UpdateAnimatedBoxColor> get copyWith =>
+  _$$_UpdateAnimatedBoxColorCopyWith<_$_UpdateAnimatedBoxColor> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$UpdateShadowColorCopyWith<$Res> {
-  factory _$UpdateShadowColorCopyWith(
-          _UpdateShadowColor value, $Res Function(_UpdateShadowColor) then) =
-      __$UpdateShadowColorCopyWithImpl<$Res>;
+abstract class _$$_UpdateShadowColorCopyWith<$Res> {
+  factory _$$_UpdateShadowColorCopyWith(_$_UpdateShadowColor value,
+          $Res Function(_$_UpdateShadowColor) then) =
+      __$$_UpdateShadowColorCopyWithImpl<$Res>;
+  @useResult
   $Res call({Color value});
 }
 
 /// @nodoc
-class __$UpdateShadowColorCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateShadowColorCopyWith<$Res> {
-  __$UpdateShadowColorCopyWithImpl(
-      _UpdateShadowColor _value, $Res Function(_UpdateShadowColor) _then)
-      : super(_value, (v) => _then(v as _UpdateShadowColor));
+class __$$_UpdateShadowColorCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateShadowColor>
+    implements _$$_UpdateShadowColorCopyWith<$Res> {
+  __$$_UpdateShadowColorCopyWithImpl(
+      _$_UpdateShadowColor _value, $Res Function(_$_UpdateShadowColor) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateShadowColor get _value => super._value as _UpdateShadowColor;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? value = freezed,
+    Object? value = null,
   }) {
-    return _then(_UpdateShadowColor(
-      value == freezed
+    return _then(_$_UpdateShadowColor(
+      null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as Color,
@@ -1302,7 +1109,7 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateShadowColor &&
+            other is _$_UpdateShadowColor &&
             const DeepCollectionEquality().equals(other.value, value));
   }
 
@@ -1312,8 +1119,10 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateShadowColorCopyWith<_UpdateShadowColor> get copyWith =>
-      __$UpdateShadowColorCopyWithImpl<_UpdateShadowColor>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateShadowColorCopyWith<_$_UpdateShadowColor> get copyWith =>
+      __$$_UpdateShadowColorCopyWithImpl<_$_UpdateShadowColor>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1325,9 +1134,6 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
   }) {
     return updateShadowColor(value);
   }
@@ -1335,16 +1141,13 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
   }) {
     return updateShadowColor?.call(value);
   }
@@ -1359,9 +1162,6 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateShadowColor != null) {
@@ -1381,9 +1181,6 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
   }) {
     return updateShadowColor(this);
   }
@@ -1391,16 +1188,13 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
   }) {
     return updateShadowColor?.call(this);
   }
@@ -1415,9 +1209,6 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
     required TResult orElse(),
   }) {
     if (updateShadowColor != null) {
@@ -1428,586 +1219,13 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
 }
 
 abstract class _UpdateShadowColor implements ShadowEvent {
-  const factory _UpdateShadowColor(Color value) = _$_UpdateShadowColor;
+  const factory _UpdateShadowColor(final Color value) = _$_UpdateShadowColor;
 
   Color get value;
   @JsonKey(ignore: true)
-  _$UpdateShadowColorCopyWith<_UpdateShadowColor> get copyWith =>
+  _$$_UpdateShadowColorCopyWith<_$_UpdateShadowColor> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-abstract class _$UpdateColorRCopyWith<$Res> {
-  factory _$UpdateColorRCopyWith(
-          _UpdateColorR value, $Res Function(_UpdateColorR) then) =
-      __$UpdateColorRCopyWithImpl<$Res>;
-  $Res call({double value});
-}
-
-/// @nodoc
-class __$UpdateColorRCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateColorRCopyWith<$Res> {
-  __$UpdateColorRCopyWithImpl(
-      _UpdateColorR _value, $Res Function(_UpdateColorR) _then)
-      : super(_value, (v) => _then(v as _UpdateColorR));
-
-  @override
-  _UpdateColorR get _value => super._value as _UpdateColorR;
-
-  @override
-  $Res call({
-    Object? value = freezed,
-  }) {
-    return _then(_UpdateColorR(
-      value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_UpdateColorR implements _UpdateColorR {
-  const _$_UpdateColorR(this.value);
-
-  @override
-  final double value;
-
-  @override
-  String toString() {
-    return 'ShadowEvent.updateColorR(value: $value)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _UpdateColorR &&
-            const DeepCollectionEquality().equals(other.value, value));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
-
-  @JsonKey(ignore: true)
-  @override
-  _$UpdateColorRCopyWith<_UpdateColorR> get copyWith =>
-      __$UpdateColorRCopyWithImpl<_UpdateColorR>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(double value) updateOffsetY,
-    required TResult Function(double value) updateOffsetX,
-    required TResult Function(double value) updateBlur,
-    required TResult Function(double value) updateSpread,
-    required TResult Function(Color value) updateAnimatedBoxColor,
-    required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
-  }) {
-    return updateColorR(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
-  }) {
-    return updateColorR?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
-    required TResult orElse(),
-  }) {
-    if (updateColorR != null) {
-      return updateColorR(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialEvent value) initial,
-    required TResult Function(_UpdateOffsetY value) updateOffsetY,
-    required TResult Function(_UpdateOffsetX value) updateOffsetX,
-    required TResult Function(_UpdateBlur value) updateBlur,
-    required TResult Function(_UpdateRadius value) updateSpread,
-    required TResult Function(_UpdateAnimatedBoxColor value)
-        updateAnimatedBoxColor,
-    required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
-  }) {
-    return updateColorR(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
-  }) {
-    return updateColorR?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
-    required TResult orElse(),
-  }) {
-    if (updateColorR != null) {
-      return updateColorR(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateColorR implements ShadowEvent {
-  const factory _UpdateColorR(double value) = _$_UpdateColorR;
-
-  double get value;
-  @JsonKey(ignore: true)
-  _$UpdateColorRCopyWith<_UpdateColorR> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$UpdateColorGCopyWith<$Res> {
-  factory _$UpdateColorGCopyWith(
-          _UpdateColorG value, $Res Function(_UpdateColorG) then) =
-      __$UpdateColorGCopyWithImpl<$Res>;
-  $Res call({double value});
-}
-
-/// @nodoc
-class __$UpdateColorGCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateColorGCopyWith<$Res> {
-  __$UpdateColorGCopyWithImpl(
-      _UpdateColorG _value, $Res Function(_UpdateColorG) _then)
-      : super(_value, (v) => _then(v as _UpdateColorG));
-
-  @override
-  _UpdateColorG get _value => super._value as _UpdateColorG;
-
-  @override
-  $Res call({
-    Object? value = freezed,
-  }) {
-    return _then(_UpdateColorG(
-      value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_UpdateColorG implements _UpdateColorG {
-  const _$_UpdateColorG(this.value);
-
-  @override
-  final double value;
-
-  @override
-  String toString() {
-    return 'ShadowEvent.updateColorG(value: $value)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _UpdateColorG &&
-            const DeepCollectionEquality().equals(other.value, value));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
-
-  @JsonKey(ignore: true)
-  @override
-  _$UpdateColorGCopyWith<_UpdateColorG> get copyWith =>
-      __$UpdateColorGCopyWithImpl<_UpdateColorG>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(double value) updateOffsetY,
-    required TResult Function(double value) updateOffsetX,
-    required TResult Function(double value) updateBlur,
-    required TResult Function(double value) updateSpread,
-    required TResult Function(Color value) updateAnimatedBoxColor,
-    required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
-  }) {
-    return updateColorG(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
-  }) {
-    return updateColorG?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
-    required TResult orElse(),
-  }) {
-    if (updateColorG != null) {
-      return updateColorG(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialEvent value) initial,
-    required TResult Function(_UpdateOffsetY value) updateOffsetY,
-    required TResult Function(_UpdateOffsetX value) updateOffsetX,
-    required TResult Function(_UpdateBlur value) updateBlur,
-    required TResult Function(_UpdateRadius value) updateSpread,
-    required TResult Function(_UpdateAnimatedBoxColor value)
-        updateAnimatedBoxColor,
-    required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
-  }) {
-    return updateColorG(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
-  }) {
-    return updateColorG?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
-    required TResult orElse(),
-  }) {
-    if (updateColorG != null) {
-      return updateColorG(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateColorG implements ShadowEvent {
-  const factory _UpdateColorG(double value) = _$_UpdateColorG;
-
-  double get value;
-  @JsonKey(ignore: true)
-  _$UpdateColorGCopyWith<_UpdateColorG> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$UpdateColorBCopyWith<$Res> {
-  factory _$UpdateColorBCopyWith(
-          _UpdateColorB value, $Res Function(_UpdateColorB) then) =
-      __$UpdateColorBCopyWithImpl<$Res>;
-  $Res call({double value});
-}
-
-/// @nodoc
-class __$UpdateColorBCopyWithImpl<$Res> extends _$ShadowEventCopyWithImpl<$Res>
-    implements _$UpdateColorBCopyWith<$Res> {
-  __$UpdateColorBCopyWithImpl(
-      _UpdateColorB _value, $Res Function(_UpdateColorB) _then)
-      : super(_value, (v) => _then(v as _UpdateColorB));
-
-  @override
-  _UpdateColorB get _value => super._value as _UpdateColorB;
-
-  @override
-  $Res call({
-    Object? value = freezed,
-  }) {
-    return _then(_UpdateColorB(
-      value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as double,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_UpdateColorB implements _UpdateColorB {
-  const _$_UpdateColorB(this.value);
-
-  @override
-  final double value;
-
-  @override
-  String toString() {
-    return 'ShadowEvent.updateColorB(value: $value)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _UpdateColorB &&
-            const DeepCollectionEquality().equals(other.value, value));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
-
-  @JsonKey(ignore: true)
-  @override
-  _$UpdateColorBCopyWith<_UpdateColorB> get copyWith =>
-      __$UpdateColorBCopyWithImpl<_UpdateColorB>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(double value) updateOffsetY,
-    required TResult Function(double value) updateOffsetX,
-    required TResult Function(double value) updateBlur,
-    required TResult Function(double value) updateSpread,
-    required TResult Function(Color value) updateAnimatedBoxColor,
-    required TResult Function(Color value) updateShadowColor,
-    required TResult Function(double value) updateColorR,
-    required TResult Function(double value) updateColorG,
-    required TResult Function(double value) updateColorB,
-  }) {
-    return updateColorB(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
-  }) {
-    return updateColorB?.call(value);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(double value)? updateOffsetY,
-    TResult Function(double value)? updateOffsetX,
-    TResult Function(double value)? updateBlur,
-    TResult Function(double value)? updateSpread,
-    TResult Function(Color value)? updateAnimatedBoxColor,
-    TResult Function(Color value)? updateShadowColor,
-    TResult Function(double value)? updateColorR,
-    TResult Function(double value)? updateColorG,
-    TResult Function(double value)? updateColorB,
-    required TResult orElse(),
-  }) {
-    if (updateColorB != null) {
-      return updateColorB(value);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialEvent value) initial,
-    required TResult Function(_UpdateOffsetY value) updateOffsetY,
-    required TResult Function(_UpdateOffsetX value) updateOffsetX,
-    required TResult Function(_UpdateBlur value) updateBlur,
-    required TResult Function(_UpdateRadius value) updateSpread,
-    required TResult Function(_UpdateAnimatedBoxColor value)
-        updateAnimatedBoxColor,
-    required TResult Function(_UpdateShadowColor value) updateShadowColor,
-    required TResult Function(_UpdateColorR value) updateColorR,
-    required TResult Function(_UpdateColorG value) updateColorG,
-    required TResult Function(_UpdateColorB value) updateColorB,
-  }) {
-    return updateColorB(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
-  }) {
-    return updateColorB?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialEvent value)? initial,
-    TResult Function(_UpdateOffsetY value)? updateOffsetY,
-    TResult Function(_UpdateOffsetX value)? updateOffsetX,
-    TResult Function(_UpdateBlur value)? updateBlur,
-    TResult Function(_UpdateRadius value)? updateSpread,
-    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
-    TResult Function(_UpdateShadowColor value)? updateShadowColor,
-    TResult Function(_UpdateColorR value)? updateColorR,
-    TResult Function(_UpdateColorG value)? updateColorG,
-    TResult Function(_UpdateColorB value)? updateColorB,
-    required TResult orElse(),
-  }) {
-    if (updateColorB != null) {
-      return updateColorB(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _UpdateColorB implements ShadowEvent {
-  const factory _UpdateColorB(double value) = _$_UpdateColorB;
-
-  double get value;
-  @JsonKey(ignore: true)
-  _$UpdateColorBCopyWith<_UpdateColorB> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-class _$ShadowStateTearOff {
-  const _$ShadowStateTearOff();
-
-  _InitialState initial() {
-    return const _InitialState();
-  }
-
-  _UpdateShadow updateShadow(
-      {required Offset offset,
-      required Color shadowColor,
-      required Color animatedBoxColor,
-      required double blurRadius,
-      required double spreadRadius}) {
-    return _UpdateShadow(
-      offset: offset,
-      shadowColor: shadowColor,
-      animatedBoxColor: animatedBoxColor,
-      blurRadius: blurRadius,
-      spreadRadius: spreadRadius,
-    );
-  }
-}
-
-/// @nodoc
-const $ShadowState = _$ShadowStateTearOff();
 
 /// @nodoc
 mixin _$ShadowState {
@@ -2021,8 +1239,8 @@ mixin _$ShadowState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
+    TResult? Function()? initial,
+    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
   }) =>
@@ -2044,8 +1262,8 @@ mixin _$ShadowState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialState value)? initial,
-    TResult Function(_UpdateShadow value)? updateShadow,
+    TResult? Function(_InitialState value)? initial,
+    TResult? Function(_UpdateShadow value)? updateShadow,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -2061,34 +1279,34 @@ mixin _$ShadowState {
 abstract class $ShadowStateCopyWith<$Res> {
   factory $ShadowStateCopyWith(
           ShadowState value, $Res Function(ShadowState) then) =
-      _$ShadowStateCopyWithImpl<$Res>;
+      _$ShadowStateCopyWithImpl<$Res, ShadowState>;
 }
 
 /// @nodoc
-class _$ShadowStateCopyWithImpl<$Res> implements $ShadowStateCopyWith<$Res> {
+class _$ShadowStateCopyWithImpl<$Res, $Val extends ShadowState>
+    implements $ShadowStateCopyWith<$Res> {
   _$ShadowStateCopyWithImpl(this._value, this._then);
 
-  final ShadowState _value;
   // ignore: unused_field
-  final $Res Function(ShadowState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$InitialStateCopyWith<$Res> {
-  factory _$InitialStateCopyWith(
-          _InitialState value, $Res Function(_InitialState) then) =
-      __$InitialStateCopyWithImpl<$Res>;
+abstract class _$$_InitialStateCopyWith<$Res> {
+  factory _$$_InitialStateCopyWith(
+          _$_InitialState value, $Res Function(_$_InitialState) then) =
+      __$$_InitialStateCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$InitialStateCopyWithImpl<$Res> extends _$ShadowStateCopyWithImpl<$Res>
-    implements _$InitialStateCopyWith<$Res> {
-  __$InitialStateCopyWithImpl(
-      _InitialState _value, $Res Function(_InitialState) _then)
-      : super(_value, (v) => _then(v as _InitialState));
-
-  @override
-  _InitialState get _value => super._value as _InitialState;
+class __$$_InitialStateCopyWithImpl<$Res>
+    extends _$ShadowStateCopyWithImpl<$Res, _$_InitialState>
+    implements _$$_InitialStateCopyWith<$Res> {
+  __$$_InitialStateCopyWithImpl(
+      _$_InitialState _value, $Res Function(_$_InitialState) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
@@ -2104,7 +1322,7 @@ class _$_InitialState implements _InitialState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _InitialState);
+        (other.runtimeType == runtimeType && other is _$_InitialState);
   }
 
   @override
@@ -2124,8 +1342,8 @@ class _$_InitialState implements _InitialState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
+    TResult? Function()? initial,
+    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
   }) {
@@ -2159,8 +1377,8 @@ class _$_InitialState implements _InitialState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialState value)? initial,
-    TResult Function(_UpdateShadow value)? updateShadow,
+    TResult? Function(_InitialState value)? initial,
+    TResult? Function(_UpdateShadow value)? updateShadow,
   }) {
     return initial?.call(this);
   }
@@ -2184,10 +1402,11 @@ abstract class _InitialState implements ShadowState {
 }
 
 /// @nodoc
-abstract class _$UpdateShadowCopyWith<$Res> {
-  factory _$UpdateShadowCopyWith(
-          _UpdateShadow value, $Res Function(_UpdateShadow) then) =
-      __$UpdateShadowCopyWithImpl<$Res>;
+abstract class _$$_UpdateShadowCopyWith<$Res> {
+  factory _$$_UpdateShadowCopyWith(
+          _$_UpdateShadow value, $Res Function(_$_UpdateShadow) then) =
+      __$$_UpdateShadowCopyWithImpl<$Res>;
+  @useResult
   $Res call(
       {Offset offset,
       Color shadowColor,
@@ -2197,41 +1416,40 @@ abstract class _$UpdateShadowCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$UpdateShadowCopyWithImpl<$Res> extends _$ShadowStateCopyWithImpl<$Res>
-    implements _$UpdateShadowCopyWith<$Res> {
-  __$UpdateShadowCopyWithImpl(
-      _UpdateShadow _value, $Res Function(_UpdateShadow) _then)
-      : super(_value, (v) => _then(v as _UpdateShadow));
+class __$$_UpdateShadowCopyWithImpl<$Res>
+    extends _$ShadowStateCopyWithImpl<$Res, _$_UpdateShadow>
+    implements _$$_UpdateShadowCopyWith<$Res> {
+  __$$_UpdateShadowCopyWithImpl(
+      _$_UpdateShadow _value, $Res Function(_$_UpdateShadow) _then)
+      : super(_value, _then);
 
-  @override
-  _UpdateShadow get _value => super._value as _UpdateShadow;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? offset = freezed,
-    Object? shadowColor = freezed,
-    Object? animatedBoxColor = freezed,
-    Object? blurRadius = freezed,
-    Object? spreadRadius = freezed,
+    Object? offset = null,
+    Object? shadowColor = null,
+    Object? animatedBoxColor = null,
+    Object? blurRadius = null,
+    Object? spreadRadius = null,
   }) {
-    return _then(_UpdateShadow(
-      offset: offset == freezed
+    return _then(_$_UpdateShadow(
+      offset: null == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
               as Offset,
-      shadowColor: shadowColor == freezed
+      shadowColor: null == shadowColor
           ? _value.shadowColor
           : shadowColor // ignore: cast_nullable_to_non_nullable
               as Color,
-      animatedBoxColor: animatedBoxColor == freezed
+      animatedBoxColor: null == animatedBoxColor
           ? _value.animatedBoxColor
           : animatedBoxColor // ignore: cast_nullable_to_non_nullable
               as Color,
-      blurRadius: blurRadius == freezed
+      blurRadius: null == blurRadius
           ? _value.blurRadius
           : blurRadius // ignore: cast_nullable_to_non_nullable
               as double,
-      spreadRadius: spreadRadius == freezed
+      spreadRadius: null == spreadRadius
           ? _value.spreadRadius
           : spreadRadius // ignore: cast_nullable_to_non_nullable
               as double,
@@ -2269,16 +1487,16 @@ class _$_UpdateShadow implements _UpdateShadow {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _UpdateShadow &&
+            other is _$_UpdateShadow &&
             const DeepCollectionEquality().equals(other.offset, offset) &&
             const DeepCollectionEquality()
                 .equals(other.shadowColor, shadowColor) &&
             const DeepCollectionEquality()
                 .equals(other.animatedBoxColor, animatedBoxColor) &&
-            const DeepCollectionEquality()
-                .equals(other.blurRadius, blurRadius) &&
-            const DeepCollectionEquality()
-                .equals(other.spreadRadius, spreadRadius));
+            (identical(other.blurRadius, blurRadius) ||
+                other.blurRadius == blurRadius) &&
+            (identical(other.spreadRadius, spreadRadius) ||
+                other.spreadRadius == spreadRadius));
   }
 
   @override
@@ -2287,13 +1505,14 @@ class _$_UpdateShadow implements _UpdateShadow {
       const DeepCollectionEquality().hash(offset),
       const DeepCollectionEquality().hash(shadowColor),
       const DeepCollectionEquality().hash(animatedBoxColor),
-      const DeepCollectionEquality().hash(blurRadius),
-      const DeepCollectionEquality().hash(spreadRadius));
+      blurRadius,
+      spreadRadius);
 
   @JsonKey(ignore: true)
   @override
-  _$UpdateShadowCopyWith<_UpdateShadow> get copyWith =>
-      __$UpdateShadowCopyWithImpl<_UpdateShadow>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$_UpdateShadowCopyWith<_$_UpdateShadow> get copyWith =>
+      __$$_UpdateShadowCopyWithImpl<_$_UpdateShadow>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2310,8 +1529,8 @@ class _$_UpdateShadow implements _UpdateShadow {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
+    TResult? Function()? initial,
+    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
   }) {
@@ -2347,8 +1566,8 @@ class _$_UpdateShadow implements _UpdateShadow {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InitialState value)? initial,
-    TResult Function(_UpdateShadow value)? updateShadow,
+    TResult? Function(_InitialState value)? initial,
+    TResult? Function(_UpdateShadow value)? updateShadow,
   }) {
     return updateShadow?.call(this);
   }
@@ -2369,11 +1588,11 @@ class _$_UpdateShadow implements _UpdateShadow {
 
 abstract class _UpdateShadow implements ShadowState {
   const factory _UpdateShadow(
-      {required Offset offset,
-      required Color shadowColor,
-      required Color animatedBoxColor,
-      required double blurRadius,
-      required double spreadRadius}) = _$_UpdateShadow;
+      {required final Offset offset,
+      required final Color shadowColor,
+      required final Color animatedBoxColor,
+      required final double blurRadius,
+      required final double spreadRadius}) = _$_UpdateShadow;
 
   Offset get offset;
   Color get shadowColor;
@@ -2381,6 +1600,6 @@ abstract class _UpdateShadow implements ShadowState {
   double get blurRadius;
   double get spreadRadius;
   @JsonKey(ignore: true)
-  _$UpdateShadowCopyWith<_UpdateShadow> get copyWith =>
+  _$$_UpdateShadowCopyWith<_$_UpdateShadow> get copyWith =>
       throw _privateConstructorUsedError;
 }
