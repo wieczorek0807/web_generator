@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:box_shadow_generator/src/core/extension/offset.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -21,7 +22,7 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
   Color _shadowColor = Colors.black;
   Color _animatedBoxColor = Colors.grey.shade200;
 
-  void initialize(){
+  void initialize() {
     add(const ShadowEvent.initial());
   }
 
@@ -41,7 +42,7 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
       blurRadius: _blurRadius,
       offset: _offset,
       shadowColor: _shadowColor,
-      animatedBoxColor : _animatedBoxColor,
+      animatedBoxColor: _animatedBoxColor,
     ));
   }
 }

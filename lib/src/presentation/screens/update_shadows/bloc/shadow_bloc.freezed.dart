@@ -123,12 +123,18 @@ class __$$_InitialEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialEvent implements _InitialEvent {
+class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
   const _$_InitialEvent();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowEvent.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'ShadowEvent.initial'));
   }
 
   @override
@@ -271,15 +277,23 @@ class __$$_UpdateOffsetYCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetY implements _UpdateOffsetY {
+class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
   const _$_UpdateOffsetY(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowEvent.updateOffsetY(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateOffsetY'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -435,15 +449,23 @@ class __$$_UpdateOffsetXCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetX implements _UpdateOffsetX {
+class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
   const _$_UpdateOffsetX(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowEvent.updateOffsetX(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateOffsetX'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -599,15 +621,23 @@ class __$$_UpdateBlurCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBlur implements _UpdateBlur {
+class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
   const _$_UpdateBlur(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowEvent.updateBlur(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateBlur'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -763,15 +793,23 @@ class __$$_UpdateRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateRadius implements _UpdateRadius {
+class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
   const _$_UpdateRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowEvent.updateSpread(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateSpread'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -927,15 +965,25 @@ class __$$_UpdateAnimatedBoxColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
+class _$_UpdateAnimatedBoxColor
+    with DiagnosticableTreeMixin
+    implements _UpdateAnimatedBoxColor {
   const _$_UpdateAnimatedBoxColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowEvent.updateAnimatedBoxColor(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateAnimatedBoxColor'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1094,15 +1142,25 @@ class __$$_UpdateShadowColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateShadowColor implements _UpdateShadowColor {
+class _$_UpdateShadowColor
+    with DiagnosticableTreeMixin
+    implements _UpdateShadowColor {
   const _$_UpdateShadowColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowEvent.updateShadowColor(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateShadowColor'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1311,12 +1369,18 @@ class __$$_InitialStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialState implements _InitialState {
+class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   const _$_InitialState();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'ShadowState.initial'));
   }
 
   @override
@@ -1459,7 +1523,7 @@ class __$$_UpdateShadowCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateShadow implements _UpdateShadow {
+class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
   const _$_UpdateShadow(
       {required this.offset,
       required this.shadowColor,
@@ -1479,8 +1543,20 @@ class _$_UpdateShadow implements _UpdateShadow {
   final double spreadRadius;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'ShadowState.updateShadow(offset: $offset, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowState.updateShadow'))
+      ..add(DiagnosticsProperty('offset', offset))
+      ..add(DiagnosticsProperty('shadowColor', shadowColor))
+      ..add(DiagnosticsProperty('animatedBoxColor', animatedBoxColor))
+      ..add(DiagnosticsProperty('blurRadius', blurRadius))
+      ..add(DiagnosticsProperty('spreadRadius', spreadRadius));
   }
 
   @override

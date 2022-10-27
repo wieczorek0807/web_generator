@@ -29,4 +29,20 @@ class Shadow extends HiveObject {
       required this.blurRadius,
       required this.shadowColor,
       required this.animatedBoxColor});
+
+  Shadow copyWith(
+      {double? offsetDx,
+      double? offsetDy,
+      double? spreadRadius,
+      double? blurRadius,
+      int? shadowColor,
+      int? animatedBoxColor}) {
+    return Shadow(
+        offsetDx: offsetDx ?? this.offsetDx,
+        offsetDy: offsetDy ?? this.offsetDy,
+        spreadRadius: spreadRadius ?? this.spreadRadius,
+        blurRadius: blurRadius ?? this.blurRadius,
+        shadowColor: shadowColor ?? this.shadowColor,
+        animatedBoxColor: animatedBoxColor ?? this.animatedBoxColor);
+  }
 }
