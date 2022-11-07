@@ -16,4 +16,7 @@ class ShadowEvent with _$ShadowEvent {
   const factory ShadowEvent.updateAnimatedBoxColor(Color value) =
       _UpdateAnimatedBoxColor;
   const factory ShadowEvent.updateShadowColor(Color value) = _UpdateShadowColor;
+
+  //undo changes
+  const factory ShadowEvent.undoAnimatedBox() = _UndoAnimatedBox;
 }

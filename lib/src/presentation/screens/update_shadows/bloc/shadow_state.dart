@@ -11,4 +11,7 @@ class ShadowState with _$ShadowState {
     required double blurRadius,
     required double spreadRadius,
   }) = _UpdateShadow;
+
+  const factory ShadowState.shadowLoaded({required Shadow shadow}) =
+      _ShadowLoaded;
 }

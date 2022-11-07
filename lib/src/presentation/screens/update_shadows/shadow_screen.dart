@@ -1,4 +1,5 @@
 import 'package:box_shadow_generator/src/core/values/dimens.dart';
+import 'package:box_shadow_generator/src/data/local_storage_data_source.dart';
 import 'package:box_shadow_generator/src/presentation/screens/update_shadows/bloc/shadow_bloc.dart';
 import 'package:box_shadow_generator/src/presentation/screens/update_shadows/widgets/animated_box.dart';
 import 'package:box_shadow_generator/src/presentation/screens/update_shadows/widgets/controllers.dart';
@@ -6,12 +7,18 @@ import 'package:box_shadow_generator/src/presentation/widgets/base_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+LocalStorageDataSource lsds = LocalStrorageDataSourceImpl();
+
 class ShadowScreen extends StatelessWidget {
   const ShadowScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) => BlocProvider(
-        create: (_) => ShadowBloc()..initialize(),
+  Widget build(BuildContext context) => MultiBlocProvider(
+        providers: [
+          BlocProvider(
+            create: (_) => ShadowBloc(lsds)..initialize(),
+          ),
+        ],
         child: const BaseScreen(
           child: _Body(),
         ),
@@ -25,8 +32,6 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) => Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.undo)),
-          const SizedBox(height: AppDimens.d72),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,

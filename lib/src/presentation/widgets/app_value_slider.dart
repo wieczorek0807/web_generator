@@ -5,9 +5,10 @@ class AppValueSlider extends StatelessWidget {
   const AppValueSlider({
     required this.title,
     required this.value,
-    required this.onChanged,
+    this.onChanged,
     this.min = _min,
     this.max = _max,
+    this.onChangeEnd,
     Key? key,
   }) : super(key: key);
 
@@ -16,7 +17,8 @@ class AppValueSlider extends StatelessWidget {
 
   final String title;
   final double value;
-  final Function(double) onChanged;
+  final Function(double)? onChanged;
+  final Function(double)? onChangeEnd;
 
   static const _min = -50.0;
   static const _max = 50.0;
@@ -33,6 +35,7 @@ class AppValueSlider extends StatelessWidget {
             min: min,
             max: max,
             onChanged: onChanged,
+            onChangeEnd: onChangeEnd,
           ),
         ],
       );

@@ -6,17 +6,17 @@ part of 'shadow.dart';
 // TypeAdapterGenerator
 // **************************************************************************
 
-class ShadowAdapter extends TypeAdapter<_$_Shadow> {
+class ShadowAdapter extends TypeAdapter<Shadow> {
   @override
   final int typeId = 1;
 
   @override
-  _$_Shadow read(BinaryReader reader) {
+  Shadow read(BinaryReader reader) {
     final numOfFields = reader.readByte();
     final fields = <int, dynamic>{
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
-    return _$_Shadow(
+    return Shadow(
       offsetDx: fields[0] as double,
       offsetDy: fields[1] as double,
       spreadRadius: fields[2] as double,
@@ -27,7 +27,7 @@ class ShadowAdapter extends TypeAdapter<_$_Shadow> {
   }
 
   @override
-  void write(BinaryWriter writer, _$_Shadow obj) {
+  void write(BinaryWriter writer, Shadow obj) {
     writer
       ..writeByte(6)
       ..writeByte(0)

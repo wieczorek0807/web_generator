@@ -25,6 +25,7 @@ mixin _$ShadowEvent {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +37,7 @@ mixin _$ShadowEvent {
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +49,7 @@ mixin _$ShadowEvent {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -60,6 +63,7 @@ mixin _$ShadowEvent {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -71,6 +75,7 @@ mixin _$ShadowEvent {
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -82,6 +87,7 @@ mixin _$ShadowEvent {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -156,6 +162,7 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) {
     return initial();
   }
@@ -170,6 +177,7 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) {
     return initial?.call();
   }
@@ -184,6 +192,7 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -203,6 +212,7 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) {
     return initial(this);
   }
@@ -217,6 +227,7 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) {
     return initial?.call(this);
   }
@@ -231,6 +242,7 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -323,6 +335,7 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) {
     return updateOffsetY(value);
   }
@@ -337,6 +350,7 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) {
     return updateOffsetY?.call(value);
   }
@@ -351,6 +365,7 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateOffsetY != null) {
@@ -370,6 +385,7 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) {
     return updateOffsetY(this);
   }
@@ -384,6 +400,7 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) {
     return updateOffsetY?.call(this);
   }
@@ -398,6 +415,7 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateOffsetY != null) {
@@ -495,6 +513,7 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) {
     return updateOffsetX(value);
   }
@@ -509,6 +528,7 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) {
     return updateOffsetX?.call(value);
   }
@@ -523,6 +543,7 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateOffsetX != null) {
@@ -542,6 +563,7 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) {
     return updateOffsetX(this);
   }
@@ -556,6 +578,7 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) {
     return updateOffsetX?.call(this);
   }
@@ -570,6 +593,7 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateOffsetX != null) {
@@ -667,6 +691,7 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) {
     return updateBlur(value);
   }
@@ -681,6 +706,7 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) {
     return updateBlur?.call(value);
   }
@@ -695,6 +721,7 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateBlur != null) {
@@ -714,6 +741,7 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) {
     return updateBlur(this);
   }
@@ -728,6 +756,7 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) {
     return updateBlur?.call(this);
   }
@@ -742,6 +771,7 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateBlur != null) {
@@ -839,6 +869,7 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) {
     return updateSpread(value);
   }
@@ -853,6 +884,7 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) {
     return updateSpread?.call(value);
   }
@@ -867,6 +899,7 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateSpread != null) {
@@ -886,6 +919,7 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) {
     return updateSpread(this);
   }
@@ -900,6 +934,7 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) {
     return updateSpread?.call(this);
   }
@@ -914,6 +949,7 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateSpread != null) {
@@ -1015,6 +1051,7 @@ class _$_UpdateAnimatedBoxColor
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) {
     return updateAnimatedBoxColor(value);
   }
@@ -1029,6 +1066,7 @@ class _$_UpdateAnimatedBoxColor
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) {
     return updateAnimatedBoxColor?.call(value);
   }
@@ -1043,6 +1081,7 @@ class _$_UpdateAnimatedBoxColor
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateAnimatedBoxColor != null) {
@@ -1062,6 +1101,7 @@ class _$_UpdateAnimatedBoxColor
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) {
     return updateAnimatedBoxColor(this);
   }
@@ -1076,6 +1116,7 @@ class _$_UpdateAnimatedBoxColor
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) {
     return updateAnimatedBoxColor?.call(this);
   }
@@ -1090,6 +1131,7 @@ class _$_UpdateAnimatedBoxColor
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateAnimatedBoxColor != null) {
@@ -1192,6 +1234,7 @@ class _$_UpdateShadowColor
     required TResult Function(double value) updateSpread,
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
   }) {
     return updateShadowColor(value);
   }
@@ -1206,6 +1249,7 @@ class _$_UpdateShadowColor
     TResult? Function(double value)? updateSpread,
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
   }) {
     return updateShadowColor?.call(value);
   }
@@ -1220,6 +1264,7 @@ class _$_UpdateShadowColor
     TResult Function(double value)? updateSpread,
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateShadowColor != null) {
@@ -1239,6 +1284,7 @@ class _$_UpdateShadowColor
     required TResult Function(_UpdateAnimatedBoxColor value)
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
   }) {
     return updateShadowColor(this);
   }
@@ -1253,6 +1299,7 @@ class _$_UpdateShadowColor
     TResult? Function(_UpdateRadius value)? updateSpread,
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
   }) {
     return updateShadowColor?.call(this);
   }
@@ -1267,6 +1314,7 @@ class _$_UpdateShadowColor
     TResult Function(_UpdateRadius value)? updateSpread,
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
     required TResult orElse(),
   }) {
     if (updateShadowColor != null) {
@@ -1286,6 +1334,153 @@ abstract class _UpdateShadowColor implements ShadowEvent {
 }
 
 /// @nodoc
+abstract class _$$_UndoAnimatedBoxCopyWith<$Res> {
+  factory _$$_UndoAnimatedBoxCopyWith(
+          _$_UndoAnimatedBox value, $Res Function(_$_UndoAnimatedBox) then) =
+      __$$_UndoAnimatedBoxCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_UndoAnimatedBoxCopyWithImpl<$Res>
+    extends _$ShadowEventCopyWithImpl<$Res, _$_UndoAnimatedBox>
+    implements _$$_UndoAnimatedBoxCopyWith<$Res> {
+  __$$_UndoAnimatedBoxCopyWithImpl(
+      _$_UndoAnimatedBox _value, $Res Function(_$_UndoAnimatedBox) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_UndoAnimatedBox
+    with DiagnosticableTreeMixin
+    implements _UndoAnimatedBox {
+  const _$_UndoAnimatedBox();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ShadowEvent.undoAnimatedBox()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'ShadowEvent.undoAnimatedBox'));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$_UndoAnimatedBox);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(double value) updateOffsetY,
+    required TResult Function(double value) updateOffsetX,
+    required TResult Function(double value) updateBlur,
+    required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateAnimatedBoxColor,
+    required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
+  }) {
+    return undoAnimatedBox();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
+  }) {
+    return undoAnimatedBox?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateAnimatedBoxColor,
+    TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
+    required TResult orElse(),
+  }) {
+    if (undoAnimatedBox != null) {
+      return undoAnimatedBox();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialEvent value) initial,
+    required TResult Function(_UpdateOffsetY value) updateOffsetY,
+    required TResult Function(_UpdateOffsetX value) updateOffsetX,
+    required TResult Function(_UpdateBlur value) updateBlur,
+    required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateAnimatedBoxColor value)
+        updateAnimatedBoxColor,
+    required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+  }) {
+    return undoAnimatedBox(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+  }) {
+    return undoAnimatedBox?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    required TResult orElse(),
+  }) {
+    if (undoAnimatedBox != null) {
+      return undoAnimatedBox(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UndoAnimatedBox implements ShadowEvent {
+  const factory _UndoAnimatedBox() = _$_UndoAnimatedBox;
+}
+
+/// @nodoc
 mixin _$ShadowState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -1293,6 +1488,7 @@ mixin _$ShadowState {
     required TResult Function(Offset offset, Color shadowColor,
             Color animatedBoxColor, double blurRadius, double spreadRadius)
         updateShadow,
+    required TResult Function(Shadow shadow) shadowLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1301,6 +1497,7 @@ mixin _$ShadowState {
     TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
+    TResult? Function(Shadow shadow)? shadowLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1309,6 +1506,7 @@ mixin _$ShadowState {
     TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
+    TResult Function(Shadow shadow)? shadowLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1316,18 +1514,21 @@ mixin _$ShadowState {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialState value) initial,
     required TResult Function(_UpdateShadow value) updateShadow,
+    required TResult Function(_ShadowLoaded value) shadowLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialState value)? initial,
     TResult? Function(_UpdateShadow value)? updateShadow,
+    TResult? Function(_ShadowLoaded value)? shadowLoaded,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialState value)? initial,
     TResult Function(_UpdateShadow value)? updateShadow,
+    TResult Function(_ShadowLoaded value)? shadowLoaded,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -1399,6 +1600,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
     required TResult Function(Offset offset, Color shadowColor,
             Color animatedBoxColor, double blurRadius, double spreadRadius)
         updateShadow,
+    required TResult Function(Shadow shadow) shadowLoaded,
   }) {
     return initial();
   }
@@ -1410,6 +1612,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
     TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
+    TResult? Function(Shadow shadow)? shadowLoaded,
   }) {
     return initial?.call();
   }
@@ -1421,6 +1624,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
     TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
+    TResult Function(Shadow shadow)? shadowLoaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1434,6 +1638,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialState value) initial,
     required TResult Function(_UpdateShadow value) updateShadow,
+    required TResult Function(_ShadowLoaded value) shadowLoaded,
   }) {
     return initial(this);
   }
@@ -1443,6 +1648,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialState value)? initial,
     TResult? Function(_UpdateShadow value)? updateShadow,
+    TResult? Function(_ShadowLoaded value)? shadowLoaded,
   }) {
     return initial?.call(this);
   }
@@ -1452,6 +1658,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialState value)? initial,
     TResult Function(_UpdateShadow value)? updateShadow,
+    TResult Function(_ShadowLoaded value)? shadowLoaded,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1597,6 +1804,7 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
     required TResult Function(Offset offset, Color shadowColor,
             Color animatedBoxColor, double blurRadius, double spreadRadius)
         updateShadow,
+    required TResult Function(Shadow shadow) shadowLoaded,
   }) {
     return updateShadow(
         offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
@@ -1609,6 +1817,7 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
     TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
+    TResult? Function(Shadow shadow)? shadowLoaded,
   }) {
     return updateShadow?.call(
         offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
@@ -1621,6 +1830,7 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
     TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
         updateShadow,
+    TResult Function(Shadow shadow)? shadowLoaded,
     required TResult orElse(),
   }) {
     if (updateShadow != null) {
@@ -1635,6 +1845,7 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialState value) initial,
     required TResult Function(_UpdateShadow value) updateShadow,
+    required TResult Function(_ShadowLoaded value) shadowLoaded,
   }) {
     return updateShadow(this);
   }
@@ -1644,6 +1855,7 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialState value)? initial,
     TResult? Function(_UpdateShadow value)? updateShadow,
+    TResult? Function(_ShadowLoaded value)? shadowLoaded,
   }) {
     return updateShadow?.call(this);
   }
@@ -1653,6 +1865,7 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialState value)? initial,
     TResult Function(_UpdateShadow value)? updateShadow,
+    TResult Function(_ShadowLoaded value)? shadowLoaded,
     required TResult orElse(),
   }) {
     if (updateShadow != null) {
@@ -1677,5 +1890,158 @@ abstract class _UpdateShadow implements ShadowState {
   double get spreadRadius;
   @JsonKey(ignore: true)
   _$$_UpdateShadowCopyWith<_$_UpdateShadow> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_ShadowLoadedCopyWith<$Res> {
+  factory _$$_ShadowLoadedCopyWith(
+          _$_ShadowLoaded value, $Res Function(_$_ShadowLoaded) then) =
+      __$$_ShadowLoadedCopyWithImpl<$Res>;
+  @useResult
+  $Res call({Shadow shadow});
+}
+
+/// @nodoc
+class __$$_ShadowLoadedCopyWithImpl<$Res>
+    extends _$ShadowStateCopyWithImpl<$Res, _$_ShadowLoaded>
+    implements _$$_ShadowLoadedCopyWith<$Res> {
+  __$$_ShadowLoadedCopyWithImpl(
+      _$_ShadowLoaded _value, $Res Function(_$_ShadowLoaded) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? shadow = null,
+  }) {
+    return _then(_$_ShadowLoaded(
+      shadow: null == shadow
+          ? _value.shadow
+          : shadow // ignore: cast_nullable_to_non_nullable
+              as Shadow,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_ShadowLoaded with DiagnosticableTreeMixin implements _ShadowLoaded {
+  const _$_ShadowLoaded({required this.shadow});
+
+  @override
+  final Shadow shadow;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'ShadowState.shadowLoaded(shadow: $shadow)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'ShadowState.shadowLoaded'))
+      ..add(DiagnosticsProperty('shadow', shadow));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_ShadowLoaded &&
+            (identical(other.shadow, shadow) || other.shadow == shadow));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, shadow);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_ShadowLoadedCopyWith<_$_ShadowLoaded> get copyWith =>
+      __$$_ShadowLoadedCopyWithImpl<_$_ShadowLoaded>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(Offset offset, Color shadowColor,
+            Color animatedBoxColor, double blurRadius, double spreadRadius)
+        updateShadow,
+    required TResult Function(Shadow shadow) shadowLoaded,
+  }) {
+    return shadowLoaded(shadow);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
+            double blurRadius, double spreadRadius)?
+        updateShadow,
+    TResult? Function(Shadow shadow)? shadowLoaded,
+  }) {
+    return shadowLoaded?.call(shadow);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
+            double blurRadius, double spreadRadius)?
+        updateShadow,
+    TResult Function(Shadow shadow)? shadowLoaded,
+    required TResult orElse(),
+  }) {
+    if (shadowLoaded != null) {
+      return shadowLoaded(shadow);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialState value) initial,
+    required TResult Function(_UpdateShadow value) updateShadow,
+    required TResult Function(_ShadowLoaded value) shadowLoaded,
+  }) {
+    return shadowLoaded(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialState value)? initial,
+    TResult? Function(_UpdateShadow value)? updateShadow,
+    TResult? Function(_ShadowLoaded value)? shadowLoaded,
+  }) {
+    return shadowLoaded?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialState value)? initial,
+    TResult Function(_UpdateShadow value)? updateShadow,
+    TResult Function(_ShadowLoaded value)? shadowLoaded,
+    required TResult orElse(),
+  }) {
+    if (shadowLoaded != null) {
+      return shadowLoaded(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _ShadowLoaded implements ShadowState {
+  const factory _ShadowLoaded({required final Shadow shadow}) = _$_ShadowLoaded;
+
+  Shadow get shadow;
+  @JsonKey(ignore: true)
+  _$$_ShadowLoadedCopyWith<_$_ShadowLoaded> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -21,41 +21,60 @@ class Controllers extends StatelessWidget {
             orElse: () => const SizedBox.shrink(),
             updateShadow: (state) => Column(
               children: [
+                IconButton(
+                    onPressed: () {
+                      context
+                          .read<ShadowBloc>()
+                          .add(const ShadowEvent.undoAnimatedBox());
+                    },
+                    icon: const Icon(Icons.undo)),
+                const Divider(),
                 AppValueSlider(
                   title: 'offset dx',
                   value: state.offset.dx,
-                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateOffsetX(v)),
+                  onChanged: (v) => context
+                      .read<ShadowBloc>()
+                      .add(ShadowEvent.updateOffsetX(v)),
                 ),
                 const Divider(),
                 AppValueSlider(
                   title: 'offset dy',
                   value: state.offset.dy,
-                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateOffsetY(v)),
+                  onChanged: (v) => context
+                      .read<ShadowBloc>()
+                      .add(ShadowEvent.updateOffsetY(v)),
                 ),
                 const Divider(),
                 AppValueSlider(
                   title: 'blur radius',
                   min: _blurMin,
                   value: state.blurRadius,
-                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateBlur(v)),
+                  onChanged: (v) =>
+                      context.read<ShadowBloc>().add(ShadowEvent.updateBlur(v)),
                 ),
                 const Divider(),
                 AppValueSlider(
                   title: 'spread radius',
                   value: state.spreadRadius,
-                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateSpread(v)),
+                  onChanged: (v) => context
+                      .read<ShadowBloc>()
+                      .add(ShadowEvent.updateSpread(v)),
                 ),
                 const Divider(),
                 AppColorPicker(
                   title: 'Shadow color:',
                   startColor: Colors.black,
-                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateShadowColor(v)),
+                  onChanged: (v) => context
+                      .read<ShadowBloc>()
+                      .add(ShadowEvent.updateShadowColor(v)),
                 ),
                 const Divider(),
                 AppColorPicker(
                   title: 'Box color:',
                   startColor: Colors.grey,
-                  onChanged: (v) => context.read<ShadowBloc>().add(ShadowEvent.updateAnimatedBoxColor(v)),
+                  onChanged: (v) => context
+                      .read<ShadowBloc>()
+                      .add(ShadowEvent.updateAnimatedBoxColor(v)),
                 ),
               ],
             ),
