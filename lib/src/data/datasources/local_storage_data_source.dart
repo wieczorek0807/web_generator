@@ -1,6 +1,6 @@
 import 'package:hive/hive.dart';
 
-import '../presentation/screens/update_shadows/model/shadow.dart';
+import '../../presentation/screens/update_shadows/model/shadow.dart';
 
 abstract class LocalStorageDataSource {
   Future<void> saveShadow(Shadow value);

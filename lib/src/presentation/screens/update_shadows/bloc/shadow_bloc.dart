@@ -1,7 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:box_shadow_generator/src/core/extension/offset.dart';
-import 'package:box_shadow_generator/src/presentation/screens/update_shadows/model/shadow_event.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +28,6 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
   double _blurRadius = 0.0;
   Color _shadowColor = Colors.black;
   Color _animatedBoxColor = Colors.grey.shade200;
-  // Shadow? _shadow = getShadow();
 
   void initialize() {
     add(const ShadowEvent.initial());
