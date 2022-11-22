@@ -1,7 +1,9 @@
-import 'package:box_shadow_generator/src/core/values/dimens.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:box_shadow_generator/src/presentation/screens/update_shadows/bloc/shadow_bloc.dart';
+
+import '../../core/values/dimens.dart';
+import '../bloc/web_box_bloc.dart';
 
 class AnimatedBox extends StatelessWidget {
   const AnimatedBox({Key? key}) : super(key: key);
@@ -15,10 +17,10 @@ class AnimatedBox extends StatelessWidget {
         height: _height,
         color: Colors.white,
         alignment: Alignment.center,
-        child: BlocBuilder<ShadowBloc, ShadowState>(
+        child: BlocBuilder<WebBoxBloc, WebBoxState>(
           builder: (context, state) => state.maybeMap(
             orElse: () => const SizedBox.shrink(),
-            updateShadow: (state) => Container(
+            updateWebBox: (state) => Container(
               height: AppDimens.animatedContainerSize,
               width: AppDimens.animatedContainerSize,
               decoration: BoxDecoration(

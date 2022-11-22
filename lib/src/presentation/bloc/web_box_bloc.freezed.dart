@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
-part of 'shadow_bloc.dart';
+part of 'web_box_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,7 +15,7 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
-mixin _$ShadowEvent {
+mixin _$WebBoxEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
@@ -94,16 +94,16 @@ mixin _$ShadowEvent {
 }
 
 /// @nodoc
-abstract class $ShadowEventCopyWith<$Res> {
-  factory $ShadowEventCopyWith(
-          ShadowEvent value, $Res Function(ShadowEvent) then) =
-      _$ShadowEventCopyWithImpl<$Res, ShadowEvent>;
+abstract class $WebBoxEventCopyWith<$Res> {
+  factory $WebBoxEventCopyWith(
+          WebBoxEvent value, $Res Function(WebBoxEvent) then) =
+      _$WebBoxEventCopyWithImpl<$Res, WebBoxEvent>;
 }
 
 /// @nodoc
-class _$ShadowEventCopyWithImpl<$Res, $Val extends ShadowEvent>
-    implements $ShadowEventCopyWith<$Res> {
-  _$ShadowEventCopyWithImpl(this._value, this._then);
+class _$WebBoxEventCopyWithImpl<$Res, $Val extends WebBoxEvent>
+    implements $WebBoxEventCopyWith<$Res> {
+  _$WebBoxEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -120,7 +120,7 @@ abstract class _$$_InitialEventCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialEventCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_InitialEvent>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_InitialEvent>
     implements _$$_InitialEventCopyWith<$Res> {
   __$$_InitialEventCopyWithImpl(
       _$_InitialEvent _value, $Res Function(_$_InitialEvent) _then)
@@ -129,18 +129,12 @@ class __$$_InitialEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
+class _$_InitialEvent implements _InitialEvent {
   const _$_InitialEvent();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'ShadowEvent.initial'));
+  String toString() {
+    return 'WebBoxEvent.initial()';
   }
 
   @override
@@ -252,7 +246,7 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
   }
 }
 
-abstract class _InitialEvent implements ShadowEvent {
+abstract class _InitialEvent implements WebBoxEvent {
   const factory _InitialEvent() = _$_InitialEvent;
 }
 
@@ -267,7 +261,7 @@ abstract class _$$_UpdateOffsetYCopyWith<$Res> {
 
 /// @nodoc
 class __$$_UpdateOffsetYCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateOffsetY>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateOffsetY>
     implements _$$_UpdateOffsetYCopyWith<$Res> {
   __$$_UpdateOffsetYCopyWithImpl(
       _$_UpdateOffsetY _value, $Res Function(_$_UpdateOffsetY) _then)
@@ -289,23 +283,15 @@ class __$$_UpdateOffsetYCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
+class _$_UpdateOffsetY implements _UpdateOffsetY {
   const _$_UpdateOffsetY(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.updateOffsetY(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateOffsetY'))
-      ..add(DiagnosticsProperty('value', value));
+  String toString() {
+    return 'WebBoxEvent.updateOffsetY(value: $value)';
   }
 
   @override
@@ -425,7 +411,7 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
   }
 }
 
-abstract class _UpdateOffsetY implements ShadowEvent {
+abstract class _UpdateOffsetY implements WebBoxEvent {
   const factory _UpdateOffsetY(final double value) = _$_UpdateOffsetY;
 
   double get value;
@@ -445,7 +431,7 @@ abstract class _$$_UpdateOffsetXCopyWith<$Res> {
 
 /// @nodoc
 class __$$_UpdateOffsetXCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateOffsetX>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateOffsetX>
     implements _$$_UpdateOffsetXCopyWith<$Res> {
   __$$_UpdateOffsetXCopyWithImpl(
       _$_UpdateOffsetX _value, $Res Function(_$_UpdateOffsetX) _then)
@@ -467,23 +453,15 @@ class __$$_UpdateOffsetXCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
+class _$_UpdateOffsetX implements _UpdateOffsetX {
   const _$_UpdateOffsetX(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.updateOffsetX(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateOffsetX'))
-      ..add(DiagnosticsProperty('value', value));
+  String toString() {
+    return 'WebBoxEvent.updateOffsetX(value: $value)';
   }
 
   @override
@@ -603,7 +581,7 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
   }
 }
 
-abstract class _UpdateOffsetX implements ShadowEvent {
+abstract class _UpdateOffsetX implements WebBoxEvent {
   const factory _UpdateOffsetX(final double value) = _$_UpdateOffsetX;
 
   double get value;
@@ -623,7 +601,7 @@ abstract class _$$_UpdateBlurCopyWith<$Res> {
 
 /// @nodoc
 class __$$_UpdateBlurCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateBlur>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateBlur>
     implements _$$_UpdateBlurCopyWith<$Res> {
   __$$_UpdateBlurCopyWithImpl(
       _$_UpdateBlur _value, $Res Function(_$_UpdateBlur) _then)
@@ -645,23 +623,15 @@ class __$$_UpdateBlurCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
+class _$_UpdateBlur implements _UpdateBlur {
   const _$_UpdateBlur(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.updateBlur(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateBlur'))
-      ..add(DiagnosticsProperty('value', value));
+  String toString() {
+    return 'WebBoxEvent.updateBlur(value: $value)';
   }
 
   @override
@@ -781,7 +751,7 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
   }
 }
 
-abstract class _UpdateBlur implements ShadowEvent {
+abstract class _UpdateBlur implements WebBoxEvent {
   const factory _UpdateBlur(final double value) = _$_UpdateBlur;
 
   double get value;
@@ -801,7 +771,7 @@ abstract class _$$_UpdateRadiusCopyWith<$Res> {
 
 /// @nodoc
 class __$$_UpdateRadiusCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateRadius>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateRadius>
     implements _$$_UpdateRadiusCopyWith<$Res> {
   __$$_UpdateRadiusCopyWithImpl(
       _$_UpdateRadius _value, $Res Function(_$_UpdateRadius) _then)
@@ -823,23 +793,15 @@ class __$$_UpdateRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
+class _$_UpdateRadius implements _UpdateRadius {
   const _$_UpdateRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.updateSpread(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateSpread'))
-      ..add(DiagnosticsProperty('value', value));
+  String toString() {
+    return 'WebBoxEvent.updateSpread(value: $value)';
   }
 
   @override
@@ -959,7 +921,7 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
   }
 }
 
-abstract class _UpdateRadius implements ShadowEvent {
+abstract class _UpdateRadius implements WebBoxEvent {
   const factory _UpdateRadius(final double value) = _$_UpdateRadius;
 
   double get value;
@@ -979,7 +941,7 @@ abstract class _$$_UpdateAnimatedBoxColorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_UpdateAnimatedBoxColorCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateAnimatedBoxColor>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateAnimatedBoxColor>
     implements _$$_UpdateAnimatedBoxColorCopyWith<$Res> {
   __$$_UpdateAnimatedBoxColorCopyWithImpl(_$_UpdateAnimatedBoxColor _value,
       $Res Function(_$_UpdateAnimatedBoxColor) _then)
@@ -1001,25 +963,15 @@ class __$$_UpdateAnimatedBoxColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateAnimatedBoxColor
-    with DiagnosticableTreeMixin
-    implements _UpdateAnimatedBoxColor {
+class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
   const _$_UpdateAnimatedBoxColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.updateAnimatedBoxColor(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateAnimatedBoxColor'))
-      ..add(DiagnosticsProperty('value', value));
+  String toString() {
+    return 'WebBoxEvent.updateAnimatedBoxColor(value: $value)';
   }
 
   @override
@@ -1141,7 +1093,7 @@ class _$_UpdateAnimatedBoxColor
   }
 }
 
-abstract class _UpdateAnimatedBoxColor implements ShadowEvent {
+abstract class _UpdateAnimatedBoxColor implements WebBoxEvent {
   const factory _UpdateAnimatedBoxColor(final Color value) =
       _$_UpdateAnimatedBoxColor;
 
@@ -1162,7 +1114,7 @@ abstract class _$$_UpdateShadowColorCopyWith<$Res> {
 
 /// @nodoc
 class __$$_UpdateShadowColorCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_UpdateShadowColor>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateShadowColor>
     implements _$$_UpdateShadowColorCopyWith<$Res> {
   __$$_UpdateShadowColorCopyWithImpl(
       _$_UpdateShadowColor _value, $Res Function(_$_UpdateShadowColor) _then)
@@ -1184,25 +1136,15 @@ class __$$_UpdateShadowColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateShadowColor
-    with DiagnosticableTreeMixin
-    implements _UpdateShadowColor {
+class _$_UpdateShadowColor implements _UpdateShadowColor {
   const _$_UpdateShadowColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.updateShadowColor(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowEvent.updateShadowColor'))
-      ..add(DiagnosticsProperty('value', value));
+  String toString() {
+    return 'WebBoxEvent.updateShadowColor(value: $value)';
   }
 
   @override
@@ -1324,7 +1266,7 @@ class _$_UpdateShadowColor
   }
 }
 
-abstract class _UpdateShadowColor implements ShadowEvent {
+abstract class _UpdateShadowColor implements WebBoxEvent {
   const factory _UpdateShadowColor(final Color value) = _$_UpdateShadowColor;
 
   Color get value;
@@ -1342,7 +1284,7 @@ abstract class _$$_UndoAnimatedBoxCopyWith<$Res> {
 
 /// @nodoc
 class __$$_UndoAnimatedBoxCopyWithImpl<$Res>
-    extends _$ShadowEventCopyWithImpl<$Res, _$_UndoAnimatedBox>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UndoAnimatedBox>
     implements _$$_UndoAnimatedBoxCopyWith<$Res> {
   __$$_UndoAnimatedBoxCopyWithImpl(
       _$_UndoAnimatedBox _value, $Res Function(_$_UndoAnimatedBox) _then)
@@ -1351,20 +1293,12 @@ class __$$_UndoAnimatedBoxCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UndoAnimatedBox
-    with DiagnosticableTreeMixin
-    implements _UndoAnimatedBox {
+class _$_UndoAnimatedBox implements _UndoAnimatedBox {
   const _$_UndoAnimatedBox();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowEvent.undoAnimatedBox()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'ShadowEvent.undoAnimatedBox'));
+  String toString() {
+    return 'WebBoxEvent.undoAnimatedBox()';
   }
 
   @override
@@ -1476,19 +1410,18 @@ class _$_UndoAnimatedBox
   }
 }
 
-abstract class _UndoAnimatedBox implements ShadowEvent {
+abstract class _UndoAnimatedBox implements WebBoxEvent {
   const factory _UndoAnimatedBox() = _$_UndoAnimatedBox;
 }
 
 /// @nodoc
-mixin _$ShadowState {
+mixin _$WebBoxState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function(Offset offset, Color shadowColor,
             Color animatedBoxColor, double blurRadius, double spreadRadius)
-        updateShadow,
-    required TResult Function(Shadow shadow) shadowLoaded,
+        updateWebBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1496,8 +1429,7 @@ mixin _$ShadowState {
     TResult? Function()? initial,
     TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult? Function(Shadow shadow)? shadowLoaded,
+        updateWebBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -1505,46 +1437,42 @@ mixin _$ShadowState {
     TResult Function()? initial,
     TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult Function(Shadow shadow)? shadowLoaded,
+        updateWebBox,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialState value) initial,
-    required TResult Function(_UpdateShadow value) updateShadow,
-    required TResult Function(_ShadowLoaded value) shadowLoaded,
+    required TResult Function(_UpdateWebBox value) updateWebBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialState value)? initial,
-    TResult? Function(_UpdateShadow value)? updateShadow,
-    TResult? Function(_ShadowLoaded value)? shadowLoaded,
+    TResult? Function(_UpdateWebBox value)? updateWebBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialState value)? initial,
-    TResult Function(_UpdateShadow value)? updateShadow,
-    TResult Function(_ShadowLoaded value)? shadowLoaded,
+    TResult Function(_UpdateWebBox value)? updateWebBox,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ShadowStateCopyWith<$Res> {
-  factory $ShadowStateCopyWith(
-          ShadowState value, $Res Function(ShadowState) then) =
-      _$ShadowStateCopyWithImpl<$Res, ShadowState>;
+abstract class $WebBoxStateCopyWith<$Res> {
+  factory $WebBoxStateCopyWith(
+          WebBoxState value, $Res Function(WebBoxState) then) =
+      _$WebBoxStateCopyWithImpl<$Res, WebBoxState>;
 }
 
 /// @nodoc
-class _$ShadowStateCopyWithImpl<$Res, $Val extends ShadowState>
-    implements $ShadowStateCopyWith<$Res> {
-  _$ShadowStateCopyWithImpl(this._value, this._then);
+class _$WebBoxStateCopyWithImpl<$Res, $Val extends WebBoxState>
+    implements $WebBoxStateCopyWith<$Res> {
+  _$WebBoxStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1561,7 +1489,7 @@ abstract class _$$_InitialStateCopyWith<$Res> {
 
 /// @nodoc
 class __$$_InitialStateCopyWithImpl<$Res>
-    extends _$ShadowStateCopyWithImpl<$Res, _$_InitialState>
+    extends _$WebBoxStateCopyWithImpl<$Res, _$_InitialState>
     implements _$$_InitialStateCopyWith<$Res> {
   __$$_InitialStateCopyWithImpl(
       _$_InitialState _value, $Res Function(_$_InitialState) _then)
@@ -1570,18 +1498,12 @@ class __$$_InitialStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
+class _$_InitialState implements _InitialState {
   const _$_InitialState();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'ShadowState.initial'));
+  String toString() {
+    return 'WebBoxState.initial()';
   }
 
   @override
@@ -1599,8 +1521,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
     required TResult Function() initial,
     required TResult Function(Offset offset, Color shadowColor,
             Color animatedBoxColor, double blurRadius, double spreadRadius)
-        updateShadow,
-    required TResult Function(Shadow shadow) shadowLoaded,
+        updateWebBox,
   }) {
     return initial();
   }
@@ -1611,8 +1532,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
     TResult? Function()? initial,
     TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult? Function(Shadow shadow)? shadowLoaded,
+        updateWebBox,
   }) {
     return initial?.call();
   }
@@ -1623,8 +1543,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
     TResult Function()? initial,
     TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult Function(Shadow shadow)? shadowLoaded,
+        updateWebBox,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1637,8 +1556,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialState value) initial,
-    required TResult Function(_UpdateShadow value) updateShadow,
-    required TResult Function(_ShadowLoaded value) shadowLoaded,
+    required TResult Function(_UpdateWebBox value) updateWebBox,
   }) {
     return initial(this);
   }
@@ -1647,8 +1565,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialState value)? initial,
-    TResult? Function(_UpdateShadow value)? updateShadow,
-    TResult? Function(_ShadowLoaded value)? shadowLoaded,
+    TResult? Function(_UpdateWebBox value)? updateWebBox,
   }) {
     return initial?.call(this);
   }
@@ -1657,8 +1574,7 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialState value)? initial,
-    TResult Function(_UpdateShadow value)? updateShadow,
-    TResult Function(_ShadowLoaded value)? shadowLoaded,
+    TResult Function(_UpdateWebBox value)? updateWebBox,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1668,15 +1584,15 @@ class _$_InitialState with DiagnosticableTreeMixin implements _InitialState {
   }
 }
 
-abstract class _InitialState implements ShadowState {
+abstract class _InitialState implements WebBoxState {
   const factory _InitialState() = _$_InitialState;
 }
 
 /// @nodoc
-abstract class _$$_UpdateShadowCopyWith<$Res> {
-  factory _$$_UpdateShadowCopyWith(
-          _$_UpdateShadow value, $Res Function(_$_UpdateShadow) then) =
-      __$$_UpdateShadowCopyWithImpl<$Res>;
+abstract class _$$_UpdateWebBoxCopyWith<$Res> {
+  factory _$$_UpdateWebBoxCopyWith(
+          _$_UpdateWebBox value, $Res Function(_$_UpdateWebBox) then) =
+      __$$_UpdateWebBoxCopyWithImpl<$Res>;
   @useResult
   $Res call(
       {Offset offset,
@@ -1687,11 +1603,11 @@ abstract class _$$_UpdateShadowCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UpdateShadowCopyWithImpl<$Res>
-    extends _$ShadowStateCopyWithImpl<$Res, _$_UpdateShadow>
-    implements _$$_UpdateShadowCopyWith<$Res> {
-  __$$_UpdateShadowCopyWithImpl(
-      _$_UpdateShadow _value, $Res Function(_$_UpdateShadow) _then)
+class __$$_UpdateWebBoxCopyWithImpl<$Res>
+    extends _$WebBoxStateCopyWithImpl<$Res, _$_UpdateWebBox>
+    implements _$$_UpdateWebBoxCopyWith<$Res> {
+  __$$_UpdateWebBoxCopyWithImpl(
+      _$_UpdateWebBox _value, $Res Function(_$_UpdateWebBox) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1703,7 +1619,7 @@ class __$$_UpdateShadowCopyWithImpl<$Res>
     Object? blurRadius = null,
     Object? spreadRadius = null,
   }) {
-    return _then(_$_UpdateShadow(
+    return _then(_$_UpdateWebBox(
       offset: null == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
@@ -1730,8 +1646,8 @@ class __$$_UpdateShadowCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
-  const _$_UpdateShadow(
+class _$_UpdateWebBox implements _UpdateWebBox {
+  const _$_UpdateWebBox(
       {required this.offset,
       required this.shadowColor,
       required this.animatedBoxColor,
@@ -1750,27 +1666,15 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
   final double spreadRadius;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowState.updateShadow(offset: $offset, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowState.updateShadow'))
-      ..add(DiagnosticsProperty('offset', offset))
-      ..add(DiagnosticsProperty('shadowColor', shadowColor))
-      ..add(DiagnosticsProperty('animatedBoxColor', animatedBoxColor))
-      ..add(DiagnosticsProperty('blurRadius', blurRadius))
-      ..add(DiagnosticsProperty('spreadRadius', spreadRadius));
+  String toString() {
+    return 'WebBoxState.updateWebBox(offset: $offset, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_UpdateShadow &&
+            other is _$_UpdateWebBox &&
             const DeepCollectionEquality().equals(other.offset, offset) &&
             const DeepCollectionEquality()
                 .equals(other.shadowColor, shadowColor) &&
@@ -1794,8 +1698,8 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UpdateShadowCopyWith<_$_UpdateShadow> get copyWith =>
-      __$$_UpdateShadowCopyWithImpl<_$_UpdateShadow>(this, _$identity);
+  _$$_UpdateWebBoxCopyWith<_$_UpdateWebBox> get copyWith =>
+      __$$_UpdateWebBoxCopyWithImpl<_$_UpdateWebBox>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1803,10 +1707,9 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
     required TResult Function() initial,
     required TResult Function(Offset offset, Color shadowColor,
             Color animatedBoxColor, double blurRadius, double spreadRadius)
-        updateShadow,
-    required TResult Function(Shadow shadow) shadowLoaded,
+        updateWebBox,
   }) {
-    return updateShadow(
+    return updateWebBox(
         offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
   }
 
@@ -1816,10 +1719,9 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
     TResult? Function()? initial,
     TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult? Function(Shadow shadow)? shadowLoaded,
+        updateWebBox,
   }) {
-    return updateShadow?.call(
+    return updateWebBox?.call(
         offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
   }
 
@@ -1829,12 +1731,11 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
     TResult Function()? initial,
     TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
             double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult Function(Shadow shadow)? shadowLoaded,
+        updateWebBox,
     required TResult orElse(),
   }) {
-    if (updateShadow != null) {
-      return updateShadow(
+    if (updateWebBox != null) {
+      return updateWebBox(
           offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
     }
     return orElse();
@@ -1844,44 +1745,41 @@ class _$_UpdateShadow with DiagnosticableTreeMixin implements _UpdateShadow {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialState value) initial,
-    required TResult Function(_UpdateShadow value) updateShadow,
-    required TResult Function(_ShadowLoaded value) shadowLoaded,
+    required TResult Function(_UpdateWebBox value) updateWebBox,
   }) {
-    return updateShadow(this);
+    return updateWebBox(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialState value)? initial,
-    TResult? Function(_UpdateShadow value)? updateShadow,
-    TResult? Function(_ShadowLoaded value)? shadowLoaded,
+    TResult? Function(_UpdateWebBox value)? updateWebBox,
   }) {
-    return updateShadow?.call(this);
+    return updateWebBox?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialState value)? initial,
-    TResult Function(_UpdateShadow value)? updateShadow,
-    TResult Function(_ShadowLoaded value)? shadowLoaded,
+    TResult Function(_UpdateWebBox value)? updateWebBox,
     required TResult orElse(),
   }) {
-    if (updateShadow != null) {
-      return updateShadow(this);
+    if (updateWebBox != null) {
+      return updateWebBox(this);
     }
     return orElse();
   }
 }
 
-abstract class _UpdateShadow implements ShadowState {
-  const factory _UpdateShadow(
+abstract class _UpdateWebBox implements WebBoxState {
+  const factory _UpdateWebBox(
       {required final Offset offset,
       required final Color shadowColor,
       required final Color animatedBoxColor,
       required final double blurRadius,
-      required final double spreadRadius}) = _$_UpdateShadow;
+      required final double spreadRadius}) = _$_UpdateWebBox;
 
   Offset get offset;
   Color get shadowColor;
@@ -1889,159 +1787,6 @@ abstract class _UpdateShadow implements ShadowState {
   double get blurRadius;
   double get spreadRadius;
   @JsonKey(ignore: true)
-  _$$_UpdateShadowCopyWith<_$_UpdateShadow> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$_ShadowLoadedCopyWith<$Res> {
-  factory _$$_ShadowLoadedCopyWith(
-          _$_ShadowLoaded value, $Res Function(_$_ShadowLoaded) then) =
-      __$$_ShadowLoadedCopyWithImpl<$Res>;
-  @useResult
-  $Res call({Shadow shadow});
-}
-
-/// @nodoc
-class __$$_ShadowLoadedCopyWithImpl<$Res>
-    extends _$ShadowStateCopyWithImpl<$Res, _$_ShadowLoaded>
-    implements _$$_ShadowLoadedCopyWith<$Res> {
-  __$$_ShadowLoadedCopyWithImpl(
-      _$_ShadowLoaded _value, $Res Function(_$_ShadowLoaded) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? shadow = null,
-  }) {
-    return _then(_$_ShadowLoaded(
-      shadow: null == shadow
-          ? _value.shadow
-          : shadow // ignore: cast_nullable_to_non_nullable
-              as Shadow,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_ShadowLoaded with DiagnosticableTreeMixin implements _ShadowLoaded {
-  const _$_ShadowLoaded({required this.shadow});
-
-  @override
-  final Shadow shadow;
-
-  @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'ShadowState.shadowLoaded(shadow: $shadow)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'ShadowState.shadowLoaded'))
-      ..add(DiagnosticsProperty('shadow', shadow));
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_ShadowLoaded &&
-            (identical(other.shadow, shadow) || other.shadow == shadow));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, shadow);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$_ShadowLoadedCopyWith<_$_ShadowLoaded> get copyWith =>
-      __$$_ShadowLoadedCopyWithImpl<_$_ShadowLoaded>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(Offset offset, Color shadowColor,
-            Color animatedBoxColor, double blurRadius, double spreadRadius)
-        updateShadow,
-    required TResult Function(Shadow shadow) shadowLoaded,
-  }) {
-    return shadowLoaded(shadow);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult? Function(Shadow shadow)? shadowLoaded,
-  }) {
-    return shadowLoaded?.call(shadow);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
-        updateShadow,
-    TResult Function(Shadow shadow)? shadowLoaded,
-    required TResult orElse(),
-  }) {
-    if (shadowLoaded != null) {
-      return shadowLoaded(shadow);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitialState value) initial,
-    required TResult Function(_UpdateShadow value) updateShadow,
-    required TResult Function(_ShadowLoaded value) shadowLoaded,
-  }) {
-    return shadowLoaded(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitialState value)? initial,
-    TResult? Function(_UpdateShadow value)? updateShadow,
-    TResult? Function(_ShadowLoaded value)? shadowLoaded,
-  }) {
-    return shadowLoaded?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitialState value)? initial,
-    TResult Function(_UpdateShadow value)? updateShadow,
-    TResult Function(_ShadowLoaded value)? shadowLoaded,
-    required TResult orElse(),
-  }) {
-    if (shadowLoaded != null) {
-      return shadowLoaded(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _ShadowLoaded implements ShadowState {
-  const factory _ShadowLoaded({required final Shadow shadow}) = _$_ShadowLoaded;
-
-  Shadow get shadow;
-  @JsonKey(ignore: true)
-  _$$_ShadowLoadedCopyWith<_$_ShadowLoaded> get copyWith =>
+  _$$_UpdateWebBoxCopyWith<_$_UpdateWebBox> get copyWith =>
       throw _privateConstructorUsedError;
 }

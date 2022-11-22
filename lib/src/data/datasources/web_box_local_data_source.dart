@@ -1,6 +1,4 @@
 import 'package:hive/hive.dart';
-
-import '../../presentation/screens/update_shadows/model/shadow.dart';
 import '../models/web_box_model.dart';
 
 abstract class WebBoxLocalDataSource {
@@ -10,12 +8,12 @@ abstract class WebBoxLocalDataSource {
 
 class WebBoxLocalDataSourceImpl implements WebBoxLocalDataSource {
   WebBoxLocalDataSourceImpl() {
-    _box = Hive.box<Shadow>("HiveBox");
+    _box = Hive.box<WebBoxModel>("WebBoxHiveBox");
   }
 
   late Box _box;
 
-  static const _key = 'shadow_key';
+  static const _key = 'shadow_key_1';
 
   @override
   Future<void> saveShadow(WebBoxModel value) {

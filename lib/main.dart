@@ -1,13 +1,14 @@
-import 'package:box_shadow_generator/src/presentation/screens/update_shadows/model/shadow.dart';
-import 'package:box_shadow_generator/src/presentation/screens/update_shadows/shadow_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+
+import 'src/data/models/web_box_model.dart';
+import 'src/presentation/pages/web_box_screen.dart';
 
 Future<void> main() async {
   //init hive
   await Hive.initFlutter();
-  Hive.registerAdapter(ShadowAdapter());
-  await Hive.openBox<Shadow>("HiveBox");
+  Hive.registerAdapter(WebBoxModelAdapter());
+  await Hive.openBox<WebBoxModel>("WebBoxHiveBox");
   //run app
   runApp(const MyApp());
 }
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: ShadowScreen(),
+      home: WebboxScreen(),
     );
   }
 }

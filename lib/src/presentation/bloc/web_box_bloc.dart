@@ -1,27 +1,25 @@
-// ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
-import 'package:box_shadow_generator/src/core/extension/offset.dart';
 import 'package:easy_debounce/easy_debounce.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:box_shadow_generator/src/presentation/screens/update_shadows/model/shadow.dart';
+import 'package:box_shadow_generator/src/core/extension/offset.dart';
+import '../../data/repositories/web_box_repository_impl.dart';
+import '../../domain/entities/web_box_entity.dart';
 
-import '../../../../data/local_storage_data_source.dart';
+part 'web_box_bloc.freezed.dart';
+part 'web_box_event.dart';
+part 'web_box_state.dart';
 
-part 'shadow_event.dart';
-part 'shadow_state.dart';
-part 'shadow_bloc.freezed.dart';
-
-class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
-  ShadowBloc(this._storage) : super(const ShadowState.initial()) {
-    on<ShadowEvent>((event, emit) {
+class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
+  WebBoxBloc({required this.repositoryImpl})
+      : super(const WebBoxState.initial()) {
+    on<WebBoxEvent>((event, emit) {
       _updateValues(event);
       _updateScreen(emit);
     });
   }
 
-  final LocalStorageDataSource _storage;
+  final WebBoxRepositoryImpl repositoryImpl;
 
   Offset _offset = Offset.zero;
   double _spreadRadius = 0.0;
@@ -30,7 +28,7 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
   Color _animatedBoxColor = Colors.grey.shade200;
 
   void initialize() {
-    add(const ShadowEvent.initial());
+    add(const WebBoxEvent.initial());
   }
 
   void _revertChanges() {
@@ -41,7 +39,7 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
     _animatedBoxColor = Colors.grey.shade200;
   }
 
-  void _updateValues(ShadowEvent event) => event.maybeWhen(
+  void _updateValues(WebBoxEvent event) => event.maybeWhen(
         orElse: () => null,
         updateSpread: (v) => _spreadRadius = v,
         updateBlur: (v) => _blurRadius = v,
@@ -52,17 +50,14 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
         undoAnimatedBox: _revertChanges,
       );
 
-  /// wchodzi -> ostatnio co zrobil
-  /// cofanie -> do pocztkowych wartosci
-
-  void _updateScreen(Emitter<ShadowState> emit) {
+  void _updateScreen(Emitter<WebBoxState> emit) {
     EasyDebounce.debounce(
       'debouncer',
       const Duration(milliseconds: 500),
       () => _saveModelToDatabase(),
     );
 
-    emit(ShadowState.updateShadow(
+    emit(WebBoxState.updateWebBox(
       spreadRadius: _spreadRadius,
       blurRadius: _blurRadius,
       offset: _offset,
@@ -72,7 +67,7 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
   }
 
   void _saveModelToDatabase() {
-    final model = Shadow(
+    final WebBoxEntity webBoxEntity = WebBoxEntity(
       offsetDx: _offset.dx,
       offsetDy: _offset.dy,
       blurRadius: _blurRadius,
@@ -81,6 +76,6 @@ class ShadowBloc extends Bloc<ShadowEvent, ShadowState> {
       animatedBoxColor: _animatedBoxColor.value,
     );
 
-    _storage.saveShadow(model);
+    repositoryImpl.saveWebBox(webBoxEntity);
   }
 }

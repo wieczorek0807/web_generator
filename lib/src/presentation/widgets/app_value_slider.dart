@@ -1,5 +1,6 @@
-import 'package:box_shadow_generator/src/core/values/dimens.dart';
 import 'package:flutter/cupertino.dart';
+
+import '../../core/values/dimens.dart';
 
 class AppValueSlider extends StatelessWidget {
   const AppValueSlider({
