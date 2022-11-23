@@ -7,17 +7,19 @@ abstract class WebBoxLocalDataSource {
 }
 
 class WebBoxLocalDataSourceImpl implements WebBoxLocalDataSource {
-  WebBoxLocalDataSourceImpl() {
-    _box = Hive.box<WebBoxModel>("WebBoxHiveBox");
+  WebBoxLocalDataSourceImpl({required this.hiveBox, required this.key}) {
+    _box = Hive.box<WebBoxModel>(hiveBox);
   }
 
+  final String hiveBox;
   late Box _box;
+  final String key;
 
-  static const _key = 'shadow_key_1';
+  // static const _key = 'shadow_key_1';
 
   @override
   Future<void> saveShadow(WebBoxModel value) {
-    return _box.put(_key, value);
+    return _box.put(key, value);
   }
 
   @override
@@ -25,7 +27,7 @@ class WebBoxLocalDataSourceImpl implements WebBoxLocalDataSource {
     if (_box.isEmpty) {
       throw Exception();
     } else {
-      return _box.get(_key);
+      return _box.get(key);
     }
   }
 }

@@ -1,14 +1,11 @@
+import 'package:box_shadow_generator/injection_container.dart'
+    as injection_container;
 import 'package:flutter/material.dart';
-import 'package:hive_flutter/hive_flutter.dart';
 
-import 'src/data/models/web_box_model.dart';
 import 'src/presentation/pages/web_box_screen.dart';
 
 Future<void> main() async {
-  //init hive
-  await Hive.initFlutter();
-  Hive.registerAdapter(WebBoxModelAdapter());
-  await Hive.openBox<WebBoxModel>("WebBoxHiveBox");
+  await injection_container.setup();
   //run app
   runApp(const MyApp());
 }
