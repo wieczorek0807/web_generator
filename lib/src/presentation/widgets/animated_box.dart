@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../core/values/dimens.dart';
-import '../bloc/web_box_bloc.dart';
+import '../bloc/web_box/web_box_bloc.dart';
 
 class AnimatedBox extends StatelessWidget {
   const AnimatedBox({Key? key}) : super(key: key);
@@ -24,16 +24,17 @@ class AnimatedBox extends StatelessWidget {
               height: AppDimens.animatedContainerSize,
               width: AppDimens.animatedContainerSize,
               decoration: BoxDecoration(
-                color: state.animatedBoxColor,
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: state.blurRadius,
-                    color: state.shadowColor,
-                    offset: state.offset,
-                    spreadRadius: state.spreadRadius,
-                  ),
-                ],
-              ),
+                  color: state.animatedBoxColor,
+                  boxShadow: [
+                    BoxShadow(
+                      blurRadius: state.blurRadius,
+                      color: state.shadowColor,
+                      offset: state.offset,
+                      spreadRadius: state.spreadRadius,
+                    ),
+                  ],
+                  borderRadius:
+                      const BorderRadius.only(topLeft: Radius.circular(40))),
             ),
           ),
         ),

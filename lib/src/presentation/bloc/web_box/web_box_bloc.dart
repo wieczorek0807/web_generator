@@ -4,8 +4,8 @@ import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:box_shadow_generator/src/core/extension/offset.dart';
-import '../../data/repositories/web_box_repository_impl.dart';
-import '../../domain/entities/web_box_entity.dart';
+import '../../../data/repositories/web_box_repository_impl.dart';
+import '../../../domain/entities/web_box_entity.dart';
 
 part 'web_box_bloc.freezed.dart';
 part 'web_box_event.dart';
