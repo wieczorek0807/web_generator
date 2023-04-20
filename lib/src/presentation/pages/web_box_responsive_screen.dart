@@ -1,7 +1,7 @@
 import 'package:box_shadow_generator/src/presentation/bloc/routing/cubit/routing_cubit.dart';
-import 'package:box_shadow_generator/src/presentation/pages/border_radius_screen.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/app_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+// ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/values/dimens.dart';
 import '../bloc/routing/cubit/routing_state.dart';

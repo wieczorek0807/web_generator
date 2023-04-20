@@ -1,6 +1,7 @@
 import 'package:box_shadow_generator/src/data/models/web_box_model.dart';
 import 'package:equatable/equatable.dart';
 
+// ignore: must_be_immutable
 class WebBoxEntity extends Equatable {
   late double offsetDx;
   late double offsetDy;

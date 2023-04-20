@@ -106,11 +106,10 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
   }
 
   Future<void> _getFromLocalDataSource() async {
-    print('getting form db');
     final Either<Failure, WebBoxEntity> webBoxEntityOrFailure =
         await getWebBoxUseCase.call();
 
-    webBoxEntityOrFailure.fold((l) => print('duppaaa'), (r) {
+    webBoxEntityOrFailure.fold((l) => null, (r) {
       _offset = Offset(r.offsetDx, r.offsetDy);
       _spreadRadius = r.spreadRadius;
       _blurRadius = r.blurRadius;

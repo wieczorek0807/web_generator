@@ -9,8 +9,8 @@ import '../widgets/animated_box.dart';
 import '../widgets/controllers.dart';
 import 'web_box_responsive_screen.dart';
 
-class BoxShadowScreen extends StatelessWidget {
-  const BoxShadowScreen({Key? key}) : super(key: key);
+class WebBoxMainScreen extends StatelessWidget {
+  const WebBoxMainScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

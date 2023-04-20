@@ -19,7 +19,7 @@ class AppColorPicker extends StatefulWidget {
 }
 
 class _AppColorPickerState extends State<AppColorPicker> {
-  Color myColor = Colors.grey.shade200;
+  Color myColor = Colors.pink;
 
   @override
   void initState() {
@@ -36,7 +36,7 @@ class _AppColorPickerState extends State<AppColorPicker> {
         GestureDetector(
           child: Container(
             decoration: BoxDecoration(
-              color: myColor,
+              color: widget.startColor,
               borderRadius: const BorderRadius.all(Radius.circular(5)),
             ),
             height: 40,
@@ -53,7 +53,7 @@ class _AppColorPickerState extends State<AppColorPicker> {
   Widget buildColorPicker() => ColorPicker(
       labelTypes: const [ColorLabelType.rgb],
       enableAlpha: false,
-      pickerColor: myColor,
+      pickerColor: widget.startColor,
       onColorChanged: (color) => setState(() {
             myColor = color;
             widget.onChanged(myColor);

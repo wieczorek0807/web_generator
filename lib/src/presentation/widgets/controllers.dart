@@ -65,7 +65,7 @@ class ShadowControllers extends StatelessWidget {
                 const Divider(),
                 AppColorPicker(
                   title: 'Shadow color:',
-                  startColor: Colors.black,
+                  startColor: state.shadowColor,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
                       .add(WebBoxEvent.updateShadowColor(v)),
@@ -73,7 +73,7 @@ class ShadowControllers extends StatelessWidget {
                 const Divider(),
                 AppColorPicker(
                   title: 'Box color:',
-                  startColor: Colors.grey,
+                  startColor: state.animatedBoxColor,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
                       .add(WebBoxEvent.updateAnimatedBoxColor(v)),
@@ -88,7 +88,6 @@ class ShadowControllers extends StatelessWidget {
 class RadiusControllers extends StatelessWidget {
   const RadiusControllers({Key? key}) : super(key: key);
 
-  static const _height = 500.0;
   static const _width = 300.0;
   static const _radiusMin = 0.0;
   static const _radiusMax = 250.0;

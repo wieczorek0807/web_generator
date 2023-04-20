@@ -18,7 +18,7 @@ class WebBoxRepositoryImpl implements WebBoxRepository {
           await webBoxLocalDataSource.getWaveBoxFromLocalDataSource();
       WebBoxEntity webBoxEntity = WebBoxEntity.fromModel(model: localWebBox);
       return Right(webBoxEntity);
-    } on Exception catch (e) {
+    } on Exception {
       return Left(DataSourceFailure());
     }
   }
