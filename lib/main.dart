@@ -16,13 +16,8 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      initialRoute: "/boxShadowScreen",
-      routes: {
-        "/boxShadowScreen": (context) => const BoxShadowScreen(),
-        "/borderRadiusScreen": (context) => const BorderRadiusScreen()
-      },
-      // home: WebboxScreen(),
+    return const MaterialApp(
+      home: BoxShadowScreen(),
     );
   }
 }

@@ -10,5 +10,9 @@ class WebBoxState with _$WebBoxState {
     required Color animatedBoxColor,
     required double blurRadius,
     required double spreadRadius,
+    required double topLeftRadius,
+    required double topRightRadius,
+    required double bottomLeftRadius,
+    required double bottomRightRadius,
   }) = _UpdateWebBox;
 }

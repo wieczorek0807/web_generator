@@ -8,6 +8,10 @@ class WebBoxEntity extends Equatable {
   late double blurRadius;
   late int shadowColor;
   late int animatedBoxColor;
+  late double topLeftRadius;
+  late double topRightRadius;
+  late double bottomLeftRadius;
+  late double bottomRightRadius;
 
   WebBoxEntity(
       {required this.offsetDx,
@@ -15,7 +19,11 @@ class WebBoxEntity extends Equatable {
       required this.spreadRadius,
       required this.blurRadius,
       required this.shadowColor,
-      required this.animatedBoxColor});
+      required this.animatedBoxColor,
+      required this.topLeftRadius,
+      required this.topRightRadius,
+      required this.bottomLeftRadius,
+      required this.bottomRightRadius});
 
   WebBoxEntity.fromModel({required WebBoxModel model}) {
     offsetDx = model.offsetDx;
@@ -24,6 +32,10 @@ class WebBoxEntity extends Equatable {
     blurRadius = model.blurRadius;
     shadowColor = model.shadowColor;
     animatedBoxColor = model.animatedBoxColor;
+    topLeftRadius = model.topLeftRadius;
+    topRightRadius = model.topRightRadius;
+    bottomLeftRadius = model.bottomLeftRadius;
+    bottomRightRadius = model.bottomRightRadius;
   }
 
   @override
@@ -33,6 +45,10 @@ class WebBoxEntity extends Equatable {
         spreadRadius,
         blurRadius,
         shadowColor,
-        animatedBoxColor
+        animatedBoxColor,
+        topLeftRadius,
+        topRightRadius,
+        bottomLeftRadius,
+        bottomRightRadius,
       ];
 }

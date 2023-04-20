@@ -16,13 +16,26 @@ class WebBoxModel extends HiveObject {
   int shadowColor;
   @HiveField(5)
   int animatedBoxColor;
+  @HiveField(6)
+  double topLeftRadius;
+  @HiveField(7)
+  double topRightRadius;
+  @HiveField(8)
+  double bottomLeftRadius;
+  @HiveField(9)
+  double bottomRightRadius;
+
   WebBoxModel(
       {required this.offsetDx,
       required this.offsetDy,
       required this.spreadRadius,
       required this.blurRadius,
       required this.shadowColor,
-      required this.animatedBoxColor});
+      required this.animatedBoxColor,
+      required this.topLeftRadius,
+      required this.topRightRadius,
+      required this.bottomLeftRadius,
+      required this.bottomRightRadius});
 
   @override
   String toString() {

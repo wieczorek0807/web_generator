@@ -26,6 +26,11 @@ mixin _$WebBoxEvent {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +43,11 @@ mixin _$WebBoxEvent {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +60,11 @@ mixin _$WebBoxEvent {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -64,6 +79,14 @@ mixin _$WebBoxEvent {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -76,6 +99,11 @@ mixin _$WebBoxEvent {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -88,6 +116,11 @@ mixin _$WebBoxEvent {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -157,6 +190,11 @@ class _$_InitialEvent implements _InitialEvent {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return initial();
   }
@@ -172,6 +210,11 @@ class _$_InitialEvent implements _InitialEvent {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return initial?.call();
   }
@@ -187,6 +230,11 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -207,6 +255,14 @@ class _$_InitialEvent implements _InitialEvent {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return initial(this);
   }
@@ -222,6 +278,11 @@ class _$_InitialEvent implements _InitialEvent {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return initial?.call(this);
   }
@@ -237,6 +298,11 @@ class _$_InitialEvent implements _InitialEvent {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -322,6 +388,11 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return updateOffsetY(value);
   }
@@ -337,6 +408,11 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return updateOffsetY?.call(value);
   }
@@ -352,6 +428,11 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateOffsetY != null) {
@@ -372,6 +453,14 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return updateOffsetY(this);
   }
@@ -387,6 +476,11 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return updateOffsetY?.call(this);
   }
@@ -402,6 +496,11 @@ class _$_UpdateOffsetY implements _UpdateOffsetY {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateOffsetY != null) {
@@ -492,6 +591,11 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return updateOffsetX(value);
   }
@@ -507,6 +611,11 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return updateOffsetX?.call(value);
   }
@@ -522,6 +631,11 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateOffsetX != null) {
@@ -542,6 +656,14 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return updateOffsetX(this);
   }
@@ -557,6 +679,11 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return updateOffsetX?.call(this);
   }
@@ -572,6 +699,11 @@ class _$_UpdateOffsetX implements _UpdateOffsetX {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateOffsetX != null) {
@@ -662,6 +794,11 @@ class _$_UpdateBlur implements _UpdateBlur {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return updateBlur(value);
   }
@@ -677,6 +814,11 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return updateBlur?.call(value);
   }
@@ -692,6 +834,11 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateBlur != null) {
@@ -712,6 +859,14 @@ class _$_UpdateBlur implements _UpdateBlur {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return updateBlur(this);
   }
@@ -727,6 +882,11 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return updateBlur?.call(this);
   }
@@ -742,6 +902,11 @@ class _$_UpdateBlur implements _UpdateBlur {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateBlur != null) {
@@ -832,6 +997,11 @@ class _$_UpdateRadius implements _UpdateRadius {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return updateSpread(value);
   }
@@ -847,6 +1017,11 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return updateSpread?.call(value);
   }
@@ -862,6 +1037,11 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateSpread != null) {
@@ -882,6 +1062,14 @@ class _$_UpdateRadius implements _UpdateRadius {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return updateSpread(this);
   }
@@ -897,6 +1085,11 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return updateSpread?.call(this);
   }
@@ -912,6 +1105,11 @@ class _$_UpdateRadius implements _UpdateRadius {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateSpread != null) {
@@ -1004,6 +1202,11 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return updateAnimatedBoxColor(value);
   }
@@ -1019,6 +1222,11 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return updateAnimatedBoxColor?.call(value);
   }
@@ -1034,6 +1242,11 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateAnimatedBoxColor != null) {
@@ -1054,6 +1267,14 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return updateAnimatedBoxColor(this);
   }
@@ -1069,6 +1290,11 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return updateAnimatedBoxColor?.call(this);
   }
@@ -1084,6 +1310,11 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateAnimatedBoxColor != null) {
@@ -1177,6 +1408,11 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return updateShadowColor(value);
   }
@@ -1192,6 +1428,11 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return updateShadowColor?.call(value);
   }
@@ -1207,6 +1448,11 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateShadowColor != null) {
@@ -1227,6 +1473,14 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return updateShadowColor(this);
   }
@@ -1242,6 +1496,11 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return updateShadowColor?.call(this);
   }
@@ -1257,6 +1516,11 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (updateShadowColor != null) {
@@ -1321,6 +1585,11 @@ class _$_UndoAnimatedBox implements _UndoAnimatedBox {
     required TResult Function(Color value) updateAnimatedBoxColor,
     required TResult Function(Color value) updateShadowColor,
     required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
   }) {
     return undoAnimatedBox();
   }
@@ -1336,6 +1605,11 @@ class _$_UndoAnimatedBox implements _UndoAnimatedBox {
     TResult? Function(Color value)? updateAnimatedBoxColor,
     TResult? Function(Color value)? updateShadowColor,
     TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
   }) {
     return undoAnimatedBox?.call();
   }
@@ -1351,6 +1625,11 @@ class _$_UndoAnimatedBox implements _UndoAnimatedBox {
     TResult Function(Color value)? updateAnimatedBoxColor,
     TResult Function(Color value)? updateShadowColor,
     TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (undoAnimatedBox != null) {
@@ -1371,6 +1650,14 @@ class _$_UndoAnimatedBox implements _UndoAnimatedBox {
         updateAnimatedBoxColor,
     required TResult Function(_UpdateShadowColor value) updateShadowColor,
     required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
   }) {
     return undoAnimatedBox(this);
   }
@@ -1386,6 +1673,11 @@ class _$_UndoAnimatedBox implements _UndoAnimatedBox {
     TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult? Function(_UpdateShadowColor value)? updateShadowColor,
     TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
   }) {
     return undoAnimatedBox?.call(this);
   }
@@ -1401,6 +1693,11 @@ class _$_UndoAnimatedBox implements _UndoAnimatedBox {
     TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
     TResult Function(_UpdateShadowColor value)? updateShadowColor,
     TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
     required TResult orElse(),
   }) {
     if (undoAnimatedBox != null) {
@@ -1415,28 +1712,1046 @@ abstract class _UndoAnimatedBox implements WebBoxEvent {
 }
 
 /// @nodoc
+abstract class _$$_GetFromLocalDataSourceCopyWith<$Res> {
+  factory _$$_GetFromLocalDataSourceCopyWith(_$_GetFromLocalDataSource value,
+          $Res Function(_$_GetFromLocalDataSource) then) =
+      __$$_GetFromLocalDataSourceCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$_GetFromLocalDataSourceCopyWithImpl<$Res>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_GetFromLocalDataSource>
+    implements _$$_GetFromLocalDataSourceCopyWith<$Res> {
+  __$$_GetFromLocalDataSourceCopyWithImpl(_$_GetFromLocalDataSource _value,
+      $Res Function(_$_GetFromLocalDataSource) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$_GetFromLocalDataSource implements _GetFromLocalDataSource {
+  const _$_GetFromLocalDataSource();
+
+  @override
+  String toString() {
+    return 'WebBoxEvent.getFromLocalDataSource()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_GetFromLocalDataSource);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(double value) updateOffsetY,
+    required TResult Function(double value) updateOffsetX,
+    required TResult Function(double value) updateBlur,
+    required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateAnimatedBoxColor,
+    required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
+  }) {
+    return getFromLocalDataSource();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
+  }) {
+    return getFromLocalDataSource?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateAnimatedBoxColor,
+    TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (getFromLocalDataSource != null) {
+      return getFromLocalDataSource();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialEvent value) initial,
+    required TResult Function(_UpdateOffsetY value) updateOffsetY,
+    required TResult Function(_UpdateOffsetX value) updateOffsetX,
+    required TResult Function(_UpdateBlur value) updateBlur,
+    required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateAnimatedBoxColor value)
+        updateAnimatedBoxColor,
+    required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
+  }) {
+    return getFromLocalDataSource(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+  }) {
+    return getFromLocalDataSource?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (getFromLocalDataSource != null) {
+      return getFromLocalDataSource(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _GetFromLocalDataSource implements WebBoxEvent {
+  const factory _GetFromLocalDataSource() = _$_GetFromLocalDataSource;
+}
+
+/// @nodoc
+abstract class _$$_UpdateTopLeftRadiusCopyWith<$Res> {
+  factory _$$_UpdateTopLeftRadiusCopyWith(_$_UpdateTopLeftRadius value,
+          $Res Function(_$_UpdateTopLeftRadius) then) =
+      __$$_UpdateTopLeftRadiusCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double value});
+}
+
+/// @nodoc
+class __$$_UpdateTopLeftRadiusCopyWithImpl<$Res>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateTopLeftRadius>
+    implements _$$_UpdateTopLeftRadiusCopyWith<$Res> {
+  __$$_UpdateTopLeftRadiusCopyWithImpl(_$_UpdateTopLeftRadius _value,
+      $Res Function(_$_UpdateTopLeftRadius) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$_UpdateTopLeftRadius(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateTopLeftRadius implements _UpdateTopLeftRadius {
+  const _$_UpdateTopLeftRadius(this.value);
+
+  @override
+  final double value;
+
+  @override
+  String toString() {
+    return 'WebBoxEvent.updateTopLeftRadius(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_UpdateTopLeftRadius &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UpdateTopLeftRadiusCopyWith<_$_UpdateTopLeftRadius> get copyWith =>
+      __$$_UpdateTopLeftRadiusCopyWithImpl<_$_UpdateTopLeftRadius>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(double value) updateOffsetY,
+    required TResult Function(double value) updateOffsetX,
+    required TResult Function(double value) updateBlur,
+    required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateAnimatedBoxColor,
+    required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
+  }) {
+    return updateTopLeftRadius(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
+  }) {
+    return updateTopLeftRadius?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateAnimatedBoxColor,
+    TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateTopLeftRadius != null) {
+      return updateTopLeftRadius(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialEvent value) initial,
+    required TResult Function(_UpdateOffsetY value) updateOffsetY,
+    required TResult Function(_UpdateOffsetX value) updateOffsetX,
+    required TResult Function(_UpdateBlur value) updateBlur,
+    required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateAnimatedBoxColor value)
+        updateAnimatedBoxColor,
+    required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
+  }) {
+    return updateTopLeftRadius(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+  }) {
+    return updateTopLeftRadius?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateTopLeftRadius != null) {
+      return updateTopLeftRadius(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateTopLeftRadius implements WebBoxEvent {
+  const factory _UpdateTopLeftRadius(final double value) =
+      _$_UpdateTopLeftRadius;
+
+  double get value;
+  @JsonKey(ignore: true)
+  _$$_UpdateTopLeftRadiusCopyWith<_$_UpdateTopLeftRadius> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_UpdateTopRightRadiusCopyWith<$Res> {
+  factory _$$_UpdateTopRightRadiusCopyWith(_$_UpdateTopRightRadius value,
+          $Res Function(_$_UpdateTopRightRadius) then) =
+      __$$_UpdateTopRightRadiusCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double value});
+}
+
+/// @nodoc
+class __$$_UpdateTopRightRadiusCopyWithImpl<$Res>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateTopRightRadius>
+    implements _$$_UpdateTopRightRadiusCopyWith<$Res> {
+  __$$_UpdateTopRightRadiusCopyWithImpl(_$_UpdateTopRightRadius _value,
+      $Res Function(_$_UpdateTopRightRadius) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$_UpdateTopRightRadius(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateTopRightRadius implements _UpdateTopRightRadius {
+  const _$_UpdateTopRightRadius(this.value);
+
+  @override
+  final double value;
+
+  @override
+  String toString() {
+    return 'WebBoxEvent.updateTopRightRadius(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_UpdateTopRightRadius &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UpdateTopRightRadiusCopyWith<_$_UpdateTopRightRadius> get copyWith =>
+      __$$_UpdateTopRightRadiusCopyWithImpl<_$_UpdateTopRightRadius>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(double value) updateOffsetY,
+    required TResult Function(double value) updateOffsetX,
+    required TResult Function(double value) updateBlur,
+    required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateAnimatedBoxColor,
+    required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
+  }) {
+    return updateTopRightRadius(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
+  }) {
+    return updateTopRightRadius?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateAnimatedBoxColor,
+    TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateTopRightRadius != null) {
+      return updateTopRightRadius(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialEvent value) initial,
+    required TResult Function(_UpdateOffsetY value) updateOffsetY,
+    required TResult Function(_UpdateOffsetX value) updateOffsetX,
+    required TResult Function(_UpdateBlur value) updateBlur,
+    required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateAnimatedBoxColor value)
+        updateAnimatedBoxColor,
+    required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
+  }) {
+    return updateTopRightRadius(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+  }) {
+    return updateTopRightRadius?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateTopRightRadius != null) {
+      return updateTopRightRadius(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateTopRightRadius implements WebBoxEvent {
+  const factory _UpdateTopRightRadius(final double value) =
+      _$_UpdateTopRightRadius;
+
+  double get value;
+  @JsonKey(ignore: true)
+  _$$_UpdateTopRightRadiusCopyWith<_$_UpdateTopRightRadius> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_UpdateBottomLeftRadiusCopyWith<$Res> {
+  factory _$$_UpdateBottomLeftRadiusCopyWith(_$_UpdateBottomLeftRadius value,
+          $Res Function(_$_UpdateBottomLeftRadius) then) =
+      __$$_UpdateBottomLeftRadiusCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double value});
+}
+
+/// @nodoc
+class __$$_UpdateBottomLeftRadiusCopyWithImpl<$Res>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateBottomLeftRadius>
+    implements _$$_UpdateBottomLeftRadiusCopyWith<$Res> {
+  __$$_UpdateBottomLeftRadiusCopyWithImpl(_$_UpdateBottomLeftRadius _value,
+      $Res Function(_$_UpdateBottomLeftRadius) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$_UpdateBottomLeftRadius(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateBottomLeftRadius implements _UpdateBottomLeftRadius {
+  const _$_UpdateBottomLeftRadius(this.value);
+
+  @override
+  final double value;
+
+  @override
+  String toString() {
+    return 'WebBoxEvent.updateBottomLeftRadius(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_UpdateBottomLeftRadius &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UpdateBottomLeftRadiusCopyWith<_$_UpdateBottomLeftRadius> get copyWith =>
+      __$$_UpdateBottomLeftRadiusCopyWithImpl<_$_UpdateBottomLeftRadius>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(double value) updateOffsetY,
+    required TResult Function(double value) updateOffsetX,
+    required TResult Function(double value) updateBlur,
+    required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateAnimatedBoxColor,
+    required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
+  }) {
+    return updateBottomLeftRadius(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
+  }) {
+    return updateBottomLeftRadius?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateAnimatedBoxColor,
+    TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateBottomLeftRadius != null) {
+      return updateBottomLeftRadius(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialEvent value) initial,
+    required TResult Function(_UpdateOffsetY value) updateOffsetY,
+    required TResult Function(_UpdateOffsetX value) updateOffsetX,
+    required TResult Function(_UpdateBlur value) updateBlur,
+    required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateAnimatedBoxColor value)
+        updateAnimatedBoxColor,
+    required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
+  }) {
+    return updateBottomLeftRadius(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+  }) {
+    return updateBottomLeftRadius?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateBottomLeftRadius != null) {
+      return updateBottomLeftRadius(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateBottomLeftRadius implements WebBoxEvent {
+  const factory _UpdateBottomLeftRadius(final double value) =
+      _$_UpdateBottomLeftRadius;
+
+  double get value;
+  @JsonKey(ignore: true)
+  _$$_UpdateBottomLeftRadiusCopyWith<_$_UpdateBottomLeftRadius> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$_UpdateBottomRightRadiusCopyWith<$Res> {
+  factory _$$_UpdateBottomRightRadiusCopyWith(_$_UpdateBottomRightRadius value,
+          $Res Function(_$_UpdateBottomRightRadius) then) =
+      __$$_UpdateBottomRightRadiusCopyWithImpl<$Res>;
+  @useResult
+  $Res call({double value});
+}
+
+/// @nodoc
+class __$$_UpdateBottomRightRadiusCopyWithImpl<$Res>
+    extends _$WebBoxEventCopyWithImpl<$Res, _$_UpdateBottomRightRadius>
+    implements _$$_UpdateBottomRightRadiusCopyWith<$Res> {
+  __$$_UpdateBottomRightRadiusCopyWithImpl(_$_UpdateBottomRightRadius _value,
+      $Res Function(_$_UpdateBottomRightRadius) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$_UpdateBottomRightRadius(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as double,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$_UpdateBottomRightRadius implements _UpdateBottomRightRadius {
+  const _$_UpdateBottomRightRadius(this.value);
+
+  @override
+  final double value;
+
+  @override
+  String toString() {
+    return 'WebBoxEvent.updateBottomRightRadius(value: $value)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_UpdateBottomRightRadius &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$_UpdateBottomRightRadiusCopyWith<_$_UpdateBottomRightRadius>
+      get copyWith =>
+          __$$_UpdateBottomRightRadiusCopyWithImpl<_$_UpdateBottomRightRadius>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(double value) updateOffsetY,
+    required TResult Function(double value) updateOffsetX,
+    required TResult Function(double value) updateBlur,
+    required TResult Function(double value) updateSpread,
+    required TResult Function(Color value) updateAnimatedBoxColor,
+    required TResult Function(Color value) updateShadowColor,
+    required TResult Function() undoAnimatedBox,
+    required TResult Function() getFromLocalDataSource,
+    required TResult Function(double value) updateTopLeftRadius,
+    required TResult Function(double value) updateTopRightRadius,
+    required TResult Function(double value) updateBottomLeftRadius,
+    required TResult Function(double value) updateBottomRightRadius,
+  }) {
+    return updateBottomRightRadius(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(double value)? updateOffsetY,
+    TResult? Function(double value)? updateOffsetX,
+    TResult? Function(double value)? updateBlur,
+    TResult? Function(double value)? updateSpread,
+    TResult? Function(Color value)? updateAnimatedBoxColor,
+    TResult? Function(Color value)? updateShadowColor,
+    TResult? Function()? undoAnimatedBox,
+    TResult? Function()? getFromLocalDataSource,
+    TResult? Function(double value)? updateTopLeftRadius,
+    TResult? Function(double value)? updateTopRightRadius,
+    TResult? Function(double value)? updateBottomLeftRadius,
+    TResult? Function(double value)? updateBottomRightRadius,
+  }) {
+    return updateBottomRightRadius?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(double value)? updateOffsetY,
+    TResult Function(double value)? updateOffsetX,
+    TResult Function(double value)? updateBlur,
+    TResult Function(double value)? updateSpread,
+    TResult Function(Color value)? updateAnimatedBoxColor,
+    TResult Function(Color value)? updateShadowColor,
+    TResult Function()? undoAnimatedBox,
+    TResult Function()? getFromLocalDataSource,
+    TResult Function(double value)? updateTopLeftRadius,
+    TResult Function(double value)? updateTopRightRadius,
+    TResult Function(double value)? updateBottomLeftRadius,
+    TResult Function(double value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateBottomRightRadius != null) {
+      return updateBottomRightRadius(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialEvent value) initial,
+    required TResult Function(_UpdateOffsetY value) updateOffsetY,
+    required TResult Function(_UpdateOffsetX value) updateOffsetX,
+    required TResult Function(_UpdateBlur value) updateBlur,
+    required TResult Function(_UpdateRadius value) updateSpread,
+    required TResult Function(_UpdateAnimatedBoxColor value)
+        updateAnimatedBoxColor,
+    required TResult Function(_UpdateShadowColor value) updateShadowColor,
+    required TResult Function(_UndoAnimatedBox value) undoAnimatedBox,
+    required TResult Function(_GetFromLocalDataSource value)
+        getFromLocalDataSource,
+    required TResult Function(_UpdateTopLeftRadius value) updateTopLeftRadius,
+    required TResult Function(_UpdateTopRightRadius value) updateTopRightRadius,
+    required TResult Function(_UpdateBottomLeftRadius value)
+        updateBottomLeftRadius,
+    required TResult Function(_UpdateBottomRightRadius value)
+        updateBottomRightRadius,
+  }) {
+    return updateBottomRightRadius(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialEvent value)? initial,
+    TResult? Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult? Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult? Function(_UpdateBlur value)? updateBlur,
+    TResult? Function(_UpdateRadius value)? updateSpread,
+    TResult? Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult? Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult? Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult? Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult? Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult? Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult? Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult? Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+  }) {
+    return updateBottomRightRadius?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialEvent value)? initial,
+    TResult Function(_UpdateOffsetY value)? updateOffsetY,
+    TResult Function(_UpdateOffsetX value)? updateOffsetX,
+    TResult Function(_UpdateBlur value)? updateBlur,
+    TResult Function(_UpdateRadius value)? updateSpread,
+    TResult Function(_UpdateAnimatedBoxColor value)? updateAnimatedBoxColor,
+    TResult Function(_UpdateShadowColor value)? updateShadowColor,
+    TResult Function(_UndoAnimatedBox value)? undoAnimatedBox,
+    TResult Function(_GetFromLocalDataSource value)? getFromLocalDataSource,
+    TResult Function(_UpdateTopLeftRadius value)? updateTopLeftRadius,
+    TResult Function(_UpdateTopRightRadius value)? updateTopRightRadius,
+    TResult Function(_UpdateBottomLeftRadius value)? updateBottomLeftRadius,
+    TResult Function(_UpdateBottomRightRadius value)? updateBottomRightRadius,
+    required TResult orElse(),
+  }) {
+    if (updateBottomRightRadius != null) {
+      return updateBottomRightRadius(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _UpdateBottomRightRadius implements WebBoxEvent {
+  const factory _UpdateBottomRightRadius(final double value) =
+      _$_UpdateBottomRightRadius;
+
+  double get value;
+  @JsonKey(ignore: true)
+  _$$_UpdateBottomRightRadiusCopyWith<_$_UpdateBottomRightRadius>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$WebBoxState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(Offset offset, Color shadowColor,
-            Color animatedBoxColor, double blurRadius, double spreadRadius)
+    required TResult Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)
         updateWebBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
+    TResult? Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)?
         updateWebBox,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
+    TResult Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)?
         updateWebBox,
     required TResult orElse(),
   }) =>
@@ -1519,8 +2834,16 @@ class _$_InitialState implements _InitialState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(Offset offset, Color shadowColor,
-            Color animatedBoxColor, double blurRadius, double spreadRadius)
+    required TResult Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)
         updateWebBox,
   }) {
     return initial();
@@ -1530,8 +2853,16 @@ class _$_InitialState implements _InitialState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
+    TResult? Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)?
         updateWebBox,
   }) {
     return initial?.call();
@@ -1541,8 +2872,16 @@ class _$_InitialState implements _InitialState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
+    TResult Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)?
         updateWebBox,
     required TResult orElse(),
   }) {
@@ -1599,7 +2938,11 @@ abstract class _$$_UpdateWebBoxCopyWith<$Res> {
       Color shadowColor,
       Color animatedBoxColor,
       double blurRadius,
-      double spreadRadius});
+      double spreadRadius,
+      double topLeftRadius,
+      double topRightRadius,
+      double bottomLeftRadius,
+      double bottomRightRadius});
 }
 
 /// @nodoc
@@ -1618,6 +2961,10 @@ class __$$_UpdateWebBoxCopyWithImpl<$Res>
     Object? animatedBoxColor = null,
     Object? blurRadius = null,
     Object? spreadRadius = null,
+    Object? topLeftRadius = null,
+    Object? topRightRadius = null,
+    Object? bottomLeftRadius = null,
+    Object? bottomRightRadius = null,
   }) {
     return _then(_$_UpdateWebBox(
       offset: null == offset
@@ -1640,6 +2987,22 @@ class __$$_UpdateWebBoxCopyWithImpl<$Res>
           ? _value.spreadRadius
           : spreadRadius // ignore: cast_nullable_to_non_nullable
               as double,
+      topLeftRadius: null == topLeftRadius
+          ? _value.topLeftRadius
+          : topLeftRadius // ignore: cast_nullable_to_non_nullable
+              as double,
+      topRightRadius: null == topRightRadius
+          ? _value.topRightRadius
+          : topRightRadius // ignore: cast_nullable_to_non_nullable
+              as double,
+      bottomLeftRadius: null == bottomLeftRadius
+          ? _value.bottomLeftRadius
+          : bottomLeftRadius // ignore: cast_nullable_to_non_nullable
+              as double,
+      bottomRightRadius: null == bottomRightRadius
+          ? _value.bottomRightRadius
+          : bottomRightRadius // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
@@ -1652,7 +3015,11 @@ class _$_UpdateWebBox implements _UpdateWebBox {
       required this.shadowColor,
       required this.animatedBoxColor,
       required this.blurRadius,
-      required this.spreadRadius});
+      required this.spreadRadius,
+      required this.topLeftRadius,
+      required this.topRightRadius,
+      required this.bottomLeftRadius,
+      required this.bottomRightRadius});
 
   @override
   final Offset offset;
@@ -1664,10 +3031,18 @@ class _$_UpdateWebBox implements _UpdateWebBox {
   final double blurRadius;
   @override
   final double spreadRadius;
+  @override
+  final double topLeftRadius;
+  @override
+  final double topRightRadius;
+  @override
+  final double bottomLeftRadius;
+  @override
+  final double bottomRightRadius;
 
   @override
   String toString() {
-    return 'WebBoxState.updateWebBox(offset: $offset, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius)';
+    return 'WebBoxState.updateWebBox(offset: $offset, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, topLeftRadius: $topLeftRadius, topRightRadius: $topRightRadius, bottomLeftRadius: $bottomLeftRadius, bottomRightRadius: $bottomRightRadius)';
   }
 
   @override
@@ -1683,7 +3058,15 @@ class _$_UpdateWebBox implements _UpdateWebBox {
             (identical(other.blurRadius, blurRadius) ||
                 other.blurRadius == blurRadius) &&
             (identical(other.spreadRadius, spreadRadius) ||
-                other.spreadRadius == spreadRadius));
+                other.spreadRadius == spreadRadius) &&
+            (identical(other.topLeftRadius, topLeftRadius) ||
+                other.topLeftRadius == topLeftRadius) &&
+            (identical(other.topRightRadius, topRightRadius) ||
+                other.topRightRadius == topRightRadius) &&
+            (identical(other.bottomLeftRadius, bottomLeftRadius) ||
+                other.bottomLeftRadius == bottomLeftRadius) &&
+            (identical(other.bottomRightRadius, bottomRightRadius) ||
+                other.bottomRightRadius == bottomRightRadius));
   }
 
   @override
@@ -1693,7 +3076,11 @@ class _$_UpdateWebBox implements _UpdateWebBox {
       const DeepCollectionEquality().hash(shadowColor),
       const DeepCollectionEquality().hash(animatedBoxColor),
       blurRadius,
-      spreadRadius);
+      spreadRadius,
+      topLeftRadius,
+      topRightRadius,
+      bottomLeftRadius,
+      bottomRightRadius);
 
   @JsonKey(ignore: true)
   @override
@@ -1705,38 +3092,86 @@ class _$_UpdateWebBox implements _UpdateWebBox {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(Offset offset, Color shadowColor,
-            Color animatedBoxColor, double blurRadius, double spreadRadius)
+    required TResult Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)
         updateWebBox,
   }) {
     return updateWebBox(
-        offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
+        offset,
+        shadowColor,
+        animatedBoxColor,
+        blurRadius,
+        spreadRadius,
+        topLeftRadius,
+        topRightRadius,
+        bottomLeftRadius,
+        bottomRightRadius);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
+    TResult? Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)?
         updateWebBox,
   }) {
     return updateWebBox?.call(
-        offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
+        offset,
+        shadowColor,
+        animatedBoxColor,
+        blurRadius,
+        spreadRadius,
+        topLeftRadius,
+        topRightRadius,
+        bottomLeftRadius,
+        bottomRightRadius);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(Offset offset, Color shadowColor, Color animatedBoxColor,
-            double blurRadius, double spreadRadius)?
+    TResult Function(
+            Offset offset,
+            Color shadowColor,
+            Color animatedBoxColor,
+            double blurRadius,
+            double spreadRadius,
+            double topLeftRadius,
+            double topRightRadius,
+            double bottomLeftRadius,
+            double bottomRightRadius)?
         updateWebBox,
     required TResult orElse(),
   }) {
     if (updateWebBox != null) {
       return updateWebBox(
-          offset, shadowColor, animatedBoxColor, blurRadius, spreadRadius);
+          offset,
+          shadowColor,
+          animatedBoxColor,
+          blurRadius,
+          spreadRadius,
+          topLeftRadius,
+          topRightRadius,
+          bottomLeftRadius,
+          bottomRightRadius);
     }
     return orElse();
   }
@@ -1779,13 +3214,21 @@ abstract class _UpdateWebBox implements WebBoxState {
       required final Color shadowColor,
       required final Color animatedBoxColor,
       required final double blurRadius,
-      required final double spreadRadius}) = _$_UpdateWebBox;
+      required final double spreadRadius,
+      required final double topLeftRadius,
+      required final double topRightRadius,
+      required final double bottomLeftRadius,
+      required final double bottomRightRadius}) = _$_UpdateWebBox;
 
   Offset get offset;
   Color get shadowColor;
   Color get animatedBoxColor;
   double get blurRadius;
   double get spreadRadius;
+  double get topLeftRadius;
+  double get topRightRadius;
+  double get bottomLeftRadius;
+  double get bottomRightRadius;
   @JsonKey(ignore: true)
   _$$_UpdateWebBoxCopyWith<_$_UpdateWebBox> get copyWith =>
       throw _privateConstructorUsedError;

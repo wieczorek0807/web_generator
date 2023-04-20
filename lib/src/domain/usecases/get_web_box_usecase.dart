@@ -1,3 +1,4 @@
+import 'package:box_shadow_generator/src/data/repositories/web_box_repository_impl.dart';
 import 'package:dartz/dartz.dart';
 
 import '../../core/err/failures.dart';
@@ -6,7 +7,7 @@ import '../entities/web_box_entity.dart';
 import '../repositories/web_box_repository.dart';
 
 class GetWebBoxUseCase implements UseCase<WebBoxEntity> {
-  final WebBoxRepository repository;
+  final WebBoxRepositoryImpl repository;
 
   GetWebBoxUseCase({required this.repository});
 

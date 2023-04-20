@@ -2,8 +2,8 @@ import 'package:hive/hive.dart';
 import '../models/web_box_model.dart';
 
 abstract class WebBoxLocalDataSource {
-  Future<void> saveShadow(WebBoxModel value);
-  Future<WebBoxModel> getShadow();
+  Future<void> saveWaveBoxToLocalDataSource(WebBoxModel value);
+  Future<WebBoxModel> getWaveBoxFromLocalDataSource();
 }
 
 class WebBoxLocalDataSourceImpl implements WebBoxLocalDataSource {
@@ -15,19 +15,18 @@ class WebBoxLocalDataSourceImpl implements WebBoxLocalDataSource {
   late Box _box;
   final String key;
 
-  // static const _key = 'shadow_key_1';
-
   @override
-  Future<void> saveShadow(WebBoxModel value) {
+  Future<void> saveWaveBoxToLocalDataSource(WebBoxModel value) {
     return _box.put(key, value);
   }
 
   @override
-  Future<WebBoxModel> getShadow() {
+  Future<WebBoxModel> getWaveBoxFromLocalDataSource() async {
     if (_box.isEmpty) {
       throw Exception();
     } else {
-      return _box.get(key);
+      WebBoxModel webBoxModel = await _box.get(key);
+      return webBoxModel;
     }
   }
 }

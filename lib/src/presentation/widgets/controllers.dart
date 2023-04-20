@@ -90,11 +90,12 @@ class RadiusControllers extends StatelessWidget {
 
   static const _height = 500.0;
   static const _width = 300.0;
-  static const _blurMin = 0.0;
+  static const _radiusMin = 0.0;
+  static const _radiusMax = 250.0;
 
   @override
   Widget build(BuildContext context) => Container(
-        height: _height,
+        // height: _height,
         width: _width,
         color: Colors.white,
         child: BlocBuilder<WebBoxBloc, WebBoxState>(
@@ -112,34 +113,42 @@ class RadiusControllers extends StatelessWidget {
                 const Divider(),
                 AppValueSlider(
                   title: 'top left',
-                  value: state.offset.dx,
+                  value: state.topLeftRadius,
+                  min: _radiusMin,
+                  max: _radiusMax,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateOffsetX(v)),
+                      .add(WebBoxEvent.updateTopLeftRadius(v)),
                 ),
                 const Divider(),
                 AppValueSlider(
                   title: 'top right',
-                  value: state.offset.dy,
+                  value: state.topRightRadius,
+                  min: _radiusMin,
+                  max: _radiusMax,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateOffsetY(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'bottom right',
-                  min: _blurMin,
-                  value: state.blurRadius,
-                  onChanged: (v) =>
-                      context.read<WebBoxBloc>().add(WebBoxEvent.updateBlur(v)),
+                      .add(WebBoxEvent.updateTopRightRadius(v)),
                 ),
                 const Divider(),
                 AppValueSlider(
                   title: 'bottom left',
-                  value: state.spreadRadius,
+                  value: state.bottomLeftRadius,
+                  min: _radiusMin,
+                  max: _radiusMax,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateSpread(v)),
+                      .add(WebBoxEvent.updateBottomLeftRadius(v)),
+                ),
+                const Divider(),
+                AppValueSlider(
+                  title: 'bottom right',
+                  value: state.bottomRightRadius,
+                  min: _radiusMin,
+                  max: _radiusMax,
+                  onChanged: (v) => context
+                      .read<WebBoxBloc>()
+                      .add(WebBoxEvent.updateBottomRightRadius(v)),
                 ),
               ],
             ),

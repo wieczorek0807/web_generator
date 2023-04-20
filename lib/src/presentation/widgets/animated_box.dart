@@ -33,8 +33,11 @@ class AnimatedBox extends StatelessWidget {
                       spreadRadius: state.spreadRadius,
                     ),
                   ],
-                  borderRadius:
-                      const BorderRadius.only(topLeft: Radius.circular(40))),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(state.topLeftRadius),
+                      topRight: Radius.circular(state.topRightRadius),
+                      bottomLeft: Radius.circular(state.bottomLeftRadius),
+                      bottomRight: Radius.circular(state.bottomRightRadius))),
             ),
           ),
         ),

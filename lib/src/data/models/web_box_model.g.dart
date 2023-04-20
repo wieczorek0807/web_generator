@@ -23,13 +23,17 @@ class WebBoxModelAdapter extends TypeAdapter<WebBoxModel> {
       blurRadius: fields[3] as double,
       shadowColor: fields[4] as int,
       animatedBoxColor: fields[5] as int,
+      topLeftRadius: fields[6] as double,
+      topRightRadius: fields[7] as double,
+      bottomLeftRadius: fields[8] as double,
+      bottomRightRadius: fields[9] as double,
     );
   }
 
   @override
   void write(BinaryWriter writer, WebBoxModel obj) {
     writer
-      ..writeByte(6)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.offsetDx)
       ..writeByte(1)
@@ -41,7 +45,15 @@ class WebBoxModelAdapter extends TypeAdapter<WebBoxModel> {
       ..writeByte(4)
       ..write(obj.shadowColor)
       ..writeByte(5)
-      ..write(obj.animatedBoxColor);
+      ..write(obj.animatedBoxColor)
+      ..writeByte(6)
+      ..write(obj.topLeftRadius)
+      ..writeByte(7)
+      ..write(obj.topRightRadius)
+      ..writeByte(8)
+      ..write(obj.bottomLeftRadius)
+      ..writeByte(9)
+      ..write(obj.bottomRightRadius);
   }
 
   @override

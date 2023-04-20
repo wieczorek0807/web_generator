@@ -13,21 +13,28 @@ class WebBoxRepositoryImpl implements WebBoxRepository {
 
   @override
   Future<Either<Failure, WebBoxEntity>> getWebBox() async {
-    //? Jak zrobić z try on
-    // try {
-    final localWebBox = await webBoxLocalDataSource.getShadow();
-    return Right(WebBoxEntity.fromModel(model: localWebBox));
-    // } on Exception catch (e) {}
+    try {
+      final localWebBox =
+          await webBoxLocalDataSource.getWaveBoxFromLocalDataSource();
+      WebBoxEntity webBoxEntity = WebBoxEntity.fromModel(model: localWebBox);
+      return Right(webBoxEntity);
+    } on Exception catch (e) {
+      return Left(DataSourceFailure());
+    }
   }
 
   @override
   Future<void> saveWebBox(WebBoxEntity webBox) async {
-    await webBoxLocalDataSource.saveShadow(WebBoxModel(
+    await webBoxLocalDataSource.saveWaveBoxToLocalDataSource(WebBoxModel(
         offsetDx: webBox.offsetDx,
         offsetDy: webBox.offsetDy,
         spreadRadius: webBox.spreadRadius,
         blurRadius: webBox.blurRadius,
         shadowColor: webBox.shadowColor,
-        animatedBoxColor: webBox.animatedBoxColor));
+        animatedBoxColor: webBox.animatedBoxColor,
+        bottomLeftRadius: webBox.bottomLeftRadius,
+        bottomRightRadius: webBox.bottomRightRadius,
+        topLeftRadius: webBox.topLeftRadius,
+        topRightRadius: webBox.topRightRadius));
   }
 }

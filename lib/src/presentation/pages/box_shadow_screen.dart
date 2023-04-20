@@ -17,7 +17,9 @@ class BoxShadowScreen extends StatelessWidget {
     return MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (_) => getIt<WebBoxBloc>()..initialize(),
+            create: (_) {
+              return getIt<WebBoxBloc>()..initialize();
+            },
           ),
           BlocProvider(
             create: (_) => getIt<RoutingCubit>(),

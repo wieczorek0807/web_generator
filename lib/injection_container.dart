@@ -11,15 +11,18 @@ import 'src/data/models/web_box_model.dart';
 final getIt = GetIt.instance;
 
 Future<void> setup() async {
-  //Bloc
-  getIt.registerFactory(() => WebBoxBloc(repositoryImpl: getIt()));
-  getIt.registerLazySingleton(() => RoutingCubit());
-  //Use Cases
-  getIt.registerLazySingleton(() => GetWebBoxUseCase(repository: getIt()));
-
   //Repository
   getIt.registerLazySingleton(
       () => WebBoxRepositoryImpl(webBoxLocalDataSource: getIt()));
+
+  //Use Cases
+  getIt.registerLazySingleton(() => GetWebBoxUseCase(repository: getIt()));
+
+  //Bloc
+  getIt.registerFactory(() =>
+      WebBoxBloc(repositoryImpl: getIt(), getWebBoxUseCase: getIt())
+        ..initialize());
+  getIt.registerLazySingleton(() => RoutingCubit());
 
   //Data sources
   const String hiveBox = "WebBoxHiveBox";
@@ -35,4 +38,6 @@ Future<void> setup() async {
       key: key,
     );
   });
+
+  // getIt<WebBoxBloc>().add(WebBoxEvent.getFromLocalDataSource(getIt()));
 }

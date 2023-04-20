@@ -19,4 +19,21 @@ class WebBoxEvent with _$WebBoxEvent {
 
   //undo changes
   const factory WebBoxEvent.undoAnimatedBox() = _UndoAnimatedBox;
+
+  //get form data sources
+
+  const factory WebBoxEvent.getFromLocalDataSource() = _GetFromLocalDataSource;
+
+  //border radio
+  const factory WebBoxEvent.updateTopLeftRadius(double value) =
+      _UpdateTopLeftRadius;
+
+  const factory WebBoxEvent.updateTopRightRadius(double value) =
+      _UpdateTopRightRadius;
+
+  const factory WebBoxEvent.updateBottomLeftRadius(double value) =
+      _UpdateBottomLeftRadius;
+
+  const factory WebBoxEvent.updateBottomRightRadius(double value) =
+      _UpdateBottomRightRadius;
 }

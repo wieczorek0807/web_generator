@@ -1,5 +1,8 @@
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
+import 'package:box_shadow_generator/src/core/err/failures.dart';
+import 'package:box_shadow_generator/src/domain/usecases/get_web_box_usecase.dart';
+import 'package:dartz/dartz.dart';
 import 'package:easy_debounce/easy_debounce.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -12,7 +15,7 @@ part 'web_box_event.dart';
 part 'web_box_state.dart';
 
 class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
-  WebBoxBloc({required this.repositoryImpl})
+  WebBoxBloc({required this.repositoryImpl, required this.getWebBoxUseCase})
       : super(const WebBoxState.initial()) {
     on<WebBoxEvent>((event, emit) {
       _updateValues(event);
@@ -21,15 +24,21 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
   }
 
   final WebBoxRepositoryImpl repositoryImpl;
+  final GetWebBoxUseCase getWebBoxUseCase;
 
   Offset _offset = Offset.zero;
   double _spreadRadius = 0.0;
   double _blurRadius = 0.0;
   Color _shadowColor = Colors.black;
   Color _animatedBoxColor = Colors.grey.shade200;
+  double _topLeftRadius = 0.0;
+  double _topRightRadius = 0.0;
+  double _bottomLeftRadius = 0.0;
+  double _bottomRightRadius = 0.0;
 
   void initialize() {
     add(const WebBoxEvent.initial());
+    add(const WebBoxEvent.getFromLocalDataSource());
   }
 
   void _revertChanges() {
@@ -38,6 +47,10 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
     _blurRadius = 0.0;
     _shadowColor = Colors.black;
     _animatedBoxColor = Colors.grey.shade200;
+    _topLeftRadius = 0.0;
+    _topRightRadius = 0.0;
+    _bottomLeftRadius = 0.0;
+    _bottomRightRadius = 0.0;
   }
 
   void _updateValues(WebBoxEvent event) => event.maybeWhen(
@@ -48,6 +61,11 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
         updateOffsetY: (v) => _offset = _offset.copyWith(dy: v),
         updateShadowColor: (v) => _shadowColor = v,
         updateAnimatedBoxColor: (v) => _animatedBoxColor = v,
+        updateTopLeftRadius: (v) => _topLeftRadius = v,
+        updateTopRightRadius: (v) => _topRightRadius = v,
+        updateBottomLeftRadius: (v) => _bottomLeftRadius = v,
+        updateBottomRightRadius: (v) => _bottomRightRadius = v,
+        getFromLocalDataSource: _getFromLocalDataSource,
         undoAnimatedBox: _revertChanges,
       );
 
@@ -59,12 +77,15 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
     );
 
     emit(WebBoxState.updateWebBox(
-      spreadRadius: _spreadRadius,
-      blurRadius: _blurRadius,
-      offset: _offset,
-      shadowColor: _shadowColor,
-      animatedBoxColor: _animatedBoxColor,
-    ));
+        spreadRadius: _spreadRadius,
+        blurRadius: _blurRadius,
+        offset: _offset,
+        shadowColor: _shadowColor,
+        animatedBoxColor: _animatedBoxColor,
+        topLeftRadius: _topLeftRadius,
+        topRightRadius: _topRightRadius,
+        bottomLeftRadius: _bottomLeftRadius,
+        bottomRightRadius: _bottomRightRadius));
   }
 
   void _saveModelToDatabase() {
@@ -75,8 +96,30 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
       spreadRadius: _spreadRadius,
       shadowColor: _shadowColor.value,
       animatedBoxColor: _animatedBoxColor.value,
+      bottomLeftRadius: _bottomLeftRadius,
+      bottomRightRadius: _bottomRightRadius,
+      topLeftRadius: _topLeftRadius,
+      topRightRadius: _topRightRadius,
     );
 
     repositoryImpl.saveWebBox(webBoxEntity);
+  }
+
+  Future<void> _getFromLocalDataSource() async {
+    print('getting form db');
+    final Either<Failure, WebBoxEntity> webBoxEntityOrFailure =
+        await getWebBoxUseCase.call();
+
+    webBoxEntityOrFailure.fold((l) => print('duppaaa'), (r) {
+      _offset = Offset(r.offsetDx, r.offsetDy);
+      _spreadRadius = r.spreadRadius;
+      _blurRadius = r.blurRadius;
+      _shadowColor = Color(r.shadowColor);
+      _animatedBoxColor = Color(r.animatedBoxColor);
+      _topLeftRadius = r.topLeftRadius;
+      _topRightRadius = r.topRightRadius;
+      _bottomLeftRadius = r.bottomLeftRadius;
+      _bottomRightRadius = r.bottomRightRadius;
+    });
   }
 }

@@ -54,19 +54,21 @@ class _DesktopBody extends StatelessWidget {
   final Widget controllers;
   final Widget animatedBox;
   @override
-  Widget build(BuildContext context) => Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              controllers,
-              const SizedBox(width: AppDimens.d100),
-              animatedBox
-            ],
-          ),
-        ],
+  Widget build(BuildContext context) => SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                controllers,
+                const SizedBox(width: AppDimens.d100),
+                animatedBox
+              ],
+            ),
+          ],
+        ),
       );
 }
 
