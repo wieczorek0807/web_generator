@@ -38,6 +38,4 @@ Future<void> setup() async {
       key: key,
     );
   });
-
-  // getIt<WebBoxBloc>().add(WebBoxEvent.getFromLocalDataSource(getIt()));
 }
