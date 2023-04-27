@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../bloc/web_box/web_box_bloc.dart';
-import 'app_color_picker.dart';
+import 'app_flex_color_picker.dart';
 import 'app_value_slider.dart';
 
 class ShadowControllers extends StatelessWidget {
@@ -63,7 +63,7 @@ class ShadowControllers extends StatelessWidget {
                       .add(WebBoxEvent.updateSpread(v)),
                 ),
                 const Divider(),
-                AppColorPicker(
+                AppFlexColorPicker(
                   title: 'Shadow color:',
                   startColor: state.shadowColor,
                   onChanged: (v) => context
@@ -71,7 +71,7 @@ class ShadowControllers extends StatelessWidget {
                       .add(WebBoxEvent.updateShadowColor(v)),
                 ),
                 const Divider(),
-                AppColorPicker(
+                AppFlexColorPicker(
                   title: 'Box color:',
                   startColor: state.animatedBoxColor,
                   onChanged: (v) => context
