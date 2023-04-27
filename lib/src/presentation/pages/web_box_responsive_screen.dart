@@ -1,10 +1,11 @@
+import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:box_shadow_generator/src/presentation/bloc/routing/cubit/routing_cubit.dart';
-import 'package:box_shadow_generator/src/presentation/widgets/app_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/values/dimens.dart';
 import '../bloc/routing/cubit/routing_state.dart';
+import '../widgets/web_box_drawer.dart';
 
 class WebBoxResponsiveScreen extends StatelessWidget {
   const WebBoxResponsiveScreen(
@@ -20,32 +21,37 @@ class WebBoxResponsiveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currnetWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-        backgroundColor: Colors.white,
-        body:
-            BlocBuilder<RoutingCubit, RoutingState>(builder: (context, state) {
-          if (state.index == ScreenRoute.boxShadowscreen) {
+    return BlocBuilder<RoutingCubit, RoutingState>(
+      builder: (context, state) {
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(state.title),
+            backgroundColor: AppColors.primary,
+          ),
+          backgroundColor: Colors.white,
+          drawer: const WebBoxDrawer(),
+          body: BlocBuilder<RoutingCubit, RoutingState>(
+              builder: (context, state) {
+            if (state.boxShadowscreen) {
+              if (currnetWidth < 900) {
+                return _MobileBody(
+                    controllers: shadowControllers, animatedBox: animatedBox);
+              } else {
+                return _DesktopBody(
+                    controllers: shadowControllers, animatedBox: animatedBox);
+              }
+            }
             if (currnetWidth < 900) {
               return _MobileBody(
-                  controllers: shadowControllers, animatedBox: animatedBox);
+                  controllers: radiusControllers, animatedBox: animatedBox);
             } else {
               return _DesktopBody(
-                  controllers: shadowControllers, animatedBox: animatedBox);
+                  controllers: radiusControllers, animatedBox: animatedBox);
             }
-          }
-          if (currnetWidth < 900) {
-            return _MobileBody(
-                controllers: radiusControllers, animatedBox: animatedBox);
-          } else {
-            return _DesktopBody(
-                controllers: radiusControllers, animatedBox: animatedBox);
-          }
-        }),
-        bottomNavigationBar: BlocBuilder<RoutingCubit, RoutingState>(
-          builder: (context, state) {
-            return AppBottomNavigationBar(routeId: state.index);
-          },
-        ));
+          }),
+        );
+      },
+    );
   }
 }
 
@@ -54,20 +60,22 @@ class _DesktopBody extends StatelessWidget {
   final Widget controllers;
   final Widget animatedBox;
   @override
-  Widget build(BuildContext context) => SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                controllers,
-                const SizedBox(width: AppDimens.d100),
-                animatedBox
-              ],
-            ),
-          ],
+  Widget build(BuildContext context) => Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  controllers,
+                  const SizedBox(width: AppDimens.d100),
+                  animatedBox
+                ],
+              ),
+            ],
+          ),
         ),
       );
 }

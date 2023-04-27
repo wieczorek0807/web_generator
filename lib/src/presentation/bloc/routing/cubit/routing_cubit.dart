@@ -5,16 +5,25 @@ import 'routing_state.dart';
 
 class RoutingCubit extends Cubit<RoutingState> {
   RoutingCubit()
-      : super(const RoutingState(index: ScreenRoute.boxShadowscreen));
+      : super(const RoutingState(
+            title: 'Box Shadow Generator', boxShadowscreen: true));
 
-  void changeToBoxShadowScreen() =>
-      emit(const RoutingState(index: ScreenRoute.boxShadowscreen));
+  void changeToBoxShadowScreen() => emit(
+      const RoutingState(title: 'Box Shadow Generator', boxShadowscreen: true));
 
-  void changeToBoxRadiusScreen() =>
-      emit(const RoutingState(index: ScreenRoute.boxRadiusscreen));
+  void changeToBoxRadiusScreen() => emit(const RoutingState(
+      title: 'Border Radius Generator', boxRadiusscreen: true));
+
+  void changeToBoxSizeScreen() => emit(
+      const RoutingState(title: 'Change Size of Block', boxSizescreen: true));
+
+  void changeToGradinetScreen() => emit(
+      const RoutingState(title: 'Gradient Generator', gradientScreen: true));
 }
 
 abstract class ScreenRoute {
   static const boxShadowscreen = 0;
   static const boxRadiusscreen = 1;
+  static const boxSizescreen = 2;
+  static const gradientScreen = 3;
 }
