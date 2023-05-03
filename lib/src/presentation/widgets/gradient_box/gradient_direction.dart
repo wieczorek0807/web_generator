@@ -17,14 +17,14 @@ class GradientDirection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GradientDropdownButton(
-                  name: 'Begin',
+                  name: 'Directon start',
                   dropDownButtonValue: state.beginLinearGradient,
                   dropDownButtonItems: allGradientDirecitons,
                   onChange: (v) => context.read<GradientBoxBloc>().add(
                       GradientBoxEvent.changeBeginValue(
                           beginLinearGradient: v))),
               GradientDropdownButton(
-                  name: 'End',
+                  name: 'Directon end',
                   dropDownButtonValue: state.endLinearGradient,
                   dropDownButtonItems: allGradientDirecitons,
                   onChange: (v) => context.read<GradientBoxBloc>().add(

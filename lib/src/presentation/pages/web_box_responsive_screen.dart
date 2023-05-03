@@ -25,7 +25,6 @@ class WebBoxResponsiveScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final currnetWidth = MediaQuery.of(context).size.width;
     return BlocBuilder<RoutingCubit, RoutingState>(
       builder: (context, state) {
         return Scaffold(
@@ -38,43 +37,50 @@ class WebBoxResponsiveScreen extends StatelessWidget {
           body: BlocBuilder<RoutingCubit, RoutingState>(
               builder: (context, state) {
             if (state.boxShadowscreen) {
-              if (currnetWidth < 900) {
-                return _MobileBody(
-                    controllers: shadowControllers, animatedBox: animatedBox);
-              } else {
-                return _DesktopBody(
-                    controllers: shadowControllers, animatedBox: animatedBox);
-              }
+              return _ResponsiveScreenHelper(
+                controllers: shadowControllers,
+                animatedBox: animatedBox,
+              );
             }
             if (state.boxRadiusscreen) {
-              if (currnetWidth < 900) {
-                return _MobileBody(
-                    controllers: radiusControllers, animatedBox: animatedBox);
-              } else {
-                return _DesktopBody(
-                    controllers: radiusControllers, animatedBox: animatedBox);
-              }
+              return _ResponsiveScreenHelper(
+                controllers: radiusControllers,
+                animatedBox: animatedBox,
+              );
             }
             if (state.boxSizescreen) {
-              if (currnetWidth < 900) {
-                return _MobileBody(
-                    controllers: sizeControllers, animatedBox: animatedBox);
-              } else {
-                return _DesktopBody(
-                    controllers: sizeControllers, animatedBox: animatedBox);
-              }
+              return _ResponsiveScreenHelper(
+                controllers: sizeControllers,
+                animatedBox: animatedBox,
+              );
             }
-            if (currnetWidth < 900) {
-              return _MobileBody(
-                  controllers: gradientControllers, animatedBox: animatedBox);
-            } else {
-              return _DesktopBody(
-                  controllers: gradientControllers, animatedBox: animatedBox);
-            }
+            return _ResponsiveScreenHelper(
+              controllers: gradientControllers,
+              animatedBox: animatedBox,
+            );
           }),
         );
       },
     );
+  }
+}
+
+class _ResponsiveScreenHelper extends StatelessWidget {
+  final Widget controllers;
+  final Widget animatedBox;
+  const _ResponsiveScreenHelper({
+    required this.controllers,
+    required this.animatedBox,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final currnetWidth = MediaQuery.of(context).size.width;
+    if (currnetWidth < 900) {
+      return _MobileBody(controllers: controllers, animatedBox: animatedBox);
+    } else {
+      return _DesktopBody(controllers: controllers, animatedBox: animatedBox);
+    }
   }
 }
 
@@ -111,14 +117,27 @@ class _MobileBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Row(
-      children: [
-        Expanded(
-          child: SingleChildScrollView(
-            child: Column(children: [animatedBox, controllers]),
+      child: Row(
+        children: [
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(children: [
+                const SizedBox(
+                  height: AppDimens.d52,
+                ),
+                animatedBox,
+                const SizedBox(
+                  height: AppDimens.d52,
+                ),
+                controllers,
+                const SizedBox(
+                  height: AppDimens.d52,
+                ),
+              ]),
+            ),
           ),
-        ),
-      ],
-    ));
+        ],
+      ),
+    );
   }
 }

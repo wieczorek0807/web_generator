@@ -1,3 +1,4 @@
+import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/global/flex_color_picker.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -42,6 +43,7 @@ class ColorAndValueForGradientPicker extends StatelessWidget {
         ),
         const SizedBox(height: AppDimens.d4),
         CupertinoSlider(
+          activeColor: AppColors.third,
           min: 0,
           max: 1,
           value: value,

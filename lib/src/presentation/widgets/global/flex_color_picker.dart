@@ -1,3 +1,4 @@
+import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:flex_color_picker/flex_color_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -69,6 +70,7 @@ class _FlexColorPickerState extends State<FlexColorPicker> {
                 },
               ),
               CupertinoButton(
+                color: AppColors.third,
                 onPressed: () {
                   Navigator.of(context).pop();
                 },

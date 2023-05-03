@@ -1,3 +1,4 @@
+import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../../core/values/dimens.dart';
@@ -32,6 +33,7 @@ class AppValueSlider extends StatelessWidget {
           Text('$title | ${value.floor()}'),
           const SizedBox(height: AppDimens.d4),
           CupertinoSlider(
+            activeColor: AppColors.third,
             value: value,
             min: min,
             max: max,

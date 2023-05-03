@@ -1,5 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
+import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:box_shadow_generator/src/domain/entities/gradient_box_entity.dart';
 import 'package:box_shadow_generator/src/domain/entities/gradient_direction_entity.dart';
 import 'package:flutter/material.dart';
@@ -26,8 +27,8 @@ class GradientBoxBloc extends Bloc<GradientBoxEvent, GradientBoxState> {
   }
 
   static const _initialValue = [
-    GradientColorEntity(Colors.greenAccent, 0, 0),
-    GradientColorEntity(Colors.deepPurpleAccent, 1, 1),
+    GradientColorEntity(AppColors.primary, 0, 0),
+    GradientColorEntity(AppColors.third, 1, 1),
   ];
 
   void initialize() {
@@ -56,7 +57,7 @@ class GradientBoxBloc extends Bloc<GradientBoxEvent, GradientBoxState> {
   void _addGradientColor() {
     if (state.gradientColors.length < 6) {
       final newColor =
-          GradientColorEntity(Colors.red, 0, state.gradientColors.length);
+          GradientColorEntity(AppColors.five, 0, state.gradientColors.length);
       final colors = List.of([...state.gradientColors, newColor]);
 
       List<GradientColorEntity> newState =

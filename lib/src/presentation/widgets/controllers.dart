@@ -1,3 +1,5 @@
+import 'package:box_shadow_generator/src/core/values/colors.dart';
+import 'package:box_shadow_generator/src/core/values/dimens.dart';
 import 'package:box_shadow_generator/src/presentation/bloc/gradient_box/gradient_box_bloc.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/app_segment_buttons.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/color_gradient_picker.dart';
@@ -39,7 +41,7 @@ class ShadowControllers extends StatelessWidget {
                     icon: const Icon(Icons.undo)),
                 const Divider(),
                 AppValueSlider(
-                  title: 'offset dx',
+                  title: 'Offset dx',
                   value: state.offset.dx,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
@@ -47,7 +49,7 @@ class ShadowControllers extends StatelessWidget {
                 ),
                 const Divider(),
                 AppValueSlider(
-                  title: 'offset dy',
+                  title: 'Offset dy',
                   value: state.offset.dy,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
@@ -55,7 +57,7 @@ class ShadowControllers extends StatelessWidget {
                 ),
                 const Divider(),
                 AppValueSlider(
-                  title: 'blur radius',
+                  title: 'Blur radius',
                   min: _blurMin,
                   value: state.blurRadius,
                   onChanged: (v) =>
@@ -63,7 +65,7 @@ class ShadowControllers extends StatelessWidget {
                 ),
                 const Divider(),
                 AppValueSlider(
-                  title: 'spread radius',
+                  title: 'Spread radius',
                   value: state.spreadRadius,
                   onChanged: (v) => context
                       .read<WebBoxBloc>()
@@ -118,7 +120,7 @@ class RadiusControllers extends StatelessWidget {
                     icon: const Icon(Icons.undo)),
                 const Divider(),
                 AppValueSlider(
-                  title: 'top left',
+                  title: 'Top left',
                   value: state.topLeftRadius,
                   min: _radiusMin,
                   max: _radiusMax,
@@ -128,7 +130,7 @@ class RadiusControllers extends StatelessWidget {
                 ),
                 const Divider(),
                 AppValueSlider(
-                  title: 'top right',
+                  title: 'Top right',
                   value: state.topRightRadius,
                   min: _radiusMin,
                   max: _radiusMax,
@@ -138,7 +140,7 @@ class RadiusControllers extends StatelessWidget {
                 ),
                 const Divider(),
                 AppValueSlider(
-                  title: 'bottom left',
+                  title: 'Bottom left',
                   value: state.bottomLeftRadius,
                   min: _radiusMin,
                   max: _radiusMax,
@@ -148,7 +150,7 @@ class RadiusControllers extends StatelessWidget {
                 ),
                 const Divider(),
                 AppValueSlider(
-                  title: 'bottom right',
+                  title: 'Bottom right',
                   value: state.bottomRightRadius,
                   min: _radiusMin,
                   max: _radiusMax,
@@ -217,83 +219,99 @@ class GradientControllers extends StatefulWidget {
   const GradientControllers({Key? key}) : super(key: key);
 
   static const _width = 300.0;
-  static const _radiusMin = 0.0;
-  static const _radiusMax = 350.0;
 
   @override
   State<GradientControllers> createState() => _GradientControllersState();
 }
 
 class _GradientControllersState extends State<GradientControllers> {
-  var _asd = {0};
   @override
   Widget build(BuildContext context) => Container(
       width: GradientControllers._width,
-      color: Colors.white,
       child: BlocBuilder<GradientBoxBloc, GradientBoxState>(
-        builder: (_, state) => Column(
-          children: [
-            AppSegmentButtons(
-              isGradiennEnabled: state.isGradientEnabled,
-              isLinearGradient: state.isLinearGradient,
-              isRadialGradient: state.isRadialGradient,
-              onChanged: (v) => context
-                  .read<GradientBoxBloc>()
-                  .add(GradientBoxEvent.changeGradientState(value: v)),
-            ),
-            const Divider(),
-            Text('Directon:'),
-            GradientDirection(),
-            const Divider(),
-            IconButton(
-                onPressed: () {
-                  context
-                      .read<GradientBoxBloc>()
-                      .add(const GradientBoxEvent.revertChanges());
-                },
-                icon: const Icon(Icons.undo)),
-            const Divider(),
-            SizedBox(
-              height: 300,
-              child: ListView.builder(
-                  itemCount: state.gradientColors.length,
-                  itemBuilder: (context, index) {
-                    return ColorAndValueForGradientPicker(
-                      valueOnChanged: (v) => context
-                          .read<GradientBoxBloc>()
-                          .add(GradientBoxEvent.updateGradientValue(
-                              id: index, value: v)),
-                      colorOnChanged: (Color v) => context
-                          .read<GradientBoxBloc>()
-                          .add(GradientBoxEvent.updateGradientColor(
-                              id: index, color: v)),
-                      startColor: state.gradientColors[index].color,
-                      index: index,
-                      value: state.gradientColors[index].value,
-                    );
-                  }),
-            ),
-            const Divider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        builder: (_, state) {
+          if (state.isGradientEnabled) {
+            return Column(
               children: [
-                ElevatedButton.icon(
-                  onPressed: () => context
+                AppSegmentButtons(
+                  isGradiennEnabled: state.isGradientEnabled,
+                  isLinearGradient: state.isLinearGradient,
+                  isRadialGradient: state.isRadialGradient,
+                  onChanged: (v) => context
                       .read<GradientBoxBloc>()
-                      .add(const GradientBoxEvent.addGradientColor()),
-                  icon: const Icon(Icons.add),
-                  label: const Text('Add color'),
+                      .add(GradientBoxEvent.changeGradientState(value: v)),
                 ),
-                ElevatedButton.icon(
-                  onPressed: () => context
-                      .read<GradientBoxBloc>()
-                      .add(const GradientBoxEvent.removeGradientColor()),
-                  icon: const Icon(Icons.remove),
-                  label: const Text('Remove color'),
+                const SizedBox(
+                  height: 24,
+                ),
+                const GradientDirection(),
+                const SizedBox(
+                  height: 12,
+                ),
+                const Divider(),
+                // IconButton(
+                //     onPressed: () {
+                //       context
+                //           .read<GradientBoxBloc>()
+                //           .add(const GradientBoxEvent.revertChanges());
+                //     },
+                //     icon: const Icon(Icons.undo)),
+                // const Divider(),
+                SizedBox(
+                  height: 200,
+                  child: ListView.builder(
+                      itemCount: state.gradientColors.length,
+                      itemBuilder: (context, index) {
+                        return ColorAndValueForGradientPicker(
+                          valueOnChanged: (v) => context
+                              .read<GradientBoxBloc>()
+                              .add(GradientBoxEvent.updateGradientValue(
+                                  id: index, value: v)),
+                          colorOnChanged: (Color v) => context
+                              .read<GradientBoxBloc>()
+                              .add(GradientBoxEvent.updateGradientColor(
+                                  id: index, color: v)),
+                          startColor: state.gradientColors[index].color,
+                          index: index,
+                          value: state.gradientColors[index].value,
+                        );
+                      }),
+                ),
+                const Divider(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: AppColors.primary,
+                      ),
+                      onPressed: () => context
+                          .read<GradientBoxBloc>()
+                          .add(const GradientBoxEvent.addGradientColor()),
+                      child: const Text('Add color'),
+                    ),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: AppColors.primary,
+                      ),
+                      onPressed: () => context
+                          .read<GradientBoxBloc>()
+                          .add(const GradientBoxEvent.removeGradientColor()),
+                      child: const Text('Remove color'),
+                    )
+                  ],
                 )
               ],
-            )
-          ],
-        ),
+            );
+          }
+          return AppSegmentButtons(
+            isGradiennEnabled: state.isGradientEnabled,
+            isLinearGradient: state.isLinearGradient,
+            isRadialGradient: state.isRadialGradient,
+            onChanged: (v) => context
+                .read<GradientBoxBloc>()
+                .add(GradientBoxEvent.changeGradientState(value: v)),
+          );
+        },
       ));
 }
