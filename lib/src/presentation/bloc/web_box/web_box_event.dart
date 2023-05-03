@@ -36,4 +36,10 @@ class WebBoxEvent with _$WebBoxEvent {
 
   const factory WebBoxEvent.updateBottomRightRadius(double value) =
       _UpdateBottomRightRadius;
+
+  //size of block
+
+  const factory WebBoxEvent.updateBoxHeight(double value) = _UpdateBoxHeight;
+
+  const factory WebBoxEvent.updateBoxWidth(double value) = _UpdateBoxWidth;
 }

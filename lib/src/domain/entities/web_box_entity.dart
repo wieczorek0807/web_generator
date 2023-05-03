@@ -3,6 +3,8 @@ import 'package:equatable/equatable.dart';
 
 // ignore: must_be_immutable
 class WebBoxEntity extends Equatable {
+  late double boxHeight;
+  late double boxWidth;
   late double offsetDx;
   late double offsetDy;
   late double spreadRadius;
@@ -15,7 +17,9 @@ class WebBoxEntity extends Equatable {
   late double bottomRightRadius;
 
   WebBoxEntity(
-      {required this.offsetDx,
+      {required this.boxHeight,
+      required this.boxWidth,
+      required this.offsetDx,
       required this.offsetDy,
       required this.spreadRadius,
       required this.blurRadius,
@@ -27,6 +31,8 @@ class WebBoxEntity extends Equatable {
       required this.bottomRightRadius});
 
   WebBoxEntity.fromModel({required WebBoxModel model}) {
+    boxHeight = model.boxHeight;
+    boxWidth = model.boxWidth;
     offsetDx = model.offsetDx;
     offsetDy = model.offsetDy;
     spreadRadius = model.spreadRadius;
@@ -41,6 +47,8 @@ class WebBoxEntity extends Equatable {
 
   @override
   List<Object?> get props => [
+        boxHeight,
+        boxWidth,
         offsetDx,
         offsetDy,
         spreadRadius,

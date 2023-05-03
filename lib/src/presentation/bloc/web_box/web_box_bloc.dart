@@ -35,6 +35,8 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
   double _topRightRadius = 0.0;
   double _bottomLeftRadius = 0.0;
   double _bottomRightRadius = 0.0;
+  double _boxHeight = 350.0;
+  double _boxWidth = 350.0;
 
   void initialize() {
     add(const WebBoxEvent.initial());
@@ -51,6 +53,8 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
     _topRightRadius = 0.0;
     _bottomLeftRadius = 0.0;
     _bottomRightRadius = 0.0;
+    _boxHeight = 350.0;
+    _boxWidth = 350.0;
   }
 
   void _updateValues(WebBoxEvent event) => event.maybeWhen(
@@ -65,6 +69,8 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
         updateTopRightRadius: (v) => _topRightRadius = v,
         updateBottomLeftRadius: (v) => _bottomLeftRadius = v,
         updateBottomRightRadius: (v) => _bottomRightRadius = v,
+        updateBoxHeight: (v) => _boxHeight = v,
+        updateBoxWidth: (v) => _boxWidth = v,
         getFromLocalDataSource: _getFromLocalDataSource,
         undoAnimatedBox: _revertChanges,
       );
@@ -85,7 +91,9 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
         topLeftRadius: _topLeftRadius,
         topRightRadius: _topRightRadius,
         bottomLeftRadius: _bottomLeftRadius,
-        bottomRightRadius: _bottomRightRadius));
+        bottomRightRadius: _bottomRightRadius,
+        boxHeight: _boxHeight,
+        boxWidth: _boxWidth));
   }
 
   void _saveModelToDatabase() {
@@ -100,6 +108,8 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
       bottomRightRadius: _bottomRightRadius,
       topLeftRadius: _topLeftRadius,
       topRightRadius: _topRightRadius,
+      boxHeight: _boxHeight,
+      boxWidth: _boxWidth,
     );
 
     repositoryImpl.saveWebBox(webBoxEntity);
@@ -119,6 +129,8 @@ class WebBoxBloc extends Bloc<WebBoxEvent, WebBoxState> {
       _topRightRadius = r.topRightRadius;
       _bottomLeftRadius = r.bottomLeftRadius;
       _bottomRightRadius = r.bottomRightRadius;
+      _boxHeight = r.boxHeight;
+      _boxWidth = r.boxWidth;
     });
   }
 }

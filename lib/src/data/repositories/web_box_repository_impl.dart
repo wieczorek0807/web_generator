@@ -26,6 +26,8 @@ class WebBoxRepositoryImpl implements WebBoxRepository {
   @override
   Future<void> saveWebBox(WebBoxEntity webBox) async {
     await webBoxLocalDataSource.saveWaveBoxToLocalDataSource(WebBoxModel(
+        boxHeight: webBox.boxHeight,
+        boxWidth: webBox.boxWidth,
         offsetDx: webBox.offsetDx,
         offsetDy: webBox.offsetDy,
         spreadRadius: webBox.spreadRadius,

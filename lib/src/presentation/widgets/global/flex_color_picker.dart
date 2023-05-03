@@ -2,24 +2,19 @@ import 'package:flex_color_picker/flex_color_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class AppFlexColorPicker extends StatefulWidget {
-  final String title;
+class FlexColorPicker extends StatefulWidget {
   final Function(Color) onChanged;
   final Color startColor;
-
-  const AppFlexColorPicker(
-      {required this.title,
-      required this.onChanged,
-      required this.startColor,
-      Key? key})
+  const FlexColorPicker(
+      {Key? key, required this.onChanged, required this.startColor})
       : super(key: key);
 
   @override
-  State<AppFlexColorPicker> createState() => _AppFlexColorPicker();
+  State<FlexColorPicker> createState() => _FlexColorPickerState();
 }
 
-class _AppFlexColorPicker extends State<AppFlexColorPicker> {
-  Color myColor = Colors.pink;
+class _FlexColorPickerState extends State<FlexColorPicker> {
+  late Color myColor;
 
   @override
   void initState() {
@@ -29,24 +24,18 @@ class _AppFlexColorPicker extends State<AppFlexColorPicker> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(widget.title),
-        GestureDetector(
-          child: Container(
-            decoration: BoxDecoration(
-              color: widget.startColor,
-              borderRadius: const BorderRadius.all(Radius.circular(5)),
-            ),
-            height: 40,
-            width: 40,
-          ),
-          onTap: () {
-            pickColor(context);
-          },
+    return GestureDetector(
+      child: Container(
+        decoration: BoxDecoration(
+          color: widget.startColor,
+          borderRadius: const BorderRadius.all(Radius.circular(5)),
         ),
-      ],
+        height: 40,
+        width: 40,
+      ),
+      onTap: () {
+        pickColor(context);
+      },
     );
   }
 

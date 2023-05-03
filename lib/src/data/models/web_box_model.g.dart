@@ -27,13 +27,15 @@ class WebBoxModelAdapter extends TypeAdapter<WebBoxModel> {
       topRightRadius: fields[7] as double,
       bottomLeftRadius: fields[8] as double,
       bottomRightRadius: fields[9] as double,
+      boxHeight: fields[10] as double,
+      boxWidth: fields[11] as double,
     );
   }
 
   @override
   void write(BinaryWriter writer, WebBoxModel obj) {
     writer
-      ..writeByte(10)
+      ..writeByte(12)
       ..writeByte(0)
       ..write(obj.offsetDx)
       ..writeByte(1)
@@ -53,7 +55,11 @@ class WebBoxModelAdapter extends TypeAdapter<WebBoxModel> {
       ..writeByte(8)
       ..write(obj.bottomLeftRadius)
       ..writeByte(9)
-      ..write(obj.bottomRightRadius);
+      ..write(obj.bottomRightRadius)
+      ..writeByte(10)
+      ..write(obj.boxHeight)
+      ..writeByte(11)
+      ..write(obj.boxWidth);
   }
 
   @override

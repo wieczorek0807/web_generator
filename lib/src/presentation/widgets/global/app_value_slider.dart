@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../core/values/dimens.dart';
+import '../../../core/values/dimens.dart';
 
 class AppValueSlider extends StatelessWidget {
   const AppValueSlider({

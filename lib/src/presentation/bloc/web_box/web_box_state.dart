@@ -14,5 +14,7 @@ class WebBoxState with _$WebBoxState {
     required double topRightRadius,
     required double bottomLeftRadius,
     required double bottomRightRadius,
+    required double boxWidth,
+    required double boxHeight,
   }) = _UpdateWebBox;
 }
