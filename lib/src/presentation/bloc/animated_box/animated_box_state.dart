@@ -3,11 +3,11 @@ part of 'animated_box_bloc.dart';
 @freezed
 class AnimatedBoxState with _$AnimatedBoxState {
   const factory AnimatedBoxState({
-    required Offset offset,
+    required AnimatedBoxOffsetEntity offset,
     required double boxWidth,
     required double boxHeight,
-    required Color shadowColor,
-    required Color animatedBoxColor,
+    @ColorJsonConverter() required Color shadowColor,
+    @ColorJsonConverter() required Color animatedBoxColor,
     required double blurRadius,
     required double spreadRadius,
     required double topLeftRadius,
@@ -23,6 +23,18 @@ class AnimatedBoxState with _$AnimatedBoxState {
     required GradientDirectionEntity centerRadiusGradient,
   }) = _AnimatedBoxState;
 
-  factory AnimatedBoxState.fromJson(Map<String, Object?> json) =>
+  factory AnimatedBoxState.fromJson(Map<String, dynamic> json) =>
       _$AnimatedBoxStateFromJson(json);
+}
+
+class ColorJsonConverter implements JsonConverter<Color, int> {
+  const ColorJsonConverter();
+
+  @override
+  Color fromJson(int json) {
+    return Color(json);
+  }
+
+  @override
+  int toJson(Color color) => color.value;
 }

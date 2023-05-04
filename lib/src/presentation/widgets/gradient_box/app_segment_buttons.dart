@@ -28,8 +28,8 @@ class AppSegmentButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CupertinoSegmentedControl(
-      borderColor: AppColors.primary,
-      selectedColor: AppColors.secondary,
+      borderColor: AppColors.prussianBlue,
+      selectedColor: AppColors.midnightGreen,
       children: const {
         0: Padding(
             padding: EdgeInsets.all(10),

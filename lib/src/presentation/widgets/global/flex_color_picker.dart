@@ -70,7 +70,7 @@ class _FlexColorPickerState extends State<FlexColorPicker> {
                 },
               ),
               CupertinoButton(
-                color: AppColors.third,
+                color: AppColors.darkCyan,
                 onPressed: () {
                   Navigator.of(context).pop();
                 },

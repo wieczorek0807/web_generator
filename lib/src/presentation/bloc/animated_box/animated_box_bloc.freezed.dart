@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'animated_box_bloc.dart';
 
@@ -230,12 +230,18 @@ class __$$_InitialEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialEvent implements _InitialEvent {
+class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
   const _$_InitialEvent();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AnimatedBoxEvent.initial'));
   }
 
   @override
@@ -470,12 +476,18 @@ class __$$_UndoChangesCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UndoChanges implements _UndoChanges {
+class _$_UndoChanges with DiagnosticableTreeMixin implements _UndoChanges {
   const _$_UndoChanges();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.undoChanges()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'AnimatedBoxEvent.undoChanges'));
   }
 
   @override
@@ -725,15 +737,23 @@ class __$$_UpdateOffsetYCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetY implements _UpdateOffsetY {
+class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
   const _$_UpdateOffsetY(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateOffsetY(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateOffsetY'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -996,15 +1016,23 @@ class __$$_UpdateOffsetXCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetX implements _UpdateOffsetX {
+class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
   const _$_UpdateOffsetX(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateOffsetX(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateOffsetX'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1267,15 +1295,23 @@ class __$$_UpdateBlurCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBlur implements _UpdateBlur {
+class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
   const _$_UpdateBlur(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateBlur(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateBlur'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1538,15 +1574,23 @@ class __$$_UpdateRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateRadius implements _UpdateRadius {
+class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
   const _$_UpdateRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateSpread(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateSpread'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1809,15 +1853,26 @@ class __$$_UpdateAnimatedBoxColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
+class _$_UpdateAnimatedBoxColor
+    with DiagnosticableTreeMixin
+    implements _UpdateAnimatedBoxColor {
   const _$_UpdateAnimatedBoxColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateAnimatedBoxColor(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AnimatedBoxEvent.updateAnimatedBoxColor'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1825,12 +1880,11 @@ class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UpdateAnimatedBoxColor &&
-            const DeepCollectionEquality().equals(other.value, value));
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
@@ -2083,15 +2137,25 @@ class __$$_UpdateShadowColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateShadowColor implements _UpdateShadowColor {
+class _$_UpdateShadowColor
+    with DiagnosticableTreeMixin
+    implements _UpdateShadowColor {
   const _$_UpdateShadowColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateShadowColor(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateShadowColor'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -2099,12 +2163,11 @@ class _$_UpdateShadowColor implements _UpdateShadowColor {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_UpdateShadowColor &&
-            const DeepCollectionEquality().equals(other.value, value));
+            (identical(other.value, value) || other.value == value));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(value));
+  int get hashCode => Object.hash(runtimeType, value);
 
   @JsonKey(ignore: true)
   @override
@@ -2356,15 +2419,25 @@ class __$$_UpdateTopLeftRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateTopLeftRadius implements _UpdateTopLeftRadius {
+class _$_UpdateTopLeftRadius
+    with DiagnosticableTreeMixin
+    implements _UpdateTopLeftRadius {
   const _$_UpdateTopLeftRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateTopLeftRadius(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateTopLeftRadius'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -2629,15 +2702,26 @@ class __$$_UpdateTopRightRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateTopRightRadius implements _UpdateTopRightRadius {
+class _$_UpdateTopRightRadius
+    with DiagnosticableTreeMixin
+    implements _UpdateTopRightRadius {
   const _$_UpdateTopRightRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateTopRightRadius(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+          DiagnosticsProperty('type', 'AnimatedBoxEvent.updateTopRightRadius'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -2902,15 +2986,26 @@ class __$$_UpdateBottomLeftRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBottomLeftRadius implements _UpdateBottomLeftRadius {
+class _$_UpdateBottomLeftRadius
+    with DiagnosticableTreeMixin
+    implements _UpdateBottomLeftRadius {
   const _$_UpdateBottomLeftRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateBottomLeftRadius(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AnimatedBoxEvent.updateBottomLeftRadius'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3175,15 +3270,26 @@ class __$$_UpdateBottomRightRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBottomRightRadius implements _UpdateBottomRightRadius {
+class _$_UpdateBottomRightRadius
+    with DiagnosticableTreeMixin
+    implements _UpdateBottomRightRadius {
   const _$_UpdateBottomRightRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateBottomRightRadius(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AnimatedBoxEvent.updateBottomRightRadius'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3449,15 +3555,25 @@ class __$$_UpdateBoxHeightCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBoxHeight implements _UpdateBoxHeight {
+class _$_UpdateBoxHeight
+    with DiagnosticableTreeMixin
+    implements _UpdateBoxHeight {
   const _$_UpdateBoxHeight(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateBoxHeight(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateBoxHeight'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3720,15 +3836,25 @@ class __$$_UpdateBoxWidthCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBoxWidth implements _UpdateBoxWidth {
+class _$_UpdateBoxWidth
+    with DiagnosticableTreeMixin
+    implements _UpdateBoxWidth {
   const _$_UpdateBoxWidth(this.value);
 
   @override
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateBoxWidth(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateBoxWidth'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3991,15 +4117,25 @@ class __$$_ChangeGradientStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ChangeGradientState implements _ChangeGradientState {
+class _$_ChangeGradientState
+    with DiagnosticableTreeMixin
+    implements _ChangeGradientState {
   const _$_ChangeGradientState({required this.value});
 
   @override
   final int value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.changeGradientState(value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.changeGradientState'))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -4249,12 +4385,21 @@ class __$$_AddGradientColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AddGradientColor implements _AddGradientColor {
+class _$_AddGradientColor
+    with DiagnosticableTreeMixin
+    implements _AddGradientColor {
   const _$_AddGradientColor();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.addGradientColor()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'AnimatedBoxEvent.addGradientColor'));
   }
 
   @override
@@ -4489,12 +4634,21 @@ class __$$_RemoveGradientColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RemoveGradientColor implements _RemoveGradientColor {
+class _$_RemoveGradientColor
+    with DiagnosticableTreeMixin
+    implements _RemoveGradientColor {
   const _$_RemoveGradientColor();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.removeGradientColor()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+        DiagnosticsProperty('type', 'AnimatedBoxEvent.removeGradientColor'));
   }
 
   @override
@@ -4749,7 +4903,9 @@ class __$$_UpdateGradientColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateGradientColor implements _UpdateGradientColor {
+class _$_UpdateGradientColor
+    with DiagnosticableTreeMixin
+    implements _UpdateGradientColor {
   const _$_UpdateGradientColor({required this.id, required this.color});
 
   @override
@@ -4758,8 +4914,17 @@ class _$_UpdateGradientColor implements _UpdateGradientColor {
   final Color color;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateGradientColor(id: $id, color: $color)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateGradientColor'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('color', color));
   }
 
   @override
@@ -4768,12 +4933,11 @@ class _$_UpdateGradientColor implements _UpdateGradientColor {
         (other.runtimeType == runtimeType &&
             other is _$_UpdateGradientColor &&
             (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality().equals(other.color, color));
+            (identical(other.color, color) || other.color == color));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, const DeepCollectionEquality().hash(color));
+  int get hashCode => Object.hash(runtimeType, id, color);
 
   @JsonKey(ignore: true)
   @override
@@ -5033,7 +5197,9 @@ class __$$_UpdateGradientValueCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateGradientValue implements _UpdateGradientValue {
+class _$_UpdateGradientValue
+    with DiagnosticableTreeMixin
+    implements _UpdateGradientValue {
   const _$_UpdateGradientValue({required this.id, required this.value});
 
   @override
@@ -5042,8 +5208,17 @@ class _$_UpdateGradientValue implements _UpdateGradientValue {
   final double value;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.updateGradientValue(id: $id, value: $value)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateGradientValue'))
+      ..add(DiagnosticsProperty('id', id))
+      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -5323,15 +5498,26 @@ class __$$_ChangeGradientBeginValueCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ChangeGradientBeginValue implements _ChangeGradientBeginValue {
+class _$_ChangeGradientBeginValue
+    with DiagnosticableTreeMixin
+    implements _ChangeGradientBeginValue {
   const _$_ChangeGradientBeginValue({required this.beginLinearGradient});
 
   @override
   final GradientDirectionEntity beginLinearGradient;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.changeGradientBeginValue(beginLinearGradient: $beginLinearGradient)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AnimatedBoxEvent.changeGradientBeginValue'))
+      ..add(DiagnosticsProperty('beginLinearGradient', beginLinearGradient));
   }
 
   @override
@@ -5609,15 +5795,26 @@ class __$$_ChangeGradientEndValueCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ChangeGradientEndValue implements _ChangeGradientEndValue {
+class _$_ChangeGradientEndValue
+    with DiagnosticableTreeMixin
+    implements _ChangeGradientEndValue {
   const _$_ChangeGradientEndValue({required this.endLinearGradient});
 
   @override
   final GradientDirectionEntity endLinearGradient;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.changeGradientEndValue(endLinearGradient: $endLinearGradient)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AnimatedBoxEvent.changeGradientEndValue'))
+      ..add(DiagnosticsProperty('endLinearGradient', endLinearGradient));
   }
 
   @override
@@ -5897,15 +6094,26 @@ class __$$_ChangeGradientCenterValueCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ChangeGradientCenterValue implements _ChangeGradientCenterValue {
+class _$_ChangeGradientCenterValue
+    with DiagnosticableTreeMixin
+    implements _ChangeGradientCenterValue {
   const _$_ChangeGradientCenterValue({required this.centerRadiusGradient});
 
   @override
   final GradientDirectionEntity centerRadiusGradient;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxEvent.changeGradientCenterValue(centerRadiusGradient: $centerRadiusGradient)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AnimatedBoxEvent.changeGradientCenterValue'))
+      ..add(DiagnosticsProperty('centerRadiusGradient', centerRadiusGradient));
   }
 
   @override
@@ -6145,10 +6353,12 @@ AnimatedBoxState _$AnimatedBoxStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AnimatedBoxState {
-  Offset get offset => throw _privateConstructorUsedError;
+  AnimatedBoxOffsetEntity get offset => throw _privateConstructorUsedError;
   double get boxWidth => throw _privateConstructorUsedError;
   double get boxHeight => throw _privateConstructorUsedError;
+  @ColorJsonConverter()
   Color get shadowColor => throw _privateConstructorUsedError;
+  @ColorJsonConverter()
   Color get animatedBoxColor => throw _privateConstructorUsedError;
   double get blurRadius => throw _privateConstructorUsedError;
   double get spreadRadius => throw _privateConstructorUsedError;
@@ -6181,11 +6391,11 @@ abstract class $AnimatedBoxStateCopyWith<$Res> {
       _$AnimatedBoxStateCopyWithImpl<$Res, AnimatedBoxState>;
   @useResult
   $Res call(
-      {Offset offset,
+      {AnimatedBoxOffsetEntity offset,
       double boxWidth,
       double boxHeight,
-      Color shadowColor,
-      Color animatedBoxColor,
+      @ColorJsonConverter() Color shadowColor,
+      @ColorJsonConverter() Color animatedBoxColor,
       double blurRadius,
       double spreadRadius,
       double topLeftRadius,
@@ -6200,6 +6410,7 @@ abstract class $AnimatedBoxStateCopyWith<$Res> {
       GradientDirectionEntity endLinearGradient,
       GradientDirectionEntity centerRadiusGradient});
 
+  $AnimatedBoxOffsetEntityCopyWith<$Res> get offset;
   $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient;
   $GradientDirectionEntityCopyWith<$Res> get endLinearGradient;
   $GradientDirectionEntityCopyWith<$Res> get centerRadiusGradient;
@@ -6241,7 +6452,7 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
       offset: null == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as Offset,
+              as AnimatedBoxOffsetEntity,
       boxWidth: null == boxWidth
           ? _value.boxWidth
           : boxWidth // ignore: cast_nullable_to_non_nullable
@@ -6315,6 +6526,14 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
 
   @override
   @pragma('vm:prefer-inline')
+  $AnimatedBoxOffsetEntityCopyWith<$Res> get offset {
+    return $AnimatedBoxOffsetEntityCopyWith<$Res>(_value.offset, (value) {
+      return _then(_value.copyWith(offset: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient {
     return $GradientDirectionEntityCopyWith<$Res>(_value.beginLinearGradient,
         (value) {
@@ -6350,11 +6569,11 @@ abstract class _$$_AnimatedBoxStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {Offset offset,
+      {AnimatedBoxOffsetEntity offset,
       double boxWidth,
       double boxHeight,
-      Color shadowColor,
-      Color animatedBoxColor,
+      @ColorJsonConverter() Color shadowColor,
+      @ColorJsonConverter() Color animatedBoxColor,
       double blurRadius,
       double spreadRadius,
       double topLeftRadius,
@@ -6369,6 +6588,8 @@ abstract class _$$_AnimatedBoxStateCopyWith<$Res>
       GradientDirectionEntity endLinearGradient,
       GradientDirectionEntity centerRadiusGradient});
 
+  @override
+  $AnimatedBoxOffsetEntityCopyWith<$Res> get offset;
   @override
   $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient;
   @override
@@ -6411,7 +6632,7 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
       offset: null == offset
           ? _value.offset
           : offset // ignore: cast_nullable_to_non_nullable
-              as Offset,
+              as AnimatedBoxOffsetEntity,
       boxWidth: null == boxWidth
           ? _value.boxWidth
           : boxWidth // ignore: cast_nullable_to_non_nullable
@@ -6486,13 +6707,15 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AnimatedBoxState implements _AnimatedBoxState {
+class _$_AnimatedBoxState
+    with DiagnosticableTreeMixin
+    implements _AnimatedBoxState {
   const _$_AnimatedBoxState(
       {required this.offset,
       required this.boxWidth,
       required this.boxHeight,
-      required this.shadowColor,
-      required this.animatedBoxColor,
+      @ColorJsonConverter() required this.shadowColor,
+      @ColorJsonConverter() required this.animatedBoxColor,
       required this.blurRadius,
       required this.spreadRadius,
       required this.topLeftRadius,
@@ -6512,14 +6735,16 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
       _$$_AnimatedBoxStateFromJson(json);
 
   @override
-  final Offset offset;
+  final AnimatedBoxOffsetEntity offset;
   @override
   final double boxWidth;
   @override
   final double boxHeight;
   @override
+  @ColorJsonConverter()
   final Color shadowColor;
   @override
+  @ColorJsonConverter()
   final Color animatedBoxColor;
   @override
   final double blurRadius;
@@ -6536,6 +6761,7 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
   final List<GradientColorEntity> _gradientColors;
   @override
   List<GradientColorEntity> get gradientColors {
+    if (_gradientColors is EqualUnmodifiableListView) return _gradientColors;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_gradientColors);
   }
@@ -6554,8 +6780,33 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
   final GradientDirectionEntity centerRadiusGradient;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'AnimatedBoxState(offset: $offset, boxWidth: $boxWidth, boxHeight: $boxHeight, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, topLeftRadius: $topLeftRadius, topRightRadius: $topRightRadius, bottomLeftRadius: $bottomLeftRadius, bottomRightRadius: $bottomRightRadius, gradientColors: $gradientColors, isGradientEnabled: $isGradientEnabled, isLinearGradient: $isLinearGradient, isRadialGradient: $isRadialGradient, beginLinearGradient: $beginLinearGradient, endLinearGradient: $endLinearGradient, centerRadiusGradient: $centerRadiusGradient)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'AnimatedBoxState'))
+      ..add(DiagnosticsProperty('offset', offset))
+      ..add(DiagnosticsProperty('boxWidth', boxWidth))
+      ..add(DiagnosticsProperty('boxHeight', boxHeight))
+      ..add(DiagnosticsProperty('shadowColor', shadowColor))
+      ..add(DiagnosticsProperty('animatedBoxColor', animatedBoxColor))
+      ..add(DiagnosticsProperty('blurRadius', blurRadius))
+      ..add(DiagnosticsProperty('spreadRadius', spreadRadius))
+      ..add(DiagnosticsProperty('topLeftRadius', topLeftRadius))
+      ..add(DiagnosticsProperty('topRightRadius', topRightRadius))
+      ..add(DiagnosticsProperty('bottomLeftRadius', bottomLeftRadius))
+      ..add(DiagnosticsProperty('bottomRightRadius', bottomRightRadius))
+      ..add(DiagnosticsProperty('gradientColors', gradientColors))
+      ..add(DiagnosticsProperty('isGradientEnabled', isGradientEnabled))
+      ..add(DiagnosticsProperty('isLinearGradient', isLinearGradient))
+      ..add(DiagnosticsProperty('isRadialGradient', isRadialGradient))
+      ..add(DiagnosticsProperty('beginLinearGradient', beginLinearGradient))
+      ..add(DiagnosticsProperty('endLinearGradient', endLinearGradient))
+      ..add(DiagnosticsProperty('centerRadiusGradient', centerRadiusGradient));
   }
 
   @override
@@ -6563,15 +6814,15 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AnimatedBoxState &&
-            const DeepCollectionEquality().equals(other.offset, offset) &&
+            (identical(other.offset, offset) || other.offset == offset) &&
             (identical(other.boxWidth, boxWidth) ||
                 other.boxWidth == boxWidth) &&
             (identical(other.boxHeight, boxHeight) ||
                 other.boxHeight == boxHeight) &&
-            const DeepCollectionEquality()
-                .equals(other.shadowColor, shadowColor) &&
-            const DeepCollectionEquality()
-                .equals(other.animatedBoxColor, animatedBoxColor) &&
+            (identical(other.shadowColor, shadowColor) ||
+                other.shadowColor == shadowColor) &&
+            (identical(other.animatedBoxColor, animatedBoxColor) ||
+                other.animatedBoxColor == animatedBoxColor) &&
             (identical(other.blurRadius, blurRadius) ||
                 other.blurRadius == blurRadius) &&
             (identical(other.spreadRadius, spreadRadius) ||
@@ -6604,11 +6855,11 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(offset),
+      offset,
       boxWidth,
       boxHeight,
-      const DeepCollectionEquality().hash(shadowColor),
-      const DeepCollectionEquality().hash(animatedBoxColor),
+      shadowColor,
+      animatedBoxColor,
       blurRadius,
       spreadRadius,
       topLeftRadius,
@@ -6639,11 +6890,11 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
 
 abstract class _AnimatedBoxState implements AnimatedBoxState {
   const factory _AnimatedBoxState(
-          {required final Offset offset,
+          {required final AnimatedBoxOffsetEntity offset,
           required final double boxWidth,
           required final double boxHeight,
-          required final Color shadowColor,
-          required final Color animatedBoxColor,
+          @ColorJsonConverter() required final Color shadowColor,
+          @ColorJsonConverter() required final Color animatedBoxColor,
           required final double blurRadius,
           required final double spreadRadius,
           required final double topLeftRadius,
@@ -6663,14 +6914,16 @@ abstract class _AnimatedBoxState implements AnimatedBoxState {
       _$_AnimatedBoxState.fromJson;
 
   @override
-  Offset get offset;
+  AnimatedBoxOffsetEntity get offset;
   @override
   double get boxWidth;
   @override
   double get boxHeight;
   @override
+  @ColorJsonConverter()
   Color get shadowColor;
   @override
+  @ColorJsonConverter()
   Color get animatedBoxColor;
   @override
   double get blurRadius;

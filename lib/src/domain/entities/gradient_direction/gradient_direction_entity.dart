@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter/foundation.dart';
 
 part 'gradient_direction_entity.freezed.dart';
 part 'gradient_direction_entity.g.dart';

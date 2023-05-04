@@ -10,7 +10,7 @@ _$_GradientColorEntity _$$_GradientColorEntityFromJson(
         Map<String, dynamic> json) =>
     _$_GradientColorEntity(
       id: json['id'] as int,
-      color: json['color'],
+      color: const ColorJsonConverter().fromJson(json['color'] as int),
       value: (json['value'] as num).toDouble(),
     );
 
@@ -18,6 +18,6 @@ Map<String, dynamic> _$$_GradientColorEntityToJson(
         _$_GradientColorEntity instance) =>
     <String, dynamic>{
       'id': instance.id,
-      'color': instance.color,
+      'color': const ColorJsonConverter().toJson(instance.color),
       'value': instance.value,
     };

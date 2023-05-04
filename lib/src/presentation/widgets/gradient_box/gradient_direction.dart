@@ -2,7 +2,7 @@ import 'package:box_shadow_generator/src/presentation/bloc/animated_box/animated
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../domain/entities/gradient_direction_entity/gradient_direction_entity.dart';
+import '../../../domain/entities/gradient_direction/gradient_direction_entity.dart';
 
 import 'gradient_dropdown_button.dart';
 

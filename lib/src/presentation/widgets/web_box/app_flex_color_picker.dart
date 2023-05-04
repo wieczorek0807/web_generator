@@ -1,5 +1,4 @@
 import 'package:box_shadow_generator/src/presentation/widgets/global/flex_color_picker.dart';
-import 'package:flex_color_picker/flex_color_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

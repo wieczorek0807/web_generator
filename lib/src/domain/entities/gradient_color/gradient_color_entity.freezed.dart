@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'gradient_color_entity.dart';
 
@@ -21,6 +21,7 @@ GradientColorEntity _$GradientColorEntityFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$GradientColorEntity {
   int get id => throw _privateConstructorUsedError;
+  @ColorJsonConverter()
   Color get color => throw _privateConstructorUsedError;
   double get value => throw _privateConstructorUsedError;
 
@@ -36,7 +37,7 @@ abstract class $GradientColorEntityCopyWith<$Res> {
           GradientColorEntity value, $Res Function(GradientColorEntity) then) =
       _$GradientColorEntityCopyWithImpl<$Res, GradientColorEntity>;
   @useResult
-  $Res call({int id, Color color, double value});
+  $Res call({int id, @ColorJsonConverter() Color color, double value});
 }
 
 /// @nodoc
@@ -81,7 +82,7 @@ abstract class _$$_GradientColorEntityCopyWith<$Res>
       __$$_GradientColorEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, Color color, double value});
+  $Res call({int id, @ColorJsonConverter() Color color, double value});
 }
 
 /// @nodoc
@@ -120,7 +121,9 @@ class __$$_GradientColorEntityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_GradientColorEntity implements _GradientColorEntity {
   const _$_GradientColorEntity(
-      {required this.id, required this.color, required this.value});
+      {required this.id,
+      @ColorJsonConverter() required this.color,
+      required this.value});
 
   factory _$_GradientColorEntity.fromJson(Map<String, dynamic> json) =>
       _$$_GradientColorEntityFromJson(json);
@@ -128,6 +131,7 @@ class _$_GradientColorEntity implements _GradientColorEntity {
   @override
   final int id;
   @override
+  @ColorJsonConverter()
   final Color color;
   @override
   final double value;
@@ -143,14 +147,13 @@ class _$_GradientColorEntity implements _GradientColorEntity {
         (other.runtimeType == runtimeType &&
             other is _$_GradientColorEntity &&
             (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality().equals(other.color, color) &&
+            (identical(other.color, color) || other.color == color) &&
             (identical(other.value, value) || other.value == value));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, const DeepCollectionEquality().hash(color), value);
+  int get hashCode => Object.hash(runtimeType, id, color, value);
 
   @JsonKey(ignore: true)
   @override
@@ -170,7 +173,7 @@ class _$_GradientColorEntity implements _GradientColorEntity {
 abstract class _GradientColorEntity implements GradientColorEntity {
   const factory _GradientColorEntity(
       {required final int id,
-      required final Color color,
+      @ColorJsonConverter() required final Color color,
       required final double value}) = _$_GradientColorEntity;
 
   factory _GradientColorEntity.fromJson(Map<String, dynamic> json) =
@@ -179,6 +182,7 @@ abstract class _GradientColorEntity implements GradientColorEntity {
   @override
   int get id;
   @override
+  @ColorJsonConverter()
   Color get color;
   @override
   double get value;

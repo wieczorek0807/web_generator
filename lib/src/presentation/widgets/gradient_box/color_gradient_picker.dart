@@ -43,7 +43,7 @@ class ColorAndValueForGradientPicker extends StatelessWidget {
         ),
         const SizedBox(height: AppDimens.d4),
         CupertinoSlider(
-          activeColor: AppColors.third,
+          activeColor: AppColors.darkCyan,
           min: 0,
           max: 1,
           value: value,

@@ -33,7 +33,7 @@ class AppValueSlider extends StatelessWidget {
           Text('$title | ${value.floor()}'),
           const SizedBox(height: AppDimens.d4),
           CupertinoSlider(
-            activeColor: AppColors.third,
+            activeColor: AppColors.darkCyan,
             value: value,
             min: min,
             max: max,

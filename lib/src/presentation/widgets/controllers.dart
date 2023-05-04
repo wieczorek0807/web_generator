@@ -1,16 +1,12 @@
 import 'package:box_shadow_generator/src/core/values/colors.dart';
-import 'package:box_shadow_generator/src/core/values/dimens.dart';
 import 'package:box_shadow_generator/src/presentation/bloc/animated_box/animated_box_bloc.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/app_segment_buttons.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/color_gradient_picker.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/gradient_direction.dart';
-import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/gradient_dropdown_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/entities/gradient_direction_entity/gradient_direction_entity.dart';
 import 'web_box/app_flex_color_picker.dart';
 import 'global/app_value_slider.dart';
 
@@ -25,21 +21,12 @@ class ShadowControllers extends StatelessWidget {
   Widget build(BuildContext context) => Container(
         height: _height,
         width: _width,
-        color: Colors.white,
         child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
           builder: (_, state) => Column(
             children: [
-              IconButton(
-                  onPressed: () {
-                    context
-                        .read<AnimatedBoxBloc>()
-                        .add(const AnimatedBoxEvent.undoChanges());
-                  },
-                  icon: const Icon(Icons.undo)),
-              const Divider(),
               AppValueSlider(
                 title: 'Offset dx',
-                value: state.offset.dx,
+                value: state.offset.getOffset().dx,
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
                     .add(AnimatedBoxEvent.updateOffsetX(v)),
@@ -47,7 +34,7 @@ class ShadowControllers extends StatelessWidget {
               const Divider(),
               AppValueSlider(
                 title: 'Offset dy',
-                value: state.offset.dy,
+                value: state.offset.getOffset().dy,
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
                     .add(AnimatedBoxEvent.updateOffsetY(v)),
@@ -100,20 +87,10 @@ class RadiusControllers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Container(
-        // height: _height,
         width: _width,
-        color: Colors.white,
         child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
           builder: (_, state) => Column(
             children: [
-              IconButton(
-                  onPressed: () {
-                    context
-                        .read<AnimatedBoxBloc>()
-                        .add(const AnimatedBoxEvent.undoChanges());
-                  },
-                  icon: const Icon(Icons.undo)),
-              const Divider(),
               AppValueSlider(
                 title: 'Top left',
                 value: state.topLeftRadius,
@@ -169,18 +146,9 @@ class SizeControllers extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Container(
         width: _width,
-        color: Colors.white,
         child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
           builder: (_, state) => Column(
             children: [
-              IconButton(
-                  onPressed: () {
-                    context
-                        .read<AnimatedBoxBloc>()
-                        .add(const AnimatedBoxEvent.undoChanges());
-                  },
-                  icon: const Icon(Icons.undo)),
-              const Divider(),
               AppValueSlider(
                 title: 'Height',
                 value: state.boxHeight,
@@ -235,14 +203,6 @@ class GradientControllers extends StatelessWidget {
                   height: 12,
                 ),
                 const Divider(),
-                // IconButton(
-                //     onPressed: () {
-                //       context
-                //           .read<GradientBoxBloc>()
-                //           .add(const GradientBoxEvent.revertChanges());
-                //     },
-                //     icon: const Icon(Icons.undo)),
-                // const Divider(),
                 SizedBox(
                   height: 200,
                   child: ListView.builder(
@@ -269,7 +229,7 @@ class GradientControllers extends StatelessWidget {
                   children: [
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        foregroundColor: AppColors.primary,
+                        foregroundColor: AppColors.prussianBlue,
                       ),
                       onPressed: () => context
                           .read<AnimatedBoxBloc>()
@@ -278,7 +238,7 @@ class GradientControllers extends StatelessWidget {
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
-                        foregroundColor: AppColors.primary,
+                        foregroundColor: AppColors.prussianBlue,
                       ),
                       onPressed: () => context
                           .read<AnimatedBoxBloc>()

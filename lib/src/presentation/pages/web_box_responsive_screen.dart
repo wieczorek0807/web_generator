@@ -31,7 +31,7 @@ class WebBoxResponsiveScreen extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(
             title: Text(state.title),
-            backgroundColor: AppColors.primary,
+            backgroundColor: AppColors.prussianBlue,
             actions: [
               IconButton(
                   onPressed: () => context
