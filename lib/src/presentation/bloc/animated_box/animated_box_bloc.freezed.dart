@@ -5328,12 +5328,13 @@ class _$_ChangeGradientBeginValue implements _ChangeGradientBeginValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientBeginValue &&
-            (identical(other.beginLinearGradient, beginLinearGradient) ||
-                other.beginLinearGradient == beginLinearGradient));
+            const DeepCollectionEquality()
+                .equals(other.beginLinearGradient, beginLinearGradient));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, beginLinearGradient);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(beginLinearGradient));
 
   @JsonKey(ignore: true)
   @override
@@ -5603,12 +5604,13 @@ class _$_ChangeGradientEndValue implements _ChangeGradientEndValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientEndValue &&
-            (identical(other.endLinearGradient, endLinearGradient) ||
-                other.endLinearGradient == endLinearGradient));
+            const DeepCollectionEquality()
+                .equals(other.endLinearGradient, endLinearGradient));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, endLinearGradient);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(endLinearGradient));
 
   @JsonKey(ignore: true)
   @override
@@ -5880,12 +5882,13 @@ class _$_ChangeGradientCenterValue implements _ChangeGradientCenterValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientCenterValue &&
-            (identical(other.centerRadiusGradient, centerRadiusGradient) ||
-                other.centerRadiusGradient == centerRadiusGradient));
+            const DeepCollectionEquality()
+                .equals(other.centerRadiusGradient, centerRadiusGradient));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, centerRadiusGradient);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(centerRadiusGradient));
 
   @JsonKey(ignore: true)
   @override
@@ -6513,12 +6516,12 @@ class _$_UpdateAnimatedBox implements _UpdateAnimatedBox {
                 other.isLinearGradient == isLinearGradient) &&
             (identical(other.isRadialGradient, isRadialGradient) ||
                 other.isRadialGradient == isRadialGradient) &&
-            (identical(other.beginLinearGradient, beginLinearGradient) ||
-                other.beginLinearGradient == beginLinearGradient) &&
-            (identical(other.endLinearGradient, endLinearGradient) ||
-                other.endLinearGradient == endLinearGradient) &&
-            (identical(other.centerRadiusGradient, centerRadiusGradient) ||
-                other.centerRadiusGradient == centerRadiusGradient));
+            const DeepCollectionEquality()
+                .equals(other.beginLinearGradient, beginLinearGradient) &&
+            const DeepCollectionEquality()
+                .equals(other.endLinearGradient, endLinearGradient) &&
+            const DeepCollectionEquality()
+                .equals(other.centerRadiusGradient, centerRadiusGradient));
   }
 
   @override
@@ -6539,9 +6542,9 @@ class _$_UpdateAnimatedBox implements _UpdateAnimatedBox {
       isGradientEnabled,
       isLinearGradient,
       isRadialGradient,
-      beginLinearGradient,
-      endLinearGradient,
-      centerRadiusGradient);
+      const DeepCollectionEquality().hash(beginLinearGradient),
+      const DeepCollectionEquality().hash(endLinearGradient),
+      const DeepCollectionEquality().hash(centerRadiusGradient));
 
   @JsonKey(ignore: true)
   @override

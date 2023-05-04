@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
 import 'package:box_shadow_generator/src/core/extension/offset.dart';
@@ -7,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../core/values/colors.dart';
-import '../../../domain/entities/gradient_box_entity.dart';
+import '../../../domain/entities/gradient_color/gradient_color_entity.dart';
 import '../../../domain/entities/gradient_direction_entity.dart';
 
 part 'animated_box_event.dart';
@@ -57,8 +55,8 @@ class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
       );
   void _addGradientColor() {
     if (state.gradientColors.length < 6) {
-      final newColor =
-          GradientColorEntity(AppColors.five, 0, state.gradientColors.length);
+      final newColor = GradientColorEntity(
+          id: state.gradientColors.length, color: AppColors.five, value: 0);
       final colors = List.of([...state.gradientColors, newColor]);
 
       List<GradientColorEntity> newState =
@@ -82,7 +80,6 @@ class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
     switch (value) {
       case 0:
         emit(state.copyWith(isGradientEnabled: false));
-
         break;
 
       case 1:
@@ -90,7 +87,6 @@ class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
             isGradientEnabled: true,
             isLinearGradient: true,
             isRadialGradient: false));
-
         break;
 
       case 2:
@@ -98,15 +94,14 @@ class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
             isGradientEnabled: true,
             isLinearGradient: false,
             isRadialGradient: true));
-
         break;
     }
   }
 
   void _updateGradientColor({required Color color, required int index}) {
     GradientColorEntity colorToCHange = state.gradientColors[index];
-    GradientColorEntity newColor =
-        GradientColorEntity(color, colorToCHange.value, colorToCHange.id);
+    GradientColorEntity newColor = GradientColorEntity(
+        id: colorToCHange.id, color: color, value: colorToCHange.value);
     List<GradientColorEntity> colorsInState = [...state.gradientColors];
     colorsInState[index] = newColor;
     emit(state.copyWith(gradientColors: colorsInState));
@@ -114,8 +109,9 @@ class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
 
   void _updateGradientValue({required double value, required int index}) {
     GradientColorEntity colorToCHange = state.gradientColors[index];
-    GradientColorEntity newColor =
-        GradientColorEntity(colorToCHange.color, value, colorToCHange.id);
+    GradientColorEntity newColor = GradientColorEntity(
+        id: colorToCHange.id, color: colorToCHange.color, value: value);
+
     List<GradientColorEntity> colorsInState = [...state.gradientColors];
     colorsInState[index] = newColor;
     emit(state.copyWith(gradientColors: colorsInState));
@@ -128,15 +124,14 @@ class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
     GradientColorEntity firstElement = gradientColorEnitiyList.removeAt(0);
     GradientColorEntity lastElement = gradientColorEnitiyList.removeLast();
 
-    colorsInState
-        .add(GradientColorEntity(firstElement.color, 0, firstElement.id));
-
+    colorsInState.add(GradientColorEntity(
+        id: firstElement.id, color: firstElement.color, value: 0));
     gradientColorEnitiyList.forEach((element) {
       colorsInState.add(GradientColorEntity(
-          element.color, newvalue * element.id, element.id));
+          id: element.id, color: element.color, value: newvalue * element.id));
     });
-    colorsInState
-        .add(GradientColorEntity(lastElement.color, 1, lastElement.id));
+    colorsInState.add(GradientColorEntity(
+        id: lastElement.id, color: lastElement.color, value: 1));
 
     return colorsInState;
   }
@@ -159,8 +154,8 @@ final AnimatedBoxState _initail = AnimatedBoxState(
     isLinearGradient: false,
     isRadialGradient: false,
     gradientColors: [
-      const GradientColorEntity(AppColors.primary, 0, 0),
-      const GradientColorEntity(AppColors.third, 1, 1),
+      const GradientColorEntity(id: 0, color: AppColors.primary, value: 0),
+      const GradientColorEntity(id: 1, color: AppColors.third, value: 1)
     ],
     beginLinearGradient: allGradientDirecitons[1],
     endLinearGradient: allGradientDirecitons[6],

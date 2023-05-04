@@ -1,17 +1,20 @@
-import 'package:equatable/equatable.dart';
 import 'package:flutter/cupertino.dart';
 
-class GradientDirectionEntity extends Equatable {
-  final String name;
-  final AlignmentGeometry value;
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:flutter/foundation.dart';
 
-  const GradientDirectionEntity({
-    required this.name,
-    required this.value,
-  });
+part 'gradient_direction_entity.freezed.dart';
+// part 'gradient_direction_entity.g.dart';
 
-  @override
-  List<Object?> get props => [name, value];
+@freezed
+class GradientDirectionEntity with _$GradientDirectionEntity {
+  const factory GradientDirectionEntity({
+    required String name,
+    required AlignmentGeometry value,
+  }) = _GradientDirectionEntity;
+
+  // factory GradientDirectionEntity.fromJson(Map<String, Object?> json) =>
+  //     _$GradientDirectionEntity(json);
 }
 
 const List<GradientDirectionEntity> allGradientDirecitons = [
