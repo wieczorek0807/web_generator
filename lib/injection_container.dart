@@ -3,9 +3,11 @@ import 'package:box_shadow_generator/src/data/repositories/web_box_repository_im
 import 'package:box_shadow_generator/src/domain/usecases/get_web_box_usecase.dart';
 import 'package:box_shadow_generator/src/presentation/bloc/animated_box/animated_box_bloc.dart';
 import 'package:box_shadow_generator/src/presentation/bloc/routing/routing_cubit.dart';
-import 'package:box_shadow_generator/src/presentation/bloc/web_box/web_box_bloc.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 import 'src/data/models/web_box_model.dart';
 
@@ -27,6 +29,10 @@ Future<void> setup() async {
   getIt.registerLazySingleton(() => RoutingCubit());
 
   getIt.registerLazySingleton(() => AnimatedBoxBloc());
+
+  // WidgetsFlutterBinding.ensureInitialized();
+  // HydratedBloc.storage = await HydratedStorage.build(
+  //     storageDirectory: HydratedStorage.webStorageDirectory);
 
   //Data sources
   const String hiveBox = "WebBoxHiveBox";

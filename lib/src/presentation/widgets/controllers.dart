@@ -10,8 +10,7 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../domain/entities/gradient_direction_entity.dart';
-import '../bloc/web_box/web_box_bloc.dart';
+import '../../domain/entities/gradient_direction_entity/gradient_direction_entity.dart';
 import 'web_box/app_flex_color_picker.dart';
 import 'global/app_value_slider.dart';
 

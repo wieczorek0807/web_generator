@@ -3,14 +3,17 @@ import 'package:bloc/bloc.dart';
 import 'package:box_shadow_generator/src/core/extension/offset.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:hydrated_bloc/hydrated_bloc.dart';
+import 'package:flutter/foundation.dart';
 
 import '../../../core/values/colors.dart';
 import '../../../domain/entities/gradient_color/gradient_color_entity.dart';
-import '../../../domain/entities/gradient_direction_entity.dart';
+import '../../../domain/entities/gradient_direction_entity/gradient_direction_entity.dart';
 
 part 'animated_box_event.dart';
 part 'animated_box_state.dart';
 part 'animated_box_bloc.freezed.dart';
+part 'animated_box_bloc.g.dart';
 
 class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
   AnimatedBoxBloc() : super(_initail) {

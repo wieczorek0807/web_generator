@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../core/values/dimens.dart';
 import '../../bloc/animated_box/animated_box_bloc.dart';
-import '../../bloc/web_box/web_box_bloc.dart';
 
 class AnimatedBox extends StatelessWidget {
   const AnimatedBox({
@@ -44,8 +43,8 @@ class AnimatedBox extends StatelessWidget {
                   gradient: LinearGradient(
                       colors: state.gradientColors.map((e) => e.color).toList(),
                       stops: state.gradientColors.map((e) => e.value).toList(),
-                      begin: state.beginLinearGradient.value,
-                      end: state.endLinearGradient.value),
+                      begin: state.beginLinearGradient.getAligment(),
+                      end: state.endLinearGradient.getAligment()),
                 ),
               );
             } else if (state.isRadialGradient) {
@@ -67,7 +66,7 @@ class AnimatedBox extends StatelessWidget {
                       bottomLeft: Radius.circular(state.bottomLeftRadius),
                       bottomRight: Radius.circular(state.bottomRightRadius)),
                   gradient: RadialGradient(
-                    center: state.centerRadiusGradient.value,
+                    center: state.centerRadiusGradient.getAligment(),
                     colors: state.gradientColors.map((e) => e.color).toList(),
                     stops: state.gradientColors.map((e) => e.value).toList(),
                   ),

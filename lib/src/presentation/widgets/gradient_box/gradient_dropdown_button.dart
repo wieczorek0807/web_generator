@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../domain/entities/gradient_direction_entity.dart';
+import '../../../domain/entities/gradient_direction_entity/gradient_direction_entity.dart';
 
 class GradientDropdownButton extends StatelessWidget {
   final String name;
@@ -20,18 +20,18 @@ class GradientDropdownButton extends StatelessWidget {
       children: [
         Text(name),
         DropdownButton(
-            value: dropDownButtonValue.value,
+            value: dropDownButtonValue.getAligment(),
             items: allGradientDirecitons
                 .map<DropdownMenuItem<AlignmentGeometry>>(
                     (GradientDirectionEntity value) {
               return DropdownMenuItem(
-                value: value.value,
+                value: value.getAligment(),
                 child: Text(value.name),
               );
             }).toList(),
             onChanged: (value) {
               allGradientDirecitons.forEach((element) {
-                if (element.value == value) {
+                if (element.getAligment() == value) {
                   onChange(element);
                 }
               });

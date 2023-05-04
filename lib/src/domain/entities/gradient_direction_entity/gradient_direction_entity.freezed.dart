@@ -14,11 +14,18 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+GradientDirectionEntity _$GradientDirectionEntityFromJson(
+    Map<String, dynamic> json) {
+  return _GradientDirectionEntity.fromJson(json);
+}
+
 /// @nodoc
 mixin _$GradientDirectionEntity {
   String get name => throw _privateConstructorUsedError;
-  AlignmentGeometry get value => throw _privateConstructorUsedError;
+  double get aligmentX => throw _privateConstructorUsedError;
+  double get aligmentY => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $GradientDirectionEntityCopyWith<GradientDirectionEntity> get copyWith =>
       throw _privateConstructorUsedError;
@@ -30,7 +37,7 @@ abstract class $GradientDirectionEntityCopyWith<$Res> {
           $Res Function(GradientDirectionEntity) then) =
       _$GradientDirectionEntityCopyWithImpl<$Res, GradientDirectionEntity>;
   @useResult
-  $Res call({String name, AlignmentGeometry value});
+  $Res call({String name, double aligmentX, double aligmentY});
 }
 
 /// @nodoc
@@ -48,17 +55,22 @@ class _$GradientDirectionEntityCopyWithImpl<$Res,
   @override
   $Res call({
     Object? name = null,
-    Object? value = null,
+    Object? aligmentX = null,
+    Object? aligmentY = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as AlignmentGeometry,
+      aligmentX: null == aligmentX
+          ? _value.aligmentX
+          : aligmentX // ignore: cast_nullable_to_non_nullable
+              as double,
+      aligmentY: null == aligmentY
+          ? _value.aligmentY
+          : aligmentY // ignore: cast_nullable_to_non_nullable
+              as double,
     ) as $Val);
   }
 }
@@ -71,7 +83,7 @@ abstract class _$$_GradientDirectionEntityCopyWith<$Res>
       __$$_GradientDirectionEntityCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, AlignmentGeometry value});
+  $Res call({String name, double aligmentX, double aligmentY});
 }
 
 /// @nodoc
@@ -87,34 +99,46 @@ class __$$_GradientDirectionEntityCopyWithImpl<$Res>
   @override
   $Res call({
     Object? name = null,
-    Object? value = null,
+    Object? aligmentX = null,
+    Object? aligmentY = null,
   }) {
     return _then(_$_GradientDirectionEntity(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      value: null == value
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as AlignmentGeometry,
+      aligmentX: null == aligmentX
+          ? _value.aligmentX
+          : aligmentX // ignore: cast_nullable_to_non_nullable
+              as double,
+      aligmentY: null == aligmentY
+          ? _value.aligmentY
+          : aligmentY // ignore: cast_nullable_to_non_nullable
+              as double,
     ));
   }
 }
 
 /// @nodoc
+@JsonSerializable()
+class _$_GradientDirectionEntity extends _GradientDirectionEntity {
+  const _$_GradientDirectionEntity(
+      {required this.name, required this.aligmentX, required this.aligmentY})
+      : super._();
 
-class _$_GradientDirectionEntity implements _GradientDirectionEntity {
-  const _$_GradientDirectionEntity({required this.name, required this.value});
+  factory _$_GradientDirectionEntity.fromJson(Map<String, dynamic> json) =>
+      _$$_GradientDirectionEntityFromJson(json);
 
   @override
   final String name;
   @override
-  final AlignmentGeometry value;
+  final double aligmentX;
+  @override
+  final double aligmentY;
 
   @override
   String toString() {
-    return 'GradientDirectionEntity(name: $name, value: $value)';
+    return 'GradientDirectionEntity(name: $name, aligmentX: $aligmentX, aligmentY: $aligmentY)';
   }
 
   @override
@@ -123,11 +147,15 @@ class _$_GradientDirectionEntity implements _GradientDirectionEntity {
         (other.runtimeType == runtimeType &&
             other is _$_GradientDirectionEntity &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.value, value) || other.value == value));
+            (identical(other.aligmentX, aligmentX) ||
+                other.aligmentX == aligmentX) &&
+            (identical(other.aligmentY, aligmentY) ||
+                other.aligmentY == aligmentY));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, value);
+  int get hashCode => Object.hash(runtimeType, name, aligmentX, aligmentY);
 
   @JsonKey(ignore: true)
   @override
@@ -136,17 +164,31 @@ class _$_GradientDirectionEntity implements _GradientDirectionEntity {
       get copyWith =>
           __$$_GradientDirectionEntityCopyWithImpl<_$_GradientDirectionEntity>(
               this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_GradientDirectionEntityToJson(
+      this,
+    );
+  }
 }
 
-abstract class _GradientDirectionEntity implements GradientDirectionEntity {
+abstract class _GradientDirectionEntity extends GradientDirectionEntity {
   const factory _GradientDirectionEntity(
       {required final String name,
-      required final AlignmentGeometry value}) = _$_GradientDirectionEntity;
+      required final double aligmentX,
+      required final double aligmentY}) = _$_GradientDirectionEntity;
+  const _GradientDirectionEntity._() : super._();
+
+  factory _GradientDirectionEntity.fromJson(Map<String, dynamic> json) =
+      _$_GradientDirectionEntity.fromJson;
 
   @override
   String get name;
   @override
-  AlignmentGeometry get value;
+  double get aligmentX;
+  @override
+  double get aligmentY;
   @override
   @JsonKey(ignore: true)
   _$$_GradientDirectionEntityCopyWith<_$_GradientDirectionEntity>

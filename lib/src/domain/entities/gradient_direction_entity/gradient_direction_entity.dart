@@ -4,27 +4,34 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
 
 part 'gradient_direction_entity.freezed.dart';
-// part 'gradient_direction_entity.g.dart';
+part 'gradient_direction_entity.g.dart';
 
 @freezed
 class GradientDirectionEntity with _$GradientDirectionEntity {
+  const GradientDirectionEntity._();
   const factory GradientDirectionEntity({
     required String name,
-    required AlignmentGeometry value,
+    required double aligmentX,
+    required double aligmentY,
   }) = _GradientDirectionEntity;
 
-  // factory GradientDirectionEntity.fromJson(Map<String, Object?> json) =>
-  //     _$GradientDirectionEntity(json);
+  Alignment getAligment() {
+    return Alignment(aligmentX, aligmentY);
+  }
+
+  factory GradientDirectionEntity.fromJson(Map<String, Object?> json) =>
+      _$GradientDirectionEntityFromJson(json);
 }
 
 const List<GradientDirectionEntity> allGradientDirecitons = [
-  GradientDirectionEntity(name: 'Top Right', value: Alignment.topRight),
-  GradientDirectionEntity(name: 'Top Left', value: Alignment.topLeft),
-  GradientDirectionEntity(name: 'Top Center', value: Alignment.topCenter),
-  GradientDirectionEntity(name: 'Center Right', value: Alignment.centerRight),
-  GradientDirectionEntity(name: 'Center Left', value: Alignment.centerLeft),
-  GradientDirectionEntity(name: 'Center', value: Alignment.center),
-  GradientDirectionEntity(name: 'Bottom Right', value: Alignment.bottomRight),
-  GradientDirectionEntity(name: 'Bottom Left', value: Alignment.bottomLeft),
-  GradientDirectionEntity(name: 'Bottom Center', value: Alignment.bottomCenter),
+  GradientDirectionEntity(name: 'Top Right', aligmentX: 1.0, aligmentY: -1.0),
+  GradientDirectionEntity(name: 'Top Left', aligmentX: -1.0, aligmentY: -1.0),
+  GradientDirectionEntity(name: 'Top Center', aligmentX: 0.0, aligmentY: -1.0),
+  GradientDirectionEntity(name: 'Center Right', aligmentX: 1.0, aligmentY: 0.0),
+  GradientDirectionEntity(name: 'Center Left', aligmentX: -1.0, aligmentY: 0.0),
+  GradientDirectionEntity(name: 'Center', aligmentX: 0.0, aligmentY: 0.0),
+  GradientDirectionEntity(name: 'Bottom Right', aligmentX: 1.0, aligmentY: 1.0),
+  GradientDirectionEntity(name: 'Bottom Left', aligmentX: -1.0, aligmentY: 1.0),
+  GradientDirectionEntity(
+      name: 'Bottom Center', aligmentX: 0.0, aligmentY: 1.0),
 ];

@@ -21,5 +21,8 @@ class AnimatedBoxState with _$AnimatedBoxState {
     required GradientDirectionEntity beginLinearGradient,
     required GradientDirectionEntity endLinearGradient,
     required GradientDirectionEntity centerRadiusGradient,
-  }) = _UpdateAnimatedBox;
+  }) = _AnimatedBoxState;
+
+  factory AnimatedBoxState.fromJson(Map<String, Object?> json) =>
+      _$AnimatedBoxStateFromJson(json);
 }
