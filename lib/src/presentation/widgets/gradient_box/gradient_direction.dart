@@ -1,8 +1,9 @@
+import 'package:box_shadow_generator/src/presentation/bloc/animated_box/animated_box_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../domain/entities/gradient_direction_entity.dart';
-import '../../bloc/gradient_box/gradient_box_bloc.dart';
+
 import 'gradient_dropdown_button.dart';
 
 class GradientDirection extends StatelessWidget {
@@ -10,7 +11,7 @@ class GradientDirection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GradientBoxBloc, GradientBoxState>(
+    return BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
       builder: (context, state) {
         if (state.isLinearGradient) {
           return Row(
@@ -20,15 +21,16 @@ class GradientDirection extends StatelessWidget {
                   name: 'Directon start',
                   dropDownButtonValue: state.beginLinearGradient,
                   dropDownButtonItems: allGradientDirecitons,
-                  onChange: (v) => context.read<GradientBoxBloc>().add(
-                      GradientBoxEvent.changeBeginValue(
+                  onChange: (v) => context.read<AnimatedBoxBloc>().add(
+                      AnimatedBoxEvent.changeGradientBeginValue(
                           beginLinearGradient: v))),
               GradientDropdownButton(
                   name: 'Directon end',
                   dropDownButtonValue: state.endLinearGradient,
                   dropDownButtonItems: allGradientDirecitons,
-                  onChange: (v) => context.read<GradientBoxBloc>().add(
-                      GradientBoxEvent.changeEndValue(endLinearGradient: v))),
+                  onChange: (v) => context.read<AnimatedBoxBloc>().add(
+                      AnimatedBoxEvent.changeGradientEndValue(
+                          endLinearGradient: v))),
             ],
           );
         }
@@ -37,8 +39,9 @@ class GradientDirection extends StatelessWidget {
             name: 'Center ',
             dropDownButtonValue: state.centerRadiusGradient,
             dropDownButtonItems: allGradientDirecitons,
-            onChange: (v) => context.read<GradientBoxBloc>().add(
-                GradientBoxEvent.changeCenterValue(centerRadiusGradient: v)));
+            onChange: (v) => context.read<AnimatedBoxBloc>().add(
+                AnimatedBoxEvent.changeGradientCenterValue(
+                    centerRadiusGradient: v)));
       },
     );
   }

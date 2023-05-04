@@ -1,4 +1,4 @@
-part of 'animated_box_cubit.dart';
+part of 'animated_box_bloc.dart';
 
 @freezed
 class AnimatedBoxState with _$AnimatedBoxState {

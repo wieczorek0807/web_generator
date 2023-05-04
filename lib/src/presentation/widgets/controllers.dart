@@ -1,6 +1,6 @@
 import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:box_shadow_generator/src/core/values/dimens.dart';
-import 'package:box_shadow_generator/src/presentation/bloc/gradient_box/gradient_box_bloc.dart';
+import 'package:box_shadow_generator/src/presentation/bloc/animated_box/animated_box_bloc.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/app_segment_buttons.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/color_gradient_picker.dart';
 import 'package:box_shadow_generator/src/presentation/widgets/gradient_box/gradient_direction.dart';
@@ -27,68 +27,66 @@ class ShadowControllers extends StatelessWidget {
         height: _height,
         width: _width,
         color: Colors.white,
-        child: BlocBuilder<WebBoxBloc, WebBoxState>(
-          builder: (_, state) => state.maybeMap(
-            orElse: () => const SizedBox.shrink(),
-            updateWebBox: (state) => Column(
-              children: [
-                IconButton(
-                    onPressed: () {
-                      context
-                          .read<WebBoxBloc>()
-                          .add(const WebBoxEvent.undoAnimatedBox());
-                    },
-                    icon: const Icon(Icons.undo)),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Offset dx',
-                  value: state.offset.dx,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateOffsetX(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Offset dy',
-                  value: state.offset.dy,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateOffsetY(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Blur radius',
-                  min: _blurMin,
-                  value: state.blurRadius,
-                  onChanged: (v) =>
-                      context.read<WebBoxBloc>().add(WebBoxEvent.updateBlur(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Spread radius',
-                  value: state.spreadRadius,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateSpread(v)),
-                ),
-                const Divider(),
-                StandardColorPicker(
-                  title: 'Shadow color:',
-                  startColor: state.shadowColor,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateShadowColor(v)),
-                ),
-                const Divider(),
-                StandardColorPicker(
-                  title: 'Box color:',
-                  startColor: state.animatedBoxColor,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateAnimatedBoxColor(v)),
-                ),
-              ],
-            ),
+        child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
+          builder: (_, state) => Column(
+            children: [
+              IconButton(
+                  onPressed: () {
+                    context
+                        .read<AnimatedBoxBloc>()
+                        .add(const AnimatedBoxEvent.undoChanges());
+                  },
+                  icon: const Icon(Icons.undo)),
+              const Divider(),
+              AppValueSlider(
+                title: 'Offset dx',
+                value: state.offset.dx,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateOffsetX(v)),
+              ),
+              const Divider(),
+              AppValueSlider(
+                title: 'Offset dy',
+                value: state.offset.dy,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateOffsetY(v)),
+              ),
+              const Divider(),
+              AppValueSlider(
+                title: 'Blur radius',
+                min: _blurMin,
+                value: state.blurRadius,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateBlur(v)),
+              ),
+              const Divider(),
+              AppValueSlider(
+                title: 'Spread radius',
+                value: state.spreadRadius,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateSpread(v)),
+              ),
+              const Divider(),
+              StandardColorPicker(
+                title: 'Shadow color:',
+                startColor: state.shadowColor,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateShadowColor(v)),
+              ),
+              const Divider(),
+              StandardColorPicker(
+                title: 'Box color:',
+                startColor: state.animatedBoxColor,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateAnimatedBoxColor(v)),
+              ),
+            ],
           ),
         ),
       );
@@ -106,60 +104,57 @@ class RadiusControllers extends StatelessWidget {
         // height: _height,
         width: _width,
         color: Colors.white,
-        child: BlocBuilder<WebBoxBloc, WebBoxState>(
-          builder: (_, state) => state.maybeMap(
-            orElse: () => const SizedBox.shrink(),
-            updateWebBox: (state) => Column(
-              children: [
-                IconButton(
-                    onPressed: () {
-                      context
-                          .read<WebBoxBloc>()
-                          .add(const WebBoxEvent.undoAnimatedBox());
-                    },
-                    icon: const Icon(Icons.undo)),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Top left',
-                  value: state.topLeftRadius,
-                  min: _radiusMin,
-                  max: _radiusMax,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateTopLeftRadius(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Top right',
-                  value: state.topRightRadius,
-                  min: _radiusMin,
-                  max: _radiusMax,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateTopRightRadius(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Bottom left',
-                  value: state.bottomLeftRadius,
-                  min: _radiusMin,
-                  max: _radiusMax,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateBottomLeftRadius(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Bottom right',
-                  value: state.bottomRightRadius,
-                  min: _radiusMin,
-                  max: _radiusMax,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateBottomRightRadius(v)),
-                ),
-              ],
-            ),
+        child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
+          builder: (_, state) => Column(
+            children: [
+              IconButton(
+                  onPressed: () {
+                    context
+                        .read<AnimatedBoxBloc>()
+                        .add(const AnimatedBoxEvent.undoChanges());
+                  },
+                  icon: const Icon(Icons.undo)),
+              const Divider(),
+              AppValueSlider(
+                title: 'Top left',
+                value: state.topLeftRadius,
+                min: _radiusMin,
+                max: _radiusMax,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateTopLeftRadius(v)),
+              ),
+              const Divider(),
+              AppValueSlider(
+                title: 'Top right',
+                value: state.topRightRadius,
+                min: _radiusMin,
+                max: _radiusMax,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateTopRightRadius(v)),
+              ),
+              const Divider(),
+              AppValueSlider(
+                title: 'Bottom left',
+                value: state.bottomLeftRadius,
+                min: _radiusMin,
+                max: _radiusMax,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateBottomLeftRadius(v)),
+              ),
+              const Divider(),
+              AppValueSlider(
+                title: 'Bottom right',
+                value: state.bottomRightRadius,
+                min: _radiusMin,
+                max: _radiusMax,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateBottomRightRadius(v)),
+              ),
+            ],
           ),
         ),
       );
@@ -176,59 +171,51 @@ class SizeControllers extends StatelessWidget {
   Widget build(BuildContext context) => Container(
         width: _width,
         color: Colors.white,
-        child: BlocBuilder<WebBoxBloc, WebBoxState>(
-          builder: (_, state) => state.maybeMap(
-            orElse: () => const SizedBox.shrink(),
-            updateWebBox: (state) => Column(
-              children: [
-                IconButton(
-                    onPressed: () {
-                      context
-                          .read<WebBoxBloc>()
-                          .add(const WebBoxEvent.undoAnimatedBox());
-                    },
-                    icon: const Icon(Icons.undo)),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Height',
-                  value: state.boxHeight,
-                  min: _valueMin,
-                  max: _valueMax,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateBoxHeight(v)),
-                ),
-                const Divider(),
-                AppValueSlider(
-                  title: 'Width',
-                  value: state.boxWidth,
-                  min: _valueMin,
-                  max: _valueMax,
-                  onChanged: (v) => context
-                      .read<WebBoxBloc>()
-                      .add(WebBoxEvent.updateBoxWidth(v)),
-                ),
-              ],
-            ),
+        child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
+          builder: (_, state) => Column(
+            children: [
+              IconButton(
+                  onPressed: () {
+                    context
+                        .read<AnimatedBoxBloc>()
+                        .add(const AnimatedBoxEvent.undoChanges());
+                  },
+                  icon: const Icon(Icons.undo)),
+              const Divider(),
+              AppValueSlider(
+                title: 'Height',
+                value: state.boxHeight,
+                min: _valueMin,
+                max: _valueMax,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateBoxHeight(v)),
+              ),
+              const Divider(),
+              AppValueSlider(
+                title: 'Width',
+                value: state.boxWidth,
+                min: _valueMin,
+                max: _valueMax,
+                onChanged: (v) => context
+                    .read<AnimatedBoxBloc>()
+                    .add(AnimatedBoxEvent.updateBoxWidth(v)),
+              ),
+            ],
           ),
         ),
       );
 }
 
-class GradientControllers extends StatefulWidget {
+class GradientControllers extends StatelessWidget {
   const GradientControllers({Key? key}) : super(key: key);
 
   static const _width = 300.0;
 
   @override
-  State<GradientControllers> createState() => _GradientControllersState();
-}
-
-class _GradientControllersState extends State<GradientControllers> {
-  @override
   Widget build(BuildContext context) => Container(
       width: GradientControllers._width,
-      child: BlocBuilder<GradientBoxBloc, GradientBoxState>(
+      child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
         builder: (_, state) {
           if (state.isGradientEnabled) {
             return Column(
@@ -238,8 +225,8 @@ class _GradientControllersState extends State<GradientControllers> {
                   isLinearGradient: state.isLinearGradient,
                   isRadialGradient: state.isRadialGradient,
                   onChanged: (v) => context
-                      .read<GradientBoxBloc>()
-                      .add(GradientBoxEvent.changeGradientState(value: v)),
+                      .read<AnimatedBoxBloc>()
+                      .add(AnimatedBoxEvent.changeGradientState(value: v)),
                 ),
                 const SizedBox(
                   height: 24,
@@ -264,12 +251,12 @@ class _GradientControllersState extends State<GradientControllers> {
                       itemBuilder: (context, index) {
                         return ColorAndValueForGradientPicker(
                           valueOnChanged: (v) => context
-                              .read<GradientBoxBloc>()
-                              .add(GradientBoxEvent.updateGradientValue(
+                              .read<AnimatedBoxBloc>()
+                              .add(AnimatedBoxEvent.updateGradientValue(
                                   id: index, value: v)),
                           colorOnChanged: (Color v) => context
-                              .read<GradientBoxBloc>()
-                              .add(GradientBoxEvent.updateGradientColor(
+                              .read<AnimatedBoxBloc>()
+                              .add(AnimatedBoxEvent.updateGradientColor(
                                   id: index, color: v)),
                           startColor: state.gradientColors[index].color,
                           index: index,
@@ -286,8 +273,8 @@ class _GradientControllersState extends State<GradientControllers> {
                         foregroundColor: AppColors.primary,
                       ),
                       onPressed: () => context
-                          .read<GradientBoxBloc>()
-                          .add(const GradientBoxEvent.addGradientColor()),
+                          .read<AnimatedBoxBloc>()
+                          .add(const AnimatedBoxEvent.addGradientColor()),
                       child: const Text('Add color'),
                     ),
                     OutlinedButton(
@@ -295,8 +282,8 @@ class _GradientControllersState extends State<GradientControllers> {
                         foregroundColor: AppColors.primary,
                       ),
                       onPressed: () => context
-                          .read<GradientBoxBloc>()
-                          .add(const GradientBoxEvent.removeGradientColor()),
+                          .read<AnimatedBoxBloc>()
+                          .add(const AnimatedBoxEvent.removeGradientColor()),
                       child: const Text('Remove color'),
                     )
                   ],
@@ -309,8 +296,8 @@ class _GradientControllersState extends State<GradientControllers> {
             isLinearGradient: state.isLinearGradient,
             isRadialGradient: state.isRadialGradient,
             onChanged: (v) => context
-                .read<GradientBoxBloc>()
-                .add(GradientBoxEvent.changeGradientState(value: v)),
+                .read<AnimatedBoxBloc>()
+                .add(AnimatedBoxEvent.changeGradientState(value: v)),
           );
         },
       ));

@@ -1,10 +1,11 @@
 import 'package:box_shadow_generator/src/core/values/colors.dart';
-import 'package:box_shadow_generator/src/presentation/bloc/routing/cubit/routing_cubit.dart';
+import 'package:box_shadow_generator/src/presentation/bloc/routing/routing_cubit.dart';
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../core/values/dimens.dart';
-import '../bloc/routing/cubit/routing_state.dart';
+import '../bloc/animated_box/animated_box_bloc.dart';
+import '../bloc/routing/routing_state.dart';
 import '../widgets/drawer/web_box_drawer.dart';
 
 class WebBoxResponsiveScreen extends StatelessWidget {
@@ -31,6 +32,13 @@ class WebBoxResponsiveScreen extends StatelessWidget {
           appBar: AppBar(
             title: Text(state.title),
             backgroundColor: AppColors.primary,
+            actions: [
+              IconButton(
+                  onPressed: () => context
+                      .read<AnimatedBoxBloc>()
+                      .add(const AnimatedBoxEvent.undoChanges()),
+                  icon: const Icon(Icons.undo)),
+            ],
           ),
           backgroundColor: Colors.white,
           drawer: const WebBoxDrawer(),

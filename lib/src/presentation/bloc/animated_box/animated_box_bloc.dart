@@ -1,59 +1,60 @@
+import 'dart:ui';
+
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
-import 'package:box_shadow_generator/src/core/values/colors.dart';
-import 'package:box_shadow_generator/src/domain/entities/gradient_box_entity.dart';
-import 'package:box_shadow_generator/src/domain/entities/gradient_direction_entity.dart';
+import 'package:box_shadow_generator/src/core/extension/offset.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'gradient_box_event.dart';
-part 'gradient_box_state.dart';
-part 'gradient_box_bloc.freezed.dart';
+import '../../../core/values/colors.dart';
+import '../../../domain/entities/gradient_box_entity.dart';
+import '../../../domain/entities/gradient_direction_entity.dart';
 
-class GradientBoxBloc extends Bloc<GradientBoxEvent, GradientBoxState> {
-  GradientBoxBloc()
-      : super(GradientBoxState(
-          gradientColors: _initialValue,
-          isRadialGradient: false,
-          isGradientEnabled: false,
-          isLinearGradient: false,
-          beginLinearGradient: allGradientDirecitons[1],
-          endLinearGradient: allGradientDirecitons[6],
-          centerRadiusGradient: allGradientDirecitons[5],
-        )) {
-    on<GradientBoxEvent>((event, emit) {
+part 'animated_box_event.dart';
+part 'animated_box_state.dart';
+part 'animated_box_bloc.freezed.dart';
+
+class AnimatedBoxBloc extends Bloc<AnimatedBoxEvent, AnimatedBoxState> {
+  AnimatedBoxBloc() : super(_initail) {
+    on<AnimatedBoxEvent>((event, emit) {
       _updateValues(event);
     });
   }
 
-  static const _initialValue = [
-    GradientColorEntity(AppColors.primary, 0, 0),
-    GradientColorEntity(AppColors.third, 1, 1),
-  ];
-
-  void initialize() {
-    add(const GradientBoxEvent.initial());
-  }
-
-  void _updateValues(GradientBoxEvent event) => event.maybeWhen(
+  void _updateValues(AnimatedBoxEvent event) => event.maybeWhen(
         orElse: () => null,
+        undoChanges: () => emit(_initail),
+        updateSpread: (v) => emit(state.copyWith(spreadRadius: v)),
+        updateBlur: (v) => emit(state.copyWith(blurRadius: v)),
+        updateOffsetX: (v) =>
+            emit(state.copyWith(offset: state.offset.copyWith(dx: v))),
+        updateOffsetY: (v) =>
+            emit(state.copyWith(offset: state.offset.copyWith(dy: v))),
+        updateShadowColor: (v) => emit(state.copyWith(shadowColor: v)),
+        updateAnimatedBoxColor: (v) =>
+            emit(state.copyWith(animatedBoxColor: v)),
+        updateTopLeftRadius: (v) => emit(state.copyWith(topLeftRadius: v)),
+        updateTopRightRadius: (v) => emit(state.copyWith(topRightRadius: v)),
+        updateBottomLeftRadius: (v) =>
+            emit(state.copyWith(bottomLeftRadius: v)),
+        updateBottomRightRadius: (v) =>
+            emit(state.copyWith(bottomRightRadius: v)),
+        updateBoxHeight: (v) => emit(state.copyWith(boxHeight: v)),
+        updateBoxWidth: (v) => emit(state.copyWith(boxWidth: v)),
         addGradientColor: _addGradientColor,
         removeGradientColor: _removeGradientColor,
-        revertChanges: _revertChanges,
         updateGradientColor: (id, newColor) =>
             _updateGradientColor(color: newColor, index: id),
         updateGradientValue: (id, value) =>
             _updateGradientValue(index: id, value: value),
-        changeGradientState: (value) => _changeGradientState(value),
-        changeBeginValue: (value) => _changeBeginValue(value),
-        changeEndValue: (value) => _changeEndValue(value),
-        changeCenterValue: (value) => _changeCenterValue(value),
+        changeGradientState: (v) => _changeGradientState(v),
+        changeGradientBeginValue: (v) =>
+            emit(state.copyWith(beginLinearGradient: v)),
+        changeGradientEndValue: (v) =>
+            emit(state.copyWith(endLinearGradient: v)),
+        changeGradientCenterValue: (v) =>
+            emit(state.copyWith(centerRadiusGradient: v)),
       );
-
-  void _revertChanges() {
-    emit(state.copyWith(gradientColors: _initialValue));
-  }
-
   void _addGradientColor() {
     if (state.gradientColors.length < 6) {
       final newColor =
@@ -102,18 +103,6 @@ class GradientBoxBloc extends Bloc<GradientBoxEvent, GradientBoxState> {
     }
   }
 
-  void _changeCenterValue(value) {
-    emit(state.copyWith(centerRadiusGradient: value));
-  }
-
-  void _changeBeginValue(value) {
-    emit(state.copyWith(beginLinearGradient: value));
-  }
-
-  void _changeEndValue(value) {
-    emit(state.copyWith(endLinearGradient: value));
-  }
-
   void _updateGradientColor({required Color color, required int index}) {
     GradientColorEntity colorToCHange = state.gradientColors[index];
     GradientColorEntity newColor =
@@ -152,3 +141,27 @@ class GradientBoxBloc extends Bloc<GradientBoxEvent, GradientBoxState> {
     return colorsInState;
   }
 }
+
+// bloc initial state
+final AnimatedBoxState _initail = AnimatedBoxState(
+    offset: Offset.zero,
+    boxWidth: 350.0,
+    boxHeight: 350.0,
+    shadowColor: AppColors.shadow,
+    animatedBoxColor: Colors.grey.shade200,
+    blurRadius: 0.0,
+    spreadRadius: 0.0,
+    topLeftRadius: 0.0,
+    topRightRadius: 0.0,
+    bottomLeftRadius: 0.0,
+    bottomRightRadius: 0.0,
+    isGradientEnabled: false,
+    isLinearGradient: false,
+    isRadialGradient: false,
+    gradientColors: [
+      const GradientColorEntity(AppColors.primary, 0, 0),
+      const GradientColorEntity(AppColors.third, 1, 1),
+    ],
+    beginLinearGradient: allGradientDirecitons[1],
+    endLinearGradient: allGradientDirecitons[6],
+    centerRadiusGradient: allGradientDirecitons[5]);
