@@ -18,7 +18,7 @@ class ShadowControllers extends StatelessWidget {
   static const _blurMin = 0.0;
 
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) => SizedBox(
         height: _height,
         width: _width,
         child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
@@ -86,7 +86,7 @@ class RadiusControllers extends StatelessWidget {
   static const _radiusMax = 250.0;
 
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) => SizedBox(
         width: _width,
         child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
           builder: (_, state) => Column(
@@ -144,7 +144,7 @@ class SizeControllers extends StatelessWidget {
   static const _valueMax = 350.0;
 
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) => SizedBox(
         width: _width,
         child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
           builder: (_, state) => Column(
@@ -180,7 +180,7 @@ class GradientControllers extends StatelessWidget {
   static const _width = 300.0;
 
   @override
-  Widget build(BuildContext context) => Container(
+  Widget build(BuildContext context) => SizedBox(
       width: GradientControllers._width,
       child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
         builder: (_, state) {
