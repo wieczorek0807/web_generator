@@ -28,13 +28,10 @@ class AppValueSlider extends StatelessWidget {
 
   static const _min = -50.0;
   static const _max = 50.0;
-  var _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    // final myController = TextEditingController();
-    // myController.text = value.floor().toString();
-    final _formKey = GlobalKey<FormState>();
+    final formKey = GlobalKey<FormState>();
 
     return Column(
       mainAxisSize: MainAxisSize.min,
@@ -46,21 +43,26 @@ class AppValueSlider extends StatelessWidget {
           children: [
             Text('$title:'),
             SizedBox(
-              width: 130,
+              width: 50,
               child: Form(
-                key: _formKey,
+                key: formKey,
                 child: TextFormField(
+                  textAlignVertical: TextAlignVertical.center,
                   maxLines: 1,
-                  textAlign: TextAlign.right,
+                  minLines: 1,
+                  textAlign: TextAlign.center,
                   initialValue: value.floor().toString(),
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                      contentPadding: EdgeInsets.all(5),
+                      focusedBorder: UnderlineInputBorder(
+                          borderSide:
+                              BorderSide(color: AppColors.persianGreen))),
                   onFieldSubmitted: (value) {
-                    if (_formKey.currentState!.validate()) {
+                    if (formKey.currentState!.validate()) {
                       onChanged!(double.parse(value));
                     }
                   },
-                  decoration:
-                      const InputDecoration(border: OutlineInputBorder()),
-                  keyboardType: TextInputType.number,
                   validator: (value) {
                     if (!(value == null || value.isEmpty)) {
                       try {
@@ -68,11 +70,12 @@ class AppValueSlider extends StatelessWidget {
                         if (doubleValue >= min && doubleValue <= max) {
                           return null;
                         }
-                      } catch (_) {
-                        return '$min<= number <=$max';
-                      }
+                      } catch (_) {}
                     }
-                    return '$min<= number <=$max';
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                        backgroundColor: AppColors.tangerine,
+                        content: Text('Value must be between $min and $max')));
+                    return '';
                   },
                 ),
               ),
