@@ -45,6 +45,7 @@ class _FlexColorPickerState extends State<FlexColorPicker> {
       builder: (context) => AlertDialog(
             content: Column(mainAxisSize: MainAxisSize.min, children: [
               ColorPicker(
+                wheelSquarePadding: 10,
                 wheelDiameter: 300,
                 borderRadius: 22,
                 heading: Text(

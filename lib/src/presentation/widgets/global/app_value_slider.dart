@@ -54,7 +54,7 @@ class AppValueSlider extends StatelessWidget {
                   initialValue: value.floor().toString(),
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
-                      contentPadding: EdgeInsets.all(5),
+                      contentPadding: EdgeInsets.all(10),
                       focusedBorder: UnderlineInputBorder(
                           borderSide:
                               BorderSide(color: AppColors.persianGreen))),
