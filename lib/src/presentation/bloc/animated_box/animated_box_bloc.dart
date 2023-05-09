@@ -1,6 +1,7 @@
 // ignore: depend_on_referenced_packages
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:flutter/foundation.dart';
@@ -156,7 +157,7 @@ final AnimatedBoxState _initail = AnimatedBoxState(
     boxWidth: 350.0,
     boxHeight: 350.0,
     shadowColor: AppColors.shadow,
-    animatedBoxColor: AppColors.box,
+    animatedBoxColor: Colors.grey.shade200,
     blurRadius: 0.0,
     spreadRadius: 0.0,
     topLeftRadius: 0.0,
