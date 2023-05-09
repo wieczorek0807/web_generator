@@ -13,13 +13,11 @@ import 'global/app_value_slider.dart';
 class ShadowControllers extends StatelessWidget {
   const ShadowControllers({Key? key}) : super(key: key);
 
-  static const _height = 500.0;
   static const _width = 300.0;
   static const _blurMin = 0.0;
 
   @override
   Widget build(BuildContext context) => SizedBox(
-        height: _height,
         width: _width,
         child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
           builder: (_, state) => Column(

@@ -84,6 +84,7 @@ class _ResponsiveScreenHelper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currnetWidth = MediaQuery.of(context).size.width;
+    // print(currnetWidth);
     if (currnetWidth < 900) {
       return _MobileBody(controllers: controllers, animatedBox: animatedBox);
     } else {
@@ -107,7 +108,7 @@ class _DesktopBody extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   controllers,
-                  const SizedBox(width: AppDimens.d100),
+                  const SizedBox(width: AppDimens.d130),
                   animatedBox
                 ],
               ),
@@ -131,11 +132,11 @@ class _MobileBody extends StatelessWidget {
             child: SingleChildScrollView(
               child: Column(children: [
                 const SizedBox(
-                  height: AppDimens.d52,
+                  height: AppDimens.d100,
                 ),
                 animatedBox,
                 const SizedBox(
-                  height: AppDimens.d52,
+                  height: AppDimens.d130,
                 ),
                 controllers,
                 const SizedBox(
