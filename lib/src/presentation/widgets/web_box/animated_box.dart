@@ -21,6 +21,8 @@ class AnimatedBox extends StatelessWidget {
       child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
         builder: (context, state) {
           var gradient;
+          final currnetWidth = MediaQuery.of(context).size.width - 250;
+
           if (state.isGradientEnabled & state.isLinearGradient) {
             gradient = LinearGradient(
                 colors: state.gradientColors.map((e) => e.color).toList(),
@@ -33,6 +35,16 @@ class AnimatedBox extends StatelessWidget {
               colors: state.gradientColors.map((e) => e.color).toList(),
               stops: state.gradientColors.map((e) => e.value).toList(),
             );
+          }
+
+          if (state.boxWidth > currnetWidth) {
+            context
+                .read<AnimatedBoxBloc>()
+                .add(AnimatedBoxEvent.updateBoxWidth(currnetWidth));
+          } else if (state.boxHeight > currnetWidth) {
+            context
+                .read<AnimatedBoxBloc>()
+                .add(AnimatedBoxEvent.updateBoxHeight(currnetWidth));
           }
 
           return Container(

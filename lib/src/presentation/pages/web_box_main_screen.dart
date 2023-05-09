@@ -24,12 +24,12 @@ class WebBoxMainScreen extends StatelessWidget {
             },
           )
         ],
-        child: const WebBoxResponsiveScreen(
-          animatedBox: AnimatedBox(),
-          shadowControllers: ShadowControllers(),
-          radiusControllers: RadiusControllers(),
+        child: WebBoxResponsiveScreen(
+          animatedBox: const AnimatedBox(),
+          shadowControllers: const ShadowControllers(),
+          radiusControllers: const RadiusControllers(),
           sizeControllers: SizeControllers(),
-          gradientControllers: GradientControllers(),
+          gradientControllers: const GradientControllers(),
         ));
   }
 }

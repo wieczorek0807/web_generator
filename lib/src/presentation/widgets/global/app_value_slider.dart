@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 import '../../../core/values/dimens.dart';
 
 class AppValueSlider extends StatelessWidget {
-  AppValueSlider({
+  const AppValueSlider({
     required this.title,
     required this.value,
     this.onChanged,

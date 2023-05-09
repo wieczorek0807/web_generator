@@ -135,41 +135,49 @@ class RadiusControllers extends StatelessWidget {
 }
 
 class SizeControllers extends StatelessWidget {
-  const SizeControllers({Key? key}) : super(key: key);
+  SizeControllers({Key? key}) : super(key: key);
 
   static const _width = 300.0;
   static const _valueMin = 0.0;
-  static const _valueMax = 350.0;
+  var _valueMax = 350.0;
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-        width: _width,
-        child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
-          builder: (_, state) => Column(
-            children: [
-              AppValueSlider(
-                title: 'Height',
-                value: state.boxHeight,
-                min: _valueMin,
-                max: _valueMax,
-                onChanged: (v) => context
-                    .read<AnimatedBoxBloc>()
-                    .add(AnimatedBoxEvent.updateBoxHeight(v)),
-              ),
-              const Divider(),
-              AppValueSlider(
-                title: 'Width',
-                value: state.boxWidth,
-                min: _valueMin,
-                max: _valueMax,
-                onChanged: (v) => context
-                    .read<AnimatedBoxBloc>()
-                    .add(AnimatedBoxEvent.updateBoxWidth(v)),
-              ),
-            ],
-          ),
+  Widget build(BuildContext context) {
+    final currnetMaxValue = MediaQuery.of(context).size.width - 250;
+
+    if (currnetMaxValue < 350) {
+      _valueMax = currnetMaxValue;
+      print(currnetMaxValue);
+    }
+    return SizedBox(
+      width: _width,
+      child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
+        builder: (_, state) => Column(
+          children: [
+            AppValueSlider(
+              title: 'Height',
+              value: state.boxHeight,
+              min: _valueMin,
+              max: _valueMax,
+              onChanged: (v) => context
+                  .read<AnimatedBoxBloc>()
+                  .add(AnimatedBoxEvent.updateBoxHeight(v)),
+            ),
+            const Divider(),
+            AppValueSlider(
+              title: 'Width',
+              value: state.boxWidth,
+              min: _valueMin,
+              max: _valueMax,
+              onChanged: (v) => context
+                  .read<AnimatedBoxBloc>()
+                  .add(AnimatedBoxEvent.updateBoxWidth(v)),
+            ),
+          ],
         ),
-      );
+      ),
+    );
+  }
 }
 
 class GradientControllers extends StatelessWidget {

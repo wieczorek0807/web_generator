@@ -86,7 +86,10 @@ class _ResponsiveScreenHelper extends StatelessWidget {
     final currnetWidth = MediaQuery.of(context).size.width;
     // print(currnetWidth);
     if (currnetWidth < 900) {
-      return _MobileBody(controllers: controllers, animatedBox: animatedBox);
+      return _MobileBody(
+        controllers: controllers,
+        animatedBox: animatedBox,
+      );
     } else {
       return _DesktopBody(controllers: controllers, animatedBox: animatedBox);
     }
@@ -119,7 +122,10 @@ class _DesktopBody extends StatelessWidget {
 }
 
 class _MobileBody extends StatelessWidget {
-  const _MobileBody({required this.controllers, required this.animatedBox});
+  const _MobileBody({
+    required this.controllers,
+    required this.animatedBox,
+  });
   final Widget controllers;
   final Widget animatedBox;
 
