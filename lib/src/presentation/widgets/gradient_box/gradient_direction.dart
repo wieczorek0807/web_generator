@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../domain/entities/gradient_direction/gradient_direction_entity.dart';
+import '../../../data/models/gradient_direction/gradient_direction_model.dart';
 
 import 'gradient_dropdown_button.dart';
 

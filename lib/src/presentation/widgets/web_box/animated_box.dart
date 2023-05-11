@@ -25,18 +25,18 @@ class AnimatedBox extends StatelessWidget {
 
           if (state.isGradientEnabled & state.isLinearGradient) {
             gradient = LinearGradient(
-                colors: state.gradientColors.map((e) => e.color).toList(),
+                colors:
+                    state.gradientColors.map((e) => Color(e.color)).toList(),
                 stops: state.gradientColors.map((e) => e.value).toList(),
                 begin: state.beginLinearGradient.getAligment(),
                 end: state.endLinearGradient.getAligment());
           } else if (state.isGradientEnabled & state.isRadialGradient) {
             gradient = RadialGradient(
               center: state.centerRadiusGradient.getAligment(),
-              colors: state.gradientColors.map((e) => e.color).toList(),
+              colors: state.gradientColors.map((e) => Color(e.color)).toList(),
               stops: state.gradientColors.map((e) => e.value).toList(),
             );
           }
-
           if (state.boxWidth > currnetWidth) {
             context
                 .read<AnimatedBoxBloc>()
@@ -51,12 +51,12 @@ class AnimatedBox extends StatelessWidget {
             height: state.boxHeight,
             width: state.boxWidth,
             decoration: BoxDecoration(
-                color: state.animatedBoxColor,
+                color: Color(state.animatedBoxColor),
                 boxShadow: [
                   BoxShadow(
                     blurRadius: state.blurRadius,
-                    color: state.shadowColor,
-                    offset: state.offset.getOffset(),
+                    color: Color(state.shadowColor),
+                    offset: Offset(state.offsetDx, state.offsetDy),
                     spreadRadius: state.spreadRadius,
                   ),
                 ],

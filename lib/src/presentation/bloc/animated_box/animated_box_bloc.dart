@@ -1,15 +1,12 @@
 // ignore: depend_on_referenced_packages
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:flutter/foundation.dart';
 
 import '../../../core/values/colors.dart';
-import '../../../domain/entities/animated_box_offset/animated_box_offset_entity.dart';
-import '../../../domain/entities/gradient_color/gradient_color_entity.dart';
-import '../../../domain/entities/gradient_direction/gradient_direction_entity.dart';
+import '../../../data/models/gradient_color/gradient_color_model.dart';
+import '../../../data/models/gradient_direction/gradient_direction_model.dart';
 
 part 'animated_box_event.dart';
 part 'animated_box_state.dart';
@@ -28,13 +25,11 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
         undoChanges: () => emit(_initail),
         updateSpread: (v) => emit(state.copyWith(spreadRadius: v)),
         updateBlur: (v) => emit(state.copyWith(blurRadius: v)),
-        updateOffsetX: (v) =>
-            emit(state.copyWith(offset: state.offset.copyWith(offsetDx: v))),
-        updateOffsetY: (v) =>
-            emit(state.copyWith(offset: state.offset.copyWith(offsetDy: v))),
-        updateShadowColor: (v) => emit(state.copyWith(shadowColor: v)),
+        updateOffsetX: (v) => emit(state.copyWith(offsetDx: v)),
+        updateOffsetY: (v) => emit(state.copyWith(offsetDy: v)),
+        updateShadowColor: (v) => emit(state.copyWith(shadowColor: v.value)),
         updateAnimatedBoxColor: (v) =>
-            emit(state.copyWith(animatedBoxColor: v)),
+            emit(state.copyWith(animatedBoxColor: v.value)),
         updateTopLeftRadius: (v) => emit(state.copyWith(topLeftRadius: v)),
         updateTopRightRadius: (v) => emit(state.copyWith(topRightRadius: v)),
         updateBottomLeftRadius: (v) =>
@@ -46,7 +41,7 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
         addGradientColor: _addGradientColor,
         removeGradientColor: _removeGradientColor,
         updateGradientColor: (id, newColor) =>
-            _updateGradient(color: newColor, index: id),
+            _updateGradient(color: newColor.value, index: id),
         updateGradientValue: (id, value) =>
             _updateGradient(index: id, value: value),
         changeGradientState: (v) => _changeGradientState(v),
@@ -62,13 +57,13 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
 
   void _addGradientColor() {
     if (state.gradientColors.length < 6) {
-      final newColor = GradientColorEntity(
+      final newColor = GradientColorModel(
           id: state.gradientColors.length,
-          color: AppColors.tangerine,
+          color: AppColors.tangerine.value,
           value: 0);
       final colors = List.of([...state.gradientColors, newColor]);
 
-      List<GradientColorEntity> newState =
+      List<GradientColorModel> newState =
           _setValueWhenAddCollor(gradientColorEnitiyList: colors);
       emit(state.copyWith(gradientColors: newState));
     }
@@ -76,10 +71,10 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
 
   void _removeGradientColor() {
     if (state.gradientColors.length > 2) {
-      List<GradientColorEntity> colorsInState = [...state.gradientColors];
+      List<GradientColorModel> colorsInState = [...state.gradientColors];
       colorsInState.removeLast();
 
-      List<GradientColorEntity> newState =
+      List<GradientColorModel> newState =
           _setValueWhenAddCollor(gradientColorEnitiyList: colorsInState);
 
       emit(state.copyWith(gradientColors: newState));
@@ -108,31 +103,31 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
     }
   }
 
-  void _updateGradient({Color? color, required int index, double? value}) {
-    GradientColorEntity colorToChange = state.gradientColors[index];
-    GradientColorEntity newColor = GradientColorEntity(
+  void _updateGradient({int? color, required int index, double? value}) {
+    GradientColorModel colorToChange = state.gradientColors[index];
+    GradientColorModel newColor = GradientColorModel(
         id: colorToChange.id,
         color: color ??= colorToChange.color,
         value: value ?? colorToChange.value);
-    List<GradientColorEntity> colorsInState = [...state.gradientColors];
+    List<GradientColorModel> colorsInState = [...state.gradientColors];
     colorsInState[index] = newColor;
     emit(state.copyWith(gradientColors: colorsInState));
   }
 
-  List<GradientColorEntity> _setValueWhenAddCollor(
-      {required List<GradientColorEntity> gradientColorEnitiyList}) {
+  List<GradientColorModel> _setValueWhenAddCollor(
+      {required List<GradientColorModel> gradientColorEnitiyList}) {
     double newvalue = 1 / (gradientColorEnitiyList.length - 1);
-    List<GradientColorEntity> colorsInState = [];
-    GradientColorEntity firstElement = gradientColorEnitiyList.removeAt(0);
-    GradientColorEntity lastElement = gradientColorEnitiyList.removeLast();
+    List<GradientColorModel> colorsInState = [];
+    GradientColorModel firstElement = gradientColorEnitiyList.removeAt(0);
+    GradientColorModel lastElement = gradientColorEnitiyList.removeLast();
 
-    colorsInState.add(GradientColorEntity(
+    colorsInState.add(GradientColorModel(
         id: firstElement.id, color: firstElement.color, value: 0));
     for (var element in gradientColorEnitiyList) {
-      colorsInState.add(GradientColorEntity(
+      colorsInState.add(GradientColorModel(
           id: element.id, color: element.color, value: newvalue * element.id));
     }
-    colorsInState.add(GradientColorEntity(
+    colorsInState.add(GradientColorModel(
         id: lastElement.id, color: lastElement.color, value: 1));
 
     return colorsInState;
@@ -153,11 +148,12 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
 
 // bloc initial state
 final AnimatedBoxState _initail = AnimatedBoxState(
-    offset: const AnimatedBoxOffsetEntity(offsetDx: 0, offsetDy: 0),
+    offsetDx: 0,
+    offsetDy: 0,
     boxWidth: 350.0,
     boxHeight: 350.0,
-    shadowColor: AppColors.shadow,
-    animatedBoxColor: Colors.grey.shade200,
+    shadowColor: AppColors.shadow.value,
+    animatedBoxColor: Colors.grey.shade200.value,
     blurRadius: 0.0,
     spreadRadius: 0.0,
     topLeftRadius: 0.0,
@@ -168,8 +164,8 @@ final AnimatedBoxState _initail = AnimatedBoxState(
     isLinearGradient: false,
     isRadialGradient: false,
     gradientColors: [
-      const GradientColorEntity(id: 0, color: AppColors.prussianBlue, value: 0),
-      const GradientColorEntity(id: 1, color: AppColors.darkCyan, value: 1)
+      GradientColorModel(id: 0, color: AppColors.prussianBlue.value, value: 0),
+      GradientColorModel(id: 1, color: AppColors.darkCyan.value, value: 1)
     ],
     beginLinearGradient: allGradientDirecitons[1],
     endLinearGradient: allGradientDirecitons[6],

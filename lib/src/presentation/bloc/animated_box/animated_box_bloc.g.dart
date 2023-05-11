@@ -8,14 +8,12 @@ part of 'animated_box_bloc.dart';
 
 _$_AnimatedBoxState _$$_AnimatedBoxStateFromJson(Map<String, dynamic> json) =>
     _$_AnimatedBoxState(
-      offset: AnimatedBoxOffsetEntity.fromJson(
-          json['offset'] as Map<String, dynamic>),
+      offsetDx: (json['offsetDx'] as num).toDouble(),
+      offsetDy: (json['offsetDy'] as num).toDouble(),
       boxWidth: (json['boxWidth'] as num).toDouble(),
       boxHeight: (json['boxHeight'] as num).toDouble(),
-      shadowColor:
-          const ColorJsonConverter().fromJson(json['shadowColor'] as int),
-      animatedBoxColor:
-          const ColorJsonConverter().fromJson(json['animatedBoxColor'] as int),
+      shadowColor: json['shadowColor'] as int,
+      animatedBoxColor: json['animatedBoxColor'] as int,
       blurRadius: (json['blurRadius'] as num).toDouble(),
       spreadRadius: (json['spreadRadius'] as num).toDouble(),
       topLeftRadius: (json['topLeftRadius'] as num).toDouble(),
@@ -23,27 +21,24 @@ _$_AnimatedBoxState _$$_AnimatedBoxStateFromJson(Map<String, dynamic> json) =>
       bottomLeftRadius: (json['bottomLeftRadius'] as num).toDouble(),
       bottomRightRadius: (json['bottomRightRadius'] as num).toDouble(),
       gradientColors: (json['gradientColors'] as List<dynamic>)
-          .map((e) => GradientColorEntity.fromJson(e as Map<String, dynamic>))
+          .map((e) => GradientColorModel.fromJson(e as Map<String, dynamic>))
           .toList(),
       isGradientEnabled: json['isGradientEnabled'] as bool,
       isLinearGradient: json['isLinearGradient'] as bool,
       isRadialGradient: json['isRadialGradient'] as bool,
-      beginLinearGradient: GradientDirectionEntity.fromJson(
-          json['beginLinearGradient'] as Map<String, dynamic>),
-      endLinearGradient: GradientDirectionEntity.fromJson(
-          json['endLinearGradient'] as Map<String, dynamic>),
-      centerRadiusGradient: GradientDirectionEntity.fromJson(
-          json['centerRadiusGradient'] as Map<String, dynamic>),
+      beginLinearGradient: json['beginLinearGradient'],
+      endLinearGradient: json['endLinearGradient'],
+      centerRadiusGradient: json['centerRadiusGradient'],
     );
 
 Map<String, dynamic> _$$_AnimatedBoxStateToJson(_$_AnimatedBoxState instance) =>
     <String, dynamic>{
-      'offset': instance.offset.toJson(),
+      'offsetDx': instance.offsetDx,
+      'offsetDy': instance.offsetDy,
       'boxWidth': instance.boxWidth,
       'boxHeight': instance.boxHeight,
-      'shadowColor': const ColorJsonConverter().toJson(instance.shadowColor),
-      'animatedBoxColor':
-          const ColorJsonConverter().toJson(instance.animatedBoxColor),
+      'shadowColor': instance.shadowColor,
+      'animatedBoxColor': instance.animatedBoxColor,
       'blurRadius': instance.blurRadius,
       'spreadRadius': instance.spreadRadius,
       'topLeftRadius': instance.topLeftRadius,
@@ -54,7 +49,7 @@ Map<String, dynamic> _$$_AnimatedBoxStateToJson(_$_AnimatedBoxState instance) =>
       'isGradientEnabled': instance.isGradientEnabled,
       'isLinearGradient': instance.isLinearGradient,
       'isRadialGradient': instance.isRadialGradient,
-      'beginLinearGradient': instance.beginLinearGradient.toJson(),
-      'endLinearGradient': instance.endLinearGradient.toJson(),
-      'centerRadiusGradient': instance.centerRadiusGradient.toJson(),
+      'beginLinearGradient': instance.beginLinearGradient,
+      'endLinearGradient': instance.endLinearGradient,
+      'centerRadiusGradient': instance.centerRadiusGradient,
     };

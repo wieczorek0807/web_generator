@@ -37,11 +37,11 @@ mixin _$AnimatedBoxEvent {
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) =>
       throw _privateConstructorUsedError;
@@ -66,11 +66,11 @@ mixin _$AnimatedBoxEvent {
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) =>
       throw _privateConstructorUsedError;
@@ -95,11 +95,11 @@ mixin _$AnimatedBoxEvent {
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) =>
@@ -230,18 +230,12 @@ class __$$_InitialEventCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
+class _$_InitialEvent implements _InitialEvent {
   const _$_InitialEvent();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AnimatedBoxEvent.initial'));
   }
 
   @override
@@ -275,11 +269,11 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return initial();
@@ -307,11 +301,11 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return initial?.call();
@@ -339,11 +333,11 @@ class _$_InitialEvent with DiagnosticableTreeMixin implements _InitialEvent {
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -476,18 +470,12 @@ class __$$_UndoChangesCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UndoChanges with DiagnosticableTreeMixin implements _UndoChanges {
+class _$_UndoChanges implements _UndoChanges {
   const _$_UndoChanges();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.undoChanges()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'AnimatedBoxEvent.undoChanges'));
   }
 
   @override
@@ -521,11 +509,11 @@ class _$_UndoChanges with DiagnosticableTreeMixin implements _UndoChanges {
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return undoChanges();
@@ -553,11 +541,11 @@ class _$_UndoChanges with DiagnosticableTreeMixin implements _UndoChanges {
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return undoChanges?.call();
@@ -585,11 +573,11 @@ class _$_UndoChanges with DiagnosticableTreeMixin implements _UndoChanges {
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -737,23 +725,15 @@ class __$$_UpdateOffsetYCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
+class _$_UpdateOffsetY implements _UpdateOffsetY {
   const _$_UpdateOffsetY(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateOffsetY(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateOffsetY'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -795,11 +775,11 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateOffsetY(value);
@@ -827,11 +807,11 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateOffsetY?.call(value);
@@ -859,11 +839,11 @@ class _$_UpdateOffsetY with DiagnosticableTreeMixin implements _UpdateOffsetY {
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -1016,23 +996,15 @@ class __$$_UpdateOffsetXCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
+class _$_UpdateOffsetX implements _UpdateOffsetX {
   const _$_UpdateOffsetX(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateOffsetX(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateOffsetX'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1074,11 +1046,11 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateOffsetX(value);
@@ -1106,11 +1078,11 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateOffsetX?.call(value);
@@ -1138,11 +1110,11 @@ class _$_UpdateOffsetX with DiagnosticableTreeMixin implements _UpdateOffsetX {
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -1295,23 +1267,15 @@ class __$$_UpdateBlurCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
+class _$_UpdateBlur implements _UpdateBlur {
   const _$_UpdateBlur(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateBlur(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateBlur'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1353,11 +1317,11 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateBlur(value);
@@ -1385,11 +1349,11 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateBlur?.call(value);
@@ -1417,11 +1381,11 @@ class _$_UpdateBlur with DiagnosticableTreeMixin implements _UpdateBlur {
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -1574,23 +1538,15 @@ class __$$_UpdateRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
+class _$_UpdateRadius implements _UpdateRadius {
   const _$_UpdateRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateSpread(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateSpread'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1632,11 +1588,11 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateSpread(value);
@@ -1664,11 +1620,11 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateSpread?.call(value);
@@ -1696,11 +1652,11 @@ class _$_UpdateRadius with DiagnosticableTreeMixin implements _UpdateRadius {
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -1853,26 +1809,15 @@ class __$$_UpdateAnimatedBoxColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateAnimatedBoxColor
-    with DiagnosticableTreeMixin
-    implements _UpdateAnimatedBoxColor {
+class _$_UpdateAnimatedBoxColor implements _UpdateAnimatedBoxColor {
   const _$_UpdateAnimatedBoxColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateAnimatedBoxColor(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'AnimatedBoxEvent.updateAnimatedBoxColor'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -1915,11 +1860,11 @@ class _$_UpdateAnimatedBoxColor
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateAnimatedBoxColor(value);
@@ -1947,11 +1892,11 @@ class _$_UpdateAnimatedBoxColor
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateAnimatedBoxColor?.call(value);
@@ -1979,11 +1924,11 @@ class _$_UpdateAnimatedBoxColor
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -2137,25 +2082,15 @@ class __$$_UpdateShadowColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateShadowColor
-    with DiagnosticableTreeMixin
-    implements _UpdateShadowColor {
+class _$_UpdateShadowColor implements _UpdateShadowColor {
   const _$_UpdateShadowColor(this.value);
 
   @override
   final Color value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateShadowColor(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateShadowColor'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -2198,11 +2133,11 @@ class _$_UpdateShadowColor
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateShadowColor(value);
@@ -2230,11 +2165,11 @@ class _$_UpdateShadowColor
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateShadowColor?.call(value);
@@ -2262,11 +2197,11 @@ class _$_UpdateShadowColor
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -2419,25 +2354,15 @@ class __$$_UpdateTopLeftRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateTopLeftRadius
-    with DiagnosticableTreeMixin
-    implements _UpdateTopLeftRadius {
+class _$_UpdateTopLeftRadius implements _UpdateTopLeftRadius {
   const _$_UpdateTopLeftRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateTopLeftRadius(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateTopLeftRadius'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -2480,11 +2405,11 @@ class _$_UpdateTopLeftRadius
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateTopLeftRadius(value);
@@ -2512,11 +2437,11 @@ class _$_UpdateTopLeftRadius
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateTopLeftRadius?.call(value);
@@ -2544,11 +2469,11 @@ class _$_UpdateTopLeftRadius
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -2702,26 +2627,15 @@ class __$$_UpdateTopRightRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateTopRightRadius
-    with DiagnosticableTreeMixin
-    implements _UpdateTopRightRadius {
+class _$_UpdateTopRightRadius implements _UpdateTopRightRadius {
   const _$_UpdateTopRightRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateTopRightRadius(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(
-          DiagnosticsProperty('type', 'AnimatedBoxEvent.updateTopRightRadius'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -2764,11 +2678,11 @@ class _$_UpdateTopRightRadius
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateTopRightRadius(value);
@@ -2796,11 +2710,11 @@ class _$_UpdateTopRightRadius
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateTopRightRadius?.call(value);
@@ -2828,11 +2742,11 @@ class _$_UpdateTopRightRadius
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -2986,26 +2900,15 @@ class __$$_UpdateBottomLeftRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBottomLeftRadius
-    with DiagnosticableTreeMixin
-    implements _UpdateBottomLeftRadius {
+class _$_UpdateBottomLeftRadius implements _UpdateBottomLeftRadius {
   const _$_UpdateBottomLeftRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateBottomLeftRadius(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'AnimatedBoxEvent.updateBottomLeftRadius'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3048,11 +2951,11 @@ class _$_UpdateBottomLeftRadius
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateBottomLeftRadius(value);
@@ -3080,11 +2983,11 @@ class _$_UpdateBottomLeftRadius
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateBottomLeftRadius?.call(value);
@@ -3112,11 +3015,11 @@ class _$_UpdateBottomLeftRadius
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -3270,26 +3173,15 @@ class __$$_UpdateBottomRightRadiusCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBottomRightRadius
-    with DiagnosticableTreeMixin
-    implements _UpdateBottomRightRadius {
+class _$_UpdateBottomRightRadius implements _UpdateBottomRightRadius {
   const _$_UpdateBottomRightRadius(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateBottomRightRadius(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'AnimatedBoxEvent.updateBottomRightRadius'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3333,11 +3225,11 @@ class _$_UpdateBottomRightRadius
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateBottomRightRadius(value);
@@ -3365,11 +3257,11 @@ class _$_UpdateBottomRightRadius
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateBottomRightRadius?.call(value);
@@ -3397,11 +3289,11 @@ class _$_UpdateBottomRightRadius
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -3555,25 +3447,15 @@ class __$$_UpdateBoxHeightCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBoxHeight
-    with DiagnosticableTreeMixin
-    implements _UpdateBoxHeight {
+class _$_UpdateBoxHeight implements _UpdateBoxHeight {
   const _$_UpdateBoxHeight(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateBoxHeight(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateBoxHeight'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3615,11 +3497,11 @@ class _$_UpdateBoxHeight
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateBoxHeight(value);
@@ -3647,11 +3529,11 @@ class _$_UpdateBoxHeight
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateBoxHeight?.call(value);
@@ -3679,11 +3561,11 @@ class _$_UpdateBoxHeight
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -3836,25 +3718,15 @@ class __$$_UpdateBoxWidthCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateBoxWidth
-    with DiagnosticableTreeMixin
-    implements _UpdateBoxWidth {
+class _$_UpdateBoxWidth implements _UpdateBoxWidth {
   const _$_UpdateBoxWidth(this.value);
 
   @override
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateBoxWidth(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateBoxWidth'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -3896,11 +3768,11 @@ class _$_UpdateBoxWidth
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateBoxWidth(value);
@@ -3928,11 +3800,11 @@ class _$_UpdateBoxWidth
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateBoxWidth?.call(value);
@@ -3960,11 +3832,11 @@ class _$_UpdateBoxWidth
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -4117,25 +3989,15 @@ class __$$_ChangeGradientStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_ChangeGradientState
-    with DiagnosticableTreeMixin
-    implements _ChangeGradientState {
+class _$_ChangeGradientState implements _ChangeGradientState {
   const _$_ChangeGradientState({required this.value});
 
   @override
   final int value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.changeGradientState(value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.changeGradientState'))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -4178,11 +4040,11 @@ class _$_ChangeGradientState
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return changeGradientState(value);
@@ -4210,11 +4072,11 @@ class _$_ChangeGradientState
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return changeGradientState?.call(value);
@@ -4242,11 +4104,11 @@ class _$_ChangeGradientState
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -4385,21 +4247,12 @@ class __$$_AddGradientColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AddGradientColor
-    with DiagnosticableTreeMixin
-    implements _AddGradientColor {
+class _$_AddGradientColor implements _AddGradientColor {
   const _$_AddGradientColor();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.addGradientColor()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'AnimatedBoxEvent.addGradientColor'));
   }
 
   @override
@@ -4433,11 +4286,11 @@ class _$_AddGradientColor
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return addGradientColor();
@@ -4465,11 +4318,11 @@ class _$_AddGradientColor
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return addGradientColor?.call();
@@ -4497,11 +4350,11 @@ class _$_AddGradientColor
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -4634,21 +4487,12 @@ class __$$_RemoveGradientColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RemoveGradientColor
-    with DiagnosticableTreeMixin
-    implements _RemoveGradientColor {
+class _$_RemoveGradientColor implements _RemoveGradientColor {
   const _$_RemoveGradientColor();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.removeGradientColor()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(
-        DiagnosticsProperty('type', 'AnimatedBoxEvent.removeGradientColor'));
   }
 
   @override
@@ -4682,11 +4526,11 @@ class _$_RemoveGradientColor
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return removeGradientColor();
@@ -4714,11 +4558,11 @@ class _$_RemoveGradientColor
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return removeGradientColor?.call();
@@ -4746,11 +4590,11 @@ class _$_RemoveGradientColor
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -4903,9 +4747,7 @@ class __$$_UpdateGradientColorCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateGradientColor
-    with DiagnosticableTreeMixin
-    implements _UpdateGradientColor {
+class _$_UpdateGradientColor implements _UpdateGradientColor {
   const _$_UpdateGradientColor({required this.id, required this.color});
 
   @override
@@ -4914,17 +4756,8 @@ class _$_UpdateGradientColor
   final Color color;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateGradientColor(id: $id, color: $color)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateGradientColor'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('color', color));
   }
 
   @override
@@ -4968,11 +4801,11 @@ class _$_UpdateGradientColor
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateGradientColor(id, color);
@@ -5000,11 +4833,11 @@ class _$_UpdateGradientColor
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateGradientColor?.call(id, color);
@@ -5032,11 +4865,11 @@ class _$_UpdateGradientColor
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -5197,9 +5030,7 @@ class __$$_UpdateGradientValueCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_UpdateGradientValue
-    with DiagnosticableTreeMixin
-    implements _UpdateGradientValue {
+class _$_UpdateGradientValue implements _UpdateGradientValue {
   const _$_UpdateGradientValue({required this.id, required this.value});
 
   @override
@@ -5208,17 +5039,8 @@ class _$_UpdateGradientValue
   final double value;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.updateGradientValue(id: $id, value: $value)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxEvent.updateGradientValue'))
-      ..add(DiagnosticsProperty('id', id))
-      ..add(DiagnosticsProperty('value', value));
   }
 
   @override
@@ -5262,11 +5084,11 @@ class _$_UpdateGradientValue
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return updateGradientValue(id, value);
@@ -5294,11 +5116,11 @@ class _$_UpdateGradientValue
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return updateGradientValue?.call(id, value);
@@ -5326,11 +5148,11 @@ class _$_UpdateGradientValue
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -5460,9 +5282,7 @@ abstract class _$$_ChangeGradientBeginValueCopyWith<$Res> {
           $Res Function(_$_ChangeGradientBeginValue) then) =
       __$$_ChangeGradientBeginValueCopyWithImpl<$Res>;
   @useResult
-  $Res call({GradientDirectionEntity beginLinearGradient});
-
-  $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient;
+  $Res call({GradientDirectionModel beginLinearGradient});
 }
 
 /// @nodoc
@@ -5476,48 +5296,28 @@ class __$$_ChangeGradientBeginValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? beginLinearGradient = null,
+    Object? beginLinearGradient = freezed,
   }) {
     return _then(_$_ChangeGradientBeginValue(
-      beginLinearGradient: null == beginLinearGradient
+      beginLinearGradient: freezed == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
+              as GradientDirectionModel,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient {
-    return $GradientDirectionEntityCopyWith<$Res>(_value.beginLinearGradient,
-        (value) {
-      return _then(_value.copyWith(beginLinearGradient: value));
-    });
   }
 }
 
 /// @nodoc
 
-class _$_ChangeGradientBeginValue
-    with DiagnosticableTreeMixin
-    implements _ChangeGradientBeginValue {
+class _$_ChangeGradientBeginValue implements _ChangeGradientBeginValue {
   const _$_ChangeGradientBeginValue({required this.beginLinearGradient});
 
   @override
-  final GradientDirectionEntity beginLinearGradient;
+  final GradientDirectionModel beginLinearGradient;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.changeGradientBeginValue(beginLinearGradient: $beginLinearGradient)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'AnimatedBoxEvent.changeGradientBeginValue'))
-      ..add(DiagnosticsProperty('beginLinearGradient', beginLinearGradient));
   }
 
   @override
@@ -5525,12 +5325,13 @@ class _$_ChangeGradientBeginValue
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientBeginValue &&
-            (identical(other.beginLinearGradient, beginLinearGradient) ||
-                other.beginLinearGradient == beginLinearGradient));
+            const DeepCollectionEquality()
+                .equals(other.beginLinearGradient, beginLinearGradient));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, beginLinearGradient);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(beginLinearGradient));
 
   @JsonKey(ignore: true)
   @override
@@ -5561,11 +5362,11 @@ class _$_ChangeGradientBeginValue
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return changeGradientBeginValue(beginLinearGradient);
@@ -5593,11 +5394,11 @@ class _$_ChangeGradientBeginValue
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return changeGradientBeginValue?.call(beginLinearGradient);
@@ -5625,11 +5426,11 @@ class _$_ChangeGradientBeginValue
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -5742,10 +5543,10 @@ class _$_ChangeGradientBeginValue
 
 abstract class _ChangeGradientBeginValue implements AnimatedBoxEvent {
   const factory _ChangeGradientBeginValue(
-          {required final GradientDirectionEntity beginLinearGradient}) =
+          {required final GradientDirectionModel beginLinearGradient}) =
       _$_ChangeGradientBeginValue;
 
-  GradientDirectionEntity get beginLinearGradient;
+  GradientDirectionModel get beginLinearGradient;
   @JsonKey(ignore: true)
   _$$_ChangeGradientBeginValueCopyWith<_$_ChangeGradientBeginValue>
       get copyWith => throw _privateConstructorUsedError;
@@ -5757,9 +5558,7 @@ abstract class _$$_ChangeGradientEndValueCopyWith<$Res> {
           $Res Function(_$_ChangeGradientEndValue) then) =
       __$$_ChangeGradientEndValueCopyWithImpl<$Res>;
   @useResult
-  $Res call({GradientDirectionEntity endLinearGradient});
-
-  $GradientDirectionEntityCopyWith<$Res> get endLinearGradient;
+  $Res call({GradientDirectionModel endLinearGradient});
 }
 
 /// @nodoc
@@ -5773,48 +5572,28 @@ class __$$_ChangeGradientEndValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? endLinearGradient = null,
+    Object? endLinearGradient = freezed,
   }) {
     return _then(_$_ChangeGradientEndValue(
-      endLinearGradient: null == endLinearGradient
+      endLinearGradient: freezed == endLinearGradient
           ? _value.endLinearGradient
           : endLinearGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
+              as GradientDirectionModel,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GradientDirectionEntityCopyWith<$Res> get endLinearGradient {
-    return $GradientDirectionEntityCopyWith<$Res>(_value.endLinearGradient,
-        (value) {
-      return _then(_value.copyWith(endLinearGradient: value));
-    });
   }
 }
 
 /// @nodoc
 
-class _$_ChangeGradientEndValue
-    with DiagnosticableTreeMixin
-    implements _ChangeGradientEndValue {
+class _$_ChangeGradientEndValue implements _ChangeGradientEndValue {
   const _$_ChangeGradientEndValue({required this.endLinearGradient});
 
   @override
-  final GradientDirectionEntity endLinearGradient;
+  final GradientDirectionModel endLinearGradient;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.changeGradientEndValue(endLinearGradient: $endLinearGradient)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'AnimatedBoxEvent.changeGradientEndValue'))
-      ..add(DiagnosticsProperty('endLinearGradient', endLinearGradient));
   }
 
   @override
@@ -5822,12 +5601,13 @@ class _$_ChangeGradientEndValue
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientEndValue &&
-            (identical(other.endLinearGradient, endLinearGradient) ||
-                other.endLinearGradient == endLinearGradient));
+            const DeepCollectionEquality()
+                .equals(other.endLinearGradient, endLinearGradient));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, endLinearGradient);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(endLinearGradient));
 
   @JsonKey(ignore: true)
   @override
@@ -5858,11 +5638,11 @@ class _$_ChangeGradientEndValue
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return changeGradientEndValue(endLinearGradient);
@@ -5890,11 +5670,11 @@ class _$_ChangeGradientEndValue
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return changeGradientEndValue?.call(endLinearGradient);
@@ -5922,11 +5702,11 @@ class _$_ChangeGradientEndValue
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -6039,10 +5819,10 @@ class _$_ChangeGradientEndValue
 
 abstract class _ChangeGradientEndValue implements AnimatedBoxEvent {
   const factory _ChangeGradientEndValue(
-          {required final GradientDirectionEntity endLinearGradient}) =
+          {required final GradientDirectionModel endLinearGradient}) =
       _$_ChangeGradientEndValue;
 
-  GradientDirectionEntity get endLinearGradient;
+  GradientDirectionModel get endLinearGradient;
   @JsonKey(ignore: true)
   _$$_ChangeGradientEndValueCopyWith<_$_ChangeGradientEndValue> get copyWith =>
       throw _privateConstructorUsedError;
@@ -6055,9 +5835,7 @@ abstract class _$$_ChangeGradientCenterValueCopyWith<$Res> {
           $Res Function(_$_ChangeGradientCenterValue) then) =
       __$$_ChangeGradientCenterValueCopyWithImpl<$Res>;
   @useResult
-  $Res call({GradientDirectionEntity centerRadiusGradient});
-
-  $GradientDirectionEntityCopyWith<$Res> get centerRadiusGradient;
+  $Res call({GradientDirectionModel centerRadiusGradient});
 }
 
 /// @nodoc
@@ -6072,48 +5850,28 @@ class __$$_ChangeGradientCenterValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? centerRadiusGradient = null,
+    Object? centerRadiusGradient = freezed,
   }) {
     return _then(_$_ChangeGradientCenterValue(
-      centerRadiusGradient: null == centerRadiusGradient
+      centerRadiusGradient: freezed == centerRadiusGradient
           ? _value.centerRadiusGradient
           : centerRadiusGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
+              as GradientDirectionModel,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GradientDirectionEntityCopyWith<$Res> get centerRadiusGradient {
-    return $GradientDirectionEntityCopyWith<$Res>(_value.centerRadiusGradient,
-        (value) {
-      return _then(_value.copyWith(centerRadiusGradient: value));
-    });
   }
 }
 
 /// @nodoc
 
-class _$_ChangeGradientCenterValue
-    with DiagnosticableTreeMixin
-    implements _ChangeGradientCenterValue {
+class _$_ChangeGradientCenterValue implements _ChangeGradientCenterValue {
   const _$_ChangeGradientCenterValue({required this.centerRadiusGradient});
 
   @override
-  final GradientDirectionEntity centerRadiusGradient;
+  final GradientDirectionModel centerRadiusGradient;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'AnimatedBoxEvent.changeGradientCenterValue(centerRadiusGradient: $centerRadiusGradient)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'AnimatedBoxEvent.changeGradientCenterValue'))
-      ..add(DiagnosticsProperty('centerRadiusGradient', centerRadiusGradient));
   }
 
   @override
@@ -6121,12 +5879,13 @@ class _$_ChangeGradientCenterValue
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientCenterValue &&
-            (identical(other.centerRadiusGradient, centerRadiusGradient) ||
-                other.centerRadiusGradient == centerRadiusGradient));
+            const DeepCollectionEquality()
+                .equals(other.centerRadiusGradient, centerRadiusGradient));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, centerRadiusGradient);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(centerRadiusGradient));
 
   @JsonKey(ignore: true)
   @override
@@ -6157,11 +5916,11 @@ class _$_ChangeGradientCenterValue
     required TResult Function() removeGradientColor,
     required TResult Function(int id, Color color) updateGradientColor,
     required TResult Function(int id, double value) updateGradientValue,
-    required TResult Function(GradientDirectionEntity beginLinearGradient)
+    required TResult Function(GradientDirectionModel beginLinearGradient)
         changeGradientBeginValue,
-    required TResult Function(GradientDirectionEntity endLinearGradient)
+    required TResult Function(GradientDirectionModel endLinearGradient)
         changeGradientEndValue,
-    required TResult Function(GradientDirectionEntity centerRadiusGradient)
+    required TResult Function(GradientDirectionModel centerRadiusGradient)
         changeGradientCenterValue,
   }) {
     return changeGradientCenterValue(centerRadiusGradient);
@@ -6189,11 +5948,11 @@ class _$_ChangeGradientCenterValue
     TResult? Function()? removeGradientColor,
     TResult? Function(int id, Color color)? updateGradientColor,
     TResult? Function(int id, double value)? updateGradientValue,
-    TResult? Function(GradientDirectionEntity beginLinearGradient)?
+    TResult? Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult? Function(GradientDirectionEntity endLinearGradient)?
+    TResult? Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult? Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult? Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
   }) {
     return changeGradientCenterValue?.call(centerRadiusGradient);
@@ -6221,11 +5980,11 @@ class _$_ChangeGradientCenterValue
     TResult Function()? removeGradientColor,
     TResult Function(int id, Color color)? updateGradientColor,
     TResult Function(int id, double value)? updateGradientValue,
-    TResult Function(GradientDirectionEntity beginLinearGradient)?
+    TResult Function(GradientDirectionModel beginLinearGradient)?
         changeGradientBeginValue,
-    TResult Function(GradientDirectionEntity endLinearGradient)?
+    TResult Function(GradientDirectionModel endLinearGradient)?
         changeGradientEndValue,
-    TResult Function(GradientDirectionEntity centerRadiusGradient)?
+    TResult Function(GradientDirectionModel centerRadiusGradient)?
         changeGradientCenterValue,
     required TResult orElse(),
   }) {
@@ -6338,10 +6097,10 @@ class _$_ChangeGradientCenterValue
 
 abstract class _ChangeGradientCenterValue implements AnimatedBoxEvent {
   const factory _ChangeGradientCenterValue(
-          {required final GradientDirectionEntity centerRadiusGradient}) =
+          {required final GradientDirectionModel centerRadiusGradient}) =
       _$_ChangeGradientCenterValue;
 
-  GradientDirectionEntity get centerRadiusGradient;
+  GradientDirectionModel get centerRadiusGradient;
   @JsonKey(ignore: true)
   _$$_ChangeGradientCenterValueCopyWith<_$_ChangeGradientCenterValue>
       get copyWith => throw _privateConstructorUsedError;
@@ -6353,29 +6112,28 @@ AnimatedBoxState _$AnimatedBoxStateFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AnimatedBoxState {
-  AnimatedBoxOffsetEntity get offset => throw _privateConstructorUsedError;
+  double get offsetDx => throw _privateConstructorUsedError;
+  double get offsetDy => throw _privateConstructorUsedError;
   double get boxWidth => throw _privateConstructorUsedError;
   double get boxHeight => throw _privateConstructorUsedError;
-  @ColorJsonConverter()
-  Color get shadowColor => throw _privateConstructorUsedError;
-  @ColorJsonConverter()
-  Color get animatedBoxColor => throw _privateConstructorUsedError;
+  int get shadowColor => throw _privateConstructorUsedError;
+  int get animatedBoxColor => throw _privateConstructorUsedError;
   double get blurRadius => throw _privateConstructorUsedError;
   double get spreadRadius => throw _privateConstructorUsedError;
   double get topLeftRadius => throw _privateConstructorUsedError;
   double get topRightRadius => throw _privateConstructorUsedError;
   double get bottomLeftRadius => throw _privateConstructorUsedError;
   double get bottomRightRadius => throw _privateConstructorUsedError;
-  List<GradientColorEntity> get gradientColors =>
+  List<GradientColorModel> get gradientColors =>
       throw _privateConstructorUsedError;
   bool get isGradientEnabled => throw _privateConstructorUsedError;
   bool get isLinearGradient => throw _privateConstructorUsedError;
   bool get isRadialGradient => throw _privateConstructorUsedError;
-  GradientDirectionEntity get beginLinearGradient =>
+  GradientDirectionModel get beginLinearGradient =>
       throw _privateConstructorUsedError;
-  GradientDirectionEntity get endLinearGradient =>
+  GradientDirectionModel get endLinearGradient =>
       throw _privateConstructorUsedError;
-  GradientDirectionEntity get centerRadiusGradient =>
+  GradientDirectionModel get centerRadiusGradient =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6391,29 +6149,25 @@ abstract class $AnimatedBoxStateCopyWith<$Res> {
       _$AnimatedBoxStateCopyWithImpl<$Res, AnimatedBoxState>;
   @useResult
   $Res call(
-      {AnimatedBoxOffsetEntity offset,
+      {double offsetDx,
+      double offsetDy,
       double boxWidth,
       double boxHeight,
-      @ColorJsonConverter() Color shadowColor,
-      @ColorJsonConverter() Color animatedBoxColor,
+      int shadowColor,
+      int animatedBoxColor,
       double blurRadius,
       double spreadRadius,
       double topLeftRadius,
       double topRightRadius,
       double bottomLeftRadius,
       double bottomRightRadius,
-      List<GradientColorEntity> gradientColors,
+      List<GradientColorModel> gradientColors,
       bool isGradientEnabled,
       bool isLinearGradient,
       bool isRadialGradient,
-      GradientDirectionEntity beginLinearGradient,
-      GradientDirectionEntity endLinearGradient,
-      GradientDirectionEntity centerRadiusGradient});
-
-  $AnimatedBoxOffsetEntityCopyWith<$Res> get offset;
-  $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient;
-  $GradientDirectionEntityCopyWith<$Res> get endLinearGradient;
-  $GradientDirectionEntityCopyWith<$Res> get centerRadiusGradient;
+      GradientDirectionModel beginLinearGradient,
+      GradientDirectionModel endLinearGradient,
+      GradientDirectionModel centerRadiusGradient});
 }
 
 /// @nodoc
@@ -6429,7 +6183,8 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? offset = null,
+    Object? offsetDx = null,
+    Object? offsetDy = null,
     Object? boxWidth = null,
     Object? boxHeight = null,
     Object? shadowColor = null,
@@ -6444,15 +6199,19 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
     Object? isGradientEnabled = null,
     Object? isLinearGradient = null,
     Object? isRadialGradient = null,
-    Object? beginLinearGradient = null,
-    Object? endLinearGradient = null,
-    Object? centerRadiusGradient = null,
+    Object? beginLinearGradient = freezed,
+    Object? endLinearGradient = freezed,
+    Object? centerRadiusGradient = freezed,
   }) {
     return _then(_value.copyWith(
-      offset: null == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as AnimatedBoxOffsetEntity,
+      offsetDx: null == offsetDx
+          ? _value.offsetDx
+          : offsetDx // ignore: cast_nullable_to_non_nullable
+              as double,
+      offsetDy: null == offsetDy
+          ? _value.offsetDy
+          : offsetDy // ignore: cast_nullable_to_non_nullable
+              as double,
       boxWidth: null == boxWidth
           ? _value.boxWidth
           : boxWidth // ignore: cast_nullable_to_non_nullable
@@ -6464,11 +6223,11 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
       shadowColor: null == shadowColor
           ? _value.shadowColor
           : shadowColor // ignore: cast_nullable_to_non_nullable
-              as Color,
+              as int,
       animatedBoxColor: null == animatedBoxColor
           ? _value.animatedBoxColor
           : animatedBoxColor // ignore: cast_nullable_to_non_nullable
-              as Color,
+              as int,
       blurRadius: null == blurRadius
           ? _value.blurRadius
           : blurRadius // ignore: cast_nullable_to_non_nullable
@@ -6496,7 +6255,7 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
       gradientColors: null == gradientColors
           ? _value.gradientColors
           : gradientColors // ignore: cast_nullable_to_non_nullable
-              as List<GradientColorEntity>,
+              as List<GradientColorModel>,
       isGradientEnabled: null == isGradientEnabled
           ? _value.isGradientEnabled
           : isGradientEnabled // ignore: cast_nullable_to_non_nullable
@@ -6509,54 +6268,19 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
           ? _value.isRadialGradient
           : isRadialGradient // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginLinearGradient: null == beginLinearGradient
+      beginLinearGradient: freezed == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
-      endLinearGradient: null == endLinearGradient
+              as GradientDirectionModel,
+      endLinearGradient: freezed == endLinearGradient
           ? _value.endLinearGradient
           : endLinearGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
-      centerRadiusGradient: null == centerRadiusGradient
+              as GradientDirectionModel,
+      centerRadiusGradient: freezed == centerRadiusGradient
           ? _value.centerRadiusGradient
           : centerRadiusGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
+              as GradientDirectionModel,
     ) as $Val);
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $AnimatedBoxOffsetEntityCopyWith<$Res> get offset {
-    return $AnimatedBoxOffsetEntityCopyWith<$Res>(_value.offset, (value) {
-      return _then(_value.copyWith(offset: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient {
-    return $GradientDirectionEntityCopyWith<$Res>(_value.beginLinearGradient,
-        (value) {
-      return _then(_value.copyWith(beginLinearGradient: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GradientDirectionEntityCopyWith<$Res> get endLinearGradient {
-    return $GradientDirectionEntityCopyWith<$Res>(_value.endLinearGradient,
-        (value) {
-      return _then(_value.copyWith(endLinearGradient: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $GradientDirectionEntityCopyWith<$Res> get centerRadiusGradient {
-    return $GradientDirectionEntityCopyWith<$Res>(_value.centerRadiusGradient,
-        (value) {
-      return _then(_value.copyWith(centerRadiusGradient: value) as $Val);
-    });
   }
 }
 
@@ -6569,33 +6293,25 @@ abstract class _$$_AnimatedBoxStateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {AnimatedBoxOffsetEntity offset,
+      {double offsetDx,
+      double offsetDy,
       double boxWidth,
       double boxHeight,
-      @ColorJsonConverter() Color shadowColor,
-      @ColorJsonConverter() Color animatedBoxColor,
+      int shadowColor,
+      int animatedBoxColor,
       double blurRadius,
       double spreadRadius,
       double topLeftRadius,
       double topRightRadius,
       double bottomLeftRadius,
       double bottomRightRadius,
-      List<GradientColorEntity> gradientColors,
+      List<GradientColorModel> gradientColors,
       bool isGradientEnabled,
       bool isLinearGradient,
       bool isRadialGradient,
-      GradientDirectionEntity beginLinearGradient,
-      GradientDirectionEntity endLinearGradient,
-      GradientDirectionEntity centerRadiusGradient});
-
-  @override
-  $AnimatedBoxOffsetEntityCopyWith<$Res> get offset;
-  @override
-  $GradientDirectionEntityCopyWith<$Res> get beginLinearGradient;
-  @override
-  $GradientDirectionEntityCopyWith<$Res> get endLinearGradient;
-  @override
-  $GradientDirectionEntityCopyWith<$Res> get centerRadiusGradient;
+      GradientDirectionModel beginLinearGradient,
+      GradientDirectionModel endLinearGradient,
+      GradientDirectionModel centerRadiusGradient});
 }
 
 /// @nodoc
@@ -6609,7 +6325,8 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? offset = null,
+    Object? offsetDx = null,
+    Object? offsetDy = null,
     Object? boxWidth = null,
     Object? boxHeight = null,
     Object? shadowColor = null,
@@ -6624,15 +6341,19 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
     Object? isGradientEnabled = null,
     Object? isLinearGradient = null,
     Object? isRadialGradient = null,
-    Object? beginLinearGradient = null,
-    Object? endLinearGradient = null,
-    Object? centerRadiusGradient = null,
+    Object? beginLinearGradient = freezed,
+    Object? endLinearGradient = freezed,
+    Object? centerRadiusGradient = freezed,
   }) {
     return _then(_$_AnimatedBoxState(
-      offset: null == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as AnimatedBoxOffsetEntity,
+      offsetDx: null == offsetDx
+          ? _value.offsetDx
+          : offsetDx // ignore: cast_nullable_to_non_nullable
+              as double,
+      offsetDy: null == offsetDy
+          ? _value.offsetDy
+          : offsetDy // ignore: cast_nullable_to_non_nullable
+              as double,
       boxWidth: null == boxWidth
           ? _value.boxWidth
           : boxWidth // ignore: cast_nullable_to_non_nullable
@@ -6644,11 +6365,11 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
       shadowColor: null == shadowColor
           ? _value.shadowColor
           : shadowColor // ignore: cast_nullable_to_non_nullable
-              as Color,
+              as int,
       animatedBoxColor: null == animatedBoxColor
           ? _value.animatedBoxColor
           : animatedBoxColor // ignore: cast_nullable_to_non_nullable
-              as Color,
+              as int,
       blurRadius: null == blurRadius
           ? _value.blurRadius
           : blurRadius // ignore: cast_nullable_to_non_nullable
@@ -6676,7 +6397,7 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
       gradientColors: null == gradientColors
           ? _value._gradientColors
           : gradientColors // ignore: cast_nullable_to_non_nullable
-              as List<GradientColorEntity>,
+              as List<GradientColorModel>,
       isGradientEnabled: null == isGradientEnabled
           ? _value.isGradientEnabled
           : isGradientEnabled // ignore: cast_nullable_to_non_nullable
@@ -6689,40 +6410,39 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
           ? _value.isRadialGradient
           : isRadialGradient // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginLinearGradient: null == beginLinearGradient
+      beginLinearGradient: freezed == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
-      endLinearGradient: null == endLinearGradient
+              as GradientDirectionModel,
+      endLinearGradient: freezed == endLinearGradient
           ? _value.endLinearGradient
           : endLinearGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
-      centerRadiusGradient: null == centerRadiusGradient
+              as GradientDirectionModel,
+      centerRadiusGradient: freezed == centerRadiusGradient
           ? _value.centerRadiusGradient
           : centerRadiusGradient // ignore: cast_nullable_to_non_nullable
-              as GradientDirectionEntity,
+              as GradientDirectionModel,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$_AnimatedBoxState
-    with DiagnosticableTreeMixin
-    implements _AnimatedBoxState {
+class _$_AnimatedBoxState implements _AnimatedBoxState {
   const _$_AnimatedBoxState(
-      {required this.offset,
+      {required this.offsetDx,
+      required this.offsetDy,
       required this.boxWidth,
       required this.boxHeight,
-      @ColorJsonConverter() required this.shadowColor,
-      @ColorJsonConverter() required this.animatedBoxColor,
+      required this.shadowColor,
+      required this.animatedBoxColor,
       required this.blurRadius,
       required this.spreadRadius,
       required this.topLeftRadius,
       required this.topRightRadius,
       required this.bottomLeftRadius,
       required this.bottomRightRadius,
-      required final List<GradientColorEntity> gradientColors,
+      required final List<GradientColorModel> gradientColors,
       required this.isGradientEnabled,
       required this.isLinearGradient,
       required this.isRadialGradient,
@@ -6735,17 +6455,17 @@ class _$_AnimatedBoxState
       _$$_AnimatedBoxStateFromJson(json);
 
   @override
-  final AnimatedBoxOffsetEntity offset;
+  final double offsetDx;
+  @override
+  final double offsetDy;
   @override
   final double boxWidth;
   @override
   final double boxHeight;
   @override
-  @ColorJsonConverter()
-  final Color shadowColor;
+  final int shadowColor;
   @override
-  @ColorJsonConverter()
-  final Color animatedBoxColor;
+  final int animatedBoxColor;
   @override
   final double blurRadius;
   @override
@@ -6758,9 +6478,9 @@ class _$_AnimatedBoxState
   final double bottomLeftRadius;
   @override
   final double bottomRightRadius;
-  final List<GradientColorEntity> _gradientColors;
+  final List<GradientColorModel> _gradientColors;
   @override
-  List<GradientColorEntity> get gradientColors {
+  List<GradientColorModel> get gradientColors {
     if (_gradientColors is EqualUnmodifiableListView) return _gradientColors;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_gradientColors);
@@ -6773,40 +6493,15 @@ class _$_AnimatedBoxState
   @override
   final bool isRadialGradient;
   @override
-  final GradientDirectionEntity beginLinearGradient;
+  final GradientDirectionModel beginLinearGradient;
   @override
-  final GradientDirectionEntity endLinearGradient;
+  final GradientDirectionModel endLinearGradient;
   @override
-  final GradientDirectionEntity centerRadiusGradient;
+  final GradientDirectionModel centerRadiusGradient;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'AnimatedBoxState(offset: $offset, boxWidth: $boxWidth, boxHeight: $boxHeight, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, topLeftRadius: $topLeftRadius, topRightRadius: $topRightRadius, bottomLeftRadius: $bottomLeftRadius, bottomRightRadius: $bottomRightRadius, gradientColors: $gradientColors, isGradientEnabled: $isGradientEnabled, isLinearGradient: $isLinearGradient, isRadialGradient: $isRadialGradient, beginLinearGradient: $beginLinearGradient, endLinearGradient: $endLinearGradient, centerRadiusGradient: $centerRadiusGradient)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty('type', 'AnimatedBoxState'))
-      ..add(DiagnosticsProperty('offset', offset))
-      ..add(DiagnosticsProperty('boxWidth', boxWidth))
-      ..add(DiagnosticsProperty('boxHeight', boxHeight))
-      ..add(DiagnosticsProperty('shadowColor', shadowColor))
-      ..add(DiagnosticsProperty('animatedBoxColor', animatedBoxColor))
-      ..add(DiagnosticsProperty('blurRadius', blurRadius))
-      ..add(DiagnosticsProperty('spreadRadius', spreadRadius))
-      ..add(DiagnosticsProperty('topLeftRadius', topLeftRadius))
-      ..add(DiagnosticsProperty('topRightRadius', topRightRadius))
-      ..add(DiagnosticsProperty('bottomLeftRadius', bottomLeftRadius))
-      ..add(DiagnosticsProperty('bottomRightRadius', bottomRightRadius))
-      ..add(DiagnosticsProperty('gradientColors', gradientColors))
-      ..add(DiagnosticsProperty('isGradientEnabled', isGradientEnabled))
-      ..add(DiagnosticsProperty('isLinearGradient', isLinearGradient))
-      ..add(DiagnosticsProperty('isRadialGradient', isRadialGradient))
-      ..add(DiagnosticsProperty('beginLinearGradient', beginLinearGradient))
-      ..add(DiagnosticsProperty('endLinearGradient', endLinearGradient))
-      ..add(DiagnosticsProperty('centerRadiusGradient', centerRadiusGradient));
+  String toString() {
+    return 'AnimatedBoxState(offsetDx: $offsetDx, offsetDy: $offsetDy, boxWidth: $boxWidth, boxHeight: $boxHeight, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, topLeftRadius: $topLeftRadius, topRightRadius: $topRightRadius, bottomLeftRadius: $bottomLeftRadius, bottomRightRadius: $bottomRightRadius, gradientColors: $gradientColors, isGradientEnabled: $isGradientEnabled, isLinearGradient: $isLinearGradient, isRadialGradient: $isRadialGradient, beginLinearGradient: $beginLinearGradient, endLinearGradient: $endLinearGradient, centerRadiusGradient: $centerRadiusGradient)';
   }
 
   @override
@@ -6814,7 +6509,10 @@ class _$_AnimatedBoxState
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_AnimatedBoxState &&
-            (identical(other.offset, offset) || other.offset == offset) &&
+            (identical(other.offsetDx, offsetDx) ||
+                other.offsetDx == offsetDx) &&
+            (identical(other.offsetDy, offsetDy) ||
+                other.offsetDy == offsetDy) &&
             (identical(other.boxWidth, boxWidth) ||
                 other.boxWidth == boxWidth) &&
             (identical(other.boxHeight, boxHeight) ||
@@ -6843,36 +6541,38 @@ class _$_AnimatedBoxState
                 other.isLinearGradient == isLinearGradient) &&
             (identical(other.isRadialGradient, isRadialGradient) ||
                 other.isRadialGradient == isRadialGradient) &&
-            (identical(other.beginLinearGradient, beginLinearGradient) ||
-                other.beginLinearGradient == beginLinearGradient) &&
-            (identical(other.endLinearGradient, endLinearGradient) ||
-                other.endLinearGradient == endLinearGradient) &&
-            (identical(other.centerRadiusGradient, centerRadiusGradient) ||
-                other.centerRadiusGradient == centerRadiusGradient));
+            const DeepCollectionEquality()
+                .equals(other.beginLinearGradient, beginLinearGradient) &&
+            const DeepCollectionEquality()
+                .equals(other.endLinearGradient, endLinearGradient) &&
+            const DeepCollectionEquality()
+                .equals(other.centerRadiusGradient, centerRadiusGradient));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      offset,
-      boxWidth,
-      boxHeight,
-      shadowColor,
-      animatedBoxColor,
-      blurRadius,
-      spreadRadius,
-      topLeftRadius,
-      topRightRadius,
-      bottomLeftRadius,
-      bottomRightRadius,
-      const DeepCollectionEquality().hash(_gradientColors),
-      isGradientEnabled,
-      isLinearGradient,
-      isRadialGradient,
-      beginLinearGradient,
-      endLinearGradient,
-      centerRadiusGradient);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        offsetDx,
+        offsetDy,
+        boxWidth,
+        boxHeight,
+        shadowColor,
+        animatedBoxColor,
+        blurRadius,
+        spreadRadius,
+        topLeftRadius,
+        topRightRadius,
+        bottomLeftRadius,
+        bottomRightRadius,
+        const DeepCollectionEquality().hash(_gradientColors),
+        isGradientEnabled,
+        isLinearGradient,
+        isRadialGradient,
+        const DeepCollectionEquality().hash(beginLinearGradient),
+        const DeepCollectionEquality().hash(endLinearGradient),
+        const DeepCollectionEquality().hash(centerRadiusGradient)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -6890,41 +6590,42 @@ class _$_AnimatedBoxState
 
 abstract class _AnimatedBoxState implements AnimatedBoxState {
   const factory _AnimatedBoxState(
-          {required final AnimatedBoxOffsetEntity offset,
+          {required final double offsetDx,
+          required final double offsetDy,
           required final double boxWidth,
           required final double boxHeight,
-          @ColorJsonConverter() required final Color shadowColor,
-          @ColorJsonConverter() required final Color animatedBoxColor,
+          required final int shadowColor,
+          required final int animatedBoxColor,
           required final double blurRadius,
           required final double spreadRadius,
           required final double topLeftRadius,
           required final double topRightRadius,
           required final double bottomLeftRadius,
           required final double bottomRightRadius,
-          required final List<GradientColorEntity> gradientColors,
+          required final List<GradientColorModel> gradientColors,
           required final bool isGradientEnabled,
           required final bool isLinearGradient,
           required final bool isRadialGradient,
-          required final GradientDirectionEntity beginLinearGradient,
-          required final GradientDirectionEntity endLinearGradient,
-          required final GradientDirectionEntity centerRadiusGradient}) =
+          required final GradientDirectionModel beginLinearGradient,
+          required final GradientDirectionModel endLinearGradient,
+          required final GradientDirectionModel centerRadiusGradient}) =
       _$_AnimatedBoxState;
 
   factory _AnimatedBoxState.fromJson(Map<String, dynamic> json) =
       _$_AnimatedBoxState.fromJson;
 
   @override
-  AnimatedBoxOffsetEntity get offset;
+  double get offsetDx;
+  @override
+  double get offsetDy;
   @override
   double get boxWidth;
   @override
   double get boxHeight;
   @override
-  @ColorJsonConverter()
-  Color get shadowColor;
+  int get shadowColor;
   @override
-  @ColorJsonConverter()
-  Color get animatedBoxColor;
+  int get animatedBoxColor;
   @override
   double get blurRadius;
   @override
@@ -6938,7 +6639,7 @@ abstract class _AnimatedBoxState implements AnimatedBoxState {
   @override
   double get bottomRightRadius;
   @override
-  List<GradientColorEntity> get gradientColors;
+  List<GradientColorModel> get gradientColors;
   @override
   bool get isGradientEnabled;
   @override
@@ -6946,11 +6647,11 @@ abstract class _AnimatedBoxState implements AnimatedBoxState {
   @override
   bool get isRadialGradient;
   @override
-  GradientDirectionEntity get beginLinearGradient;
+  GradientDirectionModel get beginLinearGradient;
   @override
-  GradientDirectionEntity get endLinearGradient;
+  GradientDirectionModel get endLinearGradient;
   @override
-  GradientDirectionEntity get centerRadiusGradient;
+  GradientDirectionModel get centerRadiusGradient;
   @override
   @JsonKey(ignore: true)
   _$$_AnimatedBoxStateCopyWith<_$_AnimatedBoxState> get copyWith =>

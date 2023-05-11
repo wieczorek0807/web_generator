@@ -24,7 +24,7 @@ class ShadowControllers extends StatelessWidget {
             children: [
               AppValueSlider(
                 title: 'Offset dx',
-                value: state.offset.getOffset().dx,
+                value: state.offsetDx,
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
                     .add(AnimatedBoxEvent.updateOffsetX(v)),
@@ -32,7 +32,7 @@ class ShadowControllers extends StatelessWidget {
               const Divider(),
               AppValueSlider(
                 title: 'Offset dy',
-                value: state.offset.getOffset().dy,
+                value: state.offsetDy,
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
                     .add(AnimatedBoxEvent.updateOffsetY(v)),
@@ -57,7 +57,7 @@ class ShadowControllers extends StatelessWidget {
               const Divider(),
               StandardColorPicker(
                 title: 'Shadow color:',
-                startColor: state.shadowColor,
+                startColor: Color(state.shadowColor),
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
                     .add(AnimatedBoxEvent.updateShadowColor(v)),
@@ -65,7 +65,7 @@ class ShadowControllers extends StatelessWidget {
               const Divider(),
               StandardColorPicker(
                 title: 'Box color:',
-                startColor: state.animatedBoxColor,
+                startColor: Color(state.animatedBoxColor),
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
                     .add(AnimatedBoxEvent.updateAnimatedBoxColor(v)),
@@ -223,7 +223,7 @@ class GradientControllers extends StatelessWidget {
                               .read<AnimatedBoxBloc>()
                               .add(AnimatedBoxEvent.updateGradientColor(
                                   id: index, color: v)),
-                          startColor: state.gradientColors[index].color,
+                          startColor: Color(state.gradientColors[index].color),
                           index: index,
                           value: state.gradientColors[index].value,
                         );

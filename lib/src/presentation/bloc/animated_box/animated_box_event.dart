@@ -53,13 +53,13 @@ class AnimatedBoxEvent with _$AnimatedBoxEvent {
       {required int id, required double value}) = _UpdateGradientValue;
 
   const factory AnimatedBoxEvent.changeGradientBeginValue(
-          {required GradientDirectionEntity beginLinearGradient}) =
+          {required GradientDirectionModel beginLinearGradient}) =
       _ChangeGradientBeginValue;
 
   const factory AnimatedBoxEvent.changeGradientEndValue(
-          {required GradientDirectionEntity endLinearGradient}) =
+          {required GradientDirectionModel endLinearGradient}) =
       _ChangeGradientEndValue;
   const factory AnimatedBoxEvent.changeGradientCenterValue(
-          {required GradientDirectionEntity centerRadiusGradient}) =
+          {required GradientDirectionModel centerRadiusGradient}) =
       _ChangeGradientCenterValue;
 }

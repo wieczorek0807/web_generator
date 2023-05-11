@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import '../../../domain/entities/gradient_direction/gradient_direction_entity.dart';
+import '../../../data/models/gradient_direction/gradient_direction_model.dart';
 
 class GradientDropdownButton extends StatelessWidget {
   final String name;
-  final GradientDirectionEntity dropDownButtonValue;
-  final List<GradientDirectionEntity> dropDownButtonItems;
-  final Function(GradientDirectionEntity) onChange;
+  final GradientDirectionModel dropDownButtonValue;
+  final List<GradientDirectionModel> dropDownButtonItems;
+  final Function(GradientDirectionModel) onChange;
   const GradientDropdownButton(
       {Key? key,
       required this.name,
@@ -23,7 +23,7 @@ class GradientDropdownButton extends StatelessWidget {
             value: dropDownButtonValue.getAligment(),
             items: allGradientDirecitons
                 .map<DropdownMenuItem<AlignmentGeometry>>(
-                    (GradientDirectionEntity value) => DropdownMenuItem(
+                    (GradientDirectionModel value) => DropdownMenuItem(
                           value: value.getAligment(),
                           child: Text(value.name),
                         ))

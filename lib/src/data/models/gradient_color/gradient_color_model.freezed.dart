@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'gradient_color_entity.dart';
+part of 'gradient_color_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,36 +14,35 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-GradientColorEntity _$GradientColorEntityFromJson(Map<String, dynamic> json) {
-  return _GradientColorEntity.fromJson(json);
+GradientColorModel _$GradientColorModelFromJson(Map<String, dynamic> json) {
+  return _GradientColorModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$GradientColorEntity {
+mixin _$GradientColorModel {
   int get id => throw _privateConstructorUsedError;
-  @ColorJsonConverter()
-  Color get color => throw _privateConstructorUsedError;
+  int get color => throw _privateConstructorUsedError;
   double get value => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $GradientColorEntityCopyWith<GradientColorEntity> get copyWith =>
+  $GradientColorModelCopyWith<GradientColorModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $GradientColorEntityCopyWith<$Res> {
-  factory $GradientColorEntityCopyWith(
-          GradientColorEntity value, $Res Function(GradientColorEntity) then) =
-      _$GradientColorEntityCopyWithImpl<$Res, GradientColorEntity>;
+abstract class $GradientColorModelCopyWith<$Res> {
+  factory $GradientColorModelCopyWith(
+          GradientColorModel value, $Res Function(GradientColorModel) then) =
+      _$GradientColorModelCopyWithImpl<$Res, GradientColorModel>;
   @useResult
-  $Res call({int id, @ColorJsonConverter() Color color, double value});
+  $Res call({int id, int color, double value});
 }
 
 /// @nodoc
-class _$GradientColorEntityCopyWithImpl<$Res, $Val extends GradientColorEntity>
-    implements $GradientColorEntityCopyWith<$Res> {
-  _$GradientColorEntityCopyWithImpl(this._value, this._then);
+class _$GradientColorModelCopyWithImpl<$Res, $Val extends GradientColorModel>
+    implements $GradientColorModelCopyWith<$Res> {
+  _$GradientColorModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -65,7 +64,7 @@ class _$GradientColorEntityCopyWithImpl<$Res, $Val extends GradientColorEntity>
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as Color,
+              as int,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -75,22 +74,22 @@ class _$GradientColorEntityCopyWithImpl<$Res, $Val extends GradientColorEntity>
 }
 
 /// @nodoc
-abstract class _$$_GradientColorEntityCopyWith<$Res>
-    implements $GradientColorEntityCopyWith<$Res> {
-  factory _$$_GradientColorEntityCopyWith(_$_GradientColorEntity value,
-          $Res Function(_$_GradientColorEntity) then) =
-      __$$_GradientColorEntityCopyWithImpl<$Res>;
+abstract class _$$_GradientColorModelCopyWith<$Res>
+    implements $GradientColorModelCopyWith<$Res> {
+  factory _$$_GradientColorModelCopyWith(_$_GradientColorModel value,
+          $Res Function(_$_GradientColorModel) then) =
+      __$$_GradientColorModelCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, @ColorJsonConverter() Color color, double value});
+  $Res call({int id, int color, double value});
 }
 
 /// @nodoc
-class __$$_GradientColorEntityCopyWithImpl<$Res>
-    extends _$GradientColorEntityCopyWithImpl<$Res, _$_GradientColorEntity>
-    implements _$$_GradientColorEntityCopyWith<$Res> {
-  __$$_GradientColorEntityCopyWithImpl(_$_GradientColorEntity _value,
-      $Res Function(_$_GradientColorEntity) _then)
+class __$$_GradientColorModelCopyWithImpl<$Res>
+    extends _$GradientColorModelCopyWithImpl<$Res, _$_GradientColorModel>
+    implements _$$_GradientColorModelCopyWith<$Res> {
+  __$$_GradientColorModelCopyWithImpl(
+      _$_GradientColorModel _value, $Res Function(_$_GradientColorModel) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -100,7 +99,7 @@ class __$$_GradientColorEntityCopyWithImpl<$Res>
     Object? color = null,
     Object? value = null,
   }) {
-    return _then(_$_GradientColorEntity(
+    return _then(_$_GradientColorModel(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -108,7 +107,7 @@ class __$$_GradientColorEntityCopyWithImpl<$Res>
       color: null == color
           ? _value.color
           : color // ignore: cast_nullable_to_non_nullable
-              as Color,
+              as int,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
@@ -119,33 +118,30 @@ class __$$_GradientColorEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GradientColorEntity implements _GradientColorEntity {
-  const _$_GradientColorEntity(
-      {required this.id,
-      @ColorJsonConverter() required this.color,
-      required this.value});
+class _$_GradientColorModel implements _GradientColorModel {
+  const _$_GradientColorModel(
+      {required this.id, required this.color, required this.value});
 
-  factory _$_GradientColorEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_GradientColorEntityFromJson(json);
+  factory _$_GradientColorModel.fromJson(Map<String, dynamic> json) =>
+      _$$_GradientColorModelFromJson(json);
 
   @override
   final int id;
   @override
-  @ColorJsonConverter()
-  final Color color;
+  final int color;
   @override
   final double value;
 
   @override
   String toString() {
-    return 'GradientColorEntity(id: $id, color: $color, value: $value)';
+    return 'GradientColorModel(id: $id, color: $color, value: $value)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GradientColorEntity &&
+            other is _$_GradientColorModel &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.color, color) || other.color == color) &&
             (identical(other.value, value) || other.value == value));
@@ -158,36 +154,35 @@ class _$_GradientColorEntity implements _GradientColorEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GradientColorEntityCopyWith<_$_GradientColorEntity> get copyWith =>
-      __$$_GradientColorEntityCopyWithImpl<_$_GradientColorEntity>(
+  _$$_GradientColorModelCopyWith<_$_GradientColorModel> get copyWith =>
+      __$$_GradientColorModelCopyWithImpl<_$_GradientColorModel>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GradientColorEntityToJson(
+    return _$$_GradientColorModelToJson(
       this,
     );
   }
 }
 
-abstract class _GradientColorEntity implements GradientColorEntity {
-  const factory _GradientColorEntity(
+abstract class _GradientColorModel implements GradientColorModel {
+  const factory _GradientColorModel(
       {required final int id,
-      @ColorJsonConverter() required final Color color,
-      required final double value}) = _$_GradientColorEntity;
+      required final int color,
+      required final double value}) = _$_GradientColorModel;
 
-  factory _GradientColorEntity.fromJson(Map<String, dynamic> json) =
-      _$_GradientColorEntity.fromJson;
+  factory _GradientColorModel.fromJson(Map<String, dynamic> json) =
+      _$_GradientColorModel.fromJson;
 
   @override
   int get id;
   @override
-  @ColorJsonConverter()
-  Color get color;
+  int get color;
   @override
   double get value;
   @override
   @JsonKey(ignore: true)
-  _$$_GradientColorEntityCopyWith<_$_GradientColorEntity> get copyWith =>
+  _$$_GradientColorModelCopyWith<_$_GradientColorModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
