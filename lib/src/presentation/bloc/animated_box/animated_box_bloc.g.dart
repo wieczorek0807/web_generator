@@ -26,9 +26,12 @@ _$_AnimatedBoxState _$$_AnimatedBoxStateFromJson(Map<String, dynamic> json) =>
       isGradientEnabled: json['isGradientEnabled'] as bool,
       isLinearGradient: json['isLinearGradient'] as bool,
       isRadialGradient: json['isRadialGradient'] as bool,
-      beginLinearGradient: json['beginLinearGradient'],
-      endLinearGradient: json['endLinearGradient'],
-      centerRadiusGradient: json['centerRadiusGradient'],
+      beginLinearGradient: GradientDirectionModel.fromJson(
+          json['beginLinearGradient'] as Map<String, dynamic>),
+      endLinearGradient: GradientDirectionModel.fromJson(
+          json['endLinearGradient'] as Map<String, dynamic>),
+      centerRadiusGradient: GradientDirectionModel.fromJson(
+          json['centerRadiusGradient'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_AnimatedBoxStateToJson(_$_AnimatedBoxState instance) =>
@@ -49,7 +52,7 @@ Map<String, dynamic> _$$_AnimatedBoxStateToJson(_$_AnimatedBoxState instance) =>
       'isGradientEnabled': instance.isGradientEnabled,
       'isLinearGradient': instance.isLinearGradient,
       'isRadialGradient': instance.isRadialGradient,
-      'beginLinearGradient': instance.beginLinearGradient,
-      'endLinearGradient': instance.endLinearGradient,
-      'centerRadiusGradient': instance.centerRadiusGradient,
+      'beginLinearGradient': instance.beginLinearGradient.toJson(),
+      'endLinearGradient': instance.endLinearGradient.toJson(),
+      'centerRadiusGradient': instance.centerRadiusGradient.toJson(),
     };

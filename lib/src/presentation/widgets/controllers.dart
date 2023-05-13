@@ -147,7 +147,6 @@ class SizeControllers extends StatelessWidget {
 
     if (currnetMaxValue < 350) {
       _valueMax = currnetMaxValue;
-      print(currnetMaxValue);
     }
     return SizedBox(
       width: _width,

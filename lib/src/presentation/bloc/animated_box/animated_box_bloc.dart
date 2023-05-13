@@ -138,12 +138,19 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
     try {
       return AnimatedBoxState.fromJson(json);
     } catch (e) {
+      print('from jsocn $e');
       return _initail;
     }
   }
 
   @override
-  Map<String, dynamic>? toJson(AnimatedBoxState state) => state.toJson();
+  Map<String, dynamic>? toJson(AnimatedBoxState state) {
+    try {
+      return state.toJson();
+    } catch (e) {
+      print('to json err $e');
+    }
+  }
 }
 
 // bloc initial state

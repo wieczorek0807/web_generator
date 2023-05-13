@@ -5283,6 +5283,8 @@ abstract class _$$_ChangeGradientBeginValueCopyWith<$Res> {
       __$$_ChangeGradientBeginValueCopyWithImpl<$Res>;
   @useResult
   $Res call({GradientDirectionModel beginLinearGradient});
+
+  $GradientDirectionModelCopyWith<$Res> get beginLinearGradient;
 }
 
 /// @nodoc
@@ -5296,14 +5298,23 @@ class __$$_ChangeGradientBeginValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? beginLinearGradient = freezed,
+    Object? beginLinearGradient = null,
   }) {
     return _then(_$_ChangeGradientBeginValue(
-      beginLinearGradient: freezed == beginLinearGradient
+      beginLinearGradient: null == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GradientDirectionModelCopyWith<$Res> get beginLinearGradient {
+    return $GradientDirectionModelCopyWith<$Res>(_value.beginLinearGradient,
+        (value) {
+      return _then(_value.copyWith(beginLinearGradient: value));
+    });
   }
 }
 
@@ -5325,13 +5336,12 @@ class _$_ChangeGradientBeginValue implements _ChangeGradientBeginValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientBeginValue &&
-            const DeepCollectionEquality()
-                .equals(other.beginLinearGradient, beginLinearGradient));
+            (identical(other.beginLinearGradient, beginLinearGradient) ||
+                other.beginLinearGradient == beginLinearGradient));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(beginLinearGradient));
+  int get hashCode => Object.hash(runtimeType, beginLinearGradient);
 
   @JsonKey(ignore: true)
   @override
@@ -5559,6 +5569,8 @@ abstract class _$$_ChangeGradientEndValueCopyWith<$Res> {
       __$$_ChangeGradientEndValueCopyWithImpl<$Res>;
   @useResult
   $Res call({GradientDirectionModel endLinearGradient});
+
+  $GradientDirectionModelCopyWith<$Res> get endLinearGradient;
 }
 
 /// @nodoc
@@ -5572,14 +5584,23 @@ class __$$_ChangeGradientEndValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? endLinearGradient = freezed,
+    Object? endLinearGradient = null,
   }) {
     return _then(_$_ChangeGradientEndValue(
-      endLinearGradient: freezed == endLinearGradient
+      endLinearGradient: null == endLinearGradient
           ? _value.endLinearGradient
           : endLinearGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GradientDirectionModelCopyWith<$Res> get endLinearGradient {
+    return $GradientDirectionModelCopyWith<$Res>(_value.endLinearGradient,
+        (value) {
+      return _then(_value.copyWith(endLinearGradient: value));
+    });
   }
 }
 
@@ -5601,13 +5622,12 @@ class _$_ChangeGradientEndValue implements _ChangeGradientEndValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientEndValue &&
-            const DeepCollectionEquality()
-                .equals(other.endLinearGradient, endLinearGradient));
+            (identical(other.endLinearGradient, endLinearGradient) ||
+                other.endLinearGradient == endLinearGradient));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(endLinearGradient));
+  int get hashCode => Object.hash(runtimeType, endLinearGradient);
 
   @JsonKey(ignore: true)
   @override
@@ -5836,6 +5856,8 @@ abstract class _$$_ChangeGradientCenterValueCopyWith<$Res> {
       __$$_ChangeGradientCenterValueCopyWithImpl<$Res>;
   @useResult
   $Res call({GradientDirectionModel centerRadiusGradient});
+
+  $GradientDirectionModelCopyWith<$Res> get centerRadiusGradient;
 }
 
 /// @nodoc
@@ -5850,14 +5872,23 @@ class __$$_ChangeGradientCenterValueCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? centerRadiusGradient = freezed,
+    Object? centerRadiusGradient = null,
   }) {
     return _then(_$_ChangeGradientCenterValue(
-      centerRadiusGradient: freezed == centerRadiusGradient
+      centerRadiusGradient: null == centerRadiusGradient
           ? _value.centerRadiusGradient
           : centerRadiusGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GradientDirectionModelCopyWith<$Res> get centerRadiusGradient {
+    return $GradientDirectionModelCopyWith<$Res>(_value.centerRadiusGradient,
+        (value) {
+      return _then(_value.copyWith(centerRadiusGradient: value));
+    });
   }
 }
 
@@ -5879,13 +5910,12 @@ class _$_ChangeGradientCenterValue implements _ChangeGradientCenterValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ChangeGradientCenterValue &&
-            const DeepCollectionEquality()
-                .equals(other.centerRadiusGradient, centerRadiusGradient));
+            (identical(other.centerRadiusGradient, centerRadiusGradient) ||
+                other.centerRadiusGradient == centerRadiusGradient));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(centerRadiusGradient));
+  int get hashCode => Object.hash(runtimeType, centerRadiusGradient);
 
   @JsonKey(ignore: true)
   @override
@@ -6168,6 +6198,10 @@ abstract class $AnimatedBoxStateCopyWith<$Res> {
       GradientDirectionModel beginLinearGradient,
       GradientDirectionModel endLinearGradient,
       GradientDirectionModel centerRadiusGradient});
+
+  $GradientDirectionModelCopyWith<$Res> get beginLinearGradient;
+  $GradientDirectionModelCopyWith<$Res> get endLinearGradient;
+  $GradientDirectionModelCopyWith<$Res> get centerRadiusGradient;
 }
 
 /// @nodoc
@@ -6199,9 +6233,9 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
     Object? isGradientEnabled = null,
     Object? isLinearGradient = null,
     Object? isRadialGradient = null,
-    Object? beginLinearGradient = freezed,
-    Object? endLinearGradient = freezed,
-    Object? centerRadiusGradient = freezed,
+    Object? beginLinearGradient = null,
+    Object? endLinearGradient = null,
+    Object? centerRadiusGradient = null,
   }) {
     return _then(_value.copyWith(
       offsetDx: null == offsetDx
@@ -6268,19 +6302,46 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
           ? _value.isRadialGradient
           : isRadialGradient // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginLinearGradient: freezed == beginLinearGradient
+      beginLinearGradient: null == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
-      endLinearGradient: freezed == endLinearGradient
+      endLinearGradient: null == endLinearGradient
           ? _value.endLinearGradient
           : endLinearGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
-      centerRadiusGradient: freezed == centerRadiusGradient
+      centerRadiusGradient: null == centerRadiusGradient
           ? _value.centerRadiusGradient
           : centerRadiusGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GradientDirectionModelCopyWith<$Res> get beginLinearGradient {
+    return $GradientDirectionModelCopyWith<$Res>(_value.beginLinearGradient,
+        (value) {
+      return _then(_value.copyWith(beginLinearGradient: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GradientDirectionModelCopyWith<$Res> get endLinearGradient {
+    return $GradientDirectionModelCopyWith<$Res>(_value.endLinearGradient,
+        (value) {
+      return _then(_value.copyWith(endLinearGradient: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $GradientDirectionModelCopyWith<$Res> get centerRadiusGradient {
+    return $GradientDirectionModelCopyWith<$Res>(_value.centerRadiusGradient,
+        (value) {
+      return _then(_value.copyWith(centerRadiusGradient: value) as $Val);
+    });
   }
 }
 
@@ -6312,6 +6373,13 @@ abstract class _$$_AnimatedBoxStateCopyWith<$Res>
       GradientDirectionModel beginLinearGradient,
       GradientDirectionModel endLinearGradient,
       GradientDirectionModel centerRadiusGradient});
+
+  @override
+  $GradientDirectionModelCopyWith<$Res> get beginLinearGradient;
+  @override
+  $GradientDirectionModelCopyWith<$Res> get endLinearGradient;
+  @override
+  $GradientDirectionModelCopyWith<$Res> get centerRadiusGradient;
 }
 
 /// @nodoc
@@ -6341,9 +6409,9 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
     Object? isGradientEnabled = null,
     Object? isLinearGradient = null,
     Object? isRadialGradient = null,
-    Object? beginLinearGradient = freezed,
-    Object? endLinearGradient = freezed,
-    Object? centerRadiusGradient = freezed,
+    Object? beginLinearGradient = null,
+    Object? endLinearGradient = null,
+    Object? centerRadiusGradient = null,
   }) {
     return _then(_$_AnimatedBoxState(
       offsetDx: null == offsetDx
@@ -6410,15 +6478,15 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
           ? _value.isRadialGradient
           : isRadialGradient // ignore: cast_nullable_to_non_nullable
               as bool,
-      beginLinearGradient: freezed == beginLinearGradient
+      beginLinearGradient: null == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
-      endLinearGradient: freezed == endLinearGradient
+      endLinearGradient: null == endLinearGradient
           ? _value.endLinearGradient
           : endLinearGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
-      centerRadiusGradient: freezed == centerRadiusGradient
+      centerRadiusGradient: null == centerRadiusGradient
           ? _value.centerRadiusGradient
           : centerRadiusGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
@@ -6541,12 +6609,12 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
                 other.isLinearGradient == isLinearGradient) &&
             (identical(other.isRadialGradient, isRadialGradient) ||
                 other.isRadialGradient == isRadialGradient) &&
-            const DeepCollectionEquality()
-                .equals(other.beginLinearGradient, beginLinearGradient) &&
-            const DeepCollectionEquality()
-                .equals(other.endLinearGradient, endLinearGradient) &&
-            const DeepCollectionEquality()
-                .equals(other.centerRadiusGradient, centerRadiusGradient));
+            (identical(other.beginLinearGradient, beginLinearGradient) ||
+                other.beginLinearGradient == beginLinearGradient) &&
+            (identical(other.endLinearGradient, endLinearGradient) ||
+                other.endLinearGradient == endLinearGradient) &&
+            (identical(other.centerRadiusGradient, centerRadiusGradient) ||
+                other.centerRadiusGradient == centerRadiusGradient));
   }
 
   @JsonKey(ignore: true)
@@ -6569,9 +6637,9 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
         isGradientEnabled,
         isLinearGradient,
         isRadialGradient,
-        const DeepCollectionEquality().hash(beginLinearGradient),
-        const DeepCollectionEquality().hash(endLinearGradient),
-        const DeepCollectionEquality().hash(centerRadiusGradient)
+        beginLinearGradient,
+        endLinearGradient,
+        centerRadiusGradient
       ]);
 
   @JsonKey(ignore: true)

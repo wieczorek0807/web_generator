@@ -1,9 +1,6 @@
 import 'package:box_shadow_generator/src/core/values/colors.dart';
-import 'package:box_shadow_generator/src/presentation/bloc/animated_box/animated_box_bloc.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 
 import '../../../core/values/dimens.dart';
 

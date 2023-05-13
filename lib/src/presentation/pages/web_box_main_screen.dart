@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../widgets/web_box/animated_box.dart';
 import '../widgets/controllers.dart';
-import 'web_box_responsive_screen.dart';
+import 'responsive_screens/web_box_responsive_screen.dart';
 
 class WebBoxMainScreen extends StatelessWidget {
   const WebBoxMainScreen({Key? key}) : super(key: key);
