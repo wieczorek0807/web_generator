@@ -1,4 +1,3 @@
-import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:box_shadow_generator/src/presentation/bloc/routing/routing_cubit.dart';
 import 'package:box_shadow_generator/src/presentation/pages/responsive_screens/large_responsive_screen.dart';
 import 'package:box_shadow_generator/src/presentation/pages/responsive_screens/small_responsive_screen.dart';
@@ -6,12 +5,10 @@ import 'package:box_shadow_generator/src/presentation/widgets/global/web_box_app
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../injection_container.dart';
-import '../../../core/values/dimens.dart';
 import '../../bloc/routing/routing_state.dart';
-import '../../widgets/drawer/drawer_list_tile.dart';
 import '../../widgets/drawer/web_box_drawer.dart';
 import 'medium_responsive_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WebBoxResponsiveScreen extends StatelessWidget {
   const WebBoxResponsiveScreen({
@@ -37,7 +34,8 @@ class WebBoxResponsiveScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: WebBoxAppBar(
-            title: currnetWidth <= 1200 ? state.title : 'Web box generator',
+            // title: currnetWidth <= 1200 ? state.title : 'Web box generator',
+            title: AppLocalizations.of(context)!.helloWorld,
           ),
           backgroundColor: Colors.white,
           drawer: currnetWidth <= 1200
@@ -54,7 +52,6 @@ class WebBoxResponsiveScreen extends StatelessWidget {
                 animatedBox: animatedBox,
               );
             } else if (state.boxRadiusscreen) {
-              print('dupa');
               return _ResponsiveScreenHelper(
                 controllers: radiusControllers,
                 animatedBox: animatedBox,
@@ -87,7 +84,6 @@ class _ResponsiveScreenHelper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currnetWidth = MediaQuery.of(context).size.width;
-    print(currnetWidth);
     if (currnetWidth < 900) {
       return MediumResponsiveScreen(
         controllers: controllers,

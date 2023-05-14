@@ -1,5 +1,6 @@
 import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppSegmentButtons extends StatelessWidget {
   final bool isGradiennEnabled;
@@ -30,23 +31,23 @@ class AppSegmentButtons extends StatelessWidget {
     return CupertinoSegmentedControl(
       borderColor: AppColors.prussianBlue,
       selectedColor: AppColors.midnightGreen,
-      children: const {
+      children: {
         0: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Text(
-              'Gradient\nOff',
+              AppLocalizations.of(context)!.gradientOff,
               textAlign: TextAlign.center,
             )),
         1: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Text(
-              'Linear Gradient',
+              AppLocalizations.of(context)!.linearGradient,
               textAlign: TextAlign.center,
             )),
         2: Padding(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             child: Text(
-              'Radius Gradient',
+              AppLocalizations.of(context)!.radiusGradient,
               textAlign: TextAlign.center,
             )),
       },

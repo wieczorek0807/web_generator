@@ -1,0 +1,39 @@
+{
+  "helloWorld": "Hello World!",
+  "boxShadow" : "Box shadow",
+  "borderRadius": "Border radius",
+  "changeSizeOfBlock": "Zmień wielkość",
+  "gradientGenerator": "Generator gradientu",
+
+  "offset": "Offset",
+  "blurRadius": "Blur radius",
+  "spreadRadius": "Spread radius",
+  "shadowColor": "Kolor cienia",
+  "boxColor": "Kolor wypełnienia",
+
+  "topLeft": "Góra lewo",
+  "topRight": "Góra prawo",
+  "topCenter": "Góra środek",
+  "centerLeft": "Środek lewo",
+  "centerRight": "Środek prawo",
+  "center": "Środek",
+  "bottomLeft": "Dół lewo",
+  "bottomRight": "Dół prawo",
+  "bottomCenter": "Dół środek", 
+
+  "height": "Wysokość",
+  "width": "Szerokość",
+
+  "gradientOff": "Gradient wyłączony",
+  "linearGradient": "Gradient liniowy",
+  "radiusGradient": "Gradient promieniowy",
+
+  "directionStart": "Początek",
+  "directionEnd": "Koniec",
+  "color": "Kolor",
+  "addColor": "Dodaj kolor",
+  "removeColor": "Usuń kolor",
+
+  "pickColor": "Wybierz kolor",
+  "select": "Wybierz"
+}

@@ -1,0 +1,42 @@
+{
+  "helloWorld": "Hello World!",
+  "boxShadow" : "Box shadow",
+  "borderRadius": "Border radius",
+  "changeSizeOfBlock": "Change size of block",
+  "gradientGenerator": "Gradient generator",
+
+  "offset": "Offset",
+  "blurRadius": "Blur radius",
+  "spreadRadius": "Spread radius",
+  "shadowColor": "Shadow color",
+  "boxColor": "Box color",
+
+  "topLeft": "Top left",
+  "topRight": "Top right",
+  "topCenter": "Top center",
+  "centerLeft": "Center left",
+  "centerRight": "Center right",
+  "center": "Center",
+  "bottomLeft": "Bottom left",
+  "bottomRight": "Bottom right",
+  "bottomCenter": "Bottom center", 
+
+  "bottomLeft": "Bottom left",
+  "bottomRight": "Bottom right",
+
+  "height": "Height",
+  "width": "Width",
+
+  "gradientOff": "Gradient\nOff",
+  "linearGradient": "Linear gradient",
+  "radiusGradient": "Radius gradient",
+
+  "directionStart": "Direction start",
+  "directionEnd": "Direction end",
+  "color": "Color",
+  "addColor": "Add color",
+  "removeColor": "Remove color",
+
+  "pickColor": "Pick color",
+  "select": "Select"
+}

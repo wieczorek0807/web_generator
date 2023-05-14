@@ -3,6 +3,9 @@ import 'package:box_shadow_generator/injection_container.dart'
 import 'package:flutter/material.dart';
 
 import 'src/presentation/pages/web_box_main_screen.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:intl/intl.dart';
 
 Future<void> main() async {
   await injection_container.setup();
@@ -17,6 +20,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
       home: WebBoxMainScreen(),
     );
   }

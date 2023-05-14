@@ -6,7 +6,7 @@ import '../../bloc/routing/routing_cubit.dart';
 import '../../bloc/routing/routing_state.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'drawer_list_tile.dart';
 
 class WebBoxDrawer extends StatelessWidget {
@@ -27,28 +27,28 @@ class WebBoxDrawer extends StatelessWidget {
               DrawerListTile(
                 focus: state.boxShadowscreen,
                 leadingIcon: const Icon(Icons.border_style),
-                title: 'Box Shadow',
+                title: AppLocalizations.of(context)!.boxShadow,
                 onTap: getIt<RoutingCubit>().changeToBoxShadowScreen,
                 popAfterOnTap: !isLargeDisplay,
               ),
               DrawerListTile(
                 focus: state.boxRadiusscreen,
                 leadingIcon: const Icon(Icons.radio_button_unchecked_sharp),
-                title: 'Border radius',
+                title: AppLocalizations.of(context)!.borderRadius,
                 onTap: getIt<RoutingCubit>().changeToBoxRadiusScreen,
                 popAfterOnTap: !isLargeDisplay,
               ),
               DrawerListTile(
                 focus: state.boxSizescreen,
                 leadingIcon: const Icon(Icons.pinch),
-                title: 'Change size of block',
+                title: AppLocalizations.of(context)!.changeSizeOfBlock,
                 onTap: getIt<RoutingCubit>().changeToBoxSizeScreen,
                 popAfterOnTap: !isLargeDisplay,
               ),
               DrawerListTile(
                 focus: state.gradientScreen,
                 leadingIcon: const Icon(Icons.gradient),
-                title: 'Gradient Generator',
+                title: AppLocalizations.of(context)!.gradientGenerator,
                 onTap: getIt<RoutingCubit>().changeToGradinetScreen,
                 popAfterOnTap: !isLargeDisplay,
               ),

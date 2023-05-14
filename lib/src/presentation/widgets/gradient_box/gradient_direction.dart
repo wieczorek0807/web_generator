@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../data/models/gradient_direction/gradient_direction_model.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'gradient_dropdown_button.dart';
 
 class GradientDirection extends StatelessWidget {
@@ -19,14 +19,14 @@ class GradientDirection extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               GradientDropdownButton(
-                  name: 'Directon start',
+                  name: AppLocalizations.of(context)!.directionStart,
                   dropDownButtonValue: state.beginLinearGradient,
                   dropDownButtonItems: allGradientDirecitons,
                   onChange: (v) => context.read<AnimatedBoxBloc>().add(
                       AnimatedBoxEvent.changeGradientBeginValue(
                           beginLinearGradient: v))),
               GradientDropdownButton(
-                  name: 'Directon end',
+                  name: AppLocalizations.of(context)!.directionEnd,
                   dropDownButtonValue: state.endLinearGradient,
                   dropDownButtonItems: allGradientDirecitons,
                   onChange: (v) => context.read<AnimatedBoxBloc>().add(
@@ -37,7 +37,7 @@ class GradientDirection extends StatelessWidget {
         }
 
         return GradientDropdownButton(
-            name: 'Center ',
+            name: AppLocalizations.of(context)!.center,
             dropDownButtonValue: state.centerRadiusGradient,
             dropDownButtonItems: allGradientDirecitons,
             onChange: (v) => context.read<AnimatedBoxBloc>().add(

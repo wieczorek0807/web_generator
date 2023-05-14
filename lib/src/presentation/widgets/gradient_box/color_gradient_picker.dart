@@ -3,6 +3,7 @@ import 'package:box_shadow_generator/src/presentation/widgets/global/flex_color_
 import 'package:flutter/cupertino.dart';
 
 import '../../../core/values/dimens.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ColorAndValueForGradientPicker extends StatelessWidget {
   final int index;
@@ -26,7 +27,7 @@ class ColorAndValueForGradientPicker extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Color ${index + 1} :'),
+            Text('${AppLocalizations.of(context)!.color} ${index + 1} :'),
             Row(
               children: [
                 FlexColorPicker(

@@ -2,6 +2,7 @@ import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:flex_color_picker/flex_color_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class FlexColorPicker extends StatefulWidget {
   final Function(Color) onChanged;
@@ -49,7 +50,7 @@ class _FlexColorPickerState extends State<FlexColorPicker> {
                 wheelDiameter: 300,
                 borderRadius: 22,
                 heading: Text(
-                  'Pick color',
+                  AppLocalizations.of(context)!.pickColor,
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 columnSpacing: 50,
@@ -75,7 +76,7 @@ class _FlexColorPickerState extends State<FlexColorPicker> {
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: const Text("Pick"),
+                child: Text(AppLocalizations.of(context)!.select),
               )
             ]),
           ));

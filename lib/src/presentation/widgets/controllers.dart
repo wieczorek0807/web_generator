@@ -9,6 +9,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'web_box/app_flex_color_picker.dart';
 import 'global/app_value_slider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class ShadowControllers extends StatelessWidget {
   const ShadowControllers({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class ShadowControllers extends StatelessWidget {
           builder: (_, state) => Column(
             children: [
               AppValueSlider(
-                title: 'Offset dx',
+                title: '${AppLocalizations.of(context)!.offset} dx',
                 value: state.offsetDx,
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
@@ -31,7 +32,7 @@ class ShadowControllers extends StatelessWidget {
               ),
               const Divider(),
               AppValueSlider(
-                title: 'Offset dy',
+                title: '${AppLocalizations.of(context)!.offset} dy',
                 value: state.offsetDy,
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
@@ -39,7 +40,7 @@ class ShadowControllers extends StatelessWidget {
               ),
               const Divider(),
               AppValueSlider(
-                title: 'Blur radius',
+                title: AppLocalizations.of(context)!.blurRadius,
                 min: _blurMin,
                 value: state.blurRadius,
                 onChanged: (v) => context
@@ -48,7 +49,7 @@ class ShadowControllers extends StatelessWidget {
               ),
               const Divider(),
               AppValueSlider(
-                title: 'Spread radius',
+                title: AppLocalizations.of(context)!.spreadRadius,
                 value: state.spreadRadius,
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
@@ -56,7 +57,7 @@ class ShadowControllers extends StatelessWidget {
               ),
               const Divider(),
               StandardColorPicker(
-                title: 'Shadow color:',
+                title: AppLocalizations.of(context)!.shadowColor,
                 startColor: Color(state.shadowColor),
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
@@ -64,7 +65,7 @@ class ShadowControllers extends StatelessWidget {
               ),
               const Divider(),
               StandardColorPicker(
-                title: 'Box color:',
+                title: AppLocalizations.of(context)!.boxColor,
                 startColor: Color(state.animatedBoxColor),
                 onChanged: (v) => context
                     .read<AnimatedBoxBloc>()
@@ -90,7 +91,7 @@ class RadiusControllers extends StatelessWidget {
           builder: (_, state) => Column(
             children: [
               AppValueSlider(
-                title: 'Top left',
+                title: AppLocalizations.of(context)!.topLeft,
                 value: state.topLeftRadius,
                 min: _radiusMin,
                 max: _radiusMax,
@@ -100,7 +101,7 @@ class RadiusControllers extends StatelessWidget {
               ),
               const Divider(),
               AppValueSlider(
-                title: 'Top right',
+                title: AppLocalizations.of(context)!.topRight,
                 value: state.topRightRadius,
                 min: _radiusMin,
                 max: _radiusMax,
@@ -110,7 +111,7 @@ class RadiusControllers extends StatelessWidget {
               ),
               const Divider(),
               AppValueSlider(
-                title: 'Bottom left',
+                title: AppLocalizations.of(context)!.bottomLeft,
                 value: state.bottomLeftRadius,
                 min: _radiusMin,
                 max: _radiusMax,
@@ -120,7 +121,7 @@ class RadiusControllers extends StatelessWidget {
               ),
               const Divider(),
               AppValueSlider(
-                title: 'Bottom right',
+                title: AppLocalizations.of(context)!.bottomRight,
                 value: state.bottomRightRadius,
                 min: _radiusMin,
                 max: _radiusMax,
@@ -154,7 +155,7 @@ class SizeControllers extends StatelessWidget {
         builder: (_, state) => Column(
           children: [
             AppValueSlider(
-              title: 'Height',
+              title: AppLocalizations.of(context)!.height,
               value: state.boxHeight,
               min: _valueMin,
               max: _valueMax,
@@ -164,7 +165,7 @@ class SizeControllers extends StatelessWidget {
             ),
             const Divider(),
             AppValueSlider(
-              title: 'Width',
+              title: AppLocalizations.of(context)!.width,
               value: state.boxWidth,
               min: _valueMin,
               max: _valueMax,
@@ -239,7 +240,7 @@ class GradientControllers extends StatelessWidget {
                       onPressed: () => context
                           .read<AnimatedBoxBloc>()
                           .add(const AnimatedBoxEvent.addGradientColor()),
-                      child: const Text('Add color'),
+                      child: Text(AppLocalizations.of(context)!.addColor),
                     ),
                     OutlinedButton(
                       style: OutlinedButton.styleFrom(
@@ -248,7 +249,7 @@ class GradientControllers extends StatelessWidget {
                       onPressed: () => context
                           .read<AnimatedBoxBloc>()
                           .add(const AnimatedBoxEvent.removeGradientColor()),
-                      child: const Text('Remove color'),
+                      child: Text(AppLocalizations.of(context)!.removeColor),
                     )
                   ],
                 )
