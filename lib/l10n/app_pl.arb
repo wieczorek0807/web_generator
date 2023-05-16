@@ -36,5 +36,8 @@
   "pickColor": "Wybierz kolor",
   "select": "Wybierz",
 
-   "valueErr": "Wartość musi być pomiędzy {min} a {max}"
+   "valueErr": "Wartość musi być pomiędzy {min} a {max}",
+
+   "directions": "{index, select, TopRight{Góra Prawo} TopLeft{Góra Lewo} TopCenter{Góra Środek} CenterRight{Środek Prawo} CenterLeft{Środek Lewo} Center{Środek} BottomRight{Dół Prawo} BottomLeft{Dół Lewo} BottomCenter{Dół Środek} other{err}}"
+
 }

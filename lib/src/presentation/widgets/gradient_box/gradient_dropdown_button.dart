@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../data/models/gradient_direction/gradient_direction_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class GradientDropdownButton extends StatelessWidget {
   final String name;
@@ -25,7 +26,8 @@ class GradientDropdownButton extends StatelessWidget {
                 .map<DropdownMenuItem<AlignmentGeometry>>(
                     (GradientDirectionModel value) => DropdownMenuItem(
                           value: value.getAligment(),
-                          child: Text(value.name),
+                          child: Text(AppLocalizations.of(context)!
+                              .directions(value.name)),
                         ))
                 .toList(),
             onChanged: (value) {

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -26,20 +28,20 @@ class GradientDirectionModel with _$GradientDirectionModel {
 
 final allGradientDirecitons = <GradientDirectionModel>[
   const GradientDirectionModel(
-      name: 'Top Right', aligmentX: 1.0, aligmentY: -1.0),
+      name: 'TopRight', aligmentX: 1.0, aligmentY: -1.0),
   const GradientDirectionModel(
-      name: 'Top Left', aligmentX: -1.0, aligmentY: -1.0),
+      name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0),
   const GradientDirectionModel(
-      name: 'Top Center', aligmentX: 0.0, aligmentY: -1.0),
+      name: 'TopCenter', aligmentX: 0.0, aligmentY: -1.0),
   const GradientDirectionModel(
-      name: 'Center Right', aligmentX: 1.0, aligmentY: 0.0),
+      name: 'CenterRight', aligmentX: 1.0, aligmentY: 0.0),
   const GradientDirectionModel(
-      name: 'Center Left', aligmentX: -1.0, aligmentY: 0.0),
+      name: 'CenterLeft', aligmentX: -1.0, aligmentY: 0.0),
   const GradientDirectionModel(name: 'Center', aligmentX: 0.0, aligmentY: 0.0),
   const GradientDirectionModel(
-      name: 'Bottom Right', aligmentX: 1.0, aligmentY: 1.0),
+      name: 'BottomRight', aligmentX: 1.0, aligmentY: 1.0),
   const GradientDirectionModel(
-      name: 'Bottom Left', aligmentX: -1.0, aligmentY: 1.0),
+      name: 'BottomLeft', aligmentX: -1.0, aligmentY: 1.0),
   const GradientDirectionModel(
-      name: 'Bottom Center', aligmentX: 0.0, aligmentY: 1.0),
+      name: 'BottomCenter', aligmentX: 0.0, aligmentY: 1.0),
 ];

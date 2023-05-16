@@ -40,11 +40,11 @@ class AnimatedBoxState with _$AnimatedBoxState {
         bool isRadialGradient,
     @Default(
         GradientDirectionModel(
-            name: 'Top Right', aligmentX: -1.0, aligmentY: -1.0))
+            name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0))
         GradientDirectionModel beginLinearGradient,
     @Default(
         GradientDirectionModel(
-            name: 'Bottom Right', aligmentX: 1.0, aligmentY: 1.0))
+            name: 'BottomRight', aligmentX: 1.0, aligmentY: 1.0))
         GradientDirectionModel endLinearGradient,
     @Default(GradientDirectionModel(name: 'Center', aligmentX: 0.0, aligmentY: 0.0))
         GradientDirectionModel centerRadiusGradient,

@@ -7,7 +7,7 @@ import 'package:get_it/get_it.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'src/data/models/gradient_directions/gradient_directions.dart';
+// import 'src/data/models/gradient_directions/gradient_directions.dart';
 
 final getIt = GetIt.instance;
 

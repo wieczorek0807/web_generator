@@ -33,12 +33,12 @@ _$_AnimatedBoxState _$$_AnimatedBoxStateFromJson(Map<String, dynamic> json) =>
       isRadialGradient: json['isRadialGradient'] as bool? ?? false,
       beginLinearGradient: json['beginLinearGradient'] == null
           ? const GradientDirectionModel(
-              name: 'Top Right', aligmentX: -1.0, aligmentY: -1.0)
+              name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0)
           : GradientDirectionModel.fromJson(
               json['beginLinearGradient'] as Map<String, dynamic>),
       endLinearGradient: json['endLinearGradient'] == null
           ? const GradientDirectionModel(
-              name: 'Bottom Right', aligmentX: 1.0, aligmentY: 1.0)
+              name: 'BottomRight', aligmentX: 1.0, aligmentY: 1.0)
           : GradientDirectionModel.fromJson(
               json['endLinearGradient'] as Map<String, dynamic>),
       centerRadiusGradient: json['centerRadiusGradient'] == null

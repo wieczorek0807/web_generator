@@ -49,5 +49,15 @@
       "type": "double"
     }
   }
+},
+
+"directions": "{index, select, TopRight{Top Right} TopLeft{Top Left} TopCenter{Top Center} CenterRight{Center Right} CenterLeft{Center Left} Center{Center} BottomRight{Bottom Right} BottomLeft{Bottom Left} BottomCenter{Bottom Center} other{err}}",
+"@directions": {
+  "placeholders": {
+    "index": {
+      "type": "String"
+    }
+  }
 }
+
 }

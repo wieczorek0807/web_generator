@@ -6518,9 +6518,9 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
       this.isLinearGradient = false,
       this.isRadialGradient = false,
       this.beginLinearGradient = const GradientDirectionModel(
-          name: 'Top Right', aligmentX: -1.0, aligmentY: -1.0),
+          name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0),
       this.endLinearGradient = const GradientDirectionModel(
-          name: 'Bottom Right', aligmentX: 1.0, aligmentY: 1.0),
+          name: 'BottomRight', aligmentX: 1.0, aligmentY: 1.0),
       this.centerRadiusGradient = const GradientDirectionModel(
           name: 'Center', aligmentX: 0.0, aligmentY: 0.0)})
       : _gradientColors = gradientColors;
