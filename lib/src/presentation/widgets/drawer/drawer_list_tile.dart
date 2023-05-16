@@ -20,16 +20,20 @@ class DrawerListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      tileColor: focus ? AppColors.tangerine : Colors.white,
-      textColor: focus ? Colors.white : Colors.black,
-      iconColor: focus ? Colors.white : Colors.black,
-      leading: leadingIcon,
-      title: Text(title),
-      onTap: () {
-        onTap();
-        popAfterOnTap ? Navigator.pop(context) : none();
-      },
+    return Padding(
+      padding: const EdgeInsets.all(5.0),
+      child: ListTile(
+        tileColor: focus ? Colors.grey.shade300 : Colors.white,
+        textColor: focus ? AppColors.prussianBlue : Colors.black,
+        iconColor: focus ? AppColors.prussianBlue : Colors.black,
+        leading: leadingIcon,
+        title: Text(title,
+            style: focus ? TextStyle(fontWeight: FontWeight.bold) : null),
+        onTap: () {
+          onTap();
+          popAfterOnTap ? Navigator.pop(context) : none();
+        },
+      ),
     );
   }
 }

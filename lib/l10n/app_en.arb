@@ -1,5 +1,4 @@
 {
-  "helloWorld": "Hello World!",
   "boxShadow" : "Box shadow",
   "borderRadius": "Border radius",
   "changeSizeOfBlock": "Change size of block",
@@ -38,5 +37,17 @@
   "removeColor": "Remove color",
 
   "pickColor": "Pick color",
-  "select": "Select"
+  "select": "Select",
+
+  "valueErr": "Value must be between {min} and {max}",
+  "@valueErr": {
+  "placeholders": {
+    "min": {
+      "type": "double"
+    },
+      "max": {
+      "type": "double"
+    }
+  }
+}
 }

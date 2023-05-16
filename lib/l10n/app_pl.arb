@@ -1,13 +1,12 @@
 {
-  "helloWorld": "Hello World!",
-  "boxShadow" : "Box shadow",
-  "borderRadius": "Border radius",
-  "changeSizeOfBlock": "Zmień wielkość",
-  "gradientGenerator": "Generator gradientu",
+  "boxShadow" : "Cień obiektu",
+  "borderRadius": "Krawędzie",
+  "changeSizeOfBlock": "Wielkość obiektu",
+  "gradientGenerator": "Gradient",
 
-  "offset": "Offset",
-  "blurRadius": "Blur radius",
-  "spreadRadius": "Spread radius",
+  "offset": "Przesunięcie",
+  "blurRadius": "Promień rozmycia",
+  "spreadRadius": "Rozłożenie rozmycia",
   "shadowColor": "Kolor cienia",
   "boxColor": "Kolor wypełnienia",
 
@@ -26,7 +25,7 @@
 
   "gradientOff": "Gradient wyłączony",
   "linearGradient": "Gradient liniowy",
-  "radiusGradient": "Gradient promieniowy",
+  "radiusGradient": "Gradient promienisty",
 
   "directionStart": "Początek",
   "directionEnd": "Koniec",
@@ -35,5 +34,7 @@
   "removeColor": "Usuń kolor",
 
   "pickColor": "Wybierz kolor",
-  "select": "Wybierz"
+  "select": "Wybierz",
+
+   "valueErr": "Wartość musi być pomiędzy {min} a {max}"
 }

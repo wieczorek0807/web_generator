@@ -6498,56 +6498,75 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AnimatedBoxState implements _AnimatedBoxState {
   const _$_AnimatedBoxState(
-      {required this.offsetDx,
-      required this.offsetDy,
-      required this.boxWidth,
-      required this.boxHeight,
-      required this.shadowColor,
-      required this.animatedBoxColor,
-      required this.blurRadius,
-      required this.spreadRadius,
-      required this.topLeftRadius,
-      required this.topRightRadius,
-      required this.bottomLeftRadius,
-      required this.bottomRightRadius,
-      required final List<GradientColorModel> gradientColors,
-      required this.isGradientEnabled,
-      required this.isLinearGradient,
-      required this.isRadialGradient,
-      required this.beginLinearGradient,
-      required this.endLinearGradient,
-      required this.centerRadiusGradient})
+      {this.offsetDx = 0.0,
+      this.offsetDy = 0.0,
+      this.boxWidth = 350.0,
+      this.boxHeight = 350.0,
+      this.shadowColor = 4279308052,
+      this.animatedBoxColor = 4293848814,
+      this.blurRadius = 0.0,
+      this.spreadRadius = 0.0,
+      this.topLeftRadius = 0.0,
+      this.topRightRadius = 0.0,
+      this.bottomLeftRadius = 0.0,
+      this.bottomRightRadius = 0.0,
+      final List<GradientColorModel> gradientColors = const [
+        GradientColorModel(id: 0, color: 4278267456, value: 0),
+        GradientColorModel(id: 1, color: 4278422668, value: 1)
+      ],
+      this.isGradientEnabled = false,
+      this.isLinearGradient = false,
+      this.isRadialGradient = false,
+      this.beginLinearGradient = const GradientDirectionModel(
+          name: 'Top Right', aligmentX: -1.0, aligmentY: -1.0),
+      this.endLinearGradient = const GradientDirectionModel(
+          name: 'Bottom Right', aligmentX: 1.0, aligmentY: 1.0),
+      this.centerRadiusGradient = const GradientDirectionModel(
+          name: 'Center', aligmentX: 0.0, aligmentY: 0.0)})
       : _gradientColors = gradientColors;
 
   factory _$_AnimatedBoxState.fromJson(Map<String, dynamic> json) =>
       _$$_AnimatedBoxStateFromJson(json);
 
   @override
+  @JsonKey()
   final double offsetDx;
   @override
+  @JsonKey()
   final double offsetDy;
   @override
+  @JsonKey()
   final double boxWidth;
   @override
+  @JsonKey()
   final double boxHeight;
   @override
+  @JsonKey()
   final int shadowColor;
   @override
+  @JsonKey()
   final int animatedBoxColor;
   @override
+  @JsonKey()
   final double blurRadius;
   @override
+  @JsonKey()
   final double spreadRadius;
   @override
+  @JsonKey()
   final double topLeftRadius;
   @override
+  @JsonKey()
   final double topRightRadius;
   @override
+  @JsonKey()
   final double bottomLeftRadius;
   @override
+  @JsonKey()
   final double bottomRightRadius;
   final List<GradientColorModel> _gradientColors;
   @override
+  @JsonKey()
   List<GradientColorModel> get gradientColors {
     if (_gradientColors is EqualUnmodifiableListView) return _gradientColors;
     // ignore: implicit_dynamic_type
@@ -6555,16 +6574,22 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
   }
 
   @override
+  @JsonKey()
   final bool isGradientEnabled;
   @override
+  @JsonKey()
   final bool isLinearGradient;
   @override
+  @JsonKey()
   final bool isRadialGradient;
   @override
+  @JsonKey()
   final GradientDirectionModel beginLinearGradient;
   @override
+  @JsonKey()
   final GradientDirectionModel endLinearGradient;
   @override
+  @JsonKey()
   final GradientDirectionModel centerRadiusGradient;
 
   @override
@@ -6658,26 +6683,25 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
 
 abstract class _AnimatedBoxState implements AnimatedBoxState {
   const factory _AnimatedBoxState(
-          {required final double offsetDx,
-          required final double offsetDy,
-          required final double boxWidth,
-          required final double boxHeight,
-          required final int shadowColor,
-          required final int animatedBoxColor,
-          required final double blurRadius,
-          required final double spreadRadius,
-          required final double topLeftRadius,
-          required final double topRightRadius,
-          required final double bottomLeftRadius,
-          required final double bottomRightRadius,
-          required final List<GradientColorModel> gradientColors,
-          required final bool isGradientEnabled,
-          required final bool isLinearGradient,
-          required final bool isRadialGradient,
-          required final GradientDirectionModel beginLinearGradient,
-          required final GradientDirectionModel endLinearGradient,
-          required final GradientDirectionModel centerRadiusGradient}) =
-      _$_AnimatedBoxState;
+      {final double offsetDx,
+      final double offsetDy,
+      final double boxWidth,
+      final double boxHeight,
+      final int shadowColor,
+      final int animatedBoxColor,
+      final double blurRadius,
+      final double spreadRadius,
+      final double topLeftRadius,
+      final double topRightRadius,
+      final double bottomLeftRadius,
+      final double bottomRightRadius,
+      final List<GradientColorModel> gradientColors,
+      final bool isGradientEnabled,
+      final bool isLinearGradient,
+      final bool isRadialGradient,
+      final GradientDirectionModel beginLinearGradient,
+      final GradientDirectionModel endLinearGradient,
+      final GradientDirectionModel centerRadiusGradient}) = _$_AnimatedBoxState;
 
   factory _AnimatedBoxState.fromJson(Map<String, dynamic> json) =
       _$_AnimatedBoxState.fromJson;

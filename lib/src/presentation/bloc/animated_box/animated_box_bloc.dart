@@ -13,7 +13,7 @@ part 'animated_box_bloc.freezed.dart';
 part 'animated_box_bloc.g.dart';
 
 class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
-  AnimatedBoxBloc() : super(_initail) {
+  AnimatedBoxBloc() : super(const AnimatedBoxState()) {
     on<AnimatedBoxEvent>((event, emit) {
       _updateValues(event);
     });
@@ -21,7 +21,7 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
 
   void _updateValues(AnimatedBoxEvent event) => event.maybeWhen(
         orElse: () => null,
-        undoChanges: () => emit(_initail),
+        undoChanges: () => emit(const AnimatedBoxState()),
         updateSpread: (v) => emit(state.copyWith(spreadRadius: v)),
         updateBlur: (v) => emit(state.copyWith(blurRadius: v)),
         updateOffsetX: (v) => emit(state.copyWith(offsetDx: v)),
@@ -138,7 +138,7 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
       return AnimatedBoxState.fromJson(json);
     } catch (e) {
       print('from jsocn $e');
-      return _initail;
+      return const AnimatedBoxState();
     }
   }
 
@@ -151,28 +151,3 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
     }
   }
 }
-
-// bloc initial state
-final AnimatedBoxState _initail = AnimatedBoxState(
-    offsetDx: 0,
-    offsetDy: 0,
-    boxWidth: 350.0,
-    boxHeight: 350.0,
-    shadowColor: AppColors.shadow.value,
-    animatedBoxColor: Colors.grey.shade200.value,
-    blurRadius: 0.0,
-    spreadRadius: 0.0,
-    topLeftRadius: 0.0,
-    topRightRadius: 0.0,
-    bottomLeftRadius: 0.0,
-    bottomRightRadius: 0.0,
-    isGradientEnabled: false,
-    isLinearGradient: false,
-    isRadialGradient: false,
-    gradientColors: [
-      GradientColorModel(id: 0, color: AppColors.prussianBlue.value, value: 0),
-      GradientColorModel(id: 1, color: AppColors.darkCyan.value, value: 1)
-    ],
-    beginLinearGradient: allGradientDirecitons[1],
-    endLinearGradient: allGradientDirecitons[6],
-    centerRadiusGradient: allGradientDirecitons[5]);

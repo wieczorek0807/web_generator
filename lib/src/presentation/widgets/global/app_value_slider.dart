@@ -1,7 +1,7 @@
 import 'package:box_shadow_generator/src/core/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import '../../../core/values/dimens.dart';
 
 class AppValueSlider extends StatelessWidget {
@@ -71,7 +71,8 @@ class AppValueSlider extends StatelessWidget {
                     }
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         backgroundColor: AppColors.tangerine,
-                        content: Text('Value must be between $min and $max')));
+                        content: Text(
+                            AppLocalizations.of(context)!.valueErr(min, max))));
                     return '';
                   },
                 ),

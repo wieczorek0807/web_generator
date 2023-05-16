@@ -34,8 +34,7 @@ class WebBoxResponsiveScreen extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: WebBoxAppBar(
-            // title: currnetWidth <= 1200 ? state.title : 'Web box generator',
-            title: AppLocalizations.of(context)!.helloWorld,
+            title: state.title,
           ),
           backgroundColor: Colors.white,
           drawer: currnetWidth <= 1200

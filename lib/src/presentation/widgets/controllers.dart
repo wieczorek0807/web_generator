@@ -14,7 +14,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class ShadowControllers extends StatelessWidget {
   const ShadowControllers({Key? key}) : super(key: key);
 
-  static const _width = 300.0;
+  static const _width = 320.0;
   static const _blurMin = 0.0;
 
   @override
@@ -80,7 +80,7 @@ class ShadowControllers extends StatelessWidget {
 class RadiusControllers extends StatelessWidget {
   const RadiusControllers({Key? key}) : super(key: key);
 
-  static const _width = 300.0;
+  static const _width = 320.0;
   static const _radiusMin = 0.0;
   static const _radiusMax = 250.0;
 
@@ -138,7 +138,7 @@ class RadiusControllers extends StatelessWidget {
 class SizeControllers extends StatelessWidget {
   SizeControllers({Key? key}) : super(key: key);
 
-  static const _width = 300.0;
+  static const _width = 320.0;
   static const _valueMin = 0.0;
   var _valueMax = 350.0;
 
@@ -183,7 +183,7 @@ class SizeControllers extends StatelessWidget {
 class GradientControllers extends StatelessWidget {
   const GradientControllers({Key? key}) : super(key: key);
 
-  static const _width = 300.0;
+  static const _width = 320.0;
 
   @override
   Widget build(BuildContext context) => SizedBox(
