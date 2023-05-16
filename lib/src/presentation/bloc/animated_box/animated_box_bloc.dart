@@ -137,7 +137,7 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
     try {
       return AnimatedBoxState.fromJson(json);
     } catch (e) {
-      print('from jsocn $e');
+      // print('from jsocn $e');
       return const AnimatedBoxState();
     }
   }
@@ -147,7 +147,8 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
     try {
       return state.toJson();
     } catch (e) {
-      print('to json err $e');
+      // print('to json err $e');
     }
+    return null;
   }
 }

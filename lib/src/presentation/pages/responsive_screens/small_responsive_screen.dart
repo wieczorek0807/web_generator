@@ -9,22 +9,27 @@ class SmallResponsiveScreen extends StatelessWidget {
   final Widget controllers;
   final Widget animatedBox;
   @override
-  Widget build(BuildContext context) => Center(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
+  Widget build(BuildContext context) => SafeArea(
+        child: Row(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                child: Column(children: [
+                  const SizedBox(
+                    height: AppDimens.d100,
+                  ),
+                  animatedBox,
+                  const SizedBox(
+                    height: AppDimens.d130,
+                  ),
                   controllers,
-                  const SizedBox(width: AppDimens.d130),
-                  animatedBox
-                ],
+                  const SizedBox(
+                    height: AppDimens.d52,
+                  ),
+                ]),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
 }

@@ -21,14 +21,16 @@ class DrawerListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(5.0),
+      padding: const EdgeInsets.only(
+        bottom: 5,
+      ),
       child: ListTile(
         tileColor: focus ? Colors.grey.shade300 : Colors.white,
         textColor: focus ? AppColors.prussianBlue : Colors.black,
         iconColor: focus ? AppColors.prussianBlue : Colors.black,
         leading: leadingIcon,
         title: Text(title,
-            style: focus ? TextStyle(fontWeight: FontWeight.bold) : null),
+            style: focus ? const TextStyle(fontWeight: FontWeight.bold) : null),
         onTap: () {
           onTap();
           popAfterOnTap ? Navigator.pop(context) : none();

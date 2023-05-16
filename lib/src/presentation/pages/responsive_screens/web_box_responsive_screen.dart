@@ -8,7 +8,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../bloc/routing/routing_state.dart';
 import '../../widgets/drawer/web_box_drawer.dart';
 import 'medium_responsive_screen.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WebBoxResponsiveScreen extends StatelessWidget {
   const WebBoxResponsiveScreen({
@@ -83,16 +82,16 @@ class _ResponsiveScreenHelper extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final currnetWidth = MediaQuery.of(context).size.width;
-    if (currnetWidth < 900) {
-      return MediumResponsiveScreen(
+    if (currnetWidth >= 1200) {
+      return LargeResponsiveScreen(
         controllers: controllers,
         animatedBox: animatedBox,
       );
-    } else if (currnetWidth < 1200) {
-      return SmallResponsiveScreen(
+    } else if (currnetWidth >= 900) {
+      return MediumResponsiveScreen(
           controllers: controllers, animatedBox: animatedBox);
     } else {
-      return LargeResponsiveScreen(
+      return SmallResponsiveScreen(
           controllers: controllers, animatedBox: animatedBox);
     }
   }

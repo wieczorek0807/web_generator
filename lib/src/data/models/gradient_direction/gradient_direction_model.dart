@@ -1,10 +1,6 @@
-import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:path/path.dart';
 
 part 'gradient_direction_model.freezed.dart';
 part 'gradient_direction_model.g.dart';

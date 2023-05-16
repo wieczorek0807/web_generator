@@ -23,7 +23,7 @@ class WebBoxDrawer extends StatelessWidget {
           child: ListView(
             padding: EdgeInsets.zero,
             children: [
-              _webBoxDrawerHeader(isEnabled: !isLargeDisplay),
+              _WebBoxDrawerHeader(isEnabled: !isLargeDisplay),
               DrawerListTile(
                 focus: state.boxShadowscreen,
                 leadingIcon: const Icon(Icons.border_style),
@@ -61,8 +61,8 @@ class WebBoxDrawer extends StatelessWidget {
   }
 }
 
-class _webBoxDrawerHeader extends StatelessWidget {
-  const _webBoxDrawerHeader({required this.isEnabled});
+class _WebBoxDrawerHeader extends StatelessWidget {
+  const _WebBoxDrawerHeader({required this.isEnabled});
 
   final bool isEnabled;
 
@@ -75,7 +75,7 @@ class _webBoxDrawerHeader extends StatelessWidget {
           Container(
             width: double.infinity,
             color: AppColors.prussianBlue,
-            child: Padding(
+            child: const Padding(
               padding: EdgeInsets.all(16.0),
               child: Text(
                 'Web box generator',

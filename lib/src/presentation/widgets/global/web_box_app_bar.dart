@@ -22,8 +22,9 @@ class _WebBoxAppBarState extends State<WebBoxAppBar> {
   Widget build(BuildContext context) {
     final currnetWidth = MediaQuery.of(context).size.width;
     return AppBar(
-      title:
-          currnetWidth < 1200 ? Text(widget.title) : Text('Web Box generator'),
+      title: currnetWidth < 1200
+          ? Text(widget.title)
+          : const Text('Web Box generator'),
       backgroundColor: AppColors.prussianBlue,
       actions: [
         IconButton(
