@@ -4,9 +4,6 @@
   "changeSizeOfBlock": "Wielkość obiektu",
   "gradientGenerator": "Gradient",
 
-  "offset": "Przesunięcie",
-  "blurRadius": "Promień rozmycia",
-  "spreadRadius": "Rozłożenie rozmycia",
   "shadowColor": "Kolor cienia",
   "boxColor": "Kolor wypełnienia",
 
