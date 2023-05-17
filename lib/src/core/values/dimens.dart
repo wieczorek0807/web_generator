@@ -29,6 +29,5 @@ class AppDimens {
   static const d96 = 96.0;
   static const d100 = 100.0;
   static const d130 = 130.0;
-  // specific dimens
   static const animatedContainerSize = 300.0;
 }

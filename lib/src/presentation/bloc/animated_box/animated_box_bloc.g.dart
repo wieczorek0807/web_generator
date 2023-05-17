@@ -16,10 +16,14 @@ _$_AnimatedBoxState _$$_AnimatedBoxStateFromJson(Map<String, dynamic> json) =>
       animatedBoxColor: json['animatedBoxColor'] as int? ?? 4293848814,
       blurRadius: (json['blurRadius'] as num?)?.toDouble() ?? 0.0,
       spreadRadius: (json['spreadRadius'] as num?)?.toDouble() ?? 0.0,
-      topLeftRadius: (json['topLeftRadius'] as num?)?.toDouble() ?? 0.0,
-      topRightRadius: (json['topRightRadius'] as num?)?.toDouble() ?? 0.0,
-      bottomLeftRadius: (json['bottomLeftRadius'] as num?)?.toDouble() ?? 0.0,
-      bottomRightRadius: (json['bottomRightRadius'] as num?)?.toDouble() ?? 0.0,
+      borderRadius: json['borderRadius'] == null
+          ? const BorderRadiusModel(
+              bottomLeftRadius: 0,
+              bottomRightRadius: 0,
+              topLeftRadius: 0,
+              topRightRadius: 0)
+          : BorderRadiusModel.fromJson(
+              json['borderRadius'] as Map<String, dynamic>),
       gradientColors: (json['gradientColors'] as List<dynamic>?)
               ?.map(
                   (e) => GradientColorModel.fromJson(e as Map<String, dynamic>))
@@ -58,10 +62,7 @@ Map<String, dynamic> _$$_AnimatedBoxStateToJson(_$_AnimatedBoxState instance) =>
       'animatedBoxColor': instance.animatedBoxColor,
       'blurRadius': instance.blurRadius,
       'spreadRadius': instance.spreadRadius,
-      'topLeftRadius': instance.topLeftRadius,
-      'topRightRadius': instance.topRightRadius,
-      'bottomLeftRadius': instance.bottomLeftRadius,
-      'bottomRightRadius': instance.bottomRightRadius,
+      'borderRadius': instance.borderRadius.toJson(),
       'gradientColors': instance.gradientColors.map((e) => e.toJson()).toList(),
       'isGradientEnabled': instance.isGradientEnabled,
       'isLinearGradient': instance.isLinearGradient,

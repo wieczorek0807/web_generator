@@ -43,28 +43,29 @@ class WebBoxResponsiveScreen extends StatelessWidget {
                 ))
               : null,
           body: BlocBuilder<RoutingCubit, RoutingState>(
-              builder: (context, state) {
-            if (state.boxShadowscreen) {
+            builder: (context, state) {
+              if (state.boxShadowscreen) {
+                return _ResponsiveScreenHelper(
+                  controllers: shadowControllers,
+                  animatedBox: animatedBox,
+                );
+              } else if (state.boxRadiusscreen) {
+                return _ResponsiveScreenHelper(
+                  controllers: radiusControllers,
+                  animatedBox: animatedBox,
+                );
+              } else if (state.boxSizescreen) {
+                return _ResponsiveScreenHelper(
+                  controllers: sizeControllers,
+                  animatedBox: animatedBox,
+                );
+              }
               return _ResponsiveScreenHelper(
-                controllers: shadowControllers,
+                controllers: gradientControllers,
                 animatedBox: animatedBox,
               );
-            } else if (state.boxRadiusscreen) {
-              return _ResponsiveScreenHelper(
-                controllers: radiusControllers,
-                animatedBox: animatedBox,
-              );
-            } else if (state.boxSizescreen) {
-              return _ResponsiveScreenHelper(
-                controllers: sizeControllers,
-                animatedBox: animatedBox,
-              );
-            }
-            return _ResponsiveScreenHelper(
-              controllers: gradientControllers,
-              animatedBox: animatedBox,
-            );
-          }),
+            },
+          ),
         );
       },
     );
@@ -88,11 +89,9 @@ class _ResponsiveScreenHelper extends StatelessWidget {
         animatedBox: animatedBox,
       );
     } else if (currnetWidth >= 900) {
-      return MediumResponsiveScreen(
-          controllers: controllers, animatedBox: animatedBox);
+      return MediumResponsiveScreen(controllers: controllers, animatedBox: animatedBox);
     } else {
-      return SmallResponsiveScreen(
-          controllers: controllers, animatedBox: animatedBox);
+      return SmallResponsiveScreen(controllers: controllers, animatedBox: animatedBox);
     }
   }
 }

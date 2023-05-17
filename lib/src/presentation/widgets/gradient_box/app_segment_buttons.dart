@@ -17,12 +17,8 @@ class AppSegmentButtons extends StatelessWidget {
       : super(key: key);
 
   int _groupValueChoose() {
-    if (!isGradiennEnabled) {
-      return 0;
-    }
-    if (isLinearGradient) {
-      return 1;
-    }
+    if (!isGradiennEnabled) return 0;
+    if (isLinearGradient) return 1;
     return 2;
   }
 

@@ -1,4 +1,5 @@
 // ignore: depend_on_referenced_packages
+import 'package:box_shadow_generator/src/data/models/border_radius/border_radius_model.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
@@ -27,111 +28,96 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
         updateOffsetX: (v) => emit(state.copyWith(offsetDx: v)),
         updateOffsetY: (v) => emit(state.copyWith(offsetDy: v)),
         updateShadowColor: (v) => emit(state.copyWith(shadowColor: v.value)),
-        updateAnimatedBoxColor: (v) =>
-            emit(state.copyWith(animatedBoxColor: v.value)),
-        updateTopLeftRadius: (v) => emit(state.copyWith(topLeftRadius: v)),
-        updateTopRightRadius: (v) => emit(state.copyWith(topRightRadius: v)),
+        updateAnimatedBoxColor: (v) => emit(state.copyWith(animatedBoxColor: v.value)),
+        updateTopLeftRadius: (v) => emit(state.copyWith(borderRadius: state.borderRadius.copyWith(topLeftRadius: v))),
+        updateTopRightRadius: (v) => emit(state.copyWith(borderRadius: state.borderRadius.copyWith(topRightRadius: v))),
         updateBottomLeftRadius: (v) =>
-            emit(state.copyWith(bottomLeftRadius: v)),
+            emit(state.copyWith(borderRadius: state.borderRadius.copyWith(bottomLeftRadius: v))),
         updateBottomRightRadius: (v) =>
-            emit(state.copyWith(bottomRightRadius: v)),
+            emit(state.copyWith(borderRadius: state.borderRadius.copyWith(bottomRightRadius: v))),
         updateBoxHeight: (v) => emit(state.copyWith(boxHeight: v)),
         updateBoxWidth: (v) => emit(state.copyWith(boxWidth: v)),
         addGradientColor: _addGradientColor,
         removeGradientColor: _removeGradientColor,
-        updateGradientColor: (id, newColor) =>
-            _updateGradient(color: newColor.value, index: id),
-        updateGradientValue: (id, value) =>
-            _updateGradient(index: id, value: value),
+        updateGradientColor: (id, newColor) => _updateGradient(color: newColor.value, index: id),
+        updateGradientValue: (id, value) => _updateGradient(index: id, value: value),
         changeGradientState: (v) => _changeGradientState(v),
-        changeGradientBeginValue: (v) =>
-            emit(state.copyWith(beginLinearGradient: v)),
-        changeGradientEndValue: (v) =>
-            emit(state.copyWith(endLinearGradient: v)),
-        changeGradientCenterValue: (v) =>
-            emit(state.copyWith(centerRadiusGradient: v)),
+        changeGradientBeginValue: (v) => emit(state.copyWith(beginLinearGradient: v)),
+        changeGradientEndValue: (v) => emit(state.copyWith(endLinearGradient: v)),
+        changeGradientCenterValue: (v) => emit(state.copyWith(centerRadiusGradient: v)),
       );
 
   // Gradient functions
 
   void _addGradientColor() {
-    if (state.gradientColors.length < 6) {
-      final newColor = GradientColorModel(
-          id: state.gradientColors.length,
-          color: AppColors.tangerine.value,
-          value: 0);
-      final colors = List.of([...state.gradientColors, newColor]);
+    if (state.gradientColors.length >= 6) return;
 
-      List<GradientColorModel> newState =
-          _setValueWhenAddCollor(gradientColorEnitiyList: colors);
-      emit(state.copyWith(gradientColors: newState));
-    }
+    final newColor = GradientColorModel(id: state.gradientColors.length, color: AppColors.tangerine.value, value: 0);
+    final colors = List.of([...state.gradientColors, newColor]);
+
+    List<GradientColorModel> newState = _setValueWhenAddCollor(gradientColorEnitiyList: colors);
+    emit(state.copyWith(gradientColors: newState));
   }
 
   void _removeGradientColor() {
-    if (state.gradientColors.length > 2) {
-      List<GradientColorModel> colorsInState = [...state.gradientColors];
-      colorsInState.removeLast();
+    if (state.gradientColors.length <= 2) return;
 
-      List<GradientColorModel> newState =
-          _setValueWhenAddCollor(gradientColorEnitiyList: colorsInState);
+    List<GradientColorModel> colorsInState = [...state.gradientColors];
+    colorsInState.removeLast();
 
-      emit(state.copyWith(gradientColors: newState));
-    }
+    List<GradientColorModel> newState = _setValueWhenAddCollor(gradientColorEnitiyList: colorsInState);
+    emit(state.copyWith(gradientColors: newState));
   }
 
   void _changeGradientState(int value) {
     switch (value) {
       case 0:
-        emit(state.copyWith(isGradientEnabled: false));
-        break;
-
+        return emit(state.copyWith(isGradientEnabled: false));
       case 1:
-        emit(state.copyWith(
+        return emit(
+          state.copyWith(
             isGradientEnabled: true,
             isLinearGradient: true,
-            isRadialGradient: false));
-        break;
+            isRadialGradient: false,
+          ),
+        );
 
       case 2:
-        emit(state.copyWith(
+        return emit(
+          state.copyWith(
             isGradientEnabled: true,
             isLinearGradient: false,
-            isRadialGradient: true));
-        break;
+            isRadialGradient: true,
+          ),
+        );
     }
   }
 
   void _updateGradient({int? color, required int index, double? value}) {
     GradientColorModel colorToChange = state.gradientColors[index];
     GradientColorModel newColor = GradientColorModel(
-        id: colorToChange.id,
-        color: color ??= colorToChange.color,
-        value: value ?? colorToChange.value);
+        id: colorToChange.id, color: color ??= colorToChange.color, value: value ?? colorToChange.value);
     List<GradientColorModel> colorsInState = [...state.gradientColors];
     colorsInState[index] = newColor;
     emit(state.copyWith(gradientColors: colorsInState));
   }
 
-  List<GradientColorModel> _setValueWhenAddCollor(
-      {required List<GradientColorModel> gradientColorEnitiyList}) {
+  List<GradientColorModel> _setValueWhenAddCollor({required List<GradientColorModel> gradientColorEnitiyList}) {
     double newvalue = 1 / (gradientColorEnitiyList.length - 1);
     List<GradientColorModel> colorsInState = [];
     GradientColorModel firstElement = gradientColorEnitiyList.removeAt(0);
     GradientColorModel lastElement = gradientColorEnitiyList.removeLast();
 
-    colorsInState.add(GradientColorModel(
-        id: firstElement.id, color: firstElement.color, value: 0));
+    colorsInState.add(GradientColorModel(id: firstElement.id, color: firstElement.color, value: 0));
     for (var element in gradientColorEnitiyList) {
-      colorsInState.add(GradientColorModel(
-          id: element.id, color: element.color, value: newvalue * element.id));
+      colorsInState.add(GradientColorModel(id: element.id, color: element.color, value: newvalue * element.id));
     }
-    colorsInState.add(GradientColorModel(
-        id: lastElement.id, color: lastElement.color, value: 1));
+    colorsInState.add(GradientColorModel(id: lastElement.id, color: lastElement.color, value: 1));
 
     return colorsInState;
   }
 
+  //Hydrated Bloc
   @override
   AnimatedBoxState? fromJson(Map<String, dynamic> json) {
     try {

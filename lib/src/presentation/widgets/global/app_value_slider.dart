@@ -52,27 +52,20 @@ class AppValueSlider extends StatelessWidget {
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
                       contentPadding: EdgeInsets.all(10),
-                      focusedBorder: UnderlineInputBorder(
-                          borderSide:
-                              BorderSide(color: AppColors.persianGreen))),
+                      focusedBorder: UnderlineInputBorder(borderSide: BorderSide(color: AppColors.persianGreen))),
                   onFieldSubmitted: (value) {
-                    if (formKey.currentState!.validate()) {
-                      onChanged!(double.parse(value));
-                    }
+                    if (formKey.currentState!.validate()) onChanged!(double.parse(value));
                   },
                   validator: (value) {
                     if (!(value == null || value.isEmpty)) {
                       try {
                         final doubleValue = double.parse(value);
-                        if (doubleValue >= min && doubleValue <= max) {
-                          return null;
-                        }
+                        if (doubleValue >= min && doubleValue <= max) return null;
                       } catch (_) {}
                     }
                     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                         backgroundColor: AppColors.tangerine,
-                        content: Text(
-                            AppLocalizations.of(context)!.valueErr(min, max))));
+                        content: Text(AppLocalizations.of(context)!.valueErr(min, max))));
                     return '';
                   },
                 ),

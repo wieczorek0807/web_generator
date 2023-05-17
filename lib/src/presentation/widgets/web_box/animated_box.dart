@@ -25,8 +25,7 @@ class AnimatedBox extends StatelessWidget {
 
           if (state.isGradientEnabled & state.isLinearGradient) {
             gradient = LinearGradient(
-                colors:
-                    state.gradientColors.map((e) => Color(e.color)).toList(),
+                colors: state.gradientColors.map((e) => Color(e.color)).toList(),
                 stops: state.gradientColors.map((e) => e.value).toList(),
                 begin: state.beginLinearGradient.getAligment(),
                 end: state.endLinearGradient.getAligment());
@@ -38,13 +37,9 @@ class AnimatedBox extends StatelessWidget {
             );
           }
           if (state.boxWidth > currnetWidth) {
-            context
-                .read<AnimatedBoxBloc>()
-                .add(AnimatedBoxEvent.updateBoxWidth(currnetWidth));
+            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxWidth(currnetWidth));
           } else if (state.boxHeight > currnetWidth) {
-            context
-                .read<AnimatedBoxBloc>()
-                .add(AnimatedBoxEvent.updateBoxHeight(currnetWidth));
+            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxHeight(currnetWidth));
           }
 
           return Container(
@@ -61,10 +56,10 @@ class AnimatedBox extends StatelessWidget {
                   ),
                 ],
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(state.topLeftRadius),
-                    topRight: Radius.circular(state.topRightRadius),
-                    bottomLeft: Radius.circular(state.bottomLeftRadius),
-                    bottomRight: Radius.circular(state.bottomRightRadius)),
+                    topLeft: Radius.circular(state.borderRadius.topLeftRadius),
+                    topRight: Radius.circular(state.borderRadius.topRightRadius),
+                    bottomLeft: Radius.circular(state.borderRadius.bottomLeftRadius),
+                    bottomRight: Radius.circular(state.borderRadius.bottomRightRadius)),
                 gradient: gradient),
           );
         },

@@ -19,14 +19,8 @@ class AnimatedBoxState with _$AnimatedBoxState {
         double blurRadius,
     @Default(0.0)
         double spreadRadius,
-    @Default(0.0)
-        double topLeftRadius,
-    @Default(0.0)
-        double topRightRadius,
-    @Default(0.0)
-        double bottomLeftRadius,
-    @Default(0.0)
-        double bottomRightRadius,
+    @Default(BorderRadiusModel(bottomLeftRadius: 0, bottomRightRadius: 0, topLeftRadius: 0, topRightRadius: 0))
+        BorderRadiusModel borderRadius,
     @Default([
       GradientColorModel(id: 0, color: 4278267456, value: 0),
       GradientColorModel(id: 1, color: 4278422668, value: 1)
@@ -38,18 +32,13 @@ class AnimatedBoxState with _$AnimatedBoxState {
         bool isLinearGradient,
     @Default(false)
         bool isRadialGradient,
-    @Default(
-        GradientDirectionModel(
-            name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0))
+    @Default(GradientDirectionModel(name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0))
         GradientDirectionModel beginLinearGradient,
-    @Default(
-        GradientDirectionModel(
-            name: 'BottomRight', aligmentX: 1.0, aligmentY: 1.0))
+    @Default(GradientDirectionModel(name: 'BottomRight', aligmentX: 1.0, aligmentY: 1.0))
         GradientDirectionModel endLinearGradient,
     @Default(GradientDirectionModel(name: 'Center', aligmentX: 0.0, aligmentY: 0.0))
         GradientDirectionModel centerRadiusGradient,
   }) = _AnimatedBoxState;
 
-  factory AnimatedBoxState.fromJson(Map<String, dynamic> json) =>
-      _$AnimatedBoxStateFromJson(json);
+  factory AnimatedBoxState.fromJson(Map<String, dynamic> json) => _$AnimatedBoxStateFromJson(json);
 }

@@ -14,35 +14,37 @@ class GradientDirection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
       builder: (context, state) {
-        if (state.isLinearGradient) {
-          return Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              GradientDropdownButton(
-                  name: AppLocalizations.of(context)!.directionStart,
-                  dropDownButtonValue: state.beginLinearGradient,
-                  dropDownButtonItems: allGradientDirecitons,
-                  onChange: (v) => context.read<AnimatedBoxBloc>().add(
-                      AnimatedBoxEvent.changeGradientBeginValue(
-                          beginLinearGradient: v))),
-              GradientDropdownButton(
-                  name: AppLocalizations.of(context)!.directionEnd,
-                  dropDownButtonValue: state.endLinearGradient,
-                  dropDownButtonItems: allGradientDirecitons,
-                  onChange: (v) => context.read<AnimatedBoxBloc>().add(
-                      AnimatedBoxEvent.changeGradientEndValue(
-                          endLinearGradient: v))),
-            ],
-          );
-        }
-
-        return GradientDropdownButton(
+        if (!state.isLinearGradient) {
+          return GradientDropdownButton(
             name: AppLocalizations.of(context)!.center,
             dropDownButtonValue: state.centerRadiusGradient,
             dropDownButtonItems: allGradientDirecitons,
             onChange: (v) => context.read<AnimatedBoxBloc>().add(
-                AnimatedBoxEvent.changeGradientCenterValue(
-                    centerRadiusGradient: v)));
+                  AnimatedBoxEvent.changeGradientCenterValue(centerRadiusGradient: v),
+                ),
+          );
+        }
+        return Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            GradientDropdownButton(
+              name: AppLocalizations.of(context)!.directionStart,
+              dropDownButtonValue: state.beginLinearGradient,
+              dropDownButtonItems: allGradientDirecitons,
+              onChange: (v) => context.read<AnimatedBoxBloc>().add(
+                    AnimatedBoxEvent.changeGradientBeginValue(beginLinearGradient: v),
+                  ),
+            ),
+            GradientDropdownButton(
+              name: AppLocalizations.of(context)!.directionEnd,
+              dropDownButtonValue: state.endLinearGradient,
+              dropDownButtonItems: allGradientDirecitons,
+              onChange: (v) => context.read<AnimatedBoxBloc>().add(
+                    AnimatedBoxEvent.changeGradientEndValue(endLinearGradient: v),
+                  ),
+            ),
+          ],
+        );
       },
     );
   }

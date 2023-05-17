@@ -6150,10 +6150,7 @@ mixin _$AnimatedBoxState {
   int get animatedBoxColor => throw _privateConstructorUsedError;
   double get blurRadius => throw _privateConstructorUsedError;
   double get spreadRadius => throw _privateConstructorUsedError;
-  double get topLeftRadius => throw _privateConstructorUsedError;
-  double get topRightRadius => throw _privateConstructorUsedError;
-  double get bottomLeftRadius => throw _privateConstructorUsedError;
-  double get bottomRightRadius => throw _privateConstructorUsedError;
+  BorderRadiusModel get borderRadius => throw _privateConstructorUsedError;
   List<GradientColorModel> get gradientColors =>
       throw _privateConstructorUsedError;
   bool get isGradientEnabled => throw _privateConstructorUsedError;
@@ -6187,10 +6184,7 @@ abstract class $AnimatedBoxStateCopyWith<$Res> {
       int animatedBoxColor,
       double blurRadius,
       double spreadRadius,
-      double topLeftRadius,
-      double topRightRadius,
-      double bottomLeftRadius,
-      double bottomRightRadius,
+      BorderRadiusModel borderRadius,
       List<GradientColorModel> gradientColors,
       bool isGradientEnabled,
       bool isLinearGradient,
@@ -6199,6 +6193,7 @@ abstract class $AnimatedBoxStateCopyWith<$Res> {
       GradientDirectionModel endLinearGradient,
       GradientDirectionModel centerRadiusGradient});
 
+  $BorderRadiusModelCopyWith<$Res> get borderRadius;
   $GradientDirectionModelCopyWith<$Res> get beginLinearGradient;
   $GradientDirectionModelCopyWith<$Res> get endLinearGradient;
   $GradientDirectionModelCopyWith<$Res> get centerRadiusGradient;
@@ -6225,10 +6220,7 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
     Object? animatedBoxColor = null,
     Object? blurRadius = null,
     Object? spreadRadius = null,
-    Object? topLeftRadius = null,
-    Object? topRightRadius = null,
-    Object? bottomLeftRadius = null,
-    Object? bottomRightRadius = null,
+    Object? borderRadius = null,
     Object? gradientColors = null,
     Object? isGradientEnabled = null,
     Object? isLinearGradient = null,
@@ -6270,22 +6262,10 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
           ? _value.spreadRadius
           : spreadRadius // ignore: cast_nullable_to_non_nullable
               as double,
-      topLeftRadius: null == topLeftRadius
-          ? _value.topLeftRadius
-          : topLeftRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      topRightRadius: null == topRightRadius
-          ? _value.topRightRadius
-          : topRightRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      bottomLeftRadius: null == bottomLeftRadius
-          ? _value.bottomLeftRadius
-          : bottomLeftRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      bottomRightRadius: null == bottomRightRadius
-          ? _value.bottomRightRadius
-          : bottomRightRadius // ignore: cast_nullable_to_non_nullable
-              as double,
+      borderRadius: null == borderRadius
+          ? _value.borderRadius
+          : borderRadius // ignore: cast_nullable_to_non_nullable
+              as BorderRadiusModel,
       gradientColors: null == gradientColors
           ? _value.gradientColors
           : gradientColors // ignore: cast_nullable_to_non_nullable
@@ -6315,6 +6295,14 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
           : centerRadiusGradient // ignore: cast_nullable_to_non_nullable
               as GradientDirectionModel,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $BorderRadiusModelCopyWith<$Res> get borderRadius {
+    return $BorderRadiusModelCopyWith<$Res>(_value.borderRadius, (value) {
+      return _then(_value.copyWith(borderRadius: value) as $Val);
+    });
   }
 
   @override
@@ -6362,10 +6350,7 @@ abstract class _$$_AnimatedBoxStateCopyWith<$Res>
       int animatedBoxColor,
       double blurRadius,
       double spreadRadius,
-      double topLeftRadius,
-      double topRightRadius,
-      double bottomLeftRadius,
-      double bottomRightRadius,
+      BorderRadiusModel borderRadius,
       List<GradientColorModel> gradientColors,
       bool isGradientEnabled,
       bool isLinearGradient,
@@ -6374,6 +6359,8 @@ abstract class _$$_AnimatedBoxStateCopyWith<$Res>
       GradientDirectionModel endLinearGradient,
       GradientDirectionModel centerRadiusGradient});
 
+  @override
+  $BorderRadiusModelCopyWith<$Res> get borderRadius;
   @override
   $GradientDirectionModelCopyWith<$Res> get beginLinearGradient;
   @override
@@ -6401,10 +6388,7 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
     Object? animatedBoxColor = null,
     Object? blurRadius = null,
     Object? spreadRadius = null,
-    Object? topLeftRadius = null,
-    Object? topRightRadius = null,
-    Object? bottomLeftRadius = null,
-    Object? bottomRightRadius = null,
+    Object? borderRadius = null,
     Object? gradientColors = null,
     Object? isGradientEnabled = null,
     Object? isLinearGradient = null,
@@ -6446,22 +6430,10 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
           ? _value.spreadRadius
           : spreadRadius // ignore: cast_nullable_to_non_nullable
               as double,
-      topLeftRadius: null == topLeftRadius
-          ? _value.topLeftRadius
-          : topLeftRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      topRightRadius: null == topRightRadius
-          ? _value.topRightRadius
-          : topRightRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      bottomLeftRadius: null == bottomLeftRadius
-          ? _value.bottomLeftRadius
-          : bottomLeftRadius // ignore: cast_nullable_to_non_nullable
-              as double,
-      bottomRightRadius: null == bottomRightRadius
-          ? _value.bottomRightRadius
-          : bottomRightRadius // ignore: cast_nullable_to_non_nullable
-              as double,
+      borderRadius: null == borderRadius
+          ? _value.borderRadius
+          : borderRadius // ignore: cast_nullable_to_non_nullable
+              as BorderRadiusModel,
       gradientColors: null == gradientColors
           ? _value._gradientColors
           : gradientColors // ignore: cast_nullable_to_non_nullable
@@ -6506,10 +6478,11 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
       this.animatedBoxColor = 4293848814,
       this.blurRadius = 0.0,
       this.spreadRadius = 0.0,
-      this.topLeftRadius = 0.0,
-      this.topRightRadius = 0.0,
-      this.bottomLeftRadius = 0.0,
-      this.bottomRightRadius = 0.0,
+      this.borderRadius = const BorderRadiusModel(
+          bottomLeftRadius: 0,
+          bottomRightRadius: 0,
+          topLeftRadius: 0,
+          topRightRadius: 0),
       final List<GradientColorModel> gradientColors = const [
         GradientColorModel(id: 0, color: 4278267456, value: 0),
         GradientColorModel(id: 1, color: 4278422668, value: 1)
@@ -6554,16 +6527,7 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
   final double spreadRadius;
   @override
   @JsonKey()
-  final double topLeftRadius;
-  @override
-  @JsonKey()
-  final double topRightRadius;
-  @override
-  @JsonKey()
-  final double bottomLeftRadius;
-  @override
-  @JsonKey()
-  final double bottomRightRadius;
+  final BorderRadiusModel borderRadius;
   final List<GradientColorModel> _gradientColors;
   @override
   @JsonKey()
@@ -6594,7 +6558,7 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
 
   @override
   String toString() {
-    return 'AnimatedBoxState(offsetDx: $offsetDx, offsetDy: $offsetDy, boxWidth: $boxWidth, boxHeight: $boxHeight, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, topLeftRadius: $topLeftRadius, topRightRadius: $topRightRadius, bottomLeftRadius: $bottomLeftRadius, bottomRightRadius: $bottomRightRadius, gradientColors: $gradientColors, isGradientEnabled: $isGradientEnabled, isLinearGradient: $isLinearGradient, isRadialGradient: $isRadialGradient, beginLinearGradient: $beginLinearGradient, endLinearGradient: $endLinearGradient, centerRadiusGradient: $centerRadiusGradient)';
+    return 'AnimatedBoxState(offsetDx: $offsetDx, offsetDy: $offsetDy, boxWidth: $boxWidth, boxHeight: $boxHeight, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, borderRadius: $borderRadius, gradientColors: $gradientColors, isGradientEnabled: $isGradientEnabled, isLinearGradient: $isLinearGradient, isRadialGradient: $isRadialGradient, beginLinearGradient: $beginLinearGradient, endLinearGradient: $endLinearGradient, centerRadiusGradient: $centerRadiusGradient)';
   }
 
   @override
@@ -6618,14 +6582,8 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
                 other.blurRadius == blurRadius) &&
             (identical(other.spreadRadius, spreadRadius) ||
                 other.spreadRadius == spreadRadius) &&
-            (identical(other.topLeftRadius, topLeftRadius) ||
-                other.topLeftRadius == topLeftRadius) &&
-            (identical(other.topRightRadius, topRightRadius) ||
-                other.topRightRadius == topRightRadius) &&
-            (identical(other.bottomLeftRadius, bottomLeftRadius) ||
-                other.bottomLeftRadius == bottomLeftRadius) &&
-            (identical(other.bottomRightRadius, bottomRightRadius) ||
-                other.bottomRightRadius == bottomRightRadius) &&
+            (identical(other.borderRadius, borderRadius) ||
+                other.borderRadius == borderRadius) &&
             const DeepCollectionEquality()
                 .equals(other._gradientColors, _gradientColors) &&
             (identical(other.isGradientEnabled, isGradientEnabled) ||
@@ -6644,28 +6602,24 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        offsetDx,
-        offsetDy,
-        boxWidth,
-        boxHeight,
-        shadowColor,
-        animatedBoxColor,
-        blurRadius,
-        spreadRadius,
-        topLeftRadius,
-        topRightRadius,
-        bottomLeftRadius,
-        bottomRightRadius,
-        const DeepCollectionEquality().hash(_gradientColors),
-        isGradientEnabled,
-        isLinearGradient,
-        isRadialGradient,
-        beginLinearGradient,
-        endLinearGradient,
-        centerRadiusGradient
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      offsetDx,
+      offsetDy,
+      boxWidth,
+      boxHeight,
+      shadowColor,
+      animatedBoxColor,
+      blurRadius,
+      spreadRadius,
+      borderRadius,
+      const DeepCollectionEquality().hash(_gradientColors),
+      isGradientEnabled,
+      isLinearGradient,
+      isRadialGradient,
+      beginLinearGradient,
+      endLinearGradient,
+      centerRadiusGradient);
 
   @JsonKey(ignore: true)
   @override
@@ -6691,10 +6645,7 @@ abstract class _AnimatedBoxState implements AnimatedBoxState {
       final int animatedBoxColor,
       final double blurRadius,
       final double spreadRadius,
-      final double topLeftRadius,
-      final double topRightRadius,
-      final double bottomLeftRadius,
-      final double bottomRightRadius,
+      final BorderRadiusModel borderRadius,
       final List<GradientColorModel> gradientColors,
       final bool isGradientEnabled,
       final bool isLinearGradient,
@@ -6723,13 +6674,7 @@ abstract class _AnimatedBoxState implements AnimatedBoxState {
   @override
   double get spreadRadius;
   @override
-  double get topLeftRadius;
-  @override
-  double get topRightRadius;
-  @override
-  double get bottomLeftRadius;
-  @override
-  double get bottomRightRadius;
+  BorderRadiusModel get borderRadius;
   @override
   List<GradientColorModel> get gradientColors;
   @override

@@ -10,8 +10,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'drawer_list_tile.dart';
 
 class WebBoxDrawer extends StatelessWidget {
-  const WebBoxDrawer({Key? key, required this.isLargeDisplay})
-      : super(key: key);
+  const WebBoxDrawer({Key? key, required this.isLargeDisplay}) : super(key: key);
   final bool isLargeDisplay;
 
   @override
@@ -68,28 +67,24 @@ class _WebBoxDrawerHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (isEnabled) {
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: double.infinity,
-            color: AppColors.prussianBlue,
-            child: const Padding(
-              padding: EdgeInsets.all(16.0),
-              child: Text(
-                'Web box generator',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
-                    color: Colors.white),
-              ),
+    if (!isEnabled) return Container();
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Container(
+          width: double.infinity,
+          color: AppColors.prussianBlue,
+          child: const Padding(
+            padding: EdgeInsets.all(16.0),
+            child: Text(
+              'Web box generator',
+              textAlign: TextAlign.left,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24, color: Colors.white),
             ),
           ),
-        ],
-      );
-    }
-    return Container();
+        ),
+      ],
+    );
   }
 }
