@@ -37,9 +37,9 @@ class AnimatedBox extends StatelessWidget {
             );
           }
           if (state.boxWidth > currnetWidth) {
-            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxWidth(currnetWidth));
+            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(width: currnetWidth));
           } else if (state.boxHeight > currnetWidth) {
-            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxHeight(currnetWidth));
+            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(height: currnetWidth));
           }
 
           return Container(

@@ -21,10 +21,7 @@ class AnimatedBoxState with _$AnimatedBoxState {
         double spreadRadius,
     @Default(BorderRadiusModel(bottomLeftRadius: 0, bottomRightRadius: 0, topLeftRadius: 0, topRightRadius: 0))
         BorderRadiusModel borderRadius,
-    @Default([
-      GradientColorModel(id: 0, color: 4278267456, value: 0),
-      GradientColorModel(id: 1, color: 4278422668, value: 1)
-    ])
+    @Default([GradientColorModel(id: 0, color: 4278267456, value: 0), GradientColorModel(id: 1, color: 4278422668, value: 1)])
         List<GradientColorModel> gradientColors,
     @Default(false)
         bool isGradientEnabled,

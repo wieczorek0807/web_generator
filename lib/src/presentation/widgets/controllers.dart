@@ -26,13 +26,13 @@ class ShadowControllers extends StatelessWidget {
               AppValueSlider(
                 title: '${AppLocalizations.of(context)!.offset} dx',
                 value: state.offsetDx,
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateOffsetX(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateOffset(x: v)),
               ),
               const Divider(),
               AppValueSlider(
                 title: '${AppLocalizations.of(context)!.offset} dy',
                 value: state.offsetDy,
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateOffsetY(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateOffset(y: v)),
               ),
               const Divider(),
               AppValueSlider(
@@ -51,13 +51,13 @@ class ShadowControllers extends StatelessWidget {
               StandardColorPicker(
                 title: AppLocalizations.of(context)!.shadowColor,
                 startColor: Color(state.shadowColor),
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateShadowColor(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateColor(animatedBoxColor: v)),
               ),
               const Divider(),
               StandardColorPicker(
                 title: AppLocalizations.of(context)!.boxColor,
                 startColor: Color(state.animatedBoxColor),
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateAnimatedBoxColor(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateColor(shadowColor: v)),
               ),
             ],
           ),
@@ -83,7 +83,7 @@ class RadiusControllers extends StatelessWidget {
                 value: state.borderRadius.topLeftRadius,
                 min: _radiusMin,
                 max: _radiusMax,
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateTopLeftRadius(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(topLeft: v)),
               ),
               const Divider(),
               AppValueSlider(
@@ -91,7 +91,7 @@ class RadiusControllers extends StatelessWidget {
                 value: state.borderRadius.topRightRadius,
                 min: _radiusMin,
                 max: _radiusMax,
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateTopRightRadius(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(topRight: v)),
               ),
               const Divider(),
               AppValueSlider(
@@ -99,7 +99,7 @@ class RadiusControllers extends StatelessWidget {
                 value: state.borderRadius.bottomLeftRadius,
                 min: _radiusMin,
                 max: _radiusMax,
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBottomLeftRadius(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(bottomLeft: v)),
               ),
               const Divider(),
               AppValueSlider(
@@ -107,7 +107,7 @@ class RadiusControllers extends StatelessWidget {
                 value: state.borderRadius.bottomRightRadius,
                 min: _radiusMin,
                 max: _radiusMax,
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBottomRightRadius(v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(bottomRight: v)),
               ),
             ],
           ),
@@ -139,7 +139,7 @@ class SizeControllers extends StatelessWidget {
               value: state.boxHeight,
               min: _valueMin,
               max: _valueMax,
-              onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxHeight(v)),
+              onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(height: v)),
             ),
             const Divider(),
             AppValueSlider(
@@ -147,7 +147,7 @@ class SizeControllers extends StatelessWidget {
               value: state.boxWidth,
               min: _valueMin,
               max: _valueMax,
-              onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxWidth(v)),
+              onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(width: v)),
             ),
           ],
         ),
@@ -196,12 +196,10 @@ class GradientControllers extends StatelessWidget {
                   itemCount: state.gradientColors.length,
                   itemBuilder: (context, index) {
                     return ColorAndValueForGradientPicker(
-                      valueOnChanged: (v) => context
-                          .read<AnimatedBoxBloc>()
-                          .add(AnimatedBoxEvent.updateGradientValue(id: index, value: v)),
-                      colorOnChanged: (Color v) => context
-                          .read<AnimatedBoxBloc>()
-                          .add(AnimatedBoxEvent.updateGradientColor(id: index, color: v)),
+                      valueOnChanged: (v) =>
+                          context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, value: v)),
+                      colorOnChanged: (Color v) =>
+                          context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, color: v)),
                       startColor: Color(state.gradientColors[index].color),
                       index: index,
                       value: state.gradientColors[index].value,
@@ -216,14 +214,14 @@ class GradientControllers extends StatelessWidget {
                   style: OutlinedButton.styleFrom(
                     foregroundColor: AppColors.prussianBlue,
                   ),
-                  onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.addGradientColor()),
+                  onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.addOrRemoveGradientColor(add: true)),
                   child: Text(AppLocalizations.of(context)!.addColor),
                 ),
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     foregroundColor: AppColors.prussianBlue,
                   ),
-                  onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.removeGradientColor()),
+                  onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.addOrRemoveGradientColor(remove: true)),
                   child: Text(AppLocalizations.of(context)!.removeColor),
                 )
               ],

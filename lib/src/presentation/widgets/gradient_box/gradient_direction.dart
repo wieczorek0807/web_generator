@@ -20,7 +20,7 @@ class GradientDirection extends StatelessWidget {
             dropDownButtonValue: state.centerRadiusGradient,
             dropDownButtonItems: allGradientDirecitons,
             onChange: (v) => context.read<AnimatedBoxBloc>().add(
-                  AnimatedBoxEvent.changeGradientCenterValue(centerRadiusGradient: v),
+                  AnimatedBoxEvent.updateGradientCenterValue(centerRadiusGradient: v),
                 ),
           );
         }
@@ -32,7 +32,7 @@ class GradientDirection extends StatelessWidget {
               dropDownButtonValue: state.beginLinearGradient,
               dropDownButtonItems: allGradientDirecitons,
               onChange: (v) => context.read<AnimatedBoxBloc>().add(
-                    AnimatedBoxEvent.changeGradientBeginValue(beginLinearGradient: v),
+                    AnimatedBoxEvent.updateLinearGradientValue(beginLinearGradient: v),
                   ),
             ),
             GradientDropdownButton(
@@ -40,7 +40,7 @@ class GradientDirection extends StatelessWidget {
               dropDownButtonValue: state.endLinearGradient,
               dropDownButtonItems: allGradientDirecitons,
               onChange: (v) => context.read<AnimatedBoxBloc>().add(
-                    AnimatedBoxEvent.changeGradientEndValue(endLinearGradient: v),
+                    AnimatedBoxEvent.updateLinearGradientValue(endLinearGradient: v),
                   ),
             ),
           ],

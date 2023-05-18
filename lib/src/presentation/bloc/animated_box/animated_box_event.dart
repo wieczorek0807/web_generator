@@ -8,45 +8,41 @@ class AnimatedBoxEvent with _$AnimatedBoxEvent {
   const factory AnimatedBoxEvent.undoChanges() = _UndoChanges;
 
   // offset
-  const factory AnimatedBoxEvent.updateOffsetY(double value) = _UpdateOffsetY;
-  const factory AnimatedBoxEvent.updateOffsetX(double value) = _UpdateOffsetX;
+  const factory AnimatedBoxEvent.updateOffset({double? x, double? y}) = _UpdateOffset;
 
-  // shadow
+  // shadow blur
   const factory AnimatedBoxEvent.updateBlur(double value) = _UpdateBlur;
-  const factory AnimatedBoxEvent.updateSpread(double value) = _UpdateRadius;
 
-  // colors
-  const factory AnimatedBoxEvent.updateAnimatedBoxColor(Color value) = _UpdateAnimatedBoxColor;
-  const factory AnimatedBoxEvent.updateShadowColor(Color value) = _UpdateShadowColor;
+  // shadow radius
+  const factory AnimatedBoxEvent.updateSpread(double value) = _UpdateSpread;
 
-  // border radio
-  const factory AnimatedBoxEvent.updateTopLeftRadius(double value) = _UpdateTopLeftRadius;
+  // box and shadow colors
+  const factory AnimatedBoxEvent.updateColor({Color? animatedBoxColor, Color? shadowColor}) = _UpdateColor;
 
-  const factory AnimatedBoxEvent.updateTopRightRadius(double value) = _UpdateTopRightRadius;
+  // border radius
+  const factory AnimatedBoxEvent.updateRadius({
+    double? topLeft,
+    double? topRight,
+    double? bottomLeft,
+    double? bottomRight,
+  }) = _UpdateRadius;
 
-  const factory AnimatedBoxEvent.updateBottomLeftRadius(double value) = _UpdateBottomLeftRadius;
+  // update box size
+  const factory AnimatedBoxEvent.updateBoxSize({double? height, double? width}) = _UpdateBoxSize;
 
-  const factory AnimatedBoxEvent.updateBottomRightRadius(double value) = _UpdateBottomRightRadius;
-
-  // size of block
-  const factory AnimatedBoxEvent.updateBoxHeight(double value) = _UpdateBoxHeight;
-
-  const factory AnimatedBoxEvent.updateBoxWidth(double value) = _UpdateBoxWidth;
-
-  // gradient
+  // gradient state
   const factory AnimatedBoxEvent.changeGradientState({required int value}) = _ChangeGradientState;
 
-  const factory AnimatedBoxEvent.addGradientColor() = _AddGradientColor;
-  const factory AnimatedBoxEvent.removeGradientColor() = _RemoveGradientColor;
+  //add or remove gradien color
+  const factory AnimatedBoxEvent.addOrRemoveGradientColor({bool? add, bool? remove}) = _AddOrRemoveGradientColor;
 
-  const factory AnimatedBoxEvent.updateGradientColor({required int id, required Color color}) = _UpdateGradientColor;
-  const factory AnimatedBoxEvent.updateGradientValue({required int id, required double value}) = _UpdateGradientValue;
+  //update gradient color or value
+  const factory AnimatedBoxEvent.updateGradientValueColor({required int id, Color? color, double? value}) = _UpdateGradientValueColor;
 
-  const factory AnimatedBoxEvent.changeGradientBeginValue({required GradientDirectionModel beginLinearGradient}) =
-      _ChangeGradientBeginValue;
-
-  const factory AnimatedBoxEvent.changeGradientEndValue({required GradientDirectionModel endLinearGradient}) =
-      _ChangeGradientEndValue;
-  const factory AnimatedBoxEvent.changeGradientCenterValue({required GradientDirectionModel centerRadiusGradient}) =
-      _ChangeGradientCenterValue;
+  //update linear gradient value
+  const factory AnimatedBoxEvent.updateLinearGradientValue(
+      {GradientDirectionModel? beginLinearGradient, GradientDirectionModel? endLinearGradient}) = _UpdateLinearGradientValue;
+  //update radial gradient value
+  const factory AnimatedBoxEvent.updateGradientCenterValue({required GradientDirectionModel centerRadiusGradient}) =
+      _UpdateGradientCenterValue;
 }
