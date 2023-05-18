@@ -32,9 +32,11 @@ _$_AnimatedBoxState _$$_AnimatedBoxStateFromJson(Map<String, dynamic> json) =>
             GradientColorModel(id: 0, color: 4278267456, value: 0),
             GradientColorModel(id: 1, color: 4278422668, value: 1)
           ],
-      isGradientEnabled: json['isGradientEnabled'] as bool? ?? false,
-      isLinearGradient: json['isLinearGradient'] as bool? ?? false,
-      isRadialGradient: json['isRadialGradient'] as bool? ?? false,
+      gradientState: json['gradientState'] ??
+          const GradientStateModel(
+              isGradientEnabled: false,
+              isLinearGradient: false,
+              isRadialGradient: false),
       beginLinearGradient: json['beginLinearGradient'] == null
           ? const GradientDirectionModel(
               name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0)
@@ -64,9 +66,7 @@ Map<String, dynamic> _$$_AnimatedBoxStateToJson(_$_AnimatedBoxState instance) =>
       'spreadRadius': instance.spreadRadius,
       'borderRadius': instance.borderRadius.toJson(),
       'gradientColors': instance.gradientColors.map((e) => e.toJson()).toList(),
-      'isGradientEnabled': instance.isGradientEnabled,
-      'isLinearGradient': instance.isLinearGradient,
-      'isRadialGradient': instance.isRadialGradient,
+      'gradientState': instance.gradientState,
       'beginLinearGradient': instance.beginLinearGradient.toJson(),
       'endLinearGradient': instance.endLinearGradient.toJson(),
       'centerRadiusGradient': instance.centerRadiusGradient.toJson(),

@@ -1,24 +1,17 @@
 import 'package:box_shadow_generator/src/core/values/colors.dart';
+import 'package:box_shadow_generator/src/data/models/gradient%20_state/gradient_state_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AppSegmentButtons extends StatelessWidget {
-  final bool isGradiennEnabled;
-  final bool isLinearGradient;
-  final bool isRadialGradient;
+  final GradientStateModel gradientStateModel;
   final Function(int) onChanged;
 
-  const AppSegmentButtons(
-      {Key? key,
-      required this.isGradiennEnabled,
-      required this.isLinearGradient,
-      required this.isRadialGradient,
-      required this.onChanged})
-      : super(key: key);
+  const AppSegmentButtons({Key? key, required this.gradientStateModel, required this.onChanged}) : super(key: key);
 
   int _groupValueChoose() {
-    if (!isGradiennEnabled) return 0;
-    if (isLinearGradient) return 1;
+    if (!gradientStateModel.isGradientEnabled) return 0;
+    if (gradientStateModel.isLinearGradient) return 1;
     return 2;
   }
 

@@ -23,13 +23,13 @@ class AnimatedBox extends StatelessWidget {
           var gradient;
           final currnetWidth = MediaQuery.of(context).size.width - 250;
 
-          if (state.isGradientEnabled & state.isLinearGradient) {
+          if (state.gradientState.isGradientEnabled & state.gradientState.isLinearGradient) {
             gradient = LinearGradient(
                 colors: state.gradientColors.map((e) => Color(e.color)).toList(),
                 stops: state.gradientColors.map((e) => e.value).toList(),
                 begin: state.beginLinearGradient.getAligment(),
                 end: state.endLinearGradient.getAligment());
-          } else if (state.isGradientEnabled & state.isRadialGradient) {
+          } else if (state.gradientState.isGradientEnabled & state.gradientState.isRadialGradient) {
             gradient = RadialGradient(
               center: state.centerRadiusGradient.getAligment(),
               colors: state.gradientColors.map((e) => Color(e.color)).toList(),

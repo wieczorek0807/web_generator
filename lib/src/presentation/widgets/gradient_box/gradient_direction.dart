@@ -14,7 +14,7 @@ class GradientDirection extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
       builder: (context, state) {
-        if (!state.isLinearGradient) {
+        if (!state.gradientState.isLinearGradient) {
           return GradientDropdownButton(
             name: AppLocalizations.of(context)!.center,
             dropDownButtonValue: state.centerRadiusGradient,

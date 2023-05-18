@@ -3266,9 +3266,7 @@ mixin _$AnimatedBoxState {
   BorderRadiusModel get borderRadius => throw _privateConstructorUsedError;
   List<GradientColorModel> get gradientColors =>
       throw _privateConstructorUsedError;
-  bool get isGradientEnabled => throw _privateConstructorUsedError;
-  bool get isLinearGradient => throw _privateConstructorUsedError;
-  bool get isRadialGradient => throw _privateConstructorUsedError;
+  GradientStateModel get gradientState => throw _privateConstructorUsedError;
   GradientDirectionModel get beginLinearGradient =>
       throw _privateConstructorUsedError;
   GradientDirectionModel get endLinearGradient =>
@@ -3299,9 +3297,7 @@ abstract class $AnimatedBoxStateCopyWith<$Res> {
       double spreadRadius,
       BorderRadiusModel borderRadius,
       List<GradientColorModel> gradientColors,
-      bool isGradientEnabled,
-      bool isLinearGradient,
-      bool isRadialGradient,
+      GradientStateModel gradientState,
       GradientDirectionModel beginLinearGradient,
       GradientDirectionModel endLinearGradient,
       GradientDirectionModel centerRadiusGradient});
@@ -3335,9 +3331,7 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
     Object? spreadRadius = null,
     Object? borderRadius = null,
     Object? gradientColors = null,
-    Object? isGradientEnabled = null,
-    Object? isLinearGradient = null,
-    Object? isRadialGradient = null,
+    Object? gradientState = freezed,
     Object? beginLinearGradient = null,
     Object? endLinearGradient = null,
     Object? centerRadiusGradient = null,
@@ -3383,18 +3377,10 @@ class _$AnimatedBoxStateCopyWithImpl<$Res, $Val extends AnimatedBoxState>
           ? _value.gradientColors
           : gradientColors // ignore: cast_nullable_to_non_nullable
               as List<GradientColorModel>,
-      isGradientEnabled: null == isGradientEnabled
-          ? _value.isGradientEnabled
-          : isGradientEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLinearGradient: null == isLinearGradient
-          ? _value.isLinearGradient
-          : isLinearGradient // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isRadialGradient: null == isRadialGradient
-          ? _value.isRadialGradient
-          : isRadialGradient // ignore: cast_nullable_to_non_nullable
-              as bool,
+      gradientState: freezed == gradientState
+          ? _value.gradientState
+          : gradientState // ignore: cast_nullable_to_non_nullable
+              as GradientStateModel,
       beginLinearGradient: null == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
@@ -3465,9 +3451,7 @@ abstract class _$$_AnimatedBoxStateCopyWith<$Res>
       double spreadRadius,
       BorderRadiusModel borderRadius,
       List<GradientColorModel> gradientColors,
-      bool isGradientEnabled,
-      bool isLinearGradient,
-      bool isRadialGradient,
+      GradientStateModel gradientState,
       GradientDirectionModel beginLinearGradient,
       GradientDirectionModel endLinearGradient,
       GradientDirectionModel centerRadiusGradient});
@@ -3503,9 +3487,7 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
     Object? spreadRadius = null,
     Object? borderRadius = null,
     Object? gradientColors = null,
-    Object? isGradientEnabled = null,
-    Object? isLinearGradient = null,
-    Object? isRadialGradient = null,
+    Object? gradientState = freezed,
     Object? beginLinearGradient = null,
     Object? endLinearGradient = null,
     Object? centerRadiusGradient = null,
@@ -3551,18 +3533,10 @@ class __$$_AnimatedBoxStateCopyWithImpl<$Res>
           ? _value._gradientColors
           : gradientColors // ignore: cast_nullable_to_non_nullable
               as List<GradientColorModel>,
-      isGradientEnabled: null == isGradientEnabled
-          ? _value.isGradientEnabled
-          : isGradientEnabled // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLinearGradient: null == isLinearGradient
-          ? _value.isLinearGradient
-          : isLinearGradient // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isRadialGradient: null == isRadialGradient
-          ? _value.isRadialGradient
-          : isRadialGradient // ignore: cast_nullable_to_non_nullable
-              as bool,
+      gradientState: freezed == gradientState
+          ? _value.gradientState
+          : gradientState // ignore: cast_nullable_to_non_nullable
+              as GradientStateModel,
       beginLinearGradient: null == beginLinearGradient
           ? _value.beginLinearGradient
           : beginLinearGradient // ignore: cast_nullable_to_non_nullable
@@ -3600,9 +3574,10 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
         GradientColorModel(id: 0, color: 4278267456, value: 0),
         GradientColorModel(id: 1, color: 4278422668, value: 1)
       ],
-      this.isGradientEnabled = false,
-      this.isLinearGradient = false,
-      this.isRadialGradient = false,
+      this.gradientState = const GradientStateModel(
+          isGradientEnabled: false,
+          isLinearGradient: false,
+          isRadialGradient: false),
       this.beginLinearGradient = const GradientDirectionModel(
           name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0),
       this.endLinearGradient = const GradientDirectionModel(
@@ -3652,13 +3627,7 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
 
   @override
   @JsonKey()
-  final bool isGradientEnabled;
-  @override
-  @JsonKey()
-  final bool isLinearGradient;
-  @override
-  @JsonKey()
-  final bool isRadialGradient;
+  final GradientStateModel gradientState;
   @override
   @JsonKey()
   final GradientDirectionModel beginLinearGradient;
@@ -3671,7 +3640,7 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
 
   @override
   String toString() {
-    return 'AnimatedBoxState(offsetDx: $offsetDx, offsetDy: $offsetDy, boxWidth: $boxWidth, boxHeight: $boxHeight, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, borderRadius: $borderRadius, gradientColors: $gradientColors, isGradientEnabled: $isGradientEnabled, isLinearGradient: $isLinearGradient, isRadialGradient: $isRadialGradient, beginLinearGradient: $beginLinearGradient, endLinearGradient: $endLinearGradient, centerRadiusGradient: $centerRadiusGradient)';
+    return 'AnimatedBoxState(offsetDx: $offsetDx, offsetDy: $offsetDy, boxWidth: $boxWidth, boxHeight: $boxHeight, shadowColor: $shadowColor, animatedBoxColor: $animatedBoxColor, blurRadius: $blurRadius, spreadRadius: $spreadRadius, borderRadius: $borderRadius, gradientColors: $gradientColors, gradientState: $gradientState, beginLinearGradient: $beginLinearGradient, endLinearGradient: $endLinearGradient, centerRadiusGradient: $centerRadiusGradient)';
   }
 
   @override
@@ -3699,12 +3668,8 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
                 other.borderRadius == borderRadius) &&
             const DeepCollectionEquality()
                 .equals(other._gradientColors, _gradientColors) &&
-            (identical(other.isGradientEnabled, isGradientEnabled) ||
-                other.isGradientEnabled == isGradientEnabled) &&
-            (identical(other.isLinearGradient, isLinearGradient) ||
-                other.isLinearGradient == isLinearGradient) &&
-            (identical(other.isRadialGradient, isRadialGradient) ||
-                other.isRadialGradient == isRadialGradient) &&
+            const DeepCollectionEquality()
+                .equals(other.gradientState, gradientState) &&
             (identical(other.beginLinearGradient, beginLinearGradient) ||
                 other.beginLinearGradient == beginLinearGradient) &&
             (identical(other.endLinearGradient, endLinearGradient) ||
@@ -3727,9 +3692,7 @@ class _$_AnimatedBoxState implements _AnimatedBoxState {
       spreadRadius,
       borderRadius,
       const DeepCollectionEquality().hash(_gradientColors),
-      isGradientEnabled,
-      isLinearGradient,
-      isRadialGradient,
+      const DeepCollectionEquality().hash(gradientState),
       beginLinearGradient,
       endLinearGradient,
       centerRadiusGradient);
@@ -3760,9 +3723,7 @@ abstract class _AnimatedBoxState implements AnimatedBoxState {
       final double spreadRadius,
       final BorderRadiusModel borderRadius,
       final List<GradientColorModel> gradientColors,
-      final bool isGradientEnabled,
-      final bool isLinearGradient,
-      final bool isRadialGradient,
+      final GradientStateModel gradientState,
       final GradientDirectionModel beginLinearGradient,
       final GradientDirectionModel endLinearGradient,
       final GradientDirectionModel centerRadiusGradient}) = _$_AnimatedBoxState;
@@ -3791,11 +3752,7 @@ abstract class _AnimatedBoxState implements AnimatedBoxState {
   @override
   List<GradientColorModel> get gradientColors;
   @override
-  bool get isGradientEnabled;
-  @override
-  bool get isLinearGradient;
-  @override
-  bool get isRadialGradient;
+  GradientStateModel get gradientState;
   @override
   GradientDirectionModel get beginLinearGradient;
   @override

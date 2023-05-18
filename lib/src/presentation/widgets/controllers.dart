@@ -165,11 +165,9 @@ class GradientControllers extends StatelessWidget {
   Widget build(BuildContext context) => SizedBox(
       width: GradientControllers._width,
       child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(builder: (_, state) {
-        if (!state.isGradientEnabled) {
+        if (!state.gradientState.isGradientEnabled) {
           return AppSegmentButtons(
-            isGradiennEnabled: state.isGradientEnabled,
-            isLinearGradient: state.isLinearGradient,
-            isRadialGradient: state.isRadialGradient,
+            gradientStateModel: state.gradientState,
             onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.changeGradientState(value: v)),
           );
         }
@@ -177,9 +175,7 @@ class GradientControllers extends StatelessWidget {
         return Column(
           children: [
             AppSegmentButtons(
-              isGradiennEnabled: state.isGradientEnabled,
-              isLinearGradient: state.isLinearGradient,
-              isRadialGradient: state.isRadialGradient,
+              gradientStateModel: state.gradientState,
               onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.changeGradientState(value: v)),
             ),
             const SizedBox(

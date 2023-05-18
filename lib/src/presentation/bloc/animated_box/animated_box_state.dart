@@ -23,12 +23,8 @@ class AnimatedBoxState with _$AnimatedBoxState {
         BorderRadiusModel borderRadius,
     @Default([GradientColorModel(id: 0, color: 4278267456, value: 0), GradientColorModel(id: 1, color: 4278422668, value: 1)])
         List<GradientColorModel> gradientColors,
-    @Default(false)
-        bool isGradientEnabled,
-    @Default(false)
-        bool isLinearGradient,
-    @Default(false)
-        bool isRadialGradient,
+    @Default(GradientStateModel(isGradientEnabled: false, isLinearGradient: false, isRadialGradient: false))
+        GradientStateModel gradientState,
     @Default(GradientDirectionModel(name: 'TopLeft', aligmentX: -1.0, aligmentY: -1.0))
         GradientDirectionModel beginLinearGradient,
     @Default(GradientDirectionModel(name: 'BottomRight', aligmentX: 1.0, aligmentY: 1.0))

@@ -1,5 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:box_shadow_generator/src/data/models/border_radius/border_radius_model.dart';
+import 'package:box_shadow_generator/src/data/models/gradient%20_state/gradient_state_model.dart';
 import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
@@ -84,24 +85,14 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
   void _changeGradientState(int value) {
     switch (value) {
       case 0:
-        return emit(state.copyWith(isGradientEnabled: false));
+        return emit(state.copyWith(gradientState: state.gradientState.copyWith(isGradientEnabled: false)));
       case 1:
-        return emit(
-          state.copyWith(
-            isGradientEnabled: true,
-            isLinearGradient: true,
-            isRadialGradient: false,
-          ),
-        );
+        return emit(state.copyWith(
+            gradientState: state.gradientState.copyWith(isGradientEnabled: true, isLinearGradient: true, isRadialGradient: false)));
 
       case 2:
-        return emit(
-          state.copyWith(
-            isGradientEnabled: true,
-            isLinearGradient: false,
-            isRadialGradient: true,
-          ),
-        );
+        return emit(state.copyWith(
+            gradientState: state.gradientState.copyWith(isGradientEnabled: true, isLinearGradient: false, isRadialGradient: true)));
     }
   }
 
