@@ -4,8 +4,12 @@ import 'package:box_shadow_generator/src/presentation/bloc/routing/routing_cubit
 import 'package:flutter/material.dart';
 // ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../widgets/controlers/gradient_controllers.dart';
+import '../widgets/controlers/radius_controllers.dart';
+import '../widgets/controlers/shadow_controllers.dart';
+import '../widgets/controlers/size_controllers.dart';
 import '../widgets/web_box/animated_box.dart';
-import '../widgets/controllers.dart';
+
 import 'responsive_screens/web_box_responsive_screen.dart';
 
 class WebBoxMainScreen extends StatelessWidget {
