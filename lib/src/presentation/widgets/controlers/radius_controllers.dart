@@ -20,7 +20,7 @@ class RadiusControllers extends StatelessWidget {
             children: [
               AppValueSlider(
                 title: AppLocalizations.of(context)!.topLeft,
-                value: state.borderRadius.topLeftRadius,
+                value: state.animatedBox.topLeftRadius,
                 min: _radiusMin,
                 max: _radiusMax,
                 onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(topLeft: v)),
@@ -28,7 +28,7 @@ class RadiusControllers extends StatelessWidget {
               const Divider(),
               AppValueSlider(
                 title: AppLocalizations.of(context)!.topRight,
-                value: state.borderRadius.topRightRadius,
+                value: state.animatedBox.topRightRadius,
                 min: _radiusMin,
                 max: _radiusMax,
                 onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(topRight: v)),
@@ -36,7 +36,7 @@ class RadiusControllers extends StatelessWidget {
               const Divider(),
               AppValueSlider(
                 title: AppLocalizations.of(context)!.bottomLeft,
-                value: state.borderRadius.bottomLeftRadius,
+                value: state.animatedBox.bottomLeftRadius,
                 min: _radiusMin,
                 max: _radiusMax,
                 onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(bottomLeft: v)),
@@ -44,7 +44,7 @@ class RadiusControllers extends StatelessWidget {
               const Divider(),
               AppValueSlider(
                 title: AppLocalizations.of(context)!.bottomRight,
-                value: state.borderRadius.bottomRightRadius,
+                value: state.animatedBox.bottomRightRadius,
                 min: _radiusMin,
                 max: _radiusMax,
                 onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateRadius(bottomRight: v)),

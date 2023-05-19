@@ -29,7 +29,7 @@ class SizeControllers extends StatelessWidget {
           children: [
             AppValueSlider(
               title: AppLocalizations.of(context)!.height,
-              value: state.boxHeight,
+              value: state.animatedBox.boxHeight,
               min: _valueMin,
               max: _valueMax,
               onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(height: v)),
@@ -37,7 +37,7 @@ class SizeControllers extends StatelessWidget {
             const Divider(),
             AppValueSlider(
               title: AppLocalizations.of(context)!.width,
-              value: state.boxWidth,
+              value: state.animatedBox.boxWidth,
               min: _valueMin,
               max: _valueMax,
               onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(width: v)),

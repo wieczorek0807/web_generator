@@ -25,41 +25,41 @@ class AnimatedBox extends StatelessWidget {
 
           if (state.gradientState.isGradientEnabled & state.gradientState.isLinearGradient) {
             gradient = LinearGradient(
-                colors: state.gradientColors.map((e) => Color(e.color)).toList(),
-                stops: state.gradientColors.map((e) => e.value).toList(),
-                begin: state.beginLinearGradient.getAligment(),
-                end: state.endLinearGradient.getAligment());
+                colors: state.animatedBox.gradientColors.map((e) => Color(e.color)).toList(),
+                stops: state.animatedBox.gradientColors.map((e) => e.value).toList(),
+                begin: state.animatedBox.beginLinearGradient.getAligment(),
+                end: state.animatedBox.endLinearGradient.getAligment());
           } else if (state.gradientState.isGradientEnabled & state.gradientState.isRadialGradient) {
             gradient = RadialGradient(
-              center: state.centerRadiusGradient.getAligment(),
-              colors: state.gradientColors.map((e) => Color(e.color)).toList(),
-              stops: state.gradientColors.map((e) => e.value).toList(),
+              center: state.animatedBox.centerRadiusGradient.getAligment(),
+              colors: state.animatedBox.gradientColors.map((e) => Color(e.color)).toList(),
+              stops: state.animatedBox.gradientColors.map((e) => e.value).toList(),
             );
           }
-          if (state.boxWidth > currnetWidth) {
+          if (state.animatedBox.boxWidth > currnetWidth) {
             context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(width: currnetWidth));
-          } else if (state.boxHeight > currnetWidth) {
+          } else if (state.animatedBox.boxHeight > currnetWidth) {
             context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateBoxSize(height: currnetWidth));
           }
 
           return Container(
-            height: state.boxHeight,
-            width: state.boxWidth,
+            height: state.animatedBox.boxHeight,
+            width: state.animatedBox.boxWidth,
             decoration: BoxDecoration(
-                color: Color(state.animatedBoxColor),
+                color: Color(state.animatedBox.animatedBoxColor),
                 boxShadow: [
                   BoxShadow(
-                    blurRadius: state.blurRadius,
-                    color: Color(state.shadowColor),
-                    offset: Offset(state.offsetDx, state.offsetDy),
-                    spreadRadius: state.spreadRadius,
+                    blurRadius: state.animatedBox.blurRadius,
+                    color: Color(state.animatedBox.shadowColor),
+                    offset: Offset(state.animatedBox.offsetDx, state.animatedBox.offsetDy),
+                    spreadRadius: state.animatedBox.spreadRadius,
                   ),
                 ],
                 borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(state.borderRadius.topLeftRadius),
-                    topRight: Radius.circular(state.borderRadius.topRightRadius),
-                    bottomLeft: Radius.circular(state.borderRadius.bottomLeftRadius),
-                    bottomRight: Radius.circular(state.borderRadius.bottomRightRadius)),
+                    topLeft: Radius.circular(state.animatedBox.topLeftRadius),
+                    topRight: Radius.circular(state.animatedBox.topRightRadius),
+                    bottomLeft: Radius.circular(state.animatedBox.bottomLeftRadius),
+                    bottomRight: Radius.circular(state.animatedBox.bottomRightRadius)),
                 gradient: gradient),
           );
         },

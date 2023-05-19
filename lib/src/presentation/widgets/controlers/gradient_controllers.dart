@@ -42,16 +42,16 @@ class GradientControllers extends StatelessWidget {
             SizedBox(
               height: 200,
               child: ListView.builder(
-                  itemCount: state.gradientColors.length,
+                  itemCount: state.animatedBox.gradientColors.length,
                   itemBuilder: (context, index) {
                     return ColorAndValueForGradientPicker(
                       valueOnChanged: (v) =>
                           context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, value: v)),
                       colorOnChanged: (Color v) =>
                           context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, color: v)),
-                      startColor: Color(state.gradientColors[index].color),
+                      startColor: Color(state.animatedBox.gradientColors[index].color),
                       index: index,
-                      value: state.gradientColors[index].value,
+                      value: state.animatedBox.gradientColors[index].value,
                     );
                   }),
             ),
