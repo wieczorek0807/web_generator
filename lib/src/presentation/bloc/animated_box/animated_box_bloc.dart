@@ -29,36 +29,46 @@ class AnimatedBoxBloc extends HydratedBloc<AnimatedBoxEvent, AnimatedBoxState> {
         updateOffset: (x, y) {
           if (x != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(offsetDx: x)));
           if (y != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(offsetDy: y)));
+          return null;
         },
         updateColor: (animatedBoxColor, shadowColor) {
-          if (animatedBoxColor != null)
+          if (animatedBoxColor != null) {
             emit(state.copyWith(animatedBox: state.animatedBox.copyWith(animatedBoxColor: animatedBoxColor.value)));
+          }
           if (shadowColor != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(shadowColor: shadowColor.value)));
+          return null;
         },
         updateRadius: (topLeft, topRight, bottomLeft, bottomRight) {
           if (topLeft != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(topLeftRadius: topLeft)));
           if (topRight != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(topRightRadius: topRight)));
           if (bottomLeft != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(bottomLeftRadius: bottomLeft)));
           if (bottomRight != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(bottomRightRadius: bottomRight)));
+          return null;
         },
         updateBoxSize: (height, width) {
           if (width != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(boxWidth: width)));
           if (height != null) emit(state.copyWith(animatedBox: state.animatedBox.copyWith(boxHeight: height)));
+          return null;
         },
         addOrRemoveGradientColor: (add, remove) {
           if (add != null) _addGradientColor();
           if (remove != null) _removeGradientColor();
+          return null;
         },
         updateGradientValueColor: (id, color, value) {
           if (color != null) _updateGradient(color: color.value, index: id);
           if (value != null) _updateGradient(index: id, value: value);
+          return null;
         },
         changeGradientState: (v) => _changeGradientState(v),
         updateLinearGradientValue: (beginLinearGradient, endLinearGradient) {
-          if (beginLinearGradient != null)
+          if (beginLinearGradient != null) {
             emit(state.copyWith(animatedBox: state.animatedBox.copyWith(beginLinearGradient: beginLinearGradient)));
-          if (endLinearGradient != null)
+          }
+          if (endLinearGradient != null) {
             emit(state.copyWith(animatedBox: state.animatedBox.copyWith(endLinearGradient: endLinearGradient)));
+          }
+          return null;
         },
         updateGradientCenterValue: (v) => emit(state.copyWith(animatedBox: state.animatedBox.copyWith(centerRadiusGradient: v))),
       );
