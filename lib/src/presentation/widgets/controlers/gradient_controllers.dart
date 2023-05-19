@@ -16,66 +16,70 @@ class GradientControllers extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-      width: GradientControllers._width,
-      child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(builder: (_, state) {
-        if (!state.gradientState.isGradientEnabled) {
-          return AppSegmentButtons(
-            gradientStateModel: state.gradientState,
-            onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.changeGradientState(value: v)),
-          );
-        }
+        width: GradientControllers._width,
+        child: BlocBuilder<AnimatedBoxBloc, AnimatedBoxState>(
+          builder: (_, state) {
+            if (!state.gradientState.isGradientEnabled) {
+              return AppSegmentButtons(
+                gradientStateModel: state.gradientState,
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.changeGradientState(value: v)),
+              );
+            }
 
-        return Column(
-          children: [
-            AppSegmentButtons(
-              gradientStateModel: state.gradientState,
-              onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.changeGradientState(value: v)),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            const GradientDirection(),
-            const SizedBox(
-              height: 12,
-            ),
-            const Divider(),
-            SizedBox(
-              height: 200,
-              child: ListView.builder(
-                  itemCount: state.animatedBox.gradientColors.length,
-                  itemBuilder: (context, index) {
-                    return ColorAndValueForGradientPicker(
-                      valueOnChanged: (v) =>
-                          context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, value: v)),
-                      colorOnChanged: (Color v) =>
-                          context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, color: v)),
-                      startColor: Color(state.animatedBox.gradientColors[index].color),
-                      index: index,
-                      value: state.animatedBox.gradientColors[index].value,
-                    );
-                  }),
-            ),
-            const Divider(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            return Column(
               children: [
-                OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: AppColors.prussianBlue,
-                  ),
-                  onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.addOrRemoveGradientColor(add: true)),
-                  child: Text(AppLocalizations.of(context)!.addColor),
+                AppSegmentButtons(
+                  gradientStateModel: state.gradientState,
+                  onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.changeGradientState(value: v)),
                 ),
-                OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: AppColors.prussianBlue,
+                const SizedBox(
+                  height: 24,
+                ),
+                const GradientDirection(),
+                const SizedBox(
+                  height: 12,
+                ),
+                const Divider(),
+                SizedBox(
+                  height: 200,
+                  child: ListView.builder(
+                    itemCount: state.animatedBox.gradientColors.length,
+                    itemBuilder: (context, index) {
+                      return ColorAndValueForGradientPicker(
+                        valueOnChanged: (v) =>
+                            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, value: v)),
+                        colorOnChanged: (Color v) =>
+                            context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateGradientValueColor(id: index, color: v)),
+                        startColor: Color(state.animatedBox.gradientColors[index].color),
+                        index: index,
+                        value: state.animatedBox.gradientColors[index].value,
+                      );
+                    },
                   ),
-                  onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.addOrRemoveGradientColor(remove: true)),
-                  child: Text(AppLocalizations.of(context)!.removeColor),
+                ),
+                const Divider(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: AppColors.prussianBlue,
+                      ),
+                      onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.addOrRemoveGradientColor(add: true)),
+                      child: Text(AppLocalizations.of(context)!.addColor),
+                    ),
+                    OutlinedButton(
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: AppColors.prussianBlue,
+                      ),
+                      onPressed: () => context.read<AnimatedBoxBloc>().add(const AnimatedBoxEvent.addOrRemoveGradientColor(remove: true)),
+                      child: Text(AppLocalizations.of(context)!.removeColor),
+                    )
+                  ],
                 )
               ],
-            )
-          ],
-        );
-      }));
+            );
+          },
+        ),
+      );
 }

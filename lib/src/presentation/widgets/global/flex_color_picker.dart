@@ -7,9 +7,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class FlexColorPicker extends StatefulWidget {
   final Function(Color) onChanged;
   final Color startColor;
-  const FlexColorPicker(
-      {Key? key, required this.onChanged, required this.startColor})
-      : super(key: key);
+  const FlexColorPicker({Key? key, required this.onChanged, required this.startColor}) : super(key: key);
 
   @override
   State<FlexColorPicker> createState() => _FlexColorPickerState();
@@ -42,9 +40,11 @@ class _FlexColorPickerState extends State<FlexColorPicker> {
   }
 
   void pickColor(BuildContext context) => showDialog(
-      context: context,
-      builder: (context) => AlertDialog(
-            content: Column(mainAxisSize: MainAxisSize.min, children: [
+        context: context,
+        builder: (context) => AlertDialog(
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
               ColorPicker(
                 wheelSquarePadding: 10,
                 wheelDiameter: 300,
@@ -78,6 +78,8 @@ class _FlexColorPickerState extends State<FlexColorPicker> {
                 },
                 child: Text(AppLocalizations.of(context)!.select),
               )
-            ]),
-          ));
+            ],
+          ),
+        ),
+      );
 }

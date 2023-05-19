@@ -56,7 +56,6 @@ class WebBoxDrawer extends StatelessWidget {
         );
       },
     );
-    // );
   }
 }
 

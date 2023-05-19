@@ -11,10 +11,8 @@ final getIt = GetIt.instance;
 Future<void> setup() async {
   // Hydrated Bloc
   WidgetsFlutterBinding.ensureInitialized();
-  HydratedBloc.storage = await HydratedStorage.build(
-      storageDirectory: kIsWeb
-          ? HydratedStorage.webStorageDirectory
-          : await getTemporaryDirectory());
+  HydratedBloc.storage =
+      await HydratedStorage.build(storageDirectory: kIsWeb ? HydratedStorage.webStorageDirectory : await getTemporaryDirectory());
 
   // Routing Cubit
   getIt.registerLazySingleton(() => RoutingCubit());

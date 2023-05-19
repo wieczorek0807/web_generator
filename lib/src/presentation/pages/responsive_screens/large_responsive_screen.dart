@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../core/values/dimens.dart';
 
 class LargeResponsiveScreen extends StatelessWidget {
-  const LargeResponsiveScreen(
-      {Key? key, required this.controllers, required this.animatedBox})
-      : super(key: key);
+  const LargeResponsiveScreen({Key? key, required this.controllers, required this.animatedBox}) : super(key: key);
   final Widget controllers;
   final Widget animatedBox;
   @override
@@ -17,10 +15,7 @@ class LargeResponsiveScreen extends StatelessWidget {
             Container(
               width: 300,
               height: double.infinity,
-              decoration: const BoxDecoration(boxShadow: [
-                BoxShadow(
-                    blurRadius: 15, offset: Offset(7, 0), spreadRadius: -16)
-              ]),
+              decoration: const BoxDecoration(boxShadow: [BoxShadow(blurRadius: 15, offset: Offset(7, 0), spreadRadius: -16)]),
               child: Container(
                 color: Colors.white,
                 child: const WebBoxDrawer(
@@ -36,11 +31,7 @@ class LargeResponsiveScreen extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        controllers,
-                        const SizedBox(width: AppDimens.d130),
-                        animatedBox
-                      ],
+                      children: [controllers, const SizedBox(width: AppDimens.d130), animatedBox],
                     ),
                   ],
                 ),

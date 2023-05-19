@@ -18,22 +18,23 @@ class WebBoxMainScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-        providers: [
-          BlocProvider(
-            create: (_) => getIt<RoutingCubit>(),
-          ),
-          BlocProvider(
-            create: (context) {
-              return getIt<AnimatedBoxBloc>();
-            },
-          )
-        ],
-        child: WebBoxResponsiveScreen(
-          animatedBox: const AnimatedBox(),
-          shadowControllers: const ShadowControllers(),
-          radiusControllers: const RadiusControllers(),
-          sizeControllers: SizeControllers(),
-          gradientControllers: const GradientControllers(),
-        ));
+      providers: [
+        BlocProvider(
+          create: (_) => getIt<RoutingCubit>(),
+        ),
+        BlocProvider(
+          create: (context) {
+            return getIt<AnimatedBoxBloc>();
+          },
+        )
+      ],
+      child: WebBoxResponsiveScreen(
+        animatedBox: const AnimatedBox(),
+        shadowControllers: const ShadowControllers(),
+        radiusControllers: const RadiusControllers(),
+        sizeControllers: SizeControllers(),
+        gradientControllers: const GradientControllers(),
+      ),
+    );
   }
 }

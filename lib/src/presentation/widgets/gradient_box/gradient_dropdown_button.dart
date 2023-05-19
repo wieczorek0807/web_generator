@@ -8,11 +8,7 @@ class GradientDropdownButton extends StatelessWidget {
   final List<GradientDirectionModel> dropDownButtonItems;
   final Function(GradientDirectionModel) onChange;
   const GradientDropdownButton(
-      {Key? key,
-      required this.name,
-      required this.dropDownButtonValue,
-      required this.dropDownButtonItems,
-      required this.onChange})
+      {Key? key, required this.name, required this.dropDownButtonValue, required this.dropDownButtonItems, required this.onChange})
       : super(key: key);
 
   @override
@@ -21,22 +17,23 @@ class GradientDropdownButton extends StatelessWidget {
       children: [
         Text(name),
         DropdownButton(
-            value: dropDownButtonValue.getAligment(),
-            items: allGradientDirecitons
-                .map<DropdownMenuItem<AlignmentGeometry>>(
-                    (GradientDirectionModel value) => DropdownMenuItem(
-                          value: value.getAligment(),
-                          child: Text(AppLocalizations.of(context)!
-                              .directions(value.name)),
-                        ))
-                .toList(),
-            onChanged: (value) {
-              for (var element in allGradientDirecitons) {
-                if (element.getAligment() == value) {
-                  onChange(element);
-                }
+          value: dropDownButtonValue.getAligment(),
+          items: allGradientDirecitons
+              .map<DropdownMenuItem<AlignmentGeometry>>(
+                (GradientDirectionModel value) => DropdownMenuItem(
+                  value: value.getAligment(),
+                  child: Text(AppLocalizations.of(context)!.directions(value.name)),
+                ),
+              )
+              .toList(),
+          onChanged: (value) {
+            for (var element in allGradientDirecitons) {
+              if (element.getAligment() == value) {
+                onChange(element);
               }
-            })
+            }
+          },
+        )
       ],
     );
   }

@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../global/app_value_slider.dart';
-import '../web_box/app_flex_color_picker.dart';
+import '../web_box/standard_color_picker.dart';
 
 class ShadowControllers extends StatelessWidget {
   const ShadowControllers({Key? key}) : super(key: key);

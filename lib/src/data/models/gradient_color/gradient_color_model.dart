@@ -11,6 +11,5 @@ class GradientColorModel with _$GradientColorModel {
     required double value,
   }) = _GradientColorModel;
 
-  factory GradientColorModel.fromJson(Map<String, Object?> json) =>
-      _$GradientColorModelFromJson(json);
+  factory GradientColorModel.fromJson(Map<String, Object?> json) => _$GradientColorModelFromJson(json);
 }

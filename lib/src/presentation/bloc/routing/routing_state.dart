@@ -15,6 +15,5 @@ class RoutingState extends Equatable {
       required this.title});
 
   @override
-  List<Object?> get props =>
-      [title, boxShadowscreen, boxRadiusscreen, boxSizescreen, gradientScreen];
+  List<Object?> get props => [title, boxShadowscreen, boxRadiusscreen, boxSizescreen, gradientScreen];
 }

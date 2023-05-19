@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../core/values/dimens.dart';
 
 class SmallResponsiveScreen extends StatelessWidget {
-  const SmallResponsiveScreen(
-      {Key? key, required this.controllers, required this.animatedBox})
-      : super(key: key);
+  const SmallResponsiveScreen({Key? key, required this.controllers, required this.animatedBox}) : super(key: key);
   final Widget controllers;
   final Widget animatedBox;
   @override

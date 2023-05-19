@@ -7,21 +7,13 @@ class StandardColorPicker extends StatelessWidget {
   final Function(Color) onChanged;
   final Color startColor;
 
-  const StandardColorPicker(
-      {required this.title,
-      required this.onChanged,
-      required this.startColor,
-      Key? key})
-      : super(key: key);
+  const StandardColorPicker({required this.title, required this.onChanged, required this.startColor, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(title),
-        FlexColorPicker(onChanged: onChanged, startColor: startColor)
-      ],
+      children: [Text(title), FlexColorPicker(onChanged: onChanged, startColor: startColor)],
     );
   }
 }

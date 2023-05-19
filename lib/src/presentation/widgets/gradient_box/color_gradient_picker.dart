@@ -37,7 +37,7 @@ class ColorAndValueForGradientPicker extends StatelessWidget {
                 const SizedBox(
                   width: AppDimens.d4,
                 ),
-                Text(value.toStringAsFixed(3))
+                Text(value.toStringAsFixed(3)),
               ],
             )
           ],
@@ -50,7 +50,6 @@ class ColorAndValueForGradientPicker extends StatelessWidget {
           value: value,
           onChanged: valueOnChanged,
         ),
-        // Text('slider')
       ],
     );
   }

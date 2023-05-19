@@ -14,23 +14,20 @@ class MediumResponsiveScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Center(
-      child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                controllers,
-                const SizedBox(width: AppDimens.d130),
-                animatedBox
-              ],
-            ),
-          ],
+      child: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [controllers, const SizedBox(width: AppDimens.d130), animatedBox],
+              ),
+            ],
+          ),
         ),
       ),
-    ));
+    );
   }
 }
