@@ -9,5 +9,6 @@ Just a copy of [CSS Box Shadow Generator](https://cssgenerator.pl/box-shadow-gen
 #### Tech Stack
 - Bloc/Cubit
 - Freezed
-- Hive or Shared preferences
+- Hydrated
+- Intl
 - Clean Architecture
