@@ -48,13 +48,13 @@ class ShadowControllers extends StatelessWidget {
               StandardColorPicker(
                 title: AppLocalizations.of(context)!.shadowColor,
                 startColor: Color(state.animatedBox.shadowColor),
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateColor(animatedBoxColor: v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateColor(shadowColor: v)),
               ),
               const Divider(),
               StandardColorPicker(
                 title: AppLocalizations.of(context)!.boxColor,
                 startColor: Color(state.animatedBox.animatedBoxColor),
-                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateColor(shadowColor: v)),
+                onChanged: (v) => context.read<AnimatedBoxBloc>().add(AnimatedBoxEvent.updateColor(animatedBoxColor: v)),
               ),
             ],
           ),
