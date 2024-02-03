@@ -1,6 +1,6 @@
 # FLUTTER WEB GENERATOR
 
-Application allows you to customize and create and test custom widgets on the web, which you can then apply to your own application 🚀
+Flutter gradient and shadow generator with customization options. The application allows you to create and test widgets with gradients and shadows on the web to easily apply them to your Flutter applications. 🚀
 
 ## Tech Stack
 - Bloc/Cubit
